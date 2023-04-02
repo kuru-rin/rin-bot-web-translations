@@ -1,0 +1,59 @@
+{
+    "channelConfiguration": {
+        "add": "加入一个频道"
+    },
+    "needHelp": {
+        "encounterProblemsContact": "如果您遇到任何问题，请联系 Kururin。",
+        "needHelp": "需要帮忙？"
+    },
+    "achievements": {
+        "showLocked": "显示锁定的成就",
+        "thisWasTheLastLevel": "这是最后一个级别",
+        "noAchievementsGainedYet": "尚未收集任何成就。"
+    },
+    "commands": {
+        "title": "命令",
+        "canUseInDirectMessage": "您还可以在直接向 RinBot 发送消息时使用这些命令中的大多数，以播放私人会话。 以这种方式获得的积分不计入排行榜。",
+        "rounds": {
+            "sg": "**会开始新一轮**"
+        }
+    },
+    "navbar": {
+        "logout": "登出",
+        "myProfile": "我的简历",
+        "mySettings": "我的设置",
+        "commands": "命令",
+        "faq": "常问问题",
+        "statistics": "统计数据",
+        "login": "登录"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "hideAlternativeTitles": {
+                "label": "别的标题",
+                "checkbox": "隐藏别的标题"
+            },
+            "title": "猜动漫",
+            "animeSummaryLink": {
+                "label": "动漫概要网页链接"
+            }
+        },
+        "general": {
+            "prefix": {
+                "label": "命令前缀",
+                "invalid": "这是必填字段，长度必须在 1 到 5 个字符之间。"
+            },
+            "language": {
+                "label": "语言",
+                "description": "在 Discord 里面设置 RinBot 的语言。 这不会影响动画标题。"
+            },
+            "inviteCode": {
+                "label": "邀请代码",
+                "invalid": "这一个邀请码似乎无效"
+            }
+        }
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "您已注销！"
+    }
+}

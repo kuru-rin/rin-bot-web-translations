@@ -1,0 +1,97 @@
+{
+    "achievements": {
+        "showLocked": "Afficher les succès verrouillés",
+        "leftToUnlock": "gauche pour déverrouiller",
+        "toGoForNextLevel": "passer au niveau supérieur",
+        "thisWasTheLastLevel": "C'était le dernier niveau",
+        "noAchievementsGainedYet": "Aucun succès n'a encore été collecté."
+    },
+    "commands": {
+        "title": "Commandes",
+        "prefixCanBeChanged": "Le préfixe `!` de ces commandes peut être modifié dans la page 'Mes serveurs' après votre connexion.",
+        "canUseInDirectMessage": "Vous pouvez également utiliser la plupart de ces commandes sur le message direct à RinBot, afin de jouer une session privée. Les points gagnés de cette manière ne sont pas comptabilisés pour les classements.",
+        "rounds": {
+            "title": "#### Les manches",
+            "sg": "**Commence un nouveau tour**",
+            "sgv": "**Commence une partie avec des clips vidéo**",
+            "sga": "** Commence un tour avec des fragments audio des chansons d'ouverture et de fin **",
+            "sgc": "** Commence une manche avec des personnages d'anime **",
+            "sgvn": "**Commence une manche avec des images de romans visuels**\nSeul le filtre de difficulté fonctionne pour cette commande.",
+            "stopg": "**Arrête le tour en cours**\nCette commande est limitée à une fois toutes les 15 minutes par personne, pour éviter les abus. [Les contributeurs bénéficient d'un temps de recharge réduit](https://patreon.com/rinbot?fan_landing=true) !",
+            "sb": "**Commencez une partie de bouton à choix multiples avec des images**",
+            "sgg": "**Débuter une partie sur les jeux vidédos**"
+        },
+        "queries": {
+            "operations": "#### Opérations",
+            "genre": "**Filtrer le genre**\nActuellement, un seul genre peut être filtré, comme `g:action` ou `g:horror`.\nUtilisez la commande `!genres` pour obtenir une liste de tous les genres disponibles.",
+            "mal": "**Filtre basé sur votre MyAnimeList**\nExemple : `mal:username` ou `mal:user1,user2` pour plusieurs listes d'utilisateurs.\nVous devez d'abord avoir utilisé la commande `!sync` avant de pouvoir utiliser le filtre.",
+            "title": "### Requêtes\nVous pouvez créer vos propres requêtes avec ces paramètres. Ils fonctionneront pour `!sg`, `!sgv`, `!sga`, `!sgs` et `!sgsa`.\n\nPar exemple : `!sg n:5 d:3 y:1995-2005` pour démarrer une session avec 5 tours d'anime sur de difficulté difficile entre les années 1995 et 2005.",
+            "imageManipulations": "**Manipulation d'images dans un tour** (uniquement pour les tours avec images)\nVous pouvez choisir entre `p` pixélisé, `i` inversé, `o` peint à l'huile, `g` niveaux de gris, `f` renversé verticalement.\nExemple : `im:p` ou une combinaison",
+            "difficulty": "**Filtrer la difficulté**\n1 (facile), 2 (normal), 3 (difficile), 4 (extrême), 5 (cauchemar) et 0 (tout)\nExemple : `d:1` pour un tour facile, ou `d:4` pour un extrême et `d:0` pour désactiver le filtre de difficulté.",
+            "songType": "**Filtrer le type de chansons** (` !sga`, ` !sgs` et `!sgsa` uniquement)\nLe type de chanson peut être : `op` (ouvertures), `ed` (fins), `in` (insérer des chansons) ou `tm` (chansons d'image)",
+            "year": "**Filtrer l'année**\nExemple : `y:1999` sélectionnerait les anime des années 1999 jusqu'à l'année en cours incluse\n`y:2005-2010` choisirait entre les années 2005 et 2010 (toutes deux incluses)",
+            "numberOfRounds": "**Le nombre de tours dans une session**\nCela démarrera automatiquement plusieurs tours en une seule session et vous donnera un classement à la fin de la session.\nExemple : `n:2` pour 2 tours au maximum",
+            "anilist": "**Filtre basé sur votre AniList**\nExemple : `anilist:username` ou `anilist:user1,user2` pour plusieurs listes d'utilisateurs.\nVous devez d'abord avoir utilisé la commande `!sync` avant de pouvoir utiliser le filtre.\nYo",
+            "filters": "#### Filtres",
+            "aggr": "**Méthode d'agrégation** (uniquement lors de l'utilisation de filtres de liste d'anime)\nVous pouvez utiliser `aggr:union` pour unir les listes d'anime au lieu de les croiser."
+        },
+        "shortcuts": {
+            "year": "**Commence un nouveau tour à partir de l'année `[année]` jusqu'à maintenant**\nExemple : ` !sg 1999` sélectionnerait les dessins animés des années 1999 jusqu'à l'année en cours incluse",
+            "years": "**Commence un nouveau cycle à partir des années comprises entre `[year1]` et `[year2]`**\nExemple : `!sg 1999 2003` choisirait les anime des années 1999 jusqu'à 2003 inclus",
+            "difficulty": "**Commence une nouvelle manche avec une difficulté spécifique**\n1 (facile), 2 (normal), 3 (difficile), 4 (extrême), 5 (cauchemar) et 0 (tout)\nExemple : `!sg 1` pour un tour facile, ou `!sg 4` pour un tour extrême.",
+            "genre": "**Commence une nouvelle manche avec des dessins animés d'un genre spécifique**\nUtilisez la commande `!genres` pour obtenir une liste de tous les genres disponibles.",
+            "title": "#### Raccourcis du filtre rond\nVoici quelques filtres rapides pour commencer. La difficulté est choisie automatiquement en fonction de vos points actuels si aucun n'est spécifié",
+            "songType": "**Démarre un nouveau cycle audio avec des chansons d'un type spécifique**\nLe type de chanson peut être : `op` (ouvertures), `ed` (fins), `in` (insérer des chansons) ou `tm` (chansons d'image)",
+            "query": "** Commence une nouvelle manche avec un anime basé sur votre propre requête**\n`d :1` pour ajouter de la difficulté au filtre\n`g :shounen` pour ajouter un genre au filtre\n`y :2001-2009` pour ajouter une plage d'années au filtre\n`t :op` pour ajouter un filtre de type de chanson (seulement pour les partie !sga)\nExemple : ` !sg d :1 g :shounen y :2001-2009` ou ` !sg g :drama y :2010` ou encore ` !sga t :op` \n_Prendre note que vous N'AVEZ PAS à utiliser tout ces filtres dans vos requêtes._"
+        },
+        "voiceRounds": {
+            "sbsa": "**Démarrez une session de tour de voix à choix multiples avec des échantillons**",
+            "title": "#### Sessions de tour de voix",
+            "sgs": "**Démarrer une session de tour de parole**\nCela rejoindra un canal vocal (avec le même nom, ou celui dans lequel vous êtes) et commencera ensuite à faire des rondes.\nAssurez-vous que RinBot a les permissions __Connect__ et __Speak__ pour cette chaîne.",
+            "sgsa": "**Commencez une session de tour de voix avec des échantillons**",
+            "stopgs": "**Arrêtez les rondes vocales**\nCela arrêtera le mode rounds vocaux ainsi que le round en cours."
+        },
+        "points": {
+            "title": "#### Points\nCeux-ci sont recalculés toutes les heures. Vous pouvez [booster votre serveur](https://patreon.com/rinbot?fan_landing=true) pour des mises à jour en temps réel.",
+            "myscore": "**Affiche les points que vous avez gagnés et les tours que vous avez joués dans le canal actuel**",
+            "alltop": "**Affiche les meilleurs joueurs de tous les temps sur le serveur**",
+            "allfastest": "**Affiche les joueurs les plus rapides de tous les temps sur le serveur**\nSeuls les tours avec un pool d'anime de plus de 1000 sont comptés.",
+            "serverscore": "**Affiche le score de l'ensemble du serveur**",
+            "weektop": "**Affiche les meilleurs joueurs de la semaine en cours sur le serveur**\nIl utilise les semaines ISO-8601 de l'année avec le lundi comme premier jour de la semaine. La commande vous indiquera quand la semaine se réinitialisera.",
+            "weekfastest": "**Affiche les joueurs les plus rapides de la semaine en cours sur le serveur**\nSeuls les tours avec un pool d'anime de plus de 1000 sont comptés.\nPar exemple : cela exclura les modes facile/normal et la plupart des petits genres."
+        },
+        "ctop": {
+            "title": "#### Classements personnalisés",
+            "ctop": "**Afficher le classement personnalisé pour la chaîne actuelle**",
+            "endctop": "**Mettre fin au tableau de classement personnalisé actif**\nCeci arrête les points de s'accumuler, mais rien n'efface le tableau.",
+            "startctop": "**Démarrer un nouveau tableau de classement personnalisé pour le salon**\nTu as besoin d'utiliser plusieurs salons pour avoir plusieurs tableaux en même temps."
+        },
+        "misc": {
+            "genres": "**Visionner tout les types d'animes possible**",
+            "sync": "**Syncroniser votre liste d'anime à partir d'autre sites**\nPrésentement seul MyanimeList et AniList sont supporté.",
+            "title": "#### Divers",
+            "statg": "**Visionner les statistiques globale de la partie**",
+            "mydifficulty": "**Vous laisse choisir le niveau de dificulté pour toutes les parties que vous débuter..**"
+        },
+        "management": {
+            "title": "#### Administration",
+            "prefix": "**Vous montre le préfix utiliser et vous laisse le changer**",
+            "lang": "**Vous montre la langue utilisé et vous laisse la changer**"
+        },
+        "onlyForPatrons": {
+            "description": "**Ceci ne peux être qu'utilisé par les [patrons]({patreonUrl})** - Ceci a été introduit pour réduire la charge sur le serveur, ainsi que d'avoir des gens pour aider à payer les factures",
+            "tooltip": "Seulement pour les patrons"
+        },
+        "isExperimental": {
+            "tooltip": "Experimental",
+            "description": "**Fonction expérimentale** - Cette fonction est très nouvelle, il est possible qu'il y est quelque bugs [S'il vous plaît veuillez les rapporter ici]({supportServerUrl} si vous en trouver"
+        }
+    },
+    "common": {
+        "loading": "Chargement",
+        "termsOfService": "Termes de service",
+        "botSupporter": "Supporteur de {botName}",
+        "boostedByBotSupporter": "Boosté par un supporteur de {botName}",
+        "onlyForPatrons": "Seulement pour les patrons"
+    }
+}

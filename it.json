@@ -1,0 +1,31 @@
+{
+    "achievements": {
+        "toGoForNextLevel": "per andare al livello successivo",
+        "leftToUnlock": "sinistra per sbloccare",
+        "noAchievementsGainedYet": "Nessun obbiettivo è stato ancora collezionato.",
+        "showLocked": "Mostra obbiettivi bloccati",
+        "thisWasTheLastLevel": "Questo era l'ultimo livello"
+    },
+    "commands": {
+        "title": "Comandi",
+        "rounds": {
+            "title": "#### Rounds",
+            "sg": "**Inizia un nuovo round**",
+            "sgv": "**Inizia un nuovo round con delle clips video**",
+            "sga": "**Inizia un round con pezzi di audio di opening ed ending**",
+            "sgc": "**Inizia un round con personaggi anime**",
+            "sgvn": "**Inizia un round con immagini di visual novels**…\nSolo il filtro della difficoltà funziona con questo comando.",
+            "stopg": "**Round corrente fermato**…\nQuesto comando é limitato per una volta ogni 15 minuti per persona, per prevenire abusi.\n[Gli abbonati hanno un cooldown ridotto]\n(https://patreon.com/rinbot?fan_landindg=true)!",
+            "sgg": "**Inizia un round con i videogiochi.**",
+            "sb": "**Avviare un round di pulsanti a scelta multipla con immagini**"
+        },
+        "voiceRounds": {
+            "title": "#### Round sessione vocale",
+            "sgs": "**Inizia una sessione di round vocali**…\nQuesto entrerà in un canale vocale (con lo stesso nome, o con quello che é dentro) e quindi inizierà facendo Rounds…\nSiate sicuri che RinBot abbia i permessi di __Connect__ e __Speak__ nel canale.",
+            "sgsa": "**Inizia una sessione di round vocali con 20 secondi di esempi**",
+            "stopgs": "**Round vocali fermati**…\nQuesto fermerà la modalità round vocali e allo stesso modo il round corrente."
+        },
+        "prefixCanBeChanged": "Il prefisso `!` di questi comandi può essere cambiato nella pagina 'My servers' dopo il tuo login.",
+        "canUseInDirectMessage": "Puoi anche usare la maggior parte di questi comandi con i messaggi diretti con RinBot, in ordine per giocare a una sessione privata. I punti dati con questa modalità non sono contati nella classifica."
+    }
+}

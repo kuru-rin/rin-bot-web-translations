@@ -1,0 +1,8 @@
+{
+    "achievements": {
+        "showLocked": "Visa låsta prestationer",
+        "leftToUnlock": "kvar att låsa upp",
+        "toGoForNextLevel": "gå till nästa nivå",
+        "thisWasTheLastLevel": "Detta var den sista nivån"
+    }
+}

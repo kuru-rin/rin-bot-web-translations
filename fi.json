@@ -1,0 +1,8 @@
+{
+    "achievements": {
+        "leftToUnlock": "jäljellä avattavaksi",
+        "thisWasTheLastLevel": "Tämä oli viimeinen taso",
+        "noAchievementsGainedYet": "Saavutuksia ei ole vielä kerätty.",
+        "showLocked": "Näytä lukitut saavutukset"
+    }
+}

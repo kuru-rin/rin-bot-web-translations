@@ -1,0 +1,10 @@
+{
+    "achievements": {
+        "showLocked": "Zeige freigeschaltete Errungenschaften",
+        "noAchievementsGainedYet": "Es wurden noch keine Erfolge gesammelt.",
+        "thisWasTheLastLevel": "Dies war das letzte Level"
+    },
+    "commands": {
+        "title": "Befehle"
+    }
+}

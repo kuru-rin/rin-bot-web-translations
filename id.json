@@ -1,0 +1,128 @@
+{
+    "achievements": {
+        "showLocked": "Tampilkan pencapaian yang terkunci",
+        "toGoForNextLevel": "Untuk ke pusingan berikut",
+        "thisWasTheLastLevel": "Ini adalah pusingan terakhir",
+        "noAchievementsGainedYet": "Belum ada pencapaian yang dikumpulkan.",
+        "leftToUnlock": "kiri untuk membuka kunci"
+    },
+    "commands": {
+        "title": "Perintah",
+        "prefixCanBeChanged": "Awalan `!` dari perintah ini dapat diubah di halaman 'Server saya' setelah Anda login.",
+        "canUseInDirectMessage": "Anda juga dapat menggunakan sebagian besar perintah ini pada pesan langsung ke RinBot, untuk memainkan sesi pribadi. Poin yang diperoleh dengan cara ini tidak dihitung untuk papan peringkat.",
+        "rounds": {
+            "title": "#### Putaran",
+            "sg": "**Memulai ronde baru**",
+            "sgv": "**Memulai ronde dengan klip video**",
+            "sga": "**Memulai ronde dengan fragmen audio dari lagu pembuka dan penutup**",
+            "sgc": "**Memulai ronde dengan karakter anime**",
+            "sgvn": "**Memulai ronde dengan gambar visual novel**\nHanya filter kesulitan yang berfungsi untuk perintah ini.",
+            "stopg": "**Menghentikan putaran saat ini**\nPerintah ini dibatasi sekali setiap 15 menit per orang, untuk mencegah penyalahgunaan. [Pelanggan mendapatkan pengurangan cooldown](https://patreon.com/rinbot?fan_landing=true)!"
+        },
+        "voiceRounds": {
+            "title": "#### Sesi putaran suara",
+            "sgs": "**Mulai sesi putaran suara**\nIni akan bergabung dengan saluran suara (dengan nama yang sama, atau yang anda ikuti) dan kemudian mulai melakukan putaran.\nPastikan RinBot memiliki izin __Connect__ dan __Speak__ untuk saluran.",
+            "sgsa": "**Mulai sesi putaran suara dengan sampel 20 detik**",
+            "stopgs": "**Menghentikan putaran suara**\nIni akan menghentikan mode putaran suara dan putaran saat ini juga."
+        },
+        "shortcuts": {
+            "year": "**Memulai ronde baru dari tahun `[tahun]` hingga sekarang**\nContoh: `!sg 1999` akan memilih anime dari tahun 1999 hingga dan termasuk tahun ini",
+            "title": "#### Pintasan filter ronde\nIni adalah beberapa filter cepat untuk memulai. Kesulitan diambil secara otomatis berdasarkan poin anda saat ini jika tidak ada yang ditentukan",
+            "genre": "**Memulai ronde baru dengan anime dari genre tertentu**\nGunakan perintah `!genres` untuk daftar semua genre yang tersedia.",
+            "songType": "**Memulai ronde audio baru dengan jenis lagu tertentu**\nJenis lagu dapat berupa: `op` (pembuka), `ed` (penutup), `in` (masukkan lagu) atau `tm` (lagu gambar)",
+            "years": "**Memulai ronde baru dari tahun-tahun antara `[year1]` dan `[year2]`**\nContoh: `!sg 1999 2003` akan memilih anime dari tahun 1999 hingga dan termasuk tahun 2003",
+            "difficulty": "**Memulai ronde baru dengan tingkat kesulitan tertentu**\n1 (mudah), 2 (normal), 3 (susah), 4 (ekstrim), 5 (mimpi buruk), dan 0 (semuanya)\nContoh: `!sg 1` untuk ronde mudah, atau `!sg 4` untuk ronde ekstrim.",
+            "query": "**Memulai ronde baru dengan anime berdasarkan pertanyaan anda sendiri**\n`d:1` untuk menambah kesulitan pada filter\n`g:shounen` untuk menambahkan genre ke filter\n`y:2001-2009` untuk menambahkan rentang tahun ke filter\n`t:op` untuk menambahkan jenis lagu ke filter (hanya untuk putaran `!sga`)\nContoh: `!sg d:1 g:shounen y:2001-2009` atau `!sg g:drama y:2010` atau `!sga t:op`\n_Perhatikan bahwa Anda TIDAK harus menggunakan semua filter dalam petranyaan anda._"
+        },
+        "queries": {
+            "title": "### Pertanyaan\nAnda dapat membuat pertanyaan anda sendiri dengan parameter ini. Mereka akan bekerja untuk `!sg`, `!sgv`, `!sga`, `!sgs` dan `!sgsa`.\n\nMisalnya: `!sg n:5 d:3 y:1995-2005` untuk memulai sesi dengan 5 ronde anime dengan kesulitan sulit antara tahun 1995 dan 2005.",
+            "numberOfRounds": "**Jumlah putaran dalam satu sesi**\nIni akan secara otomatis memulai beberapa putaran dalam satu sesi, dan memberi anda papan peringkat di akhir sesi.\nContoh: `n:2` untuk 2 putaran hingga maksimum 10 putaran dengan `n:10`",
+            "difficulty": "**Filter kesulitan**\n1 (mudah), 2 (normal), 3 (susah), 4 (ekstrim), 5 (mimpi buruk), dan 0 (semuanya)\nContoh: `d:1` untuk putaran mudah, atau `d:4` untuk putaran ekstrem dan `d:0` untuk menonaktifkan filter kesulitan.",
+            "genre": "**Filter genre**\nSaat ini hanya satu genre yang dapat difilter, seperti `g:action` atau `g:horror`.\nGunakan perintah `!genres` untuk daftar semua genre yang tersedia.",
+            "songType": "**Filter jenis lagu** (`!sga`, `!sgs`, dan `!sgsa` saja)\nJenis lagu dapat berupa: `op` (pembuka), `ed` (penutup), `in` (masukkan lagu) atau `tm` (lagu gambar)",
+            "mal": "**Filter berdasarkan MyAnimeList anda**\nContoh: `mal:namapengguna` atau `mal:pengguna1,pengguna2` untuk beberapa daftar pengguna.\nAnda harus menggunakan perintah `!sync` terlebih dahulu, sebelum dapat menggunakan filter.",
+            "imageManipulations": "**Memanipulasi gambar dalam satu putaran** (hanya untuk putaran dengan gambar)\nAnda dapat memilih dari `p` piksel, `i` terbalik, `o` dicat minyak, `g` skala abu-abu, `f` vertikal dibalik.\nContoh: `im:p` atau kombinasi dengan `im:g,o,i`",
+            "year": "**Filter tahun**\nContoh: `y:1999` akan memilih anime dari tahun 1999 hingga dan termasuk tahun ini\n`y:2005-2010` akan memilih antara tahun 2005 dan 2010 (keduanya termasuk)",
+            "anilist": "**Filter berdasarkan AniList anda**\nContoh: `anilist:username` atau `anilist:user1,user2` untuk beberapa daftar pengguna.\nAnda harus menggunakan perintah `!sync` terlebih dahulu, sebelum dapat menggunakan filter.\nAnda juga dapat menggabungkan berbagai jenis daftar anime, seperti ini: `mal:user1,user2 anilist:user3`",
+            "operations": "#### Operasi",
+            "filters": "#### Filter",
+            "aggr": "**Metode agregasi** (hanya pada saat menggunakan filter daftar anime)\nAnda dapat menggunakan `aggr:union` untuk menyatukan daftar anime daripada memotongnya."
+        },
+        "onlyForPatrons": {
+            "description": "**Hanya dapat digunakan oleh [pelanggan]({patreonUrl})** - ini diperkenalkan untuk mengurangi beban server, dan meminta orang membantu membayar tagihan",
+            "tooltip": "Hanya untuk pelanggan"
+        },
+        "points": {
+            "myscore": "**Menunjukkan poin yang anda peroleh dan putaran yang anda mainkan di saluran saat ini**",
+            "alltop": "**Menampilkan pemain top sepanjang masa di server**",
+            "allfastest": "**Menampilkan pemain tercepat sepanjang masa di server**\nHanya ronde dengan kumpulan anime lebih dari 1000 yang dihitung.",
+            "weekfastest": "**Menampilkan pemain tercepat minggu ini di server**\nHanya ronde dengan kumpulan anime lebih dari 1000 yang dihitung.\nMisalnya: ini akan mengecualikan mode mudah/normal dan sebagian besar genre yang lebih kecil.",
+            "title": "#### Poin \nIni akan dihitung ulang setiap jam. Anda dapat [memboost server Anda](https://patreon.com/rinbot?fan_landing=true) untuk pembaruan waktu nyata.",
+            "weektop": "**Menampilkan pemain top minggu ini di server**\nItu menggunakan ISO-8601 minggu dalam setahun dengan Senin sebagai hari pertama dalam seminggu. Perintah akan memberi tahu anda kapan minggu akan diatur ulang."
+        },
+        "ctop": {
+            "title": "#### Papan peringkat khusus",
+            "ctop": "**Menampilkan papan peringkat khusus untuk saluran saat ini**",
+            "endctop": "**Akhiri papan peringkat khusus yang aktif**\nIni akan menghentikan poin yang diakumulasikan, tetapi tidak menghapus papan peringkat.",
+            "startctop": "**Memulai papan peringkat khusus baru untuk saluran**\nAnda perlu menggunakan beberapa saluran untuk memiliki beberapa papan peringkat khusus secara bersamaan.",
+            "resetctop": "**Menyetel ulang papan peringkat khusus**\nIni akan **sepenuhnya menghapus** papan peringkat khusus, tidak akan pernah kembali lagi!\nUntuk menggunakan fitur ini, Anda memerlukan salah satu izin berikut:\n- Administrator\n- Kelola Server\n- Kelola Peran\n- Kelola Saluran\n- Kelola Pesan"
+        },
+        "misc": {
+            "genres": "**Menampilkan semua kemungkinan genre anime**",
+            "credits": "**Menunjukkan kepada anda semua orang dan situs keren yang membantu mewujudkan {botName}.**",
+            "statg": "**Menampilkan beberapa statistik global game**",
+            "sync": "**Mensinkronkan daftar anime anda dari situs lain**\nSaat ini MyAnimeList dan AniList didukung.\nContoh: `!sync mal:kukurin` atau `!sync anilist:kukurin`",
+            "title": "#### Lain-lain"
+        },
+        "management": {
+            "title": "#### Manajemen",
+            "prefix": "**Menunjukkan awalan saat ini dan memungkinkan anda mengubahnya**",
+            "lang": "**Menunjukkan awalan saat ini dan memungkinkan anda mengubahnya**"
+        },
+        "isExperimental": {
+            "tooltip": "Eksperimental",
+            "description": "**Fitur eksperimental** - fitur ini cukup baru, jadi mungkin mengandung beberapa bug [harap laporkan di sini]({supportServerUrl}) jika anda menemukan beberapa"
+        }
+    },
+    "common": {
+        "loading": "Memuat",
+        "botSupporter": "{botName} pendukung",
+        "boostedByBotSupporter": "Didukung oleh pendukung {botName}",
+        "privacyPolicy": "Kebijakan pribadi",
+        "onlyForPatrons": "Hanya untuk pelanggan",
+        "experimentalFeature": "Fitur eksperimental"
+    },
+    "introduction": {
+        "title": "Halaman beranda {botName}",
+        "inviteButton": "Undang {botName} ke server anda",
+        "orSeeHerInAction": "atau anda dapat melihatnya beraksi di",
+        "supportServer": "{botName} server dukungan",
+        "shortDescription": "{botName} menyelenggarakan permainan perselisihan di mana tujuannya adalah untuk menebak judul anime di tangkapan layar, klip video, atau fragmen audio.",
+        "checkTheCommandListAndConfigure": "Periksa daftar perintah untuk daftar lengkap fitur. Anda dapat mengkonfigurasi {botName} setelah masuk ke situs web ini, untuk menyesuaikannya dengan kebutuhan server anda.",
+        "features": "### Fitur\n- **Ribuan** anime dan novel visual tersedia untuk ditebak!\n- Tebak dari tangkapan layar, klip video, atau fragmen audio lagu.\n- **Tangkapan yang dibuat secara acak** tidak akan membuat putaran yang sama.\n- **Sistem penilaian dengan papan peringkat** (sepanjang waktu, mingguan, dan periode khusus anda sendiri)\n- Beberapa **tingkat kesulitan**, sehingga penggemar anime dan novel visual yang baru pun bisa bersenang-senang.\n- Judul dapat ditebak dalam **berbagai bahasa**.\n- …dan banyak lagi!"
+    },
+    "leaderboardTable": {
+        "hidden": "(tersembunyi)",
+        "rank": "Peringkat",
+        "name": "Nama",
+        "rounds": "Ronde",
+        "players": "Pemain",
+        "points": "Poin"
+    },
+    "leaderboard": {
+        "title": "Papan peringkat",
+        "overview": {
+            "title": "Gambaran",
+            "showMore": "Menampilkan lebih banyak",
+            "guildsHiddenByDefault": "Secara default nama server disembunyikan, login sebagai admin server untuk menampilkannya.",
+            "lastWeekWinners": "Pemenang minggu lalu",
+            "thisWeek": "Minggu ini",
+            "allTime": "Sepanjang masa",
+            "thisWeekEndsIn": "Minggu akan berakhir {timeLeft}."
+        },
+        "players": {
+            "title": "Pemain",
+            "description": "Ini adalah daftar pemain top di semua server tempat game ini dimainkan. Putaran pesan langsung tidak dihitung."
+        }
+    }
+}

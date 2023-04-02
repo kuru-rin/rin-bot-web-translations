@@ -1,0 +1,532 @@
+{
+    "navbar": {
+        "home": "Home",
+        "commands": "Commando's",
+        "faq": "Veelgestelde vragen",
+        "changelog": "Logboek",
+        "leaderboard": "Scorebord",
+        "statistics": "Statistieken",
+        "login": "Inloggen",
+        "logout": "Uitloggen",
+        "myProfile": "Mijn profiel",
+        "myServers": "Mijn servers",
+        "status": "Status",
+        "myBoostedServers": "Mijn servers met een boost",
+        "database": "Database",
+        "mySettings": "Mijn instellingen"
+    },
+    "introduction": {
+        "title": "{botName}'s homepage",
+        "shortDescription": "{botName} bevat een discord spel waarin het doel is om de titel van de anime in de afbeelding, videoclip of geluidsfragment te raden.",
+        "inviteButton": "Nodig {botName} uit in jouw server",
+        "orSeeHerInAction": "of je kunt haar in actie zien in de",
+        "checkTheCommandListAndConfigure": "Bekijk de commandolijst voor een volledige lijst van functies. Je kunt {botName} configureren door in te loggen op deze website, zodat ze aan de eisen van jouw server kan voldoen.",
+        "features": "### Functies\n- **Duizenden** anime en visual novels beschikbaar om te raden!\n- Raad schermafbeeldingen, videoclips of audiofragmenten van songs.\n- **Willekeurig gegenereerde afbeeldingen** zorgen ervoor dat elke ronde anders is.\n- **Puntensysteem met scoreborden** (allertijden, wekelijks en je eigen perioden op maat)\n- Meerdere **moeilijkheidsgraden**, zodat ook nieuwe anime en visual novel fans plezier kunnen hebben.\n- Titels kunnen worden geraden in **meerdere talen**.\n- …en nog veel meer!",
+        "supportServer": "{botName} supportserver"
+    },
+    "commands": {
+        "rounds": {
+            "title": "#### Rondes",
+            "sg": "**Start een nieuwe ronde**",
+            "sga": "**Start een ronde met audiofragmenten van opening en ending songs**",
+            "sgvn": "**Start een ronde met afbeeldingen van visual novels**\nVoor dit commando werkt alleen het filter op de moeilijkheidsgraad.",
+            "stopg": "**Stop de huidige ronde**\nDit commando is beperkt tot eenmaal per 15 minuten per persoon om misbruik te voorkomen. [Patrons krijgen een verlaagde wachttijd](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgv": "**Start een ronde met videoclips**",
+            "sgc": "**Start een ronde met animepersonages**",
+            "sb": "**Start een meerkeuzevragen ronde met afbeeldingen**"
+        },
+        "title": "Commando's",
+        "prefixCanBeChanged": "De prefix `!` van deze commando's kan worden veranderd op de 'Mijn servers' pagina nadat je bent ingelogd.",
+        "canUseInDirectMessage": "Je kan de meeste van deze commando's ook gebruiken in een privébericht naar RinBot om een privésessie te spelen. Punten die op deze manier zijn verzameld worden niet meegeteld in de scoreborden.",
+        "shortcuts": {
+            "years": "**Start een nieuwe ronde met jaren tussen `[year1]` en`[year2]`**\nVoorbeeld: `!sg 1999 2003` pakt anime vanaf het jaar 1999 tot en met 2003",
+            "songType": "**Start een nieuwe audioronde met songs van een specifiek type**\nSongtype kan zijn: `op` (openings), `ed` (endings), `in` (insert songs) of `tm` (image songs)",
+            "query": "**Start een nieuwe ronde met anime op basis van jouw zoekopdracht**\n`d:1` om de moeilijkheidsgraad toe te voegen aan het filter\n`g:shounen` om het genre toe te voegen aan het filter\n`y:2001-2009` om de jaartallen toe te voegen aan het filter\n`t:op` om het songtype toe te voegen aan het filter (alleen voor `!sga` rondes)\nBijvoorbeeld: `!sg d:1 g:shounen y:2001-2009` or `!sg g:drama y:2010` or `!sga t:op`\n_Let op dat je NIET al deze filters hoeft te gebruiken in jouw zoekopdrachten._",
+            "title": "#### Verkorte vorm van rondefilters\nDit zijn enkele snelle filters om mee te beginnen. De moeilijkheidsgraad wordt automatisch gekozen op basis van jouw huidige punten als deze niet is opgegeven",
+            "year": "**Start een nieuwe ronde vanaf jaar `[year]` tot nu**\nVoorbeeld: `!sg 1999` pakt anime vanaf het jaar 1999 tot en met het huidige jaar",
+            "difficulty": "**Start een nieuwe ronde met een specifieke moeilijkheidsgraad**\n1 (eenvoudig), 2 (normaal), 3 (moeilijk), 4 (extreem), 5 (nachtmerrie) en 0 (alles)\nVoorbeeld: `!sg 1` voor een eenvoudige ronde, of `!sg 4` voor een extreme ronde.",
+            "genre": "**Start een nieuwe ronde met anime van een specifiek genre**\nGebruik commando `!genres` voor een lijst van alle beschikbare genres."
+        },
+        "queries": {
+            "year": "**Filter het jaar**\nVoorbeeld: `y:1999` pakt anime vanaf het jaar 1999 tot en met het huidige jaar\n`y:2005-2010` pakt anime vanaf het jaar 2005 tot en met 2010",
+            "difficulty": "**Filteren van moeilijkheidsgraad**\n1 (eenvoudig), 2 (normaal), 3 (moeilijk), 4 (extreem), 5 (nachtmerrie) en 0 (alles)\nVoorbeeld: `d:1` voor een eenvoudige ronde, of `d:4` voor een extreme ronde en `d:0` om het filter op moeilijkheidsgraad uit te zetten.",
+            "anilist": "**Filter gebaseerd op jouw AniList**\nVoorbeeld: `anilist:gebruikersnaam` of `anilist:gebruiker1,gebruiker2` voor meerdere gebruikerslijsten.\nJe moet eerst het commando `!sync` hebben uitgevoerd voordat je het filter kan gebruiken.\nJe kan ook meerdere soorten animelijsten combineren, zoals: `mal:gebruiker1,gebruiker2 anilist:gebruiker3`",
+            "title": "### Zoekopdrachten\nJe kan je eigen zoekopdrachten maken met deze parameters. Deze werken voor `!sg`, `!sgv`, `!sga`, `!sgs` and `!sgsa`.\n\nBijvoorbeeld: `!sg n:5 d:3 y:1995-2005` start een sessie met 5 animerondes op moeilijkheidsgraad moeilijk tussen de jaren 1995 en 2005.",
+            "numberOfRounds": "**Het aantal rondes in een sessie**\nHiermee starten automatisch meerdere rondes in één sessie, en krijg je een scorebord aan het einde van de sessie.\nVoorbeeld: `n:2` voor 2 rondes en `n:10` voor het maximale aantal van 10 rondes",
+            "imageManipulations": "**Manipuleren van afbeeldingen in een ronde** (alleen voor rondes met afbeeldingen)\nJe kan kiezen uit `p` korrelig, `i` tegenovergestelde kleuren, `o` olieverfschilderij, `g` zwartwit, `f` ondersteboven.\nVoorbeeld: `im:p` of een combinatie met `im:g,o,i`",
+            "genre": "**Filter het genre**\nOp dit moment kan alleen gefilterd worden op één genre, zoals `g:action` of `g:horror`.\nGebruik commando `!genres` voor een lijst van alle beschikbare genres.",
+            "songType": "**Filter het songtype** (alleen voor `!sga`, `!sgs` en `!sgsa`)\nSongtype kan zijn: `op` (openings), `ed` (endings), `in` (insert songs) of `tm` (image songs)",
+            "mal": "**Filter op basis van jouw MyAnimeList**\nVoorbeeld: `mal:gebruikersnaam` of `mal:gebruiker1,gebruiker2` voor meerdere gebruikerslijsten.\nJe moet eerst het commando `!sync` hebben uitgevoerd voordat je het filter kan gebruiken.",
+            "aggr": "**Manier van samenvoeging** (alleen bij filters op animelijst)\nJe kan `aggr:union` gebruiken om animelijsten volledig samen te voegen in plaats van alleen de gemeenschappelijke titels.",
+            "operations": "#### Handelingen",
+            "filters": "#### Filters"
+        },
+        "voiceRounds": {
+            "sgs": "**Start een spraakkanaalsessie**\nHiermee verbindt RinBot met een spraakkanaal (met dezelfde naam, of degene waar jij in zit) en start daarna de rondes.\nLet erop dat RinBot de machtigingen __Verbinden__ en __Spreken__ nodig heeft voor het kanaal.",
+            "stopgs": "**Stop spraakkanaalsessie**\nHiermee stopt de spraakkanaalsessie en ook de huidige ronde.",
+            "title": "#### Spraakkanaalsessies",
+            "sgsa": "**Start een spraakkanaalsessie met fragmenten**",
+            "sbsa": "**Start een spraakkanaal meerkeuzevragensessie met fragmenten**"
+        },
+        "points": {
+            "title": "#### Punten\nDeze worden elk uur opnieuw berekend. Je kan [jouw server boosten](https://patreon.com/rinbot?fan_landing=true) voor continue updates.",
+            "myscore": "**Toon de punten die je behaald hebt en rondes die je gespeeld hebt in het huidige kanaal**",
+            "weektop": "**Toon de beste spelers van de huidige week in de server**\nDit gebruikt de ISO-8601 weeknotatie met maandag als eerste dag in de week. Het commando vertelt je wanneer de week zal worden gereset.",
+            "weekfastest": "**Toon de snelste spelers van de huidige week in de server**\nAlleen rondes met een animeselectie van meer dan 1000 worden meegerekend.\nDit zal bijvoorbeeld eenvoudige/normale speelmodussen en de meeste kleinere genres niet meerekenen.",
+            "allfastest": "**Toon de snelste spelers allertijden in de server**\nAlleen rondes met een animeselectie van meer dan 1000 worden meegerekend.",
+            "alltop": "**Toon de beste spelers allertijden in de server**",
+            "serverscore": "** Toont de score van de hele server**"
+        },
+        "ctop": {
+            "title": "#### Scoreborden op maat",
+            "ctop": "**Toon het scorebord op maat voor het huidige kanaal**",
+            "startctop": "**Start een nieuw scorebord op maat voor het huidige kanaal**\nJe moet meerdere kanalen gebruiken om meerdere scoreborden op maat tegelijkertijd te kunnen gebruiken.",
+            "endctop": "**Beëindig het actieve scorebord op maat**\nHiermee stopt de puntentelling, maar wordt het scorebord niet verwijderd.",
+            "resetctop": "**Reset het scorebord op maat**\nHiermee wordt het scorebord op maat **volledig verwijderd** en zal nooit meer terugkomen!\nOm deze functie te gebruiken moet je een van de volgende machtigingen hebben:\n- Beheerder\n- Server beheren\n- Rollen beheren\n- Kanalen beheren\n- Berichten beheren"
+        },
+        "misc": {
+            "title": "#### Overige",
+            "genres": "**Toon alle mogelijke animegenres**",
+            "statg": "**Toon enkele globale statistieken van het spel**",
+            "sync": "**Synchroniseer jouw animelijst van andere sites**\nOp dit moment worden MyAnimeList en AniList ondersteund.",
+            "credits": "**Toon alle coole mensen en websites die geholpen hebben om {botName} mogelijk te maken.**",
+            "mydifficulty": "**Hiermee kun je de standaard moeilijkheidsgraad instellen voor alle rondes die je start.**"
+        },
+        "management": {
+            "title": "#### Beheer",
+            "prefix": "**Toon de huidige prefix en geef de optie om te wijzigen**",
+            "lang": "**Toon de huidige taal en geef de optie om te wijzigen**"
+        },
+        "isExperimental": {
+            "description": "**Experimentele functie** - deze functie is vrij nieuw, dus kan bugs bevatten [rapporteer ze alsjeblieft hier]({supportServerUrl}) als je ze vindt",
+            "tooltip": "Experimenteel"
+        },
+        "onlyForPatrons": {
+            "description": "**Kan alleen gebruikt worden door [donateurs]({patreonUrl})** - dit is zo gekomen om het servergebruik te verminderen en om mensen de rekening helpen te betalen",
+            "tooltip": "Alleen voor donateurs"
+        }
+    },
+    "achievements": {
+        "leftToUnlock": "tot ontgrendeling",
+        "toGoForNextLevel": "tot het volgende level",
+        "showLocked": "Toon vergrendelde prestaties",
+        "thisWasTheLastLevel": "Dit was het laatste level",
+        "noAchievementsGainedYet": "Nog geen prestaties verzameld."
+    },
+    "common": {
+        "experimentalFeature": "Experimentele functie",
+        "botSupporter": "{botName} supporter",
+        "boostedByBotSupporter": "Boost gegeven door een {botName} supporter",
+        "loading": "Laden",
+        "privacyPolicy": "Privacybeleid",
+        "onlyForPatrons": "Alleen voor patrons",
+        "error": "Fout",
+        "success": "Succes",
+        "termsOfService": "Voorwaarden van de dienst"
+    },
+    "leaderboardTable": {
+        "hidden": "(verborgen)",
+        "points": "Punten",
+        "players": "Spelers",
+        "rounds": "Rondes",
+        "name": "Naam",
+        "rank": "Rang"
+    },
+    "needHelp": {
+        "supportServerIntroduction": "Je kan in de officiële supportserver om hulp vragen, feedback geven, nieuwe functies aanvragen of gewoon Raad de Anime spelen.",
+        "joinTheSupportServer": "Kom naar de supportserver",
+        "encounterProblemsContact": "Als je ooit problemen ervaart, neem dan daar contact op met Kururin.",
+        "needHelp": "Hulp nodig?"
+    },
+    "leaderboard": {
+        "overview": {
+            "title": "Overzicht",
+            "showMore": "Toon meer",
+            "guildsHiddenByDefault": "Standaard zijn servernamen verborgen, login als serverbeheerder om de naam te tonen.",
+            "lastWeekWinners": "Winnaars van vorige week",
+            "thisWeek": "Deze week",
+            "allTime": "Allertijden",
+            "thisWeekEndsIn": "De week zal {timeLeft} eindigen."
+        },
+        "players": {
+            "title": "Spelers",
+            "description": "Dit is een lijst van de beste spelers van alle servers samen waar het spel gespeeld wordt. Privéberichtronden worden niet meegeteld."
+        },
+        "guilds": {
+            "title": "Servers",
+            "description": "Dit is een lijst van de beste servers waar het spel gespeeld wordt.\nStandaard wordt jouw servernaam verborgen. Je kan kiezen om hem te tonen in de serverconfiguratie nadat je bent ingelogd."
+        },
+        "achievements": {
+            "title": "Prestaties",
+            "description": "Dit is van de spelers die de meeste prestatiepunten hebben verzameld."
+        },
+        "title": "Scorebord"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Je bent uitgelogd!"
+    },
+    "myBoostedServers": {
+        "boostedServers": "# Servers met een boost\nJe bent een niveau {patronTier} donateur. Je kan nog {boostsLeft} server(s) boosten",
+        "addServer": "Voeg een server toe",
+        "remove": "Boost verwijderen",
+        "noServersBoosted": "Geen servers hebben een boost gekregen.",
+        "searchForServer": "Zoek naar een server",
+        "pickServersToBoost": "Kies servers om te boosten",
+        "addToBoosted": "Voeg boost toe",
+        "alreadyAdded": "Al toegevoegd",
+        "noServersFound": "Geen servers gevonden.",
+        "savedChanges": "Wijzigingen succesvol opgeslagen",
+        "couldNotSaveChanges": "Wijzigingen konden niet opgeslagen worden",
+        "youCannotBoostServers": "# Je kan geen servers boosten.\nJe moet tenminste een niveau 2 donateur zijn om een server te boosten.\nOm dit te kunnen moet je eerst je Discord account verbinden met Patreon en daarna [voor tenminste niveau 2 op RinBots Patreon-pagina inschrijven]({patreonLink})."
+    },
+    "myServers": {
+        "title": "Mijn servers",
+        "description": "Je hebt de machtiging **Server Beheren** nodig om {botName} te kunnen configureren voor jouw server.",
+        "boostedServer": "Server met een boost",
+        "hasBot": "{botName} is in deze server",
+        "addBot": "Voeg {botName} toe",
+        "notHasBot": "{botName} is niet in deze server",
+        "couldNotRetrieveServers": "Kon servers niet ophalen",
+        "configure": "Configureer",
+        "details": "Details",
+        "showAll": "Toon al mijn servers",
+        "searchForServer": "Zoek een server"
+    },
+    "myServerDetails": {
+        "backToMyServers": "Terug naar mijn servers",
+        "channels": "Kanalen",
+        "server": "Server",
+        "leaderboard": "Scorebord",
+        "players": "Spelers",
+        "onlyForManagement": "Aleen voor serverbeheer"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "winnerRoleConfigs": {
+                "undo": "Ongedaan maken",
+                "role": "Rol",
+                "rank": "Rang",
+                "type": "Soort",
+                "label": "Winnaarsrollen",
+                "description": "Hier kun je roltoewijzingen instellen voor winnaars van de scoreborden.",
+                "permissionInfo": "Let erop dat {botName} de machtiging 'Beheer Rollen' heeft en deze boven de rol staat die je haar wil laten toewijzen.",
+                "reachedMaximumAssignments": "Je hebt het maximale aantal van {maxWinnerRoleConfigs} roltoewijzingen bereikt.",
+                "boostedServersGetMoreAssignments": "[Servers met een boost]({patreonLink}) kunnen maximaal {patronWinnerRoleConfigs} roltoewijzingen hebben.",
+                "add": "Voeg nieuwe roltoewijzing toe",
+                "warnManagedRole": "Let op dat de rollen volledig beheerd worden door {botName}, dus alle leden van een rol die geen winnaars zijn zullen worden verwijderd.",
+                "saveChanges": "Wijzigingen opslaan",
+                "allTime": "Allertijden",
+                "weekly": "Wekelijks",
+                "isWeekly": "Allertijden/Wekelijks",
+                "points": "Punten",
+                "time": "Tijd",
+                "title": "Rolconfiguratie"
+            },
+            "titlePreferences": {
+                "mainTitle": {
+                    "description": "Dit is de volgorde waarin de hoofdtitels worden gekozen. De hoofdtitel wordt gebruikt voor de hint en de animesamenvatting aan het einde van een ronde. Als geen hoofdtitel kan worden gevonden op basis van jouw voorkeuren, dan wordt teruggevallen op de standaardinstellingen.",
+                    "source": "Bron",
+                    "type": "Soort",
+                    "language": "Taal",
+                    "label": "Hoofdtitel"
+                },
+                "setToDefaults": "Stel standaardinstellingen in",
+                "percentageWrong": {
+                    "label": "Percentage verkeerd",
+                    "description": "{percentage}% - lager betekent minder vergevingsgezind op typfouten in gokken"
+                },
+                "titleSources": {
+                    "any": "(alle)"
+                },
+                "titleTypes": {
+                    "label": "Soorten titels",
+                    "main": "Hoofdtitels",
+                    "official": "Officiële titels",
+                    "short": "Korte titels",
+                    "synonym": "Synoniemen",
+                    "card": "Kaarttitels",
+                    "kana": "Kana uitspraken",
+                    "any": "(elke)"
+                },
+                "titleLanguages": {
+                    "label": "Talen van titels",
+                    "selectAll": "Selecteer alles",
+                    "selectNone": "Selecteer niets"
+                },
+                "description": "##### Titelvoorkeuren\nHier kun je jouw voorkeuren in de talen van titels configureren die zouden moeten worden toegestaan als correcte gokken.\n\nAls jouw voorkeuren ervoor zorgen dat er geen titels overblijven dan wordt er teruggevallen op de standaardinstellingen."
+            },
+            "title": "Raad de Anime",
+            "animeSummaryLink": {
+                "label": "Animesamenvattingslink",
+                "description": "Dit verandert alleen de URL en er kan worden teruggevallen op de RinBot website voor sommige anime."
+            },
+            "disableHints": {
+                "description": "Als dit is aangevinkt dan zal de game geen hints tonen in alle ronden.",
+                "label": "Hints",
+                "checkbox": "Hints uitzetten"
+            },
+            "hideAlternativeTitles": {
+                "description": "Het aanvinken hiervan verbergt de lijst van alternatieve titels in de anime-samenvatting.",
+                "label": "Alternatieve titels",
+                "checkbox": "Verberg alternatieve titels"
+            }
+        },
+        "general": {
+            "title": "Algemeen",
+            "prefix": {
+                "label": "Commandoprefix",
+                "invalid": "Dit is een verplicht veld en moet tussen de 1 en 5 karakters zijn.",
+                "description": "Deze karakters zullen voor commando's worden gezet in plaats van de standaard: !"
+            },
+            "language": {
+                "label": "Taal",
+                "description": "Stel de taal in voor RinBot in Discord. Dit heeft geen invloed op de animetitels."
+            },
+            "showInLeaderboards": {
+                "description": "Wanneer dit aan staat wordt jouw servernaam getoond in de serverscoreborden. Het kan een uur duren voordat deze wijziging is doorgevoerd.",
+                "label": "Toon op wereldwijde scoreborden",
+                "checkbox": "Toon servernaam op de wereldwijde scoreborden op deze site"
+            },
+            "inviteCode": {
+                "description": "Uitnodigingscode die wordt gebruikt voor de URL van jouw servernaam op de scoreborden",
+                "label": "Uitnodigingscode",
+                "invalid": "Deze uitnodigingscode lijkt ongeldig te zijn"
+            }
+        }
+    },
+    "channelConfiguration": {
+        "boostedServersGetMore": "[Servers met een boost]({patreonLink}) kunnen maximaal {patronMaxConfigs} kanaalconfiguraties hebben.",
+        "startGameOnIdle": {
+            "checkbox": "Start een nieuwe ronde als het kanaal inactief is",
+            "minutesIdle": "Minuten inactief",
+            "boostedServersCanHaveLess": "[Servers met een boost]({patreonLink}) kunnen &#60; 60 minuten hebben."
+        },
+        "saveChanges": "Wijzigingen opslaan",
+        "undo": "Ongedaan maken",
+        "savedChangesSuccessfully": "Wijzigingen succesvol opgeslagen",
+        "couldNotSaveChanges": "Wijzigingen konden niet opgeslagen worden",
+        "description": "Hier kun je een paar specifieke kanaalopties configureren. Deze zouden op een later moment kunnen worden uitgebreid met meer serverconfiguratieopties.",
+        "add": "Kanaal toevoegen",
+        "noChannelsConfigured": "Op dit moment zijn geen kanalen geconfigureerd. Klik op de knop 'Kanaal toevoegen' om te beginnen.",
+        "maximumReached": "Je hebt het maximale aantal van {maxChannelConfigs} kanaalconfiguraties bereikt.",
+        "useForVoiceRounds": {
+            "checkbox": "Gebruik alleen dit spraakkanaal voor spraakronden (slechts één kan actief zijn)"
+        },
+        "channelAccessControlEnabled": {
+            "checkbox": "Kanaal toegangscontrole inschakelen",
+            "description": "Dit zorgt ervoor dat {botName} naar geen enkel commando luistert, tenzij het specifiek per kanaal is toegestaan.",
+            "label": "Toegangscontrole"
+        },
+        "stage": {
+            "topic": {
+                "label": "Onderwerp van podium"
+            }
+        }
+    },
+    "supportUs": {
+        "supportThroughPatreon": "Als je wil helpen om de serverkosten te betalen dan kun je een willekeurig bedrag doneren met Patreon. Je krijgt er ook enkele voordelen voor terug!",
+        "goal": "{completedPercentage}% van de ${amount} maandelijkse operationele kosten zijn gefinancierd!",
+        "supportThroughKoFi": "Je zou ook kunnen overwegen om te betalen voor een kopje koffie via ko-fi-.com. Echter geeft dit geen enkele voordelen behalve mijn uiterste waardering!",
+        "translations": "Vertalingen",
+        "helpWithTranslating": "Je kan helpen om huidige vertalingen te verbeteren of nieuwe talen toe te voegen met crowd-vertaling!",
+        "joinTheTranslationsChannel": "Kom naar het kanaal `#translations` in [de supportserver]({supportServerUrl}) om hulp te krijgen en vertalingen te bespreken.",
+        "signInWithAuth0": "Log in met Auth0 en daarna 'Ga verder met Discord'.",
+        "votingAndReviewing": "Stemmen en recenseren",
+        "supportThroughVoting": "Het helpt altijd om regelmatig te stemmen en een recensie achter te laten op deze websites."
+    },
+    "userProfile": {
+        "roundPoints": "Rondepunten",
+        "achievementPoints": "Prestatiepunten",
+        "statistics": "Statistieken",
+        "allTimeResults": "Resultaten allertijden",
+        "rank": "Rang",
+        "points": "Punten",
+        "rounds": "Rondes",
+        "noResultsYet": "Nog geen resultaten.",
+        "trophiesWon": "Gewonnen trofeeën",
+        "noTrophiesWon": "Nog geen trofeeën gewonnen.",
+        "week": "Week",
+        "achievements": "Prestaties"
+    },
+    "notLoggedIn": "Je moet ingelogd zijn om deze pagina te kunnen bekijken.",
+    "pageNotFound": "Pagina bestaat niet",
+    "status": {
+        "title": "Status",
+        "description": "Hier kun je de status vinden van sommige diensten die {botName} haar werk laten doen. Deze pagina ververst automatisch elke 10 seconden.",
+        "operational": "Operationeel",
+        "partialOutage": "Gedeeltelijke uitval",
+        "majorOutage": "Grotendeelse uitval",
+        "coreServices": "Kerndiensten",
+        "discordShards": "Discord-shards",
+        "databaseServices": "Databasediensten",
+        "website": {
+            "name": "Website",
+            "tooltip": "Je zou hier niet zijn als deze rood was"
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "Levert dynamische inhoud en botconfiguratie op de website"
+        },
+        "worker": {
+            "name": "Werker",
+            "tooltip": "Levert updates van het scorebord, score en profiel"
+        },
+        "putYourServerId": "Zet hier je servernummer om jouw shard te vinden",
+        "couldNotGetShardStatuses": "Shard-statussen konden niet opgehaald worden van de API",
+        "animeDatabaseApi": {
+            "name": "Animedatabase API",
+            "tooltip": "Levert animeronden - !sg, !sgv en !sga"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "Visual novel-database API",
+            "tooltip": "Levert visual novel-ronden - !sgvn"
+        },
+        "howToFindYourServerId": "Als je niet weet hoe je jouw servernummer kan vinden, lees dan alsjeblieft [dit ondersteuningartikel](https://support.discord.com/hc/nl/articles/206346498-Hoe-vind-ik-mijn-server-ID-).",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Zorgt voor dynamische inhoud (zoals de database) op de website"
+        }
+    },
+    "weekPicker": {
+        "weekly": "Wekelijks",
+        "allTime": "Allertijden",
+        "year": "Jaar",
+        "week": "Week"
+    },
+    "main": {
+        "isBetaSite": "Je bevindt je nu op de {botName} beta website. Dit is alleen voor testdoeleinden. [Klik hier om de echte website te bezoeken]({productionUrl}).",
+        "isAinaBotSite": "Je bent nu op AinaBots homepagina. Dit is een discordbot met alleen functies voor volwassenen. [Klik hier om naar RinBots homepagina te gaan]({productionUrl}), die normale anime heeft."
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "winners": "Winnaars",
+            "total": "Totaal",
+            "lost": "Verloren",
+            "won": "Gewonnen",
+            "title": "Ronden per dag"
+        },
+        "description": "Het aantal ronden dat de afgelopen 30 dagen per dag is gepeeld.",
+        "title": "Statistieken"
+    },
+    "playerTable": {
+        "username": "Naam"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Vind een speler"
+    },
+    "channelAccessControlConfig": {
+        "allCommands": "(alle commando's)",
+        "maximumReached": "Je hebt het maximum aantal toegangscontroles bereikt.",
+        "commands": "Commando's",
+        "roles": "Rollen",
+        "everyoneRole": "@everyone",
+        "title": "Toegangscontrole",
+        "description": "Regels voor toegangscontrole worden van boven naar beneden verwerkt.  \nAlles wordt standaard geweigerd, dus je zal op zijn minst één toegestane regel moeten maken.",
+        "addRule": "Voeg een regel toe"
+    },
+    "animeSorts": {
+        "MAIN_TITLE_ASC": "Hoofdtitel (oplopend)",
+        "MAIN_TITLE_DESC": "Hoofdtitel (aflopend)",
+        "YEAR_ASC": "Jaar (oplopend)",
+        "YEAR_DESC": "Jaar (aflopend)",
+        "ROUNDS_WON_ASC": "Gewonnen rondes (oplopend)",
+        "ROUNDS_WON_DESC": "Gewonnen rondes (aflopend)",
+        "ROUNDS_LOST_ASC": "Verloren rondes (oplopend)",
+        "ROUNDS_LOST_DESC": "Verloren rondes (aflopend)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Gewonnen rondes % (oplopend)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Gewonnen rondes (aflopend)"
+    },
+    "genres": {
+        "SEINEN": "Seinen",
+        "JOSEI": "Josei",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "ISEKAI": "Isekai",
+        "SHOUNEN": "Shounen",
+        "SUPER_POWER": "Superkracht",
+        "HAREM": "Harem",
+        "SLICE_OF_LIFE": "Slice of life",
+        "SUPERNATURAL": "Bovennatuurlijk",
+        "MILITARY": "Leger",
+        "POLICE": "Politie",
+        "PSYCHOLOGICAL": "Psychologisch",
+        "THRILLER": "Thriller",
+        "ACTION": "Actie",
+        "ADVENTURE": "Avontuur",
+        "MARTIAL_ARTS": "Vechtsport",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SPORTS": "Sport",
+        "DEMENTIA": "Dementie",
+        "DEMONS": "Demonen",
+        "MYSTERY": "Mysterie",
+        "DRAMA": "Drama",
+        "ECCHI": "Ecchi",
+        "PARODY": "Parodie",
+        "SAMURAI": "Samoerai",
+        "ROMANCE": "Romantisch",
+        "MECHA": "Mecha",
+        "MUSIC": "Muziek",
+        "CARS": "Auto's",
+        "COMEDY": "Comedy",
+        "FANTASY": "Fantasie",
+        "GAME": "Spel",
+        "HISTORICAL": "Historisch",
+        "HORROR": "Horror",
+        "KIDS": "Kinderen",
+        "MAGIC": "Magie",
+        "SCHOOL": "School",
+        "SCI_FI": "Sciencefiction",
+        "SHOUJO": "Shoujo",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SPACE": "Ruimte",
+        "VAMPIRE": "Vampier"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Personages"
+        },
+        "visualNovels": {
+            "title": "Visual novels"
+        }
+    },
+    "difficulties": {
+        "EXTREME": "Extreem",
+        "NIGHTMARE": "Nachtmerrie",
+        "HARD": "Moeilijk",
+        "EASY": "Eenvoudig",
+        "NORMAL": "Normaal",
+        "UNKNOWN": "Onbekend"
+    },
+    "nsfw": {
+        "UNKNOWN": "Onbekend",
+        "SAFE": "Veilig",
+        "QUESTIONABLE": "Bedenkelijk",
+        "NOT_SAFE": "Onveilig",
+        "DANGEROUS": "Gevaarlijk"
+    },
+    "reportAnime": {
+        "submitted": "Jouw melding is succesvol ingediend.",
+        "couldNotSubmit": "Jouw melding kon niet worden ingediend."
+    },
+    "validation": {
+        "required": "Dit veld is verplicht",
+        "maxLength": "Maximale lengte is {max} tekens, maar jij schreef {length} tekens."
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "guildProfile": {
+        "join": "Word lid van deze server"
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "tooltip": "Vluchtig commando",
+            "description": "**Vluchtig commando** - de berichten die op deze commando's volgen zullen alleen voor jou zichtbaar zijn."
+        },
+        "title": "Slash commando's",
+        "description": "Om de slash commando's te kunnen gebruiken moet je misschien {botName} opnieuw uitnodigen en ervoor zorgen dat ze de **Creëer commando's in een server** scope heeft.  \nJe kunt de uitnodigknop gebruiken op de home pagina, of door te klikken op {botName} vanuit Discord.  \n\nZorg ervoor dat jouw gebruikers de toestemming **Toepassingscommando's gebruiken** hebben, of zij zullen's helemaal geen slash-commando's kunnen gebruiken."
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "achievements": {
+        "showLocked": "Kilitli başarımları göster",
+        "noAchievementsGainedYet": "Henüz hiçbir başarım toplanmadı."
+    },
+    "commands": {
+        "title": "Komutlar",
+        "prefixCanBeChanged": "Komutların prefixi `!`dir. Giriş yaptıktan sonra 'Sunucularım' kısmından değiştirilebilir.",
+        "shortcuts": {
+            "years": "**``[year1]` ve `[year2]` arasında çıkan yapımlarla bir tur başlatır.**\nÖrneğin: `!sg 1999 2003` ile 1999 yılından 2003 yılına kadar olan animelerden birisini seçer"
+        },
+        "rounds": {
+            "sg": "**Yeni bir tur başlatır**",
+            "sgv": "**Video klipleri ile bir tur başlatır**",
+            "sga": "**Opening ve Ending şarkılarından oluşan ses parçaları ile bir tur başlatır.**",
+            "sgc": "**Anime karakterleri ile bir tur başlatır**",
+            "sgvn": "**Görsel roman resimleriyle bir tur başlatır**\nBu komut için sadece zorluk filtresi çalışır.",
+            "sb": "**Resimlerle çoktan seçmeli (butonlu) bir tur başlatır**",
+            "stopg": "**Mevcut turu durdurur**\nBu komut kötüye kullanıma engel olmak için her kullanıcı başına 15 dakikada bir kullanılabilir olarak kısıtlanmıştır. [Bağışçılar azaltılmış bekleme süresine sahiptir](https://patreon.com/rinbot?fan_landing=true)!"
+        },
+        "voiceRounds": {
+            "title": "#### Sesli tur seansları"
+        }
+    },
+    "introduction": {
+        "features": "### Özellikler\n- **Binlerce** tahmin edilebilir anime ve görsel novel!\n- Ekran görüntüleri, video klipleri veya ses dosyalarını kullanarak tahmin yapın.\n- **Rastgele alınmış ekran alıntılarıyla** bir tur asla diğerinin aynısı olmaz.\n- **Skor sistemiyle oluşturulan sıralamalar** (tüm zamanlar, haftalık ya da kendi istediğiniz zaman aralığı)\n- Çoklu **zorluk seviyeleri** sayesinde yeni anime ve görsel novel fanları dahi eğlenebilir.\n- Başlıklar **birden fazla dille** tahmin edilebilir.\n- ...ve çok daha fazlası!"
+    }
+}

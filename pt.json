@@ -1,0 +1,55 @@
+{
+    "commands": {
+        "shortcuts": {
+            "songType": "**Começar uma nova rodada com musicas de um tipo especifico**  \nOs tipos de musicas são: `op` (openings), `ed` (endings), `in` (insert songs) ou `tm` (image songs)",
+            "genre": "**Começar uma nova rodada com o gênero especifico de anime**  \nUse o comando `!genres` para listar todos os gêneros disponíveis.",
+            "difficulty": "**Começar uma nova rodada com uma dificuldade específica**  \n1 (fácil), 2 (normal), 3 (difícil), 4 (extremo), 5 (pesadelo) e 0 (aleatório)  \nExample: `!sg 1` para uma rodada no modo fácil, ou `!sg 4` para um round no modo extremo.",
+            "years": "**Começar uma nova rodada entre os ano `[ano1}` e`[ano2]`**\nExemplo: `!sg 1999 2003` será selecionado animes do ano de 1999 até 2003",
+            "year": "**Começar uma nova rodada do ano `[year]` até os dias atuais**  \nExemplo: `!sg 1999` selecionar animes dos anos de 1999 até o ano atual",
+            "title": "#### Filtrar atalhos na rodada\nEstes são alguns filtros rápidos para começar. A dificuldade é escolhida automaticamente com base em seus pontos atuais, se nenhum for especificado"
+        },
+        "voiceRounds": {
+            "stopgs": "**Parar a rodada d voz**  \nIsso interromperá o modo de rodadas de voz e a rodada atual também.",
+            "sgsa": "**Inicie uma sessão de voz com trechos de 20 segundos**",
+            "sgs": "**Começar um seção de rodada de voz**  \nIsso irá entrar em um canal de voz (com o mesmo nome, ou aquele em que você está) e então começara as rodadas.\nCertifique-se de que RinBot tenha permissões para __Conectar__ e __Falar__ no canal de voz selecionado.",
+            "title": "#### Sessões de rodadas de voz"
+        },
+        "rounds": {
+            "stopg": "**Stops the current round**  \nEste comando é limitado a 15 minutos por pessoa, para prevenir o abuso do comando. [Usuários premium ganham uma redução do cooldown](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgvn": "**Começar a rodada com imagem de visual novels**  \nApenas o filtro de dificuldade funciona para este comando.",
+            "sgc": "**Começar uma nova rodada com personagens de animes**",
+            "sga": "**Começar a rodada com algumas partes de opening e endings de diversos animes**",
+            "sgv": "**Começar a rodada com clipes de vídeos**",
+            "sg": "**Começar uma nova rodada**",
+            "title": "#### Rodadas",
+            "sb": "**Começa um round de múltipla escolha com imagens**"
+        },
+        "canUseInDirectMessage": "Você também pode usar a maioria desses comandos na DM do RinBot, a fim de ter um jogo privado. Os pontos ganhos desta forma não são contabilizados para as tabelas de classificação.",
+        "prefixCanBeChanged": "O prefixo `!` desses comandos podem ser alterados na página 'Meus servidores' após o login.",
+        "title": "Comandos",
+        "points": {
+            "alltop": "**Mostra os melhores jogadores de todos os tempos no servidor**",
+            "myscore": "**Mostra os pontos que você ganhou e rounds que jogou nesse canal**",
+            "allfastest": "**Mostra os jogadores mais rápidos de todos os tempos do servidor** \nApenas rounds com uma coleção de anime de mais de 100 são contabilizadas.",
+            "weekfastest": "**Mostra os jogadores mais rápidos dessa semana no servidor** \nApenas rounds com uma coleção de anime de mais de 100 são contabilizadas. \nPor exemplo: isso vai excluir os modos fácil/normal e a maioria dos gêneros menores."
+        },
+        "queries": {
+            "difficulty": "**Seleciona a Dificuldade**\n1 (fácil), 2 (normal), 3 (difícil), 4 (extrema), 5 (pesadelo) e 0 (todas)\nExemplo: `d:1` para uma rodada fácil, ou `d:4`Para uma rodada extrema e `d:0`para desabilitar os filtros de dificuldade.",
+            "genre": "**Filtra o gênero**\nAtualmente apenas um gênero pode ser usado, como `g:action`ou`g:horror`\nUse o commando `!genres` para uma lista com os gêneros disponiveis.",
+            "mal": "**Seleciona com base na sua MyAnimeList**\nExemplo: `mal:usuario` ou `mal:usuario1,usuario2`para multiplas listas de usuario\nVocê precisa ter usando o comando `!sync` primeiramente, antes de usar o filtro.",
+            "filters": "#### Filtros",
+            "operations": "#### Operações"
+        },
+        "ctop": {
+            "title": "#### Placar customizado",
+            "ctop": "**Mostra o placar customizado para o canal atual**"
+        }
+    },
+    "achievements": {
+        "noAchievementsGainedYet": "Nenhuma conquista foi coletada ainda.",
+        "thisWasTheLastLevel": "Este foi o ultimo nível",
+        "toGoForNextLevel": "ir para o próximo nível",
+        "leftToUnlock": "restantes para desbloquear",
+        "showLocked": "Mostras as conquistas não desbloqueadas"
+    }
+}
