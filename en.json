@@ -563,5 +563,13 @@
   },
   "guildProfile": {
     "join": "Join this server"
+  },
+  "mySettings": {
+    "privacy": {
+      "hideNameGlobally": {
+        "checkbox": "Hide my name globally",
+        "description": "Enabling this will set your name as '(hidden)' on all leaderboards and profiles within the website.\n  It may take up to a day for your change to be propagated through the system."
+      }
+    }
   }
 }
