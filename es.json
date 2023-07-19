@@ -515,7 +515,7 @@
         "SHOUNEN_AI": "Shounen Ai",
         "SPACE": "Espacio",
         "SPORTS": "Deportes",
-        "SUPER_POWER": "Superpoder",
+        "SUPER_POWER": "Superpoderes",
         "VAMPIRE": "Vampiro",
         "HAREM": "Harem",
         "SLICE_OF_LIFE": "Recuento de la vida",
@@ -526,7 +526,7 @@
         "THRILLER": "Thriller",
         "SEINEN": "Seinen",
         "JOSEI": "Josei",
-        "MAHOU_SHOUJO": "Chica Mágica",
+        "MAHOU_SHOUJO": "Chicas Mágicas",
         "ISEKAI": "Otro mundo"
     },
     "animeListTypes": {
@@ -563,5 +563,13 @@
         },
         "title": "Comandos de barra diagonal (slash)",
         "description": "Para usar los comandos de barra diagonal (slash), es posible que tengas que volver a invitar a {botName} y asegurarte de que pueda **Crear comandos en un servidor**.\nPuedes usar el botón de invitación en la página de inicio o haciendo clic en {botName} desde Discord.\n\nAsegúrese de que sus usuarios tengan el permiso **Usar comandos de aplicaciones**, o no podrán usar ningún comando de barra diagonal."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Ocultar mi nombre globalmente",
+                "description": "Al activar esto, se establecerá tu nombre como '(oculto)' en todas las clasificaciones y perfiles dentro del sitio web.\n  Es posible que tu cambio tarde hasta un día en implementarse."
+            }
+        }
     }
 }
