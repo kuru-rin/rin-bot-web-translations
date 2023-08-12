@@ -17,13 +17,16 @@
             "sga": "**Memulai ronde dengan fragmen audio dari lagu pembuka dan penutup**",
             "sgc": "**Memulai ronde dengan karakter anime**",
             "sgvn": "**Memulai ronde dengan gambar visual novel**\nHanya filter kesulitan yang berfungsi untuk perintah ini.",
-            "stopg": "**Menghentikan putaran saat ini**\nPerintah ini dibatasi sekali setiap 15 menit per orang, untuk mencegah penyalahgunaan. [Pelanggan mendapatkan pengurangan cooldown](https://patreon.com/rinbot?fan_landing=true)!"
+            "stopg": "**Menghentikan putaran saat ini**\nPerintah ini dibatasi sekali setiap 15 menit per orang, untuk mencegah penyalahgunaan. [Pelanggan mendapatkan pengurangan cooldown](https://patreon.com/rinbot?fan_landing=true)!",
+            "sb": "**Memulai putaran tombol pilihan ganda dengan gambar**",
+            "sgg": "**Memulai ronde dengan permainan video**"
         },
         "voiceRounds": {
             "title": "#### Sesi putaran suara",
             "sgs": "**Mulai sesi putaran suara**\nIni akan bergabung dengan saluran suara (dengan nama yang sama, atau yang anda ikuti) dan kemudian mulai melakukan putaran.\nPastikan RinBot memiliki izin __Connect__ dan __Speak__ untuk saluran.",
             "sgsa": "**Mulai sesi putaran suara dengan sampel 20 detik**",
-            "stopgs": "**Menghentikan putaran suara**\nIni akan menghentikan mode putaran suara dan putaran saat ini juga."
+            "stopgs": "**Menghentikan putaran suara**\nIni akan menghentikan mode putaran suara dan putaran saat ini juga.",
+            "sbsa": "**Memulai sesi putaran suara tombol pilihan ganda dengan sampel**"
         },
         "shortcuts": {
             "year": "**Memulai ronde baru dari tahun `[tahun]` hingga sekarang**\nContoh: `!sg 1999` akan memilih anime dari tahun 1999 hingga dan termasuk tahun ini",
@@ -58,7 +61,8 @@
             "allfastest": "**Menampilkan pemain tercepat sepanjang masa di server**\nHanya ronde dengan kumpulan anime lebih dari 1000 yang dihitung.",
             "weekfastest": "**Menampilkan pemain tercepat minggu ini di server**\nHanya ronde dengan kumpulan anime lebih dari 1000 yang dihitung.\nMisalnya: ini akan mengecualikan mode mudah/normal dan sebagian besar genre yang lebih kecil.",
             "title": "#### Poin \nIni akan dihitung ulang setiap jam. Anda dapat [memboost server Anda](https://patreon.com/rinbot?fan_landing=true) untuk pembaruan waktu nyata.",
-            "weektop": "**Menampilkan pemain top minggu ini di server**\nItu menggunakan ISO-8601 minggu dalam setahun dengan Senin sebagai hari pertama dalam seminggu. Perintah akan memberi tahu anda kapan minggu akan diatur ulang."
+            "weektop": "**Menampilkan pemain top minggu ini di server**\nItu menggunakan ISO-8601 minggu dalam setahun dengan Senin sebagai hari pertama dalam seminggu. Perintah akan memberi tahu anda kapan minggu akan diatur ulang.",
+            "serverscore": "**Menampilkan skor seluruh server**"
         },
         "ctop": {
             "title": "#### Papan peringkat khusus",
@@ -72,7 +76,8 @@
             "credits": "**Menunjukkan kepada anda semua orang dan situs keren yang membantu mewujudkan {botName}.**",
             "statg": "**Menampilkan beberapa statistik global game**",
             "sync": "**Mensinkronkan daftar anime anda dari situs lain**\nSaat ini MyAnimeList dan AniList didukung.\nContoh: `!sync mal:kukurin` atau `!sync anilist:kukurin`",
-            "title": "#### Lain-lain"
+            "title": "#### Lain-lain",
+            "mydifficulty": "**Memungkinkan Anda mengatur tingkat kesulitan default untuk semua ronde yang Anda mulai.**"
         },
         "management": {
             "title": "#### Manajemen",
@@ -90,7 +95,10 @@
         "boostedByBotSupporter": "Didukung oleh pendukung {botName}",
         "privacyPolicy": "Kebijakan pribadi",
         "onlyForPatrons": "Hanya untuk pelanggan",
-        "experimentalFeature": "Fitur eksperimental"
+        "experimentalFeature": "Fitur eksperimental",
+        "error": "Kesalahan",
+        "termsOfService": "Ketentuan layanan",
+        "success": "Sukses"
     },
     "introduction": {
         "title": "Halaman beranda {botName}",
@@ -123,6 +131,445 @@
         "players": {
             "title": "Pemain",
             "description": "Ini adalah daftar pemain top di semua server tempat game ini dimainkan. Putaran pesan langsung tidak dihitung."
+        },
+        "guilds": {
+            "title": "Server",
+            "description": "Ini adalah daftar server teratas tempat game dimainkan.  \nSecara default, nama server Anda akan disembunyikan. Anda dapat memilih untuk menampilkannya dalam konfigurasi server setelah Anda masuk."
+        },
+        "achievements": {
+            "description": "Ini adalah pemain yang telah mengumpulkan poin pencapaian terbanyak.",
+            "title": "Pencapaian"
+        }
+    },
+    "needHelp": {
+        "joinTheSupportServer": "Bergabunglah dengan server dukungan",
+        "encounterProblemsContact": "Jika Anda mengalami masalah apa pun, silakan hubungi Kururin di sana.",
+        "needHelp": "Butuh bantuan?",
+        "supportServerIntroduction": "Anda dapat meminta bantuan, memberikan umpan balik, meminta fitur baru, atau sekadar bermain Tebak Anime di server dukungan resmi."
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Anda telah keluar!"
+    },
+    "myBoostedServers": {
+        "addServer": "Menambahkan server",
+        "savedChanges": "Berhasil menyimpan perubahan",
+        "couldNotSaveChanges": "Tidak dapat menyimpan perubahan",
+        "boostedServers": "# Server yang ditingkatkan  \nAnda adalah seorang pelindung {patronTier} tingkat. Anda dapat meningkatkan {boostsLeft} lebih banyak server",
+        "noServersBoosted": "Tidak ada server yang ditingkatkan.",
+        "searchForServer": "Mencari server",
+        "pickServersToBoost": "Pilih server untuk ditingkatkan",
+        "addToBoosted": "Tambahkan ke ditingkatkan",
+        "alreadyAdded": "Sudah ditambahkan",
+        "noServersFound": "Server tidak ditemukan.",
+        "youCannotBoostServers": "# Anda tidak dapat meningkatkan server mana pun  \nAnda setidaknya harus menjadi pelindung tingkat 2 untuk dapat meningkatkan server.  \nUntuk mendapatkannya, pertama-tama tautkan akun Discord Anda ke patreon, dan kemudian [berjanji untuk setidaknya tingkat 2 di halaman patreon RinBot] ({patreonLink}).",
+        "remove": "Menghapus dari yang ditingkatkan"
+    },
+    "myServers": {
+        "boostedServer": "Server yang ditingkatkan",
+        "hasBot": "{botName} ada di server ini",
+        "notHasBot": "{botName} tidak ada di server ini",
+        "searchForServer": "Mencari server",
+        "details": "Detail",
+        "title": "Server saya",
+        "description": "Anda harus memiliki izin **Server Management** untuk dapat mengonfigurasi {botName} untuk server Anda.",
+        "addBot": "Menambahkan {botName}",
+        "couldNotRetrieveServers": "Tidak dapat mengambil server",
+        "configure": "Konfigurasi",
+        "showAll": "Tampilkan semua server saya"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "title": "Tebak Anime",
+            "winnerRoleConfigs": {
+                "warnManagedRole": "Harap diperhatikan bahwa peran akan sepenuhnya dikelola oleh {botName}, sehingga anggota peran yang bukan pemenang akan dihapus.",
+                "undo": "Membatalkan",
+                "type": "Jenis",
+                "role": "Peran",
+                "rank": "Peringkat",
+                "isWeekly": "Sepanjang waktu / Mingguan",
+                "add": "Menambahkan tugas peran baru",
+                "title": "Konfigurasi peran",
+                "points": "Poin",
+                "time": "Waktu",
+                "label": "Peran berdasarkan peringkat",
+                "description": "Di sini Anda dapat mengatur tugas peran untuk para pemenang di papan peringkat.",
+                "permissionInfo": "Pastikan {botName} memiliki izin 'Kelola Peran' dan diposisikan di atas peran yang ingin Anda berikan kepadanya.",
+                "reachedMaximumAssignments": "Anda telah mencapai batas maksimum penugasan peran {maxWinnerRoleConfigs}.",
+                "boostedServersGetMoreAssignments": "[Server yang ditingkatkan] ({patreonLink}) dapat memiliki hingga {patronWinnerRoleConfigs} tugas peran.",
+                "saveChanges": "Menyimpan perubahan",
+                "allTime": "Sepanjang masa",
+                "weekly": "Mingguan"
+            },
+            "titlePreferences": {
+                "mainTitle": {
+                    "source": "Sumber",
+                    "label": "Judul utama",
+                    "description": "Ini adalah prioritas di mana judul utama akan dipilih. Judul utama adalah judul yang digunakan untuk petunjuk dan ringkasan anime di akhir ronde. Jika tidak ada judul utama yang dapat ditemukan berdasarkan preferensi Anda, maka akan kembali ke default.",
+                    "type": "Jenis",
+                    "language": "Bahasa"
+                },
+                "disableTitleSimplifications": {
+                    "label": "Penyederhanaan judul",
+                    "description": "Menonaktifkan penyederhanaan judul (seperti memisahkan judul yang panjang pada tanda hubung/kolon dan menghapus kata-kata kontekstual yang umum seperti 'musim', 'versi', dll.)",
+                    "checkbox": "Menonaktifkan penyederhanaan"
+                },
+                "percentageWrong": {
+                    "label": "Persentase salah",
+                    "description": "{percentage}% - lebih rendah berarti kurang memaafkan kesalahan ketik dalam tebakan"
+                },
+                "titleSources": {
+                    "any": "(apa saja)"
+                },
+                "titleTypes": {
+                    "any": "(apa saja)",
+                    "kana": "Pembacaan Kana",
+                    "label": "Jenis judul",
+                    "official": "Judul resmi",
+                    "card": "Judul kartu",
+                    "main": "Judul utama",
+                    "short": "Judul pendek",
+                    "synonym": "Sinonim"
+                },
+                "titleLanguages": {
+                    "label": "Bahasa judul",
+                    "selectAll": "Pilih semua",
+                    "selectNone": "Pilih tidak ada"
+                },
+                "setToDefaults": "Mengatur ke default",
+                "description": "##### Preferensi judul  \nDi sini Anda dapat mengonfigurasi preferensi Anda dalam bahasa judul yang harus diterima sebagai tebakan yang benar.  \n\nJika preferensi Anda menghasilkan kumpulan judul yang kosong, maka akan kembali ke default."
+            },
+            "disableSummaryLink": {
+                "description": "Dengan mencentangnya, maka tautan tersebut akan dihapus dari rangkuman di akhir ronde.",
+                "label": "Ringkasan",
+                "checkbox": "Menonaktifkan tautan ringkasan"
+            },
+            "disableDrops": {
+                "checkbox": "Nonaktifkan tetes",
+                "description": "Dengan mencentangnya, game tidak akan memunculkan drop karakter secara acak.",
+                "label": "Drops"
+            },
+            "disableHints": {
+                "label": "Petunjuk",
+                "description": "Mencentang ini akan membuat permainan tidak menampilkan petunjuk apa pun di putaran mana pun.",
+                "checkbox": "Menonaktifkan petunjuk"
+            },
+            "hideAlternativeTitles": {
+                "checkbox": "Sembunyikan judul alternatif",
+                "label": "Judul alternatif",
+                "description": "Dengan mencentangnya, maka daftar judul alternatif dalam ringkasan anime akan disembunyikan."
+            },
+            "animeSummaryLink": {
+                "label": "Tautan ringkasan anime",
+                "description": "Ini hanya mengubah URL dan mungkin akan kembali ke situs web RinBot untuk beberapa anime."
+            },
+            "pointRoleConfigs": {
+                "label": "Peran berdasarkan poin"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Centang ini akan membuat pemain yang telah meninggalkan server tetap muncul di papan peringkat. Mungkin diperlukan waktu hingga satu jam agar mereka muncul.",
+                "label": "Pemain yang hilang di papan peringkat",
+                "checkbox": "Menampilkan pemain yang hilang di papan peringkat"
+            },
+            "enableAntiSpam": {
+                "description": "Mengaktifkan ini akan membuat bot mulai mengabaikan pemain yang mencoba menebak menggunakan judul yang sama secara terus menerus.",
+                "label": "Anti-spam",
+                "checkbox": "Mengaktifkan filter anti-spam"
+            }
+        },
+        "general": {
+            "language": {
+                "description": "Mengatur bahasa untuk RinBot di dalam Discord. Hal ini tidak mempengaruhi judul anime.",
+                "label": "Bahasa"
+            },
+            "showInLeaderboards": {
+                "checkbox": "Tampilkan nama server di papan peringkat global di situs ini",
+                "label": "Tampil di papan peringkat global",
+                "description": "Ketika ini diaktifkan, nama server Anda akan ditampilkan di papan peringkat server. Mungkin diperlukan waktu satu jam untuk menyebarkan perubahan ini."
+            },
+            "inviteCode": {
+                "label": "Kode undangan",
+                "invalid": "Kode undangan ini tampaknya tidak valid",
+                "description": "Kode undangan yang digunakan untuk URL nama server Anda di papan peringkat"
+            },
+            "prefix": {
+                "description": "Karakter ini akan diletakkan di depan perintah, bukan di belakangnya: !",
+                "label": "Awalan perintah",
+                "invalid": "Ini adalah bidang yang wajib diisi dan harus terdiri dari 1 hingga 5 karakter."
+            },
+            "noLanguageCodeDefined": "(gunakan bahasa default server)",
+            "title": "Umum",
+            "disableLegacyCommands": {
+                "description": "Ini akan menonaktifkan perintah lama yang diawali sepenuhnya, sehingga Anda hanya dapat menggunakan perintah garis miring.",
+                "label": "Perintah yang diawali",
+                "checkbox": "Menonaktifkan perintah yang diawali sebelumnya"
+            }
+        }
+    },
+    "genres": {
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "ADVENTURE": "Petualangan",
+        "THRILLER": "Thriller",
+        "SEINEN": "Seinen",
+        "HAREM": "Harem",
+        "HORROR": "Horor",
+        "KIDS": "Anak-anak",
+        "MARTIAL_ARTS": "Seni Bela Diri",
+        "FANTASY": "Fantasi",
+        "GAME": "Permainan",
+        "HISTORICAL": "Sejarah",
+        "SPACE": "Ruang",
+        "SPORTS": "Olahraga",
+        "VAMPIRE": "Vampir",
+        "ISEKAI": "Isekai",
+        "SUPER_POWER": "Kekuatan super",
+        "JOSEI": "Josei",
+        "ACTION": "Tindakan",
+        "CARS": "Mobil",
+        "COMEDY": "Komedi",
+        "DEMENTIA": "Demensia",
+        "DEMONS": "Iblis",
+        "MYSTERY": "Misteri",
+        "DRAMA": "Drama",
+        "ECCHI": "Ecchi",
+        "MAGIC": "Sihir",
+        "MECHA": "Mecha",
+        "MUSIC": "Musik",
+        "PARODY": "Parodi",
+        "SAMURAI": "Samurai",
+        "ROMANCE": "Romansa",
+        "SCHOOL": "Sekolah",
+        "SCI_FI": "Sci-fi",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SLICE_OF_LIFE": "Sepenggal kehidupan",
+        "SUPERNATURAL": "Supranatural",
+        "MILITARY": "Militer",
+        "POLICE": "Polisi",
+        "PSYCHOLOGICAL": "Psikologis"
+    },
+    "difficulties": {
+        "EASY": "Mudah",
+        "NIGHTMARE": "Mimpi buruk",
+        "UNKNOWN": "Tidak diketahui",
+        "NORMAL": "Normal",
+        "EXTREME": "Ekstrim",
+        "HARD": "Keras"
+    },
+    "supportUs": {
+        "helpWithTranslating": "Anda dapat membantu dengan meningkatkan terjemahan saat ini atau menambahkan bahasa baru menggunakan terjemahan massal!",
+        "supportThroughVoting": "Selalu membantu adalah memberikan suara secara teratur dan memberikan ulasan di situs web ini.",
+        "translations": "Terjemahan",
+        "supportThroughPatreon": "Jika Anda ingin membantu menutupi biaya server, Anda dapat memberikan donasi berapapun yang Anda inginkan dengan menggunakan Patreon. Anda juga akan mendapatkan beberapa keuntungan khusus!",
+        "goal": "{completedPercentage}% dari ${amount} biaya operasional per bulan didanai!",
+        "supportThroughKoFi": "Anda juga bisa mempertimbangkan untuk membelikan saya kopi melalui ko-fi.com. Namun, hal ini tidak memberikan keuntungan apa pun selain apresiasi saya yang sebesar-besarnya!",
+        "joinTheTranslationsChannel": "Pastikan untuk bergabung dengan saluran `#translations` di [server dukungan]({supportServerUrl}) untuk meminta bantuan dan mendiskusikan terjemahan.",
+        "signInWithAuth0": "Masuk dengan Auth0 lalu 'Lanjutkan dengan Discord'.",
+        "votingAndReviewing": "Pemungutan suara dan peninjauan"
+    },
+    "userProfile": {
+        "achievementPoints": "Poin pencapaian",
+        "allTimeResults": "Hasil sepanjang masa",
+        "points": "Poin",
+        "roundPoints": "Poin bulat",
+        "noResultsYet": "Belum ada hasil.",
+        "trophiesWon": "Piala yang dimenangkan",
+        "noTrophiesWon": "Belum ada trofi yang dimenangkan.",
+        "rank": "Peringkat",
+        "rounds": "Putaran",
+        "week": "Minggu",
+        "achievements": "Pencapaian",
+        "statistics": "Statistik"
+    },
+    "status": {
+        "partialOutage": "Pemadaman sebagian",
+        "api": {
+            "tooltip": "Menyediakan konten dinamis dan konfigurasi bot di situs web",
+            "name": "API"
+        },
+        "operational": "Operasional",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Menyediakan konten dinamis (seperti basis data) di situs web"
+        },
+        "putYourServerId": "Masukkan ID server Anda di sini untuk menemukan pecahan Anda",
+        "title": "Status",
+        "description": "Di sini Anda dapat menemukan status beberapa layanan yang membuat {botName} berfungsi sebagaimana mestinya. Halaman ini secara otomatis di-refresh setiap 10 detik.",
+        "majorOutage": "Pemadaman besar",
+        "coreServices": "Layanan inti",
+        "discordShards": "Pecahan perselisihan",
+        "databaseServices": "Layanan basis data",
+        "website": {
+            "name": "Situs web",
+            "tooltip": "Anda tidak akan berada di sini jika yang satu ini berwarna merah"
+        },
+        "worker": {
+            "name": "Pekerja",
+            "tooltip": "Menyediakan papan peringkat, skor, dan pembaruan profil"
+        },
+        "couldNotGetShardStatuses": "Tidak bisa mendapatkan status pecahan dari API",
+        "howToFindYourServerId": "Jika Anda tidak tahu cara menemukan ID server Anda, silakan [baca artikel dukungan ini](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "animeDatabaseApi": {
+            "tooltip": "Menyediakan ronde anime - !sg, !sgv dan !sga",
+            "name": "API basis data anime"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "API basis data novel visual",
+            "tooltip": "Menyediakan putaran novel visual - !sgvn"
+        }
+    },
+    "weekPicker": {
+        "week": "Minggu",
+        "allTime": "Sepanjang masa",
+        "weekly": "Mingguan",
+        "year": "Tahun"
+    },
+    "channelConfiguration": {
+        "saveChanges": "Menyimpan perubahan",
+        "savedChangesSuccessfully": "Perubahan berhasil disimpan",
+        "description": "Di sini Anda dapat mengonfigurasi beberapa opsi spesifik per saluran. Ini mungkin akan diperluas dengan lebih banyak opsi konfigurasi server di kemudian hari.",
+        "add": "Menambahkan saluran",
+        "noChannelsConfigured": "Tidak ada saluran yang telah dikonfigurasi saat ini. Klik tombol 'Tambahkan saluran' untuk memulai.",
+        "maximumReached": "Anda telah mencapai konfigurasi saluran maksimum {maxChannelConfigs}.",
+        "boostedServersGetMore": "[Server yang ditingkatkan] ({patreonLink}) dapat memiliki hingga {patronMaxConfigs} konfigurasi saluran.",
+        "startGameOnIdle": {
+            "checkbox": "Memulai babak baru saat saluran tidak aktif",
+            "minutesIdle": "Menit menganggur",
+            "boostedServersCanHaveLess": "({patreonLink}) dapat memiliki waktu 60 menit."
+        },
+        "couldNotSaveChanges": "Tidak dapat menyimpan perubahan",
+        "useForVoiceRounds": {
+            "checkbox": "Gunakan hanya saluran suara ini untuk putaran suara (hanya satu yang bisa aktif)"
+        },
+        "channelAccessControlEnabled": {
+            "checkbox": "Mengaktifkan kontrol akses saluran",
+            "description": "Ini akan membuat {botName} tidak mendengarkan perintah apa pun kecuali yang masuk daftar putih secara khusus per saluran.",
+            "label": "Kontrol akses"
+        },
+        "stage": {
+            "topic": {
+                "label": "Topik panggung"
+            }
+        },
+        "undo": "Membatalkan"
+    },
+    "nsfw": {
+        "SAFE": "Aman",
+        "QUESTIONABLE": "Dipertanyakan",
+        "NOT_SAFE": "Tidak aman",
+        "DANGEROUS": "Berbahaya.",
+        "UNKNOWN": "Tidak diketahui"
+    },
+    "reportAnime": {
+        "submitted": "Laporan Anda berhasil dikirimkan.",
+        "couldNotSubmit": "Laporan Anda tidak dapat dikirimkan."
+    },
+    "validation": {
+        "required": "Bidang ini wajib diisi",
+        "maxLength": "Panjang maksimumnya adalah {max} karakter, tetapi Anda menulis {length} karakter."
+    },
+    "statistics": {
+        "title": "Statistik",
+        "description": "Jumlah putaran yang dimainkan per hari selama 30 hari terakhir.",
+        "roundsPerDay": {
+            "title": "Putaran per hari",
+            "lost": "Hilang",
+            "won": "Won",
+            "total": "Total",
+            "winners": "Pemenang"
+        }
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "navbar": {
+        "status": "Status",
+        "home": "Beranda",
+        "login": "Masuk",
+        "logout": "Keluar",
+        "myServers": "Server saya",
+        "myProfile": "Profil saya",
+        "database": "Basis data",
+        "mySettings": "Pengaturan saya",
+        "commands": "Perintah",
+        "faq": "PERTANYAAN YANG SERING DIAJUKAN",
+        "changelog": "Changelog",
+        "leaderboard": "Papan Peringkat",
+        "statistics": "Statistik",
+        "myBoostedServers": "Server saya yang ditingkatkan"
+    },
+    "channelAccessControlConfig": {
+        "maximumReached": "Anda telah mencapai jumlah maksimum kontrol akses.",
+        "roles": "Peran",
+        "everyoneRole": "@semua orang",
+        "commands": "Perintah",
+        "allCommands": "(semua perintah)",
+        "title": "Kontrol akses",
+        "description": "Aturan kontrol akses diproses dari atas ke bawah.  \nSemuanya ditolak secara default, jadi Anda harus membuat satu aturan yang mengizinkan paling tidak.",
+        "addRule": "Menambahkan aturan"
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "description": "**Perintah singkat** - pesan yang mengikuti perintah ini hanya akan terlihat oleh Anda.",
+            "tooltip": "Perintah singkat"
+        },
+        "title": "Perintah garis miring",
+        "description": "Untuk menggunakan perintah garis miring, Anda mungkin perlu mengundang ulang {botName} dan memastikan dia memiliki perintah **Create dalam lingkup server**.  \nAnda dapat menggunakan tombol undang pada halaman beranda, atau dengan mengklik {botName} dari dalam Discord.  \n\nPastikan pengguna Anda memiliki izin **Gunakan Perintah Aplikasi**, atau mereka tidak akan dapat menggunakan perintah garis miring sama sekali."
+    },
+    "pageNotFound": "Halaman tidak ada",
+    "animeSorts": {
+        "YEAR_ASC": "Tahun (naik)",
+        "YEAR_DESC": "Tahun (menurun)",
+        "ROUNDS_WON_ASC": "Ronde yang dimenangkan (naik)",
+        "ROUNDS_WON_DESC": "Ronde yang dimenangkan (menurun)",
+        "ROUNDS_LOST_ASC": "Putaran yang hilang (naik)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Ronde yang dimenangkan% (naik)",
+        "MAIN_TITLE_DESC": "Judul utama (menurun)",
+        "ROUNDS_LOST_DESC": "Putaran yang hilang (menurun)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Ronde yang dimenangkan% (menurun)",
+        "MAIN_TITLE_ASC": "Judul utama (naik)"
+    },
+    "guildProfile": {
+        "join": "Bergabunglah dengan server ini"
+    },
+    "notLoggedIn": "Anda harus masuk untuk mengakses halaman ini.",
+    "main": {
+        "isBetaSite": "Anda saat ini sedang menjelajahi situs web {botName} beta. Ini hanya dimaksudkan untuk tujuan pengujian. [Klik di sini untuk menjelajahi situs web yang sebenarnya] ({productionUrl}).",
+        "isAinaBotSite": "Anda saat ini sedang menjelajahi beranda AinaBot. Ini adalah bot perselisihan yang hanya memiliki konten dewasa. [Klik di sini untuk pergi ke beranda RinBot] ({productionUrl}), yang memiliki anime biasa."
+    },
+    "playerTable": {
+        "username": "Nama"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Temukan pemain"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Karakter"
+        },
+        "visualNovels": {
+            "title": "Novel Visual"
+        }
+    },
+    "myServerDetails": {
+        "backToMyServers": "Kembali ke server saya",
+        "server": "Server",
+        "channels": "Saluran",
+        "leaderboard": "Papan Peringkat",
+        "players": "Pemain",
+        "onlyForManagement": "Hanya untuk manajemen server"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Sembunyikan nama saya secara global",
+                "description": "Mengaktifkan ini akan membuat nama Anda menjadi '(tersembunyi)' di semua papan peringkat dan profil di situs web.\n  Perubahan Anda mungkin memerlukan waktu hingga satu hari untuk diterapkan di seluruh sistem."
+            }
         }
     }
 }

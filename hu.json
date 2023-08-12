@@ -1,1 +1,575 @@
-{}
+{
+    "genres": {
+        "PARODY": "Paródia",
+        "SAMURAI": "Szamuráj",
+        "SCHOOL": "Iskola",
+        "SHOUNEN": "Shounen",
+        "SPORTS": "Sport",
+        "HORROR": "Horror",
+        "DRAMA": "Dráma",
+        "ECCHI": "Ecchi",
+        "FANTASY": "Fantasy",
+        "GAME": "Játék",
+        "DEMENTIA": "Demencia",
+        "HISTORICAL": "Történelmi",
+        "KIDS": "Gyerekek",
+        "MUSIC": "Zene",
+        "SUPER_POWER": "Szupererő",
+        "MILITARY": "Katonai",
+        "THRILLER": "Thriller",
+        "SEINEN": "Seinen",
+        "PSYCHOLOGICAL": "Pszichológiai",
+        "JOSEI": "Josei",
+        "ISEKAI": "Isekai",
+        "POLICE": "Rendőrség",
+        "ROMANCE": "Románc",
+        "SPACE": "Űr",
+        "ACTION": "Akció",
+        "ADVENTURE": "Kaland",
+        "CARS": "Autók",
+        "COMEDY": "Vígjáték",
+        "MAGIC": "Varázslatos",
+        "MARTIAL_ARTS": "Harcművészetek",
+        "MECHA": "Mecha",
+        "VAMPIRE": "Vámpír",
+        "HAREM": "Hárem",
+        "SLICE_OF_LIFE": "Az élet egy szelete",
+        "SUPERNATURAL": "Természetfeletti",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "DEMONS": "Démonok",
+        "MYSTERY": "Rejtély",
+        "SCI_FI": "Sci-fi",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN_AI": "Shounen Ai"
+    },
+    "myServerDetails": {
+        "backToMyServers": "Vissza a szervereimhez",
+        "server": "Szerver",
+        "channels": "Csatornák",
+        "leaderboard": "Ranglista",
+        "onlyForManagement": "Csak szervermenedzsmenthez",
+        "players": "Játékosok"
+    },
+    "channelConfiguration": {
+        "channelAccessControlEnabled": {
+            "description": "Ezáltal a {botName} nem fog semmilyen parancsot meghallgatni, kivéve, ha az adott csatornára vonatkozóan fehér listán van.",
+            "label": "Hozzáférés-ellenőrzés",
+            "checkbox": "Csatorna-hozzáférés-szabályozás engedélyezése"
+        },
+        "useForVoiceRounds": {
+            "checkbox": "Csak ezt a hangcsatornát használja a hangforgalomhoz (csak egy lehet aktív)."
+        },
+        "savedChangesSuccessfully": "Sikeresen elmentette a változtatásokat",
+        "couldNotSaveChanges": "Nem tudta elmenteni a módosításokat",
+        "add": "Csatorna hozzáadása",
+        "boostedServersGetMore": "[Boosted szerverek]({patreonLink}) akár {patronMaxConfigs} csatornakonfigurációval is rendelkezhet.",
+        "startGameOnIdle": {
+            "minutesIdle": "Percek üresjárat",
+            "checkbox": "Új forduló indítása, ha a csatorna üresjáratban van",
+            "boostedServersCanHaveLess": "[Boosted szerverek]({patreonLink}) lehet &#60; 60 perc."
+        },
+        "description": "Itt csatornánként beállíthat néhány speciális opciót. Ezek a későbbiekben a kiszolgáló konfigurációs lehetőségei közül többel is bővülhetnek.",
+        "noChannelsConfigured": "Jelenleg nincsenek konfigurálva csatornák. Kattintson a 'Csatorna hozzáadása' gombra a kezdéshez.",
+        "maximumReached": "Elérte a {maxChannelConfigs} csatornakonfigurációk maximális számát.",
+        "saveChanges": "Változások mentése",
+        "undo": "Undo",
+        "stage": {
+            "topic": {
+                "label": "Színpadi téma"
+            }
+        }
+    },
+    "userProfile": {
+        "points": "Pontok",
+        "rounds": "Forduló",
+        "achievements": "Eredmények",
+        "achievementPoints": "Teljesítménypontok",
+        "roundPoints": "Kerek pontok",
+        "allTimeResults": "Minden idők eredményei",
+        "rank": "Rangsor",
+        "noResultsYet": "Még nincs eredmény.",
+        "trophiesWon": "Nyert trófeák",
+        "noTrophiesWon": "Még nem nyertünk trófeát.",
+        "week": "Hét",
+        "statistics": "Statisztikák"
+    },
+    "myServers": {
+        "searchForServer": "Kiszolgáló keresése",
+        "description": "A **Server Management** jogosultsággal kell rendelkeznie ahhoz, hogy konfigurálni tudja a {botName} címet a kiszolgálóján.",
+        "title": "A szervereim",
+        "showAll": "Összes szerverem megjelenítése",
+        "details": "Részletek",
+        "boostedServer": "Felturbózott szerver",
+        "hasBot": "{botName} ezen a szerveren van",
+        "addBot": "Add {botName}",
+        "notHasBot": "{botName} nincs ezen a szerveren",
+        "couldNotRetrieveServers": "Nem tudta lekérni a szervereket",
+        "configure": "A  beállítása"
+    },
+    "status": {
+        "visualNovelDatabaseApi": {
+            "tooltip": "Vizuális regény körök biztosítása - !sgvn",
+            "name": "Visual novel adatbázis API"
+        },
+        "website": {
+            "tooltip": "Nem lennél itt, ha ez piros lenne.",
+            "name": "Honlap"
+        },
+        "api": {
+            "tooltip": "Dinamikus tartalom és bot konfiguráció a weboldalon",
+            "name": "API"
+        },
+        "worker": {
+            "tooltip": "Ranglista, pontszám és profilfrissítések biztosítása",
+            "name": "Munkavállaló"
+        },
+        "putYourServerId": "Tegye be ide a szerver azonosítóját, hogy megtalálja a szilánkját.",
+        "couldNotGetShardStatuses": "Nem tudta lekérni a shard állapotokat az API-ból",
+        "animeDatabaseApi": {
+            "tooltip": "Anime körök - !sg, !sgv és !sga - biztosítása",
+            "name": "Anime adatbázis API"
+        },
+        "discordShards": "Discord szilánkok",
+        "howToFindYourServerId": "Ha nem tudja, hogyan találja meg a szerver azonosítóját, kérjük, [olvassa el ezt a támogatási cikket](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "title": "Állapot",
+        "description": "Itt megtalálja néhány olyan szolgáltatás állapotát, amelyek a {botName} honlapot a megfelelő működésre késztetik. Ez az oldal automatikusan 10 másodpercenként frissül.",
+        "operational": "Működési",
+        "majorOutage": "Jelentősebb üzemszünet",
+        "databaseServices": "Adatbázis-szolgáltatások",
+        "partialOutage": "Részleges üzemszünet",
+        "coreServices": "Alapvető szolgáltatások",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Dinamikus tartalmat (például az adatbázist) biztosít a weboldalon."
+        }
+    },
+    "notLoggedIn": "Az oldal eléréséhez be kell jelentkeznie.",
+    "commands": {
+        "rounds": {
+            "sgv": "**Videoklipekkel indít egy kört**",
+            "sga": "**Egy kört a nyitó és befejező dalok hangfoszlányaival indít.**",
+            "sgc": "**Kezd egy kört anime karakterekkel**",
+            "sgvn": "**Vizuális regények képeivel indít egy kört** \nCsak a nehézségi szűrő működik ennél a parancsnál.",
+            "sb": "**Indítson el egy feleletválasztós gombos kört képekkel**",
+            "title": "#### Körök",
+            "sg": "**Új kört indít**",
+            "stopg": "**Megállítja az aktuális kört** \nEz a parancs személyenként 15 percenként egyszer adható, hogy megelőzzük a visszaéléseket. [A patrónusok csökkentett lehűlési időt kapnak](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgg": "**Videójátékokkal kezd egy kört**"
+        },
+        "voiceRounds": {
+            "title": "#### Voice kerek ülések",
+            "sbsa": "**Indítson el egy feleletválasztós gombos hangkörüljárást mintákkal**",
+            "sgsa": "**Kezdje el a hangkörös ülést mintákkal**",
+            "sgs": "**Kezdje el a hangosbeszélgetés munkamenetét** \nEzzel csatlakozik egy hangcsatornához (ugyanazon a néven, vagy azon, amelyen Ön van), majd elkezd köröket csinálni.  \nGyőződjön meg róla, hogy a RinBot rendelkezik a __Connect__ és a __Speak__ jogosultságokkal a csatornához.",
+            "stopgs": "**Stop voice rounds** \nEz leállítja a hangos forduló módot és az aktuális fordulót is."
+        },
+        "shortcuts": {
+            "genre": "**Új kört indít egy adott műfajhoz tartozó animékkel** \nHasználd a `!genres` parancsot az összes elérhető műfaj listájához.",
+            "year": "**Új kört indít a `[év]-től mostanáig** \nPélda: `!sg 1999` az 1999-es évektől az aktuális évig bezárólag az anime-t választja.",
+            "songType": "**Új hangkör indítása egy adott típusú dalokkal** \nA dal típusa lehet: `op` (nyitó dalok), `ed` (befejező dalok), `in` (betétdalok) vagy `tm` (képdalok).",
+            "query": "**Új kört indít az animével a saját lekérdezésed alapján**  \n`d:1` nehézség hozzáadása a szűrőhöz.  \n`g:shounen` műfaj hozzáadásához a szűrőhöz.  \n`y:2001-2009` évszám hozzáadásához a szűrőhöz.  \n`t:op` a dal típusának hozzáadása a szűrőhöz (csak a `!sga` fordulóhoz)  \nPélda: `!sg d:1 g:shounen y:2001-2009` vagy `!sg g:drama y:2010` vagy `!sga t:op`  \n_Megjegyzés: NEM kell az összes szűrőt használnod a lekérdezéseidben._",
+            "title": "#### Kerek szűrő gyorsbillentyűk  \nEzekkel a szűrőkkel gyorsan kezdhetsz. A nehézségi fokozat automatikusan kiválasztásra kerül az aktuális pontjaid alapján, ha nincs megadva.",
+            "years": "**Új kört indít a `[year1]` és `[year2]` közötti évekből** \nPélda: `!sg 1999 2003` az 1999-es évektől 2003-ig bezárólag választja ki az animét.",
+            "difficulty": "**Új kört indít egy adott nehézséggel** \n1 (könnyű), 2 (normális), 3 (nehéz), 4 (extrém), 5 (rémálom) és 0 (minden).  \nPélda: `!sg 1` egy könnyű körhöz, vagy `!sg 4` egy extrém körhöz."
+        },
+        "ctop": {
+            "resetctop": "**Visszaállítja az egyéni ranglistát** \nEz a **teljesen törli** az egyéni ranglistát, és soha többé nem tér vissza!  \nA funkció használatához a következő jogosultságok valamelyikére van szükséged:\n- Rendszergazda\n- Kiszolgáló kezelése\n- Szerepkörök kezelése\n- Csatornák kezelése\n- Üzenetek kezelése",
+            "title": "#### Egyéni ranglisták",
+            "ctop": "**Az aktuális csatorna egyéni ranglistájának megjelenítése**",
+            "startctop": "**Új egyéni ranglistát indít a** csatornához.  \nTöbb csatornát kell használnod ahhoz, hogy egyszerre több egyéni ranglistát is használhass.",
+            "endctop": "**Az aktív egyéni ranglista befejezése** \nEz megakadályozza a pontok gyűjtését, de nem távolítja el a ranglistát."
+        },
+        "onlyForPatrons": {
+            "tooltip": "Kizárólag védnökök számára",
+            "description": "**Csak [patrónusok]({patreonUrl})** használhatják - ezt azért vezették be, hogy csökkentsék a szerver terhelést, és hogy az emberek segítsenek fizetni a számlákat."
+        },
+        "queries": {
+            "title": "### Kérdések  \nEzekkel a paraméterekkel saját lekérdezéseket készíthet. Ezek a `!sg`, `!sgv`, `!sga`, `!sgs` és `!sgsa` esetében működnek.  \n\nPéldául: `!sg n:5 d:3 y:1995-2005`, hogy egy munkamenetet indítson 5 körös anime játékkal nehéz nehézségen 1995 és 2005 között.",
+            "operations": "#### Műveletek",
+            "numberOfRounds": "**A fordulók száma egy munkamenetben** \nEz automatikusan több kört indít egy munkamenetben, és a munkamenet végén egy ranglistát ad.  \nPélda: `n:2` 2 fordulóra, maximum 10 fordulóig a `n:10 segítségével.`",
+            "imageManipulations": "**Képek manipulálása egy körben** (csak képekkel rendelkező körök esetén)  \nVálaszthat a `p` pixeles, `i` invertált, `o` olajfestményes, `g` szürkeárnyalatos, `f` függőlegesen megfordítva.  \nPélda: `im:p` vagy a `im:g,o,i kombinációval.`",
+            "difficulty": "**A nehézség szűrése** \n1 (könnyű), 2 (normál), 3 (nehéz), 4 (extrém), 5 (rémálom) és 0 (minden)  \nPélda: `d:1` könnyű körhöz, vagy `d:4` extrém körhöz, és `d:0` a nehézségi szűrő kikapcsolásához.",
+            "genre": "**A műfaj szűrése** \nJelenleg csak egyetlen műfaj szűrhető, például `g:action` vagy `g:horror`.  \nA `!genres` paranccsal az összes elérhető műfaj listája megjeleníthető.",
+            "songType": "**A dalok típusának szűrése** (`!sga`, `!sgs` és `!sgsa` csak)  \nA dal típusa lehet: `op` (nyitó dalok), `ed` (befejező dalok), `in` (betétdalok) vagy `tm` (képdalok).",
+            "year": "**Az év szűrése** \nPélda: `y:1999` az 1999-es évektől az aktuális évig bezárólag választja ki az animéket.  \n`y:2005-2010` a 2005 és 2010 közötti éveket választja ki (mindkettőt beleértve).",
+            "mal": "**Szűrés a MyAnimeList alapján** \nPélda: `mal:username` vagy `mal:user1,user2` több felhasználói lista esetén.  \nA szűrő használata előtt először a `!sync` parancsot kell használnod.",
+            "anilist": "**Szűrés az Ön AniListája alapján** \nPélda: `anilist:username` vagy `anilist:user1,user2` több felhasználói lista esetén.  \nA szűrő használata előtt először a `!sync` parancsot kell használnia.   \nKülönböző típusú anime listákat is kombinálhat, például így: `mal:user1,user2 anilist:user3`",
+            "aggr": "**Összesítési módszer** (csak anime listaszűrők használata esetén)  \nHasználhatja a `aggr:union` lehetőséget az anime listák egyesítésére ahelyett, hogy metszi őket.",
+            "filters": "#### szűrők"
+        },
+        "management": {
+            "title": "#### Menedzsment",
+            "prefix": "**Megjeleníti az aktuális előtagot, és lehetővé teszi annak módosítását.**",
+            "lang": "**Megjeleníti az aktuális nyelvet, és lehetővé teszi annak megváltoztatását.**"
+        },
+        "isExperimental": {
+            "tooltip": "Kísérleti",
+            "description": "**Kísérleti funkció** - ez a funkció még elég új, ezért tartalmazhat néhány hibát [kérjük, jelezd itt]({supportServerUrl}), ha találsz néhányat."
+        },
+        "title": "Parancsok",
+        "prefixCanBeChanged": "A parancsok előtagja `!` a bejelentkezés után a \"Saját szerverek\" oldalon módosítható.",
+        "canUseInDirectMessage": "A legtöbb ilyen parancsot használhatod a RinBotnak küldött közvetlen üzenetben is, hogy privát ülést játszhass. Az így szerzett pontok nem számítanak bele a ranglistákba.",
+        "points": {
+            "allfastest": "**Megmutatja minden idők leggyorsabb játékosait a** szerveren.  \nCsak az 1000-nél nagyobb anime poolal rendelkező fordulók számítanak.",
+            "title": "#### Pontok  \nEzeket óránként újraszámítják. A valós idejű frissítésekhez [boost your server](https://patreon.com/rinbot?fan_landing=true) segítségével frissítheted őket.",
+            "myscore": "**Megmutatja az aktuális csatornán szerzett pontokat és lejátszott köröket.**",
+            "serverscore": "**Megjeleníti az egész szerver pontszámát**",
+            "alltop": "**Megmutatja a szerver minden idők legjobb játékosait.**",
+            "weektop": "**Megjeleníti az aktuális hét legjobb játékosait a** szerveren.  \nAz ISO-8601-es év heteit használja, a hétfő a hét első napja. A parancs megmondja, hogy mikor áll vissza a hét.",
+            "weekfastest": "**Megjeleníti az aktuális hét leggyorsabb játékosait a** szerveren.  \nCsak az 1000-nél nagyobb anime poolal rendelkező fordulók számítanak.  \nPéldául: ez kizárja az easy/normal módokat és a legtöbb kisebb műfajt."
+        },
+        "misc": {
+            "title": "#### Egyéb",
+            "genres": "**Minden lehetséges anime műfaj megjelenítése**",
+            "statg": "**A játék néhány globális statisztikájának megjelenítése**",
+            "sync": "**Szinkronizálja anime listáját más oldalakról** \nJelenleg a MyAnimeList és az AniList támogatott.",
+            "credits": "**Megmutatja az összes olyan klassz embert és weboldalt, akik segítenek a {botName} elérhetővé tételében.**",
+            "mydifficulty": "**Lehetővé teszi az alapértelmezett nehézség beállítását minden megkezdett fordulóhoz.**"
+        }
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "titlePreferences": {
+                "description": "##### Cím preferenciák  \nItt beállíthatja a helyes tippként elfogadandó címnyelvek preferenciáit.  \n\nHa az Ön beállításai üres címkészletet eredményeznek, a rendszer visszaáll az alapértelmezettre.",
+                "setToDefaults": "Alapértelmezettre állítva",
+                "percentageWrong": {
+                    "label": "Téves százalékos arány",
+                    "description": "{percentage}% - az alacsonyabb érték kevésbé elnéző a tippelési hibákkal szemben."
+                },
+                "disableTitleSimplifications": {
+                    "label": "Cím egyszerűsítések",
+                    "description": "Letiltja a címegyszerűsítéseket (például a hosszú címek felosztása a kötőjelen/ponton, és a gyakori szövegkörnyezeti szavak, mint az \"évad\", \"verzió\" stb. eltávolítása).",
+                    "checkbox": "Egyszerűsítések letiltása"
+                },
+                "titleLanguages": {
+                    "selectAll": "Válasszon ki mindent",
+                    "label": "Cím nyelvek",
+                    "selectNone": "Válasszon egyet sem"
+                },
+                "titleSources": {
+                    "any": "(bármilyen)"
+                },
+                "titleTypes": {
+                    "any": "(bármilyen)",
+                    "label": "Címtípusok",
+                    "main": "Főbb címek",
+                    "official": "Hivatalos címek",
+                    "short": "Rövid címek",
+                    "synonym": "Szinonimák",
+                    "card": "Kártya címek",
+                    "kana": "Kana olvasás"
+                },
+                "mainTitle": {
+                    "label": "Főcím",
+                    "description": "A főcímek kiválasztása ebben a sorrendben történik. A főcím az, amelyet a tipphez és az anime összefoglalójához használnak a forduló végén. Ha a beállításaid alapján nem találsz főcímet, akkor az alapértelmezett címek kerülnek visszaállításra.",
+                    "type": "Típus",
+                    "language": "Nyelv",
+                    "source": "Forrás"
+                }
+            },
+            "winnerRoleConfigs": {
+                "add": "Új szerepkör hozzárendelés hozzáadása",
+                "label": "Szerepek rang szerint",
+                "reachedMaximumAssignments": "Ön elérte a {maxWinnerRoleConfigs} szerepkör hozzárendelésének maximumát.",
+                "rank": "Rangsor",
+                "permissionInfo": "Győződjön meg róla, hogy a {botName} rendelkezik a \"Szerepkörök kezelése\" jogosultsággal, és a szerepkör felett helyezkedik el, amelyet ki szeretne neki osztani.",
+                "undo": "Undo",
+                "isWeekly": "Mindig/héthetente",
+                "points": "Pontok",
+                "boostedServersGetMoreAssignments": "[Boosted szerverek]({patreonLink}) legfeljebb {patronWinnerRoleConfigs} szerepkörrel rendelkezhetnek.",
+                "saveChanges": "Változások mentése",
+                "title": "Szerepkör-konfiguráció",
+                "type": "Típus",
+                "allTime": "Alltime",
+                "time": "Idő",
+                "weekly": "Heti",
+                "description": "Itt állíthatod be a ranglista győzteseinek szerepkiosztását.",
+                "warnManagedRole": "Vegye figyelembe, hogy a szerepköröket teljes mértékben a {botName} fogja kezelni, így a szerepkör minden olyan tagja, amely nem nyertes, eltávolításra kerül.",
+                "role": "Szerepvállalás"
+            },
+            "disableHints": {
+                "checkbox": "Utalások kikapcsolása",
+                "label": "Tippek",
+                "description": "Ha ezt bejelölöd, a játék nem fog semmilyen tippet mutatni egyik körben sem."
+            },
+            "animeSummaryLink": {
+                "label": "Anime összefoglaló link",
+                "description": "Ez csak az URL-t változtatja meg, és előfordulhat, hogy néhány anime esetében visszalép a RinBot weboldalára."
+            },
+            "pointRoleConfigs": {
+                "label": "Szerepek pontok szerint"
+            },
+            "hideAlternativeTitles": {
+                "checkbox": "Alternatív címek elrejtése",
+                "description": "Ha ezt bejelölöd, akkor az anime összefoglalójában elrejted az alternatív címek listáját.",
+                "label": "Alternatív címek"
+            },
+            "disableDrops": {
+                "description": "Ha ezt bejelölöd, akkor a játék nem fog véletlenszerű karakterdobásokat generálni.",
+                "label": "Cseppek",
+                "checkbox": "Cseppek letiltása"
+            },
+            "title": "Találd ki az Anime",
+            "disableSummaryLink": {
+                "checkbox": "Összefoglaló link letiltása",
+                "description": "Ha ezt bejelölöd, a linket a forduló végén eltávolítod az összefoglalóból.",
+                "label": "Összefoglaló"
+            },
+            "enableAntiSpam": {
+                "description": "Ha engedélyezed ezt a funkciót, a bot elkezdi figyelmen kívül hagyni azokat a játékosokat, akik folyamatosan ugyanazt a címet próbálják kitalálni.",
+                "label": "Spam elleni védelem",
+                "checkbox": "A spamszűrő engedélyezése"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Ha ezt bejelölöd, akkor a szervert elhagyó játékosok továbbra is megjelennek a ranglistán. Akár egy óráig is eltarthat, amíg megjelennek.",
+                "label": "Hiányzó játékosok a ranglistákon",
+                "checkbox": "Hiányzó játékosok megjelenítése a ranglistákon"
+            }
+        },
+        "general": {
+            "disableLegacyCommands": {
+                "description": "Ez teljesen letiltja a régi előtaggal ellátott parancsokat, így csak a slash parancsokat használhatja.",
+                "label": "Előre beillesztett parancsok",
+                "checkbox": "A régi előtaggal ellátott parancsok letiltása"
+            },
+            "noLanguageCodeDefined": "(a kiszolgáló alapértelmezett nyelvének használata)",
+            "prefix": {
+                "description": "Ezek a karakterek a parancsok elé kerülnek az alapértelmezett helyett: !",
+                "label": "Parancs előtag",
+                "invalid": "Ez egy kötelező mező, és 1 és 5 karakter között kell lennie."
+            },
+            "showInLeaderboards": {
+                "checkbox": "A szerver nevének megjelenítése az oldal globális ranglistáin",
+                "label": "Megjelenítés a globális ranglistákon",
+                "description": "Ha ez engedélyezve van, a szervered neve megjelenik a szerver ranglistán. A változás átvitele egy órát vehet igénybe."
+            },
+            "inviteCode": {
+                "description": "Meghívó kód, amelyet a szerver nevének URL-jeként használnak a ranglistákon.",
+                "invalid": "Ez a meghívó kód érvénytelennek tűnik",
+                "label": "Meghívó kód"
+            },
+            "title": "Általános",
+            "language": {
+                "description": "A RinBot nyelvének beállítása a Discordon belül. Ez nem befolyásolja az anime címeket.",
+                "label": "Nyelv"
+            }
+        }
+    },
+    "difficulties": {
+        "EASY": "Easy",
+        "NORMAL": "Normál",
+        "HARD": "Kemény",
+        "EXTREME": "Extreme",
+        "UNKNOWN": "Ismeretlen",
+        "NIGHTMARE": "Rémálom"
+    },
+    "animeSorts": {
+        "MAIN_TITLE_DESC": "Főcím (csökkenő sorrendben)",
+        "YEAR_ASC": "Év (növekvő)",
+        "YEAR_DESC": "Év (csökkenő)",
+        "ROUNDS_WON_ASC": "Megnyert fordulók (növekvő)",
+        "MAIN_TITLE_ASC": "Főcím (növekvő)",
+        "ROUNDS_LOST_DESC": "Elveszített körök (csökkenő)",
+        "ROUNDS_WON_DESC": "Nyert körök (csökkenő sorrendben)",
+        "ROUNDS_LOST_ASC": "Elveszített körök (növekvő)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Nyert fordulók % (növekvő)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Megnyert fordulók % (csökkenő)"
+    },
+    "weekPicker": {
+        "weekly": "Heti",
+        "allTime": "Minden idők",
+        "year": "Év",
+        "week": "Hét"
+    },
+    "channelAccessControlConfig": {
+        "everyoneRole": "@everyone",
+        "commands": "Parancsok",
+        "allCommands": "(minden parancs)",
+        "roles": "Szerepek",
+        "title": "Hozzáférés-ellenőrzés",
+        "maximumReached": "Elérte a hozzáférés-ellenőrzések maximális számát.",
+        "description": "A hozzáférés-ellenőrzési szabályok feldolgozása felülről lefelé haladva történik.  \nAlapértelmezés szerint mindent megtagad, ezért legalább egy engedélyezési szabályt kell létrehoznia.",
+        "addRule": "Szabály hozzáadása"
+    },
+    "nsfw": {
+        "UNKNOWN": "Ismeretlen",
+        "QUESTIONABLE": "Megkérdőjelezhető",
+        "NOT_SAFE": "Nem biztonságos",
+        "DANGEROUS": "Veszélyes",
+        "SAFE": "Biztonságos"
+    },
+    "navbar": {
+        "status": "Állapot",
+        "database": "Adatbázis",
+        "mySettings": "Az én beállításaim",
+        "home": "Home",
+        "commands": "Parancsok",
+        "faq": "GYIK",
+        "myBoostedServers": "A felturbózott szervereim",
+        "logout": "Kijelentkezés",
+        "myProfile": "Profilom",
+        "changelog": "Changelog",
+        "leaderboard": "Ranglista",
+        "statistics": "Statisztikák",
+        "login": "Bejelentkezés",
+        "myServers": "A szervereim"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Önt kijelentkeztették!"
+    },
+    "common": {
+        "loading": "Betöltés",
+        "privacyPolicy": "Adatvédelmi szabályzat",
+        "onlyForPatrons": "Kizárólag védnökök számára",
+        "experimentalFeature": "Kísérleti funkció",
+        "error": "Hiba",
+        "success": "Siker",
+        "termsOfService": "Szolgáltatási feltételek",
+        "botSupporter": "{botName} támogató",
+        "boostedByBotSupporter": "Egy {botName} támogató által támogatott"
+    },
+    "introduction": {
+        "title": "{botName}honlapja",
+        "inviteButton": "Hívja meg a {botName} oldalt a szerverére",
+        "orSeeHerInAction": "vagy láthatod őt akcióban a",
+        "supportServer": "{botName} támogató szerver",
+        "shortDescription": "Játssz **találd ki az anime** és sok más találgatós kvízjátékot közvetlenül a discord csatornákon barátaiddal.",
+        "checkTheCommandListAndConfigure": "A funkciók teljes listáját a parancslistában találja. A {botName} weboldalon való bejelentkezés után konfigurálhatja a , hogy a szerver igényeihez igazítsa.",
+        "features": "### Jellemzők\n- **Több ezer** anime, karakterek, vizuális regények és videojátékok találhatók!\n- Tippelj képek, videoklipek vagy dalok hangfoszlányaiból.\n- **Véletlenszerűen kiválasztott megfejtések** így egyetlen forduló sem lesz ugyanolyan.\n- **Pontozási rendszer ranglistákkal** (minden idők, hetente és saját egyéni időszakok).\n- Több **nehézségi szint**, így még az anime és a vizuális regények új rajongói is jól szórakozhatnak.\n- A címek kitalálhatók **több nyelven**.\n- ...és még sok más!"
+    },
+    "leaderboardTable": {
+        "rounds": "Forduló",
+        "hidden": "(rejtett)",
+        "rank": "Rangsor",
+        "players": "Játékosok",
+        "points": "Pontok",
+        "name": "Név"
+    },
+    "leaderboard": {
+        "overview": {
+            "showMore": "Többet mutasson",
+            "thisWeekEndsIn": "A hét vége {timeLeft}.",
+            "lastWeekWinners": "A múlt heti nyertesek",
+            "allTime": "Minden idők",
+            "title": "Áttekintés",
+            "guildsHiddenByDefault": "Alapértelmezés szerint a kiszolgálónevek el vannak rejtve, a megjelenítéshez jelentkezzen be szerveradminisztrátorként.",
+            "thisWeek": "Ezen a héten"
+        },
+        "achievements": {
+            "description": "Ez a legtöbb teljesítménypontot összegyűjtő játékosoké.",
+            "title": "Eredmények"
+        },
+        "players": {
+            "title": "Játékosok",
+            "description": "Ez egy lista a legjobb játékosokról az összes szerveren, amelyen a játékot játsszák. A közvetlen üzenetváltások nem számítanak."
+        },
+        "guilds": {
+            "title": "Szerverek",
+            "description": "Ez egy lista a játék legfontosabb szervereiről, amelyeken a játékot játsszák.  \nAlapértelmezés szerint a szerver neve el lesz rejtve. Bejelentkezés után a szerverkonfigurációban választhatod, hogy megjelenjen-e."
+        },
+        "title": "Ranglista"
+    },
+    "needHelp": {
+        "needHelp": "Segítségre van szüksége?",
+        "supportServerIntroduction": "Segítséget kérhetsz, visszajelzést adhatsz, új funkciókat kérhetsz, vagy egyszerűen csak játszhatsz néhány Guess the Anime játékkal a hivatalos támogatási szerveren.",
+        "joinTheSupportServer": "Csatlakozzon a támogatási szerverhez",
+        "encounterProblemsContact": "Ha bármilyen probléma merülne fel, kérjük, ott lépjen kapcsolatba Kururinnal."
+    },
+    "myBoostedServers": {
+        "alreadyAdded": "Már hozzáadva",
+        "addToBoosted": "Hozzáadás a boosted",
+        "noServersFound": "Nem találtunk szervert.",
+        "savedChanges": "Sikeresen elmentette a változtatásokat",
+        "couldNotSaveChanges": "Nem tudta elmenteni a módosításokat",
+        "youCannotBoostServers": "# Nem tudod növelni a szervereket  \nLegalább 2-es szintű mecénásnak kell lenned ahhoz, hogy fel tudj lendíteni egy szervert.  \nEhhez először kösd össze a Discord fiókodat a patreonnal, majd [ígérj legalább tier 2-t a RinBot patreon oldalán]({patreonLink}).",
+        "boostedServers": "# Boosted servers  \nÖn egy tier {patronTier} mecénás. Több szerver(ek)et tudsz felturbózni {boostsLeft}",
+        "addServer": "Kiszolgáló hozzáadása",
+        "remove": "Távolítsuk el a boosted",
+        "noServersBoosted": "Egyetlen szerver sem lett felturbózva.",
+        "searchForServer": "Kiszolgáló keresése",
+        "pickServersToBoost": "Válassza ki a szervereket, hogy növelje"
+    },
+    "supportUs": {
+        "joinTheTranslationsChannel": "Mindenképpen csatlakozz a `#translations` csatornához a [support szerveren]({supportServerUrl}), hogy segítséget kérj és megvitasd a fordításokat.",
+        "signInWithAuth0": "Jelentkezz be Auth0-val, majd 'Folytatás a Discorddal'.",
+        "votingAndReviewing": "Szavazás és felülvizsgálat",
+        "supportThroughVoting": "Mindig hasznos a rendszeres szavazás és a véleményezés ezeken a weboldalakon.",
+        "supportThroughPatreon": "Ha szeretnél segíteni a szerver költségeinek fedezésében, akkor a Patreon segítségével bármilyen összeget felajánlhatsz. Néhány különleges kedvezményt is kapsz!",
+        "supportThroughKoFi": "Azt is fontolóra vehetnéd, hogy veszel nekem egy kávét a ko-fi.com-on keresztül. Ez azonban a legnagyobb elismerésemen kívül semmilyen előnyt nem ad!",
+        "translations": "Fordítások",
+        "helpWithTranslating": "Segíthetsz a jelenlegi fordítások javításával vagy új nyelvek hozzáadásával a tömegfordítás segítségével!",
+        "goal": "{completedPercentage}A{amount} havi működési költségek %-ban finanszírozottak!"
+    },
+    "achievements": {
+        "showLocked": "Zárolt eredmények megjelenítése",
+        "leftToUnlock": "balra a feloldáshoz",
+        "toGoForNextLevel": "a következő szintre lépni",
+        "thisWasTheLastLevel": "Ez volt az utolsó szint",
+        "noAchievementsGainedYet": "Még nem gyűjtöttek be semmilyen eredményt."
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "statistics": {
+        "title": "Statisztikák",
+        "roundsPerDay": {
+            "total": "Összesen",
+            "winners": "Győztesek",
+            "won": "Won",
+            "title": "Körök naponta",
+            "lost": "Elveszett"
+        },
+        "description": "Az elmúlt 30 napban naponta játszott körök száma."
+    },
+    "pageNotFound": "Az oldal nem létezik",
+    "playerTable": {
+        "username": "Név"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Rejtsd el a nevem globálisan",
+                "description": "Ha engedélyezi ezt a funkciót, akkor a neve \"(rejtett)\" lesz a weboldal összes ranglistáján és profilján.\n  A változtatás egy napot is igénybe vehet, mire a rendszerben mindenhol érvénybe lép."
+            }
+        }
+    },
+    "reportAnime": {
+        "submitted": "A jelentést sikeresen benyújtottuk.",
+        "couldNotSubmit": "Az Ön jelentését nem lehetett elküldeni."
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Játékos keresése"
+    },
+    "database": {
+        "characters": {
+            "title": "Karakterek"
+        },
+        "visualNovels": {
+            "title": "Vizuális regények"
+        },
+        "anime": {
+            "title": "Anime"
+        }
+    },
+    "validation": {
+        "maxLength": "A maximális hossz {max} karakter, de Ön {length} karaktert írt.",
+        "required": "Ez a mező kötelező"
+    },
+    "guildProfile": {
+        "join": "Csatlakozz ehhez a szerverhez"
+    },
+    "main": {
+        "isAinaBotSite": "Ön jelenleg az AinaBot honlapját böngészi. Ez egy discord bot csak felnőtt tartalmakkal. [Kattints ide RinBot honlapjára]({productionUrl}), ahol rendszeresen van anime.",
+        "isBetaSite": "Ön jelenleg a {botName} béta weboldalon böngészik. Ez csak tesztelési célokat szolgál. [Kattintson ide az aktuális weboldal megtekintéséhez]({productionUrl})."
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "tooltip": "Ephemerális parancs",
+            "description": "**Ephemeral parancs** - az ezeket a parancsokat követő üzenetek csak az Ön számára lesznek láthatóak."
+        },
+        "title": "Slash parancsok",
+        "description": "A slash parancsok használatához valószínűleg újra meg kell hívnod a {botName} címet, és meg kell győződnöd arról, hogy a **Create parancsok a** szerver hatókörében vannak.  \nHasználhatod a meghívás gombot a kezdőlapon, vagy a Discordon belül a {botName} gombra kattintva.  \n\nGyőződj meg róla, hogy a felhasználóid rendelkeznek a **Use Application Commands** jogosultsággal, különben egyáltalán nem tudnak majd slash parancsokat használni."
+    }
+}

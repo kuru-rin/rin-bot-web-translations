@@ -64,14 +64,16 @@
             "title": "#### Classements personnalisés",
             "ctop": "**Afficher le classement personnalisé pour la chaîne actuelle**",
             "endctop": "**Mettre fin au tableau de classement personnalisé actif**\nCeci arrête les points de s'accumuler, mais rien n'efface le tableau.",
-            "startctop": "**Démarrer un nouveau tableau de classement personnalisé pour le salon**\nTu as besoin d'utiliser plusieurs salons pour avoir plusieurs tableaux en même temps."
+            "startctop": "**Démarrer un nouveau tableau de classement personnalisé pour le salon**\nTu as besoin d'utiliser plusieurs salons pour avoir plusieurs tableaux en même temps.",
+            "resetctop": "**Réinitialise le classement personnalisé** \nCette opération permet à **d'effacer complètement** le classement personnalisé, qui ne reviendra plus jamais !  \nPour utiliser cette fonction, vous devez disposer de l'une des autorisations suivantes :\n- Administrateur\n- Gérer le serveur\n- Gestion des rôles\n- Gérer les canaux\n- Gérer les messages"
         },
         "misc": {
             "genres": "**Visionner tout les types d'animes possible**",
             "sync": "**Syncroniser votre liste d'anime à partir d'autre sites**\nPrésentement seul MyanimeList et AniList sont supporté.",
             "title": "#### Divers",
             "statg": "**Visionner les statistiques globale de la partie**",
-            "mydifficulty": "**Vous laisse choisir le niveau de dificulté pour toutes les parties que vous débuter..**"
+            "mydifficulty": "**Vous laisse choisir le niveau de dificulté pour toutes les parties que vous débuter..**",
+            "credits": "**Montre toutes les personnes et tous les sites web intéressants qui contribuent à rendre {botName} possible.**"
         },
         "management": {
             "title": "#### Administration",
@@ -92,6 +94,482 @@
         "termsOfService": "Termes de service",
         "botSupporter": "Supporteur de {botName}",
         "boostedByBotSupporter": "Boosté par un supporteur de {botName}",
-        "onlyForPatrons": "Seulement pour les patrons"
-    }
+        "onlyForPatrons": "Seulement pour les patrons",
+        "error": "Erreur",
+        "success": "Succès",
+        "privacyPolicy": "Politique de confidentialité",
+        "experimentalFeature": "Caractéristique expérimentale"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "titlePreferences": {
+                "titleTypes": {
+                    "card": "Titres des cartes",
+                    "short": "Titres courts",
+                    "any": "(tous)",
+                    "official": "Titres officiels",
+                    "kana": "Lectures de Kana",
+                    "label": "Types de titres",
+                    "main": "Titres principaux",
+                    "synonym": "Synonymes"
+                },
+                "disableTitleSimplifications": {
+                    "description": "Désactive les simplifications de titre (telles que la séparation des titres longs sur leur tiret/colon et la suppression des mots contextuels courants tels que \"saison\", \"version\", etc.)",
+                    "checkbox": "Désactiver les simplifications",
+                    "label": "Simplifications du titre"
+                },
+                "percentageWrong": {
+                    "description": "{percentage}% - plus bas signifie que l'on pardonne moins les fautes de frappe dans les estimations.",
+                    "label": "Pourcentage d'erreurs"
+                },
+                "mainTitle": {
+                    "type": "Type",
+                    "description": "Il s'agit de la priorité dans laquelle les titres principaux seront choisis. Le titre principal est celui utilisé pour l'indice et le résumé de l'anime à la fin d'un round. Si aucun titre principal ne peut être trouvé en fonction de vos préférences, les valeurs par défaut seront appliquées.",
+                    "label": "Titre principal",
+                    "source": "Source",
+                    "language": "Langue"
+                },
+                "titleLanguages": {
+                    "selectAll": "Tout sélectionner",
+                    "selectNone": "Sélectionner aucun",
+                    "label": "Langues du titre"
+                },
+                "titleSources": {
+                    "any": "(tous)"
+                },
+                "description": "##### Préférences de titre  \nVous pouvez ici configurer vos préférences en ce qui concerne les langues du titre qui doivent être acceptées comme des suppositions correctes.  \n\nSi vos préférences aboutissent à un ensemble de titres vide, les valeurs par défaut seront appliquées.",
+                "setToDefaults": "Régler sur les valeurs par défaut"
+            },
+            "winnerRoleConfigs": {
+                "rank": "Rang",
+                "undo": "Annuler",
+                "role": "Rôle",
+                "allTime": "Tout le temps",
+                "type": "Type",
+                "weekly": "Hebdomadaire",
+                "add": "Ajouter une nouvelle attribution de rôle",
+                "saveChanges": "Enregistrer les modifications",
+                "title": "Configuration des rôles",
+                "reachedMaximumAssignments": "Vous avez atteint le maximum de {maxWinnerRoleConfigs} attributions de rôles.",
+                "isWeekly": "En continu/hebdomadaire",
+                "points": "Points",
+                "time": "L'heure",
+                "label": "Rôles par rang",
+                "description": "Vous pouvez ici définir les attributions de rôles pour les gagnants du classement.",
+                "permissionInfo": "Assurez-vous que {botName} dispose de l'autorisation \"Gérer les rôles\" et qu'elle se trouve au-dessus du rôle que vous souhaitez lui confier.",
+                "boostedServersGetMoreAssignments": "Les [serveurs boostés] ({patreonLink}) peuvent avoir jusqu'à {patronWinnerRoleConfigs} rôles assignés.",
+                "warnManagedRole": "Notez que les rôles seront entièrement gérés par {botName}, de sorte que tous les membres du rôle qui ne sont pas des gagnants seront supprimés."
+            },
+            "animeSummaryLink": {
+                "description": "Cela ne fait que changer l'URL et il se peut que le site Web de RinBot soit rétabli pour certains animés.",
+                "label": "Lien vers le résumé de l'anime"
+            },
+            "disableHints": {
+                "label": "Conseils",
+                "description": "Si vous cochez cette case, le jeu n'affichera aucun indice dans aucun des tours.",
+                "checkbox": "Désactiver les indices"
+            },
+            "hideAlternativeTitles": {
+                "description": "En cochant cette case, la liste des titres alternatifs sera masquée dans le résumé de l'anime.",
+                "label": "Titres alternatifs",
+                "checkbox": "Cacher les titres alternatifs"
+            },
+            "disableSummaryLink": {
+                "description": "En cochant cette case, le lien sera supprimé du résumé à la fin d'un tour.",
+                "label": "Résumé",
+                "checkbox": "Désactiver le lien de synthèse"
+            },
+            "pointRoleConfigs": {
+                "label": "Rôles par points"
+            },
+            "disableDrops": {
+                "label": "Gouttes",
+                "description": "Si vous cochez cette case, le jeu ne produira pas de gouttes aléatoires pour les personnages.",
+                "checkbox": "Désactiver les chutes"
+            },
+            "title": "Devinez l'anime",
+            "enableAntiSpam": {
+                "label": "Anti-spam",
+                "description": "En activant cette option, le robot commencera à ignorer les joueurs qui essaient de deviner en utilisant continuellement le même titre.",
+                "checkbox": "Activer le filtre anti-spam"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Si vous cochez cette case, les joueurs qui ont quitté le serveur apparaîtront toujours dans les classements. Il peut s'écouler jusqu'à une heure avant qu'ils n'apparaissent.",
+                "label": "Joueurs manquants dans les classements",
+                "checkbox": "Afficher les joueurs manquants dans les classements"
+            }
+        },
+        "general": {
+            "inviteCode": {
+                "label": "Code d'invitation",
+                "invalid": "Ce code d'invitation semble être invalide",
+                "description": "Code d'invitation utilisé pour l'URL du nom de votre serveur dans les classements."
+            },
+            "showInLeaderboards": {
+                "checkbox": "Afficher le nom du serveur dans les classements mondiaux sur ce site",
+                "label": "Afficher dans les classements mondiaux",
+                "description": "Lorsque cette option est activée, le nom de votre serveur sera affiché dans les classements des serveurs. La propagation de ce changement peut prendre une heure."
+            },
+            "language": {
+                "label": "Langue",
+                "description": "Définit la langue de RinBot dans Discord. Cela n'affecte pas les titres de l'anime."
+            },
+            "disableLegacyCommands": {
+                "description": "Cela désactivera complètement les anciennes commandes préfixées, de sorte que vous ne pourrez utiliser que des commandes à barres obliques.",
+                "label": "Commandes préfixées",
+                "checkbox": "Désactiver les anciennes commandes préfixées"
+            },
+            "title": "Général",
+            "prefix": {
+                "label": "Préfixe de commande",
+                "invalid": "Ce champ est obligatoire et doit comporter entre 1 et 5 caractères.",
+                "description": "Ces caractères seront placés devant les commandes au lieu des caractères par défaut : !"
+            },
+            "noLanguageCodeDefined": "(utiliser la langue par défaut du serveur)"
+        }
+    },
+    "navbar": {
+        "database": "Base de données",
+        "mySettings": "Mes paramètres",
+        "leaderboard": "Tableau de bord",
+        "statistics": "Statistiques",
+        "login": "Connexion",
+        "logout": "Déconnexion",
+        "myProfile": "Mon profil",
+        "myServers": "Mes serveurs",
+        "myBoostedServers": "Mes serveurs boostés",
+        "status": "Statut",
+        "home": "Accueil",
+        "commands": "Commandes",
+        "faq": "FAQ",
+        "changelog": "Changelog"
+    },
+    "genres": {
+        "ISEKAI": "Isekai",
+        "SCI_FI": "Science-fiction",
+        "HISTORICAL": "Historique",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SEINEN": "Seinen",
+        "MILITARY": "Militaire",
+        "VAMPIRE": "Vampire",
+        "SPORTS": "Sports",
+        "SUPER_POWER": "Super pouvoir",
+        "ACTION": "Action",
+        "MAGIC": "Magie",
+        "MARTIAL_ARTS": "Arts martiaux",
+        "MECHA": "Mecha",
+        "PARODY": "Parodie",
+        "HORROR": "Horreur",
+        "KIDS": "Les enfants",
+        "ADVENTURE": "Aventure",
+        "CARS": "Voitures",
+        "COMEDY": "Comédie",
+        "ECCHI": "Ecchi",
+        "MUSIC": "Musique",
+        "SAMURAI": "Samouraï",
+        "ROMANCE": "Romance",
+        "SCHOOL": "L'école",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SPACE": "L'espace",
+        "HAREM": "Harem",
+        "SLICE_OF_LIFE": "Tranche de vie",
+        "SUPERNATURAL": "Surnaturel",
+        "POLICE": "Police",
+        "PSYCHOLOGICAL": "Psychologique",
+        "DEMENTIA": "Démence",
+        "DEMONS": "Démons",
+        "MYSTERY": "Mystère",
+        "DRAMA": "Drame",
+        "THRILLER": "Thriller",
+        "JOSEI": "Josei",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "GAME": "Jeu",
+        "FANTASY": "Fantaisie"
+    },
+    "needHelp": {
+        "needHelp": "Besoin d'aide ?",
+        "supportServerIntroduction": "Vous pouvez demander de l'aide, donner votre avis, demander de nouvelles fonctionnalités ou simplement jouer à Guess the Anime sur le serveur de support officiel.",
+        "encounterProblemsContact": "Si vous rencontrez le moindre problème, veuillez contacter Kururin à cet endroit.",
+        "joinTheSupportServer": "Rejoindre le serveur de support"
+    },
+    "main": {
+        "isBetaSite": "Vous êtes en train de parcourir le site web {botName} beta. Ce site n'est destiné qu'à des fins de test. [Cliquez ici pour naviguer sur le site actuel]({productionUrl}).",
+        "isAinaBotSite": "Vous êtes en train de parcourir la page d'accueil de AinaBot. Il s'agit d'un bot discord avec uniquement du contenu pour adultes. [Cliquez ici pour aller sur la page d'accueil de RinBot]({productionUrl}), qui propose des animes réguliers."
+    },
+    "userProfile": {
+        "statistics": "Statistiques",
+        "allTimeResults": "Résultats historiques",
+        "rounds": "Rondes",
+        "points": "Points",
+        "roundPoints": "Points ronds",
+        "rank": "Rang",
+        "achievementPoints": "Points d'accomplissement",
+        "achievements": "Réalisations",
+        "noTrophiesWon": "Aucun trophée n'a encore été remporté.",
+        "week": "Semaine",
+        "noResultsYet": "Aucun résultat pour l'instant.",
+        "trophiesWon": "Trophées remportés"
+    },
+    "status": {
+        "description": "Vous trouverez ici l'état de certains des services qui permettent à {botName} de fonctionner comme il se doit. Cette page est actualisée automatiquement toutes les 10 secondes.",
+        "api": {
+            "name": "API",
+            "tooltip": "Fournit un contenu dynamique et une configuration des robots sur le site web"
+        },
+        "worker": {
+            "name": "Travailleur",
+            "tooltip": "Fournit un tableau de classement, des scores et des mises à jour de profil"
+        },
+        "partialOutage": "Panne partielle",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Fournit un contenu dynamique (tel que la base de données) sur le site web"
+        },
+        "operational": "Opérationnel",
+        "coreServices": "Services de base",
+        "discordShards": "Éclats de discorde",
+        "howToFindYourServerId": "Si vous ne savez pas comment trouver l'ID de votre serveur, veuillez [lire cet article d'assistance] (https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "visualNovelDatabaseApi": {
+            "name": "API de base de données Visual novel",
+            "tooltip": "Fournit des séries de romans visuels - !sgvn"
+        },
+        "animeDatabaseApi": {
+            "tooltip": "Fournit des rondes d'anime - !sg, !sgv et !sga",
+            "name": "API pour les bases de données d'anime"
+        },
+        "title": "Statut",
+        "majorOutage": "Panne majeure",
+        "website": {
+            "name": "Site web",
+            "tooltip": "Vous ne seriez pas ici si celui-ci était rouge"
+        },
+        "putYourServerId": "Mettez votre ID de serveur ici pour trouver votre shard.",
+        "couldNotGetShardStatuses": "Impossible d'obtenir l'état d'un dépôt à partir de l'API",
+        "databaseServices": "Services de base de données"
+    },
+    "weekPicker": {
+        "weekly": "Hebdomadaire",
+        "year": "Année",
+        "allTime": "Tous les temps",
+        "week": "Semaine"
+    },
+    "myServers": {
+        "details": "Détails",
+        "showAll": "Afficher tous mes serveurs",
+        "configure": "Configurer",
+        "searchForServer": "Recherche d'un serveur",
+        "couldNotRetrieveServers": "Impossible de récupérer les serveurs",
+        "title": "Mes serveurs",
+        "description": "Vous devez avoir l'autorisation **Server Management** pour pouvoir configurer {botName} pour votre serveur.",
+        "boostedServer": "Serveur boosté",
+        "hasBot": "{botName} est sur ce serveur",
+        "addBot": "Ajouter {botName}",
+        "notHasBot": "{botName} n'est pas sur ce serveur"
+    },
+    "myServerDetails": {
+        "leaderboard": "Tableau de bord",
+        "backToMyServers": "Retour à mes serveurs",
+        "players": "Joueurs",
+        "channels": "Canaux",
+        "onlyForManagement": "Uniquement pour la gestion des serveurs",
+        "server": "Serveur"
+    },
+    "animeSorts": {
+        "MAIN_TITLE_ASC": "Titre principal (ascendant)",
+        "ROUNDS_LOST_ASC": "Rounds perdus (en ordre croissant)",
+        "MAIN_TITLE_DESC": "Titre principal (par ordre décroissant)",
+        "YEAR_ASC": "Année (par ordre croissant)",
+        "ROUNDS_WON_ASC": "Tours gagnés (par ordre croissant)",
+        "ROUNDS_WON_DESC": "Tours gagnés (par ordre décroissant)",
+        "ROUNDS_LOST_DESC": "Tours perdus (en ordre décroissant)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Tours gagnés % (croissant)",
+        "YEAR_DESC": "Année (par ordre décroissant)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Tours gagnés % (décroissant)"
+    },
+    "channelAccessControlConfig": {
+        "everyoneRole": "Tout le monde",
+        "allCommands": "(toutes les commandes)",
+        "title": "Contrôle d'accès",
+        "description": "Les règles de contrôle d'accès sont traitées de haut en bas.  \nTout est refusé par défaut, vous devrez donc au moins établir une règle d'autorisation.",
+        "addRule": "Ajouter une règle",
+        "maximumReached": "Vous avez atteint le nombre maximum de contrôles d'accès.",
+        "roles": "Rôles",
+        "commands": "Commandes"
+    },
+    "nsfw": {
+        "NOT_SAFE": "Peu sûr",
+        "QUESTIONABLE": "Discutable",
+        "DANGEROUS": "Dangereux",
+        "UNKNOWN": "Inconnu",
+        "SAFE": "Sûr"
+    },
+    "myBoostedServers": {
+        "addServer": "Ajouter un serveur",
+        "pickServersToBoost": "Choisissez des serveurs pour stimuler",
+        "addToBoosted": "Ajouter à boosté",
+        "alreadyAdded": "Déjà ajouté",
+        "boostedServers": "# Serveurs boostés  \nVous êtes un mécène de niveau {patronTier}. Vous pouvez booster {boostsLeft} serveur(s) supplémentaire(s)",
+        "remove": "Supprimer de boosté",
+        "noServersBoosted": "Aucun serveur n'a été renforcé.",
+        "searchForServer": "Recherche d'un serveur",
+        "youCannotBoostServers": "# Vous ne pouvez pas booster de serveurs  \nVous devez au moins être un mécène de niveau 2 pour pouvoir booster un serveur.  \nPour cela, vous devez d'abord lier votre compte Discord à patreon, puis [promettre au moins le niveau 2 sur la page patreon de RinBot]({patreonLink}).",
+        "noServersFound": "Aucun serveur n'a été trouvé.",
+        "savedChanges": "Les modifications ont été enregistrées avec succès",
+        "couldNotSaveChanges": "Impossible d'enregistrer les modifications"
+    },
+    "playerTable": {
+        "username": "Nom"
+    },
+    "validation": {
+        "required": "Ce champ est obligatoire",
+        "maxLength": "La longueur maximale est de {max} caractères, mais vous avez écrit {length} caractères."
+    },
+    "statistics": {
+        "title": "Statistiques",
+        "description": "Le nombre de tours joués par jour au cours des 30 derniers jours.",
+        "roundsPerDay": {
+            "title": "Rondes par jour",
+            "won": "Gagné",
+            "lost": "Perdu",
+            "total": "Total",
+            "winners": "Vainqueurs"
+        }
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Trouver un joueur"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Personnages"
+        },
+        "visualNovels": {
+            "title": "Romans visuels"
+        }
+    },
+    "difficulties": {
+        "NORMAL": "Normal",
+        "UNKNOWN": "Inconnu",
+        "EASY": "Facile",
+        "HARD": "Dur",
+        "EXTREME": "Extrême",
+        "NIGHTMARE": "Cauchemar"
+    },
+    "reportAnime": {
+        "submitted": "Votre rapport a été soumis avec succès.",
+        "couldNotSubmit": "Votre rapport n'a pas pu être soumis."
+    },
+    "channelConfiguration": {
+        "savedChangesSuccessfully": "Les modifications ont été enregistrées avec succès",
+        "stage": {
+            "topic": {
+                "label": "Thème de la scène"
+            }
+        },
+        "undo": "Annuler",
+        "startGameOnIdle": {
+            "checkbox": "Commencer un nouveau tour lorsque le canal est inactif",
+            "minutesIdle": "Minutes d'inactivité",
+            "boostedServersCanHaveLess": "[Boosted servers]({patreonLink}) peut avoir &#60 ; 60 minutes."
+        },
+        "add": "Ajouter un canal",
+        "saveChanges": "Enregistrer les modifications",
+        "description": "Ici, vous pouvez configurer quelques options spécifiques par canal. Ces options pourront être complétées ultérieurement par d'autres options de configuration du serveur.",
+        "noChannelsConfigured": "Aucune chaîne n'a été configurée pour le moment. Cliquez sur le bouton \"Ajouter un canal\" pour commencer.",
+        "maximumReached": "Vous avez atteint le maximum de {maxChannelConfigs} configurations de canaux.",
+        "couldNotSaveChanges": "Impossible d'enregistrer les modifications",
+        "useForVoiceRounds": {
+            "checkbox": "Utiliser uniquement ce canal vocal pour les rondes vocales (un seul peut être actif)"
+        },
+        "channelAccessControlEnabled": {
+            "checkbox": "Activer le contrôle d'accès aux canaux",
+            "description": "Ceci fera en sorte que {botName} n'écoute aucune commande à moins qu'elle ne soit listée spécifiquement par canal.",
+            "label": "Contrôle d'accès"
+        },
+        "boostedServersGetMore": "Les [serveurs boostés] ({patreonLink}) peuvent avoir jusqu'à {patronMaxConfigs} configurations de canaux."
+    },
+    "supportUs": {
+        "signInWithAuth0": "Connectez-vous avec Auth0, puis \"Continuer avec Discord\".",
+        "votingAndReviewing": "Vote et révision",
+        "supportThroughVoting": "Il est toujours utile de voter régulièrement et de laisser un avis sur ces sites web.",
+        "joinTheTranslationsChannel": "N'oubliez pas de rejoindre le canal `#translations` dans [le serveur d'assistance]({supportServerUrl}) pour demander de l'aide et discuter des traductions.",
+        "supportThroughKoFi": "Vous pouvez également envisager de m'offrir un café par l'intermédiaire de ko-fi.com. Cependant, cela n'offre aucun avantage, si ce n'est ma plus grande reconnaissance !",
+        "supportThroughPatreon": "Si vous souhaitez nous aider à couvrir les coûts du serveur, vous pouvez faire une promesse de don du montant de votre choix en utilisant Patreon. Vous bénéficierez également d'avantages particuliers !",
+        "goal": "{completedPercentage}% des coûts opérationnels de{amount} $ par mois sont financés !",
+        "translations": "Traductions",
+        "helpWithTranslating": "Vous pouvez nous aider en améliorant les traductions actuelles ou en ajoutant de nouvelles langues à l'aide de la traduction participative (crowd-translation) !"
+    },
+    "notLoggedIn": "Vous devez être connecté pour accéder à cette page.",
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Vous avez été déconnecté !"
+    },
+    "guildProfile": {
+        "join": "Rejoindre ce serveur"
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "description": "**Commande éphémère** - les messages qui suivent ces commandes ne seront visibles que par vous.",
+            "tooltip": "Commande éphémère"
+        },
+        "title": "Commandes de barre oblique",
+        "description": "Pour utiliser les commandes slash, vous devrez peut-être réinviter {botName} et vous assurer qu'elle dispose des commandes **Create dans une portée de serveur**.  \nVous pouvez utiliser le bouton d'invitation sur la page d'accueil, ou en cliquant sur {botName} depuis Discord.  \n\nAssurez-vous que vos utilisateurs ont la permission **Use Application Commands**, ou ils ne pourront pas utiliser de commandes slash."
+    },
+    "leaderboardTable": {
+        "players": "Joueurs",
+        "rank": "Rang",
+        "name": "Nom",
+        "rounds": "Rondes",
+        "hidden": "(caché)",
+        "points": "Points"
+    },
+    "introduction": {
+        "checkTheCommandListAndConfigure": "Consultez la liste des commandes pour une liste complète des fonctionnalités. Vous pouvez configurer {botName} après vous être connecté à ce site web, afin de l'adapter aux besoins de votre serveur.",
+        "orSeeHerInAction": "ou vous pouvez la voir en action dans le",
+        "supportServer": "{botName} serveur de support",
+        "shortDescription": "Jouez à **devinez l'anime** et bien d'autres jeux de devinettes directement dans les canaux discord avec vos amis.",
+        "features": "### Caractéristiques\n- **Des milliers de** d'anime, de personnages, de romans visuels et de jeux vidéo à deviner !\n- Devinez à partir d'images, de clips vidéo ou de fragments audio de chansons.\n- **Les prises choisies au hasard** font qu'aucun tour n'est jamais le même.\n- **Système de score avec tableaux de classement** (historique, hebdomadaire et périodes personnalisées).\n- Plusieurs niveaux de difficulté **** , pour que même les nouveaux fans d'anime et de visual novels puissent s'amuser.\n- Les titres peuvent être devinés en **plusieurs langues**.\n- ...et bien plus encore !",
+        "title": "{botName}Page d'accueil du site",
+        "inviteButton": "Invitez {botName} sur votre serveur"
+    },
+    "leaderboard": {
+        "guilds": {
+            "description": "Il s'agit d'une liste des principaux serveurs sur lesquels le jeu est joué.  \nPar défaut, le nom de votre serveur est caché. Vous pouvez choisir de l'afficher dans la configuration du serveur après vous être connecté.",
+            "title": "Serveurs"
+        },
+        "achievements": {
+            "description": "Il s'agit des joueurs qui ont accumulé le plus de points de réussite.",
+            "title": "Réalisations"
+        },
+        "overview": {
+            "showMore": "Afficher plus",
+            "lastWeekWinners": "Les gagnants de la semaine dernière",
+            "title": "Vue d'ensemble",
+            "guildsHiddenByDefault": "Par défaut, les noms des serveurs sont cachés. Pour les afficher, il faut se connecter en tant qu'administrateur du serveur.",
+            "thisWeek": "Cette semaine",
+            "allTime": "Tous les temps",
+            "thisWeekEndsIn": "La semaine se terminera à l'adresse {timeLeft}."
+        },
+        "title": "Tableau de bord",
+        "players": {
+            "title": "Joueurs",
+            "description": "Il s'agit d'une liste des meilleurs joueurs sur tous les serveurs sur lesquels le jeu est joué. Les rounds de messages directs ne sont pas pris en compte."
+        }
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Cacher mon nom au niveau mondial",
+                "description": "En activant cette option, votre nom sera \"(caché)\" dans tous les classements et profils du site web.\n  Votre changement peut prendre jusqu'à un jour pour être mis en œuvre dans tout le système."
+            }
+        }
+    },
+    "pageNotFound": "La page n'existe pas"
 }

@@ -23,9 +23,553 @@
             "title": "#### Round sessione vocale",
             "sgs": "**Inizia una sessione di round vocali**…\nQuesto entrerà in un canale vocale (con lo stesso nome, o con quello che é dentro) e quindi inizierà facendo Rounds…\nSiate sicuri che RinBot abbia i permessi di __Connect__ e __Speak__ nel canale.",
             "sgsa": "**Inizia una sessione di round vocali con 20 secondi di esempi**",
-            "stopgs": "**Round vocali fermati**…\nQuesto fermerà la modalità round vocali e allo stesso modo il round corrente."
+            "stopgs": "**Round vocali fermati**…\nQuesto fermerà la modalità round vocali e allo stesso modo il round corrente.",
+            "sbsa": "**Avviare una sessione di round vocale a scelta multipla con i campioni**"
         },
         "prefixCanBeChanged": "Il prefisso `!` di questi comandi può essere cambiato nella pagina 'My servers' dopo il tuo login.",
-        "canUseInDirectMessage": "Puoi anche usare la maggior parte di questi comandi con i messaggi diretti con RinBot, in ordine per giocare a una sessione privata. I punti dati con questa modalità non sono contati nella classifica."
+        "canUseInDirectMessage": "Puoi anche usare la maggior parte di questi comandi con i messaggi diretti con RinBot, in ordine per giocare a una sessione privata. I punti dati con questa modalità non sono contati nella classifica.",
+        "shortcuts": {
+            "year": "**Inizia un nuovo ciclo dall'anno `[anno]` fino ad oggi** \nEsempio: `!sg 1999` preleva anime dall'anno 1999 fino all'anno corrente incluso.",
+            "years": "**Inizia un nuovo ciclo dagli anni compresi tra `[anno1]` e `[anno2]`** \nEsempio: `!sg 1999 2003` preleva anime dagli anni 1999 fino al 2003 incluso.",
+            "title": "#### Scorciatoie per i filtri rotondi  \nQuesti sono alcuni filtri rapidi per iniziare. La difficoltà viene scelta automaticamente in base ai punti attuali, se non è stata specificata.",
+            "difficulty": "**Avvia un nuovo round con una difficoltà specifica** \n1 (facile), 2 (normale), 3 (difficile), 4 (estremo), 5 (incubo) e 0 (tutto)  \nEsempio: `!sg 1` per un round facile, o `!sg 4` per uno estremo.",
+            "genre": "**Avvia un nuovo ciclo con anime di un genere specifico** \nUsare il comando `!genres` per un elenco di tutti i generi disponibili.",
+            "songType": "**Avvia un nuovo ciclo audio con brani di un tipo specifico** \nIl tipo di brano può essere: `op` (aperture), `ed` (finali), `in` (brani di inserimento) o `tm` (brani immagine)",
+            "query": "**Inizia un nuovo ciclo con anime basati sulla propria query**  \n`d:1` per aggiungere la difficoltà al filtro  \n`g:shounen` per aggiungere un genere al filtro  \n`y:2001-2009` per aggiungere un intervallo di anni al filtro  \n`t:op` per aggiungere un tipo di canzone al filtro (solo per `!sga` rounds)  \nEsempio: `!sg d:1 g:shounen y:2001-2009` o `!sg g:drama y:2010` o `!sga t:op`  \n_Si noti che non è necessario utilizzare tutti i filtri nelle query._"
+        },
+        "onlyForPatrons": {
+            "tooltip": "Solo per i clienti",
+            "description": "**Può essere usato solo dai [patroni]({patreonUrl})** - questo è stato introdotto per ridurre il carico del server e far sì che le persone contribuiscano a pagare le bollette."
+        },
+        "queries": {
+            "numberOfRounds": "**Il numero di round in una sessione** \nIn questo modo si avviano automaticamente più round in una sessione e si ottiene una classifica alla fine della sessione.  \nEsempio: `n:2` per 2 round fino a un massimo di 10 round con `n:10`",
+            "operations": "#### Operazioni",
+            "filters": "#### Filtri",
+            "title": "### Query  \nÈ possibile creare le proprie query con questi parametri. Esse funzionano per `!sg`, `!sgv`, `!sga`, `!sgs` e `!sgsa`.  \n\nAd esempio: `!sg n:5 d:3 y:1995-2005` per avviare una sessione con 5 turni di anime a difficoltà difficile tra il 1995 e il 2005.",
+            "anilist": "**Filtrare in base all'elenco AniList** \nEsempio: `anilist:username` o `anilist:user1,user2` per elenchi di utenti multipli.  \nPrima di poter utilizzare il filtro, è necessario aver utilizzato il comando `!sync`.   \nÈ anche possibile combinare insieme diversi tipi di elenchi di anime, in questo modo: `mal:user1,user2 anilist:user3`",
+            "genre": "**Filtrare il genere** \nAttualmente è possibile filtrare solo un singolo genere, come `g:action` o `g:horror`.  \nUtilizzare il comando `!genres` per ottenere un elenco di tutti i generi disponibili.",
+            "songType": "**Filtrare il tipo di canzoni** (solo`!sga`, `!sgs` e `!sgsa` ) \nIl tipo di brano può essere: `op` (aperture), `ed` (finali), `in` (brani di inserimento) o `tm` (brani immagine)",
+            "imageManipulations": "**Manipola le immagini in un round** (solo per i round con immagini)  \nSi può scegliere tra `p` pixelato, `i` invertito, `o` dipinto a olio, `g` scala di grigi, `f` capovolto verticalmente.  \nEsempio: `im:p` o una combinazione con `im:g,o,i`",
+            "difficulty": "**Filtrare la difficoltà** \n1 (facile), 2 (normale), 3 (difficile), 4 (estrema), 5 (incubo) e 0 (tutto)  \nEsempio: `d:1` per un round facile, oppure `d:4` per uno estremo e `d:0` per disabilitare il filtro della difficoltà.",
+            "year": "**Filtrare l'anno** \nEsempio: `y:1999` selezionerebbe le anime dagli anni 1999 fino all'anno corrente incluso  \n`y:2005-2010` selezionerebbe gli anime tra il 2005 e il 2010 (entrambi inclusi).",
+            "mal": "**Filtro basato sull'elenco MyAnimeList** \nEsempio: `mal:username` o `mal:user1,user2` per elenchi di utenti multipli.  \nPrima di poter usare il filtro, è necessario aver usato il comando `!sync`.",
+            "aggr": "**Metodo di aggregazione** (solo quando si usano i filtri degli elenchi di anime)  \nÈ possibile utilizzare `aggr:union` per unire gli elenchi di anime invece di intersecarli."
+        },
+        "ctop": {
+            "title": "#### Classifiche personalizzate",
+            "resetctop": "**Azzera la classifica personalizzata** \nQuesto **cancellerà completamente** la classifica personalizzata, per non tornare mai più!  \nPer utilizzare questa funzione è necessario disporre di uno dei seguenti permessi:\n- Amministratore\n- Gestione del server\n- Gestione dei ruoli\n- Gestione dei canali\n- Gestione dei messaggi",
+            "ctop": "**Mostra la classifica personalizzata per il canale corrente**",
+            "startctop": "**Avvia una nuova classifica personalizzata per il canale**. \nÈ necessario utilizzare più canali per avere più classifiche personalizzate contemporaneamente.",
+            "endctop": "**Termina la classifica personalizzata attiva** \nIn questo modo si interrompe l'accumulo di punti, ma non si rimuove la classifica."
+        },
+        "points": {
+            "serverscore": "**Mostra il punteggio dell'intero server**",
+            "allfastest": "**Mostra i giocatori più veloci di tutti i tempi nel server**. \nVengono contati solo i round con un pool di anime superiore a 1000.",
+            "weektop": "**Mostra i migliori giocatori della settimana corrente nel server**. \nUtilizza le settimane ISO-8601 dell'anno con il lunedì come primo giorno della settimana. Il comando vi dirà quando la settimana si azzererà.",
+            "title": "#### Punti  \nI punti vengono ricalcolati ogni ora. Puoi [potenziare il tuo server](https://patreon.com/rinbot?fan_landing=true) per avere aggiornamenti in tempo reale.",
+            "myscore": "**Mostra i punti guadagnati e i round giocati nel canale corrente.**",
+            "alltop": "**Mostra i migliori giocatori di tutti i tempi nel server**",
+            "weekfastest": "**Mostra i giocatori più veloci della settimana corrente nel server**. \nVengono contati solo i turni con un pool di anime superiore a 1000.  \nPer esempio: questo esclude le modalità facile/normale e la maggior parte dei generi minori."
+        },
+        "misc": {
+            "title": "#### Varie",
+            "genres": "**Mostra tutti i generi di anime possibili**",
+            "statg": "**Mostra alcune statistiche globali del gioco**",
+            "sync": "**Sincronizza la tua lista di anime da altri siti** \nAttualmente sono supportati MyAnimeList e AniList.",
+            "credits": "**Mostra tutte le persone e i siti web che contribuiscono a rendere possibile {botName}.**",
+            "mydifficulty": "**Permette di impostare la difficoltà predefinita per tutti i round iniziati.**"
+        },
+        "management": {
+            "title": "#### Gestione",
+            "prefix": "**Mostra il prefisso corrente e consente di cambiarlo**",
+            "lang": "**Mostra la lingua corrente e permette di cambiarla**"
+        },
+        "isExperimental": {
+            "tooltip": "Sperimentale",
+            "description": "**Funzionalità sperimentale** - questa funzionalità è abbastanza nuova, quindi potrebbe contenere alcuni bug [per favore segnalateli qui]({supportServerUrl}) se ne trovate alcuni"
+        }
+    },
+    "animeSorts": {
+        "ROUNDS_WON_ASC": "Round vinti (in ordine crescente)",
+        "YEAR_ASC": "Anno (ascendente)",
+        "YEAR_DESC": "Anno (decrescente)",
+        "ROUNDS_WON_DESC": "Giri vinti (decrescenti)",
+        "ROUNDS_LOST_ASC": "Round persi (in ordine crescente)",
+        "MAIN_TITLE_ASC": "Titolo principale (ascendente)",
+        "ROUNDS_LOST_DESC": "Giri persi (decrescente)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Round vinti % (ascendente)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Round vinti % (decrescente)",
+        "MAIN_TITLE_DESC": "Titolo principale (decrescente)"
+    },
+    "status": {
+        "databaseServices": "Servizi di database",
+        "website": {
+            "name": "Sito web",
+            "tooltip": "Non saresti qui se questo fosse stato rosso."
+        },
+        "animeDatabaseApi": {
+            "tooltip": "Fornisce anime rotonde - !sg, !sgv e !sga",
+            "name": "API del database degli anime"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "API per il database del romanzo visivo",
+            "tooltip": "Fornisce i turni per i romanzi visivi - !sgvn"
+        },
+        "title": "Stato",
+        "worker": {
+            "tooltip": "Fornisce aggiornamenti su classifiche, punteggi e profili",
+            "name": "Lavoratore"
+        },
+        "putYourServerId": "Inserite qui l'ID del vostro server per trovare il vostro shard",
+        "howToFindYourServerId": "Se non sapete come trovare l'ID del vostro server, [leggete questo articolo di supporto](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "description": "Qui potete trovare lo stato di alcuni dei servizi che fanno funzionare {botName} come dovrebbe. Questa pagina si aggiorna automaticamente ogni 10 secondi.",
+        "majorOutage": "Interruzione grave",
+        "couldNotGetShardStatuses": "Impossibile ottenere gli stati degli shard dall'API",
+        "api": {
+            "name": "API",
+            "tooltip": "Fornisce contenuti dinamici e configurazione dei bot sul sito web"
+        },
+        "coreServices": "Servizi principali",
+        "discordShards": "Frammenti di discordia",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Fornisce contenuti dinamici (come il database) sul sito web"
+        },
+        "operational": "Operativo",
+        "partialOutage": "Interruzione parziale"
+    },
+    "main": {
+        "isBetaSite": "Si sta consultando il sito web {botName} beta. Questo sito è stato creato solo a scopo di test. [Fare clic qui per consultare il sito web attuale]({productionUrl}).",
+        "isAinaBotSite": "Stai visualizzando il sito web di AinaBot. Questo è un bot di discordia con contenuti esclusivamente per adulti. [Clicca qui per andare alla homepage di RinBot]({productionUrl}), che ha anime regolari."
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Trova un giocatore"
+    },
+    "channelAccessControlConfig": {
+        "commands": "Comandi",
+        "roles": "Ruoli",
+        "allCommands": "(tutti i comandi)",
+        "everyoneRole": "@tutti",
+        "maximumReached": "È stato raggiunto il numero massimo di controlli di accesso.",
+        "addRule": "Aggiungere una regola",
+        "title": "Controllo degli accessi",
+        "description": "Le regole di controllo dell'accesso vengono elaborate dall'alto verso il basso.  \nPer impostazione predefinita, tutto è negato, quindi è necessario creare almeno una regola di autorizzazione."
+    },
+    "validation": {
+        "required": "Questo campo è obbligatorio",
+        "maxLength": "La lunghezza massima è di {max} caratteri, ma avete scritto {length} caratteri."
+    },
+    "genres": {
+        "GAME": "Gioco",
+        "SPORTS": "Sport",
+        "SUPER_POWER": "Superpotere",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "POLICE": "Polizia",
+        "VAMPIRE": "Vampiro",
+        "PSYCHOLOGICAL": "Psicologico",
+        "ISEKAI": "Isekai",
+        "SAMURAI": "Samurai",
+        "SCHOOL": "Scuola",
+        "JOSEI": "Josei",
+        "DEMENTIA": "Demenza",
+        "DEMONS": "I demoni",
+        "MYSTERY": "Mistero",
+        "MAGIC": "Magia",
+        "SEINEN": "Seinen",
+        "HORROR": "Orrore",
+        "KIDS": "Bambini",
+        "THRILLER": "Thriller",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SPACE": "Spazio",
+        "HAREM": "Harem",
+        "MARTIAL_ARTS": "Arti marziali",
+        "HISTORICAL": "Storico",
+        "FANTASY": "Fantasia",
+        "ROMANCE": "Il romanticismo",
+        "COMEDY": "Commedia",
+        "DRAMA": "Drammatico",
+        "ECCHI": "Ecchi",
+        "ACTION": "Azione",
+        "ADVENTURE": "Avventura",
+        "CARS": "Auto",
+        "SHOUJO": "Shoujo",
+        "SCI_FI": "Fantascienza",
+        "MECHA": "Mecha",
+        "MUSIC": "Musica",
+        "PARODY": "Parodia",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SLICE_OF_LIFE": "Fetta di vita",
+        "SUPERNATURAL": "Soprannaturale",
+        "MILITARY": "Militare"
+    },
+    "guildProfile": {
+        "join": "Unisciti a questo server"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "pointRoleConfigs": {
+                "label": "Ruoli per punti"
+            },
+            "winnerRoleConfigs": {
+                "reachedMaximumAssignments": "È stato raggiunto il numero massimo di assegnazioni di ruoli {maxWinnerRoleConfigs}.",
+                "points": "Punti",
+                "warnManagedRole": "Si noti che i ruoli saranno completamente gestiti da {botName}, quindi tutti i membri del ruolo che non sono vincitori saranno rimossi.",
+                "saveChanges": "Salva le modifiche",
+                "title": "Configurazione del ruolo",
+                "role": "Ruolo",
+                "label": "Ruoli per grado",
+                "allTime": "Tutti i tempi",
+                "description": "Qui è possibile impostare l'assegnazione dei ruoli ai vincitori della classifica.",
+                "boostedServersGetMoreAssignments": "I [server potenziati]({patreonLink}) possono avere fino a {patronWinnerRoleConfigs} assegnazioni di ruolo.",
+                "add": "Aggiungere una nuova assegnazione di ruolo",
+                "undo": "Annullamento",
+                "rank": "Classifica",
+                "weekly": "Settimanale",
+                "isWeekly": "Sempre e settimanalmente",
+                "type": "Tipo",
+                "time": "Tempo",
+                "permissionInfo": "Assicuratevi che {botName} abbia l'autorizzazione \"Gestisci ruoli\" e sia posizionato sopra il ruolo che volete farle assegnare."
+            },
+            "disableSummaryLink": {
+                "description": "Selezionando questa opzione si rimuove il link dal riepilogo alla fine di un turno.",
+                "label": "Sintesi",
+                "checkbox": "Disattivare il link di riepilogo"
+            },
+            "titlePreferences": {
+                "disableTitleSimplifications": {
+                    "description": "Disabilita le semplificazioni dei titoli (come la divisione dei titoli lunghi sul trattino/colon e la rimozione di parole contestuali comuni come \"stagione\", \"versione\", ecc.)",
+                    "label": "Semplificazioni del titolo",
+                    "checkbox": "Disattivare le semplificazioni"
+                },
+                "titleTypes": {
+                    "short": "Titoli brevi",
+                    "kana": "Letture Kana",
+                    "label": "Tipi di titoli",
+                    "main": "Titoli principali",
+                    "official": "Titoli ufficiali",
+                    "synonym": "Sinonimi",
+                    "card": "Titoli delle carte",
+                    "any": "(qualsiasi)"
+                },
+                "description": "##### Preferenze per i titoli  \nQui è possibile configurare le preferenze relative alle lingue dei titoli che devono essere accettate come ipotesi corrette.  \n\nSe le preferenze risultano in una serie di titoli vuota, il programma si rifarà alle impostazioni predefinite.",
+                "mainTitle": {
+                    "language": "Lingua",
+                    "type": "Tipo",
+                    "label": "Titolo principale",
+                    "description": "Questa è la priorità con cui verranno scelti i titoli principali. Il titolo principale è quello utilizzato per il suggerimento e il riassunto dell'anime alla fine di un turno. Se non è possibile trovare un titolo principale in base alle preferenze dell'utente, il gioco si riduce ai valori predefiniti.",
+                    "source": "Fonte"
+                },
+                "setToDefaults": "Impostare le impostazioni predefinite",
+                "percentageWrong": {
+                    "label": "Percentuale sbagliata",
+                    "description": "{percentage}% - più basso significa meno indulgente nei confronti di errori di battitura nelle ipotesi"
+                },
+                "titleLanguages": {
+                    "selectNone": "Selezionare nessuno",
+                    "label": "Titolo lingue",
+                    "selectAll": "Seleziona tutti"
+                },
+                "titleSources": {
+                    "any": "(qualsiasi)"
+                }
+            },
+            "disableDrops": {
+                "label": "Gocce",
+                "checkbox": "Disattivare le gocce",
+                "description": "Selezionando questa opzione, il gioco non genererà alcuna goccia casuale di personaggio."
+            },
+            "disableHints": {
+                "checkbox": "Disattivare i suggerimenti",
+                "description": "Selezionando questa opzione, il gioco non mostrerà alcun suggerimento in nessun round.",
+                "label": "Suggerimenti"
+            },
+            "hideAlternativeTitles": {
+                "description": "Selezionando questa opzione si nasconde l'elenco dei titoli alternativi nel sommario dell'anime.",
+                "label": "Titoli alternativi",
+                "checkbox": "Nascondi i titoli alternativi"
+            },
+            "title": "Indovina l'anime",
+            "enableAntiSpam": {
+                "description": "Abilitando questa opzione, il bot inizierà a ignorare i giocatori che tentano di indovinare utilizzando sempre lo stesso titolo.",
+                "label": "Antispam",
+                "checkbox": "Abilitare il filtro antispam"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Selezionando questa opzione, i giocatori che hanno lasciato il server appariranno comunque nelle classifiche. La loro comparsa potrebbe richiedere fino a un'ora.",
+                "label": "Giocatori mancanti nelle classifiche",
+                "checkbox": "Mostra i giocatori mancanti nelle classifiche"
+            },
+            "animeSummaryLink": {
+                "description": "In questo modo si modifica solo l'URL e si può tornare al sito web di RinBot per alcune anime.",
+                "label": "Link al riassunto dell'anime"
+            }
+        },
+        "general": {
+            "prefix": {
+                "label": "Prefisso del comando",
+                "description": "Questi caratteri verranno inseriti davanti ai comandi invece di quelli predefiniti: !",
+                "invalid": "È un campo obbligatorio e deve essere compreso tra 1 e 5 caratteri."
+            },
+            "showInLeaderboards": {
+                "description": "Quando questa funzione è attivata, il nome del server verrà visualizzato nelle classifiche dei server. Potrebbe essere necessaria un'ora per la propagazione di questa modifica.",
+                "label": "Mostra nelle classifiche globali",
+                "checkbox": "Mostra il nome del server nelle classifiche globali su questo sito"
+            },
+            "inviteCode": {
+                "invalid": "Il codice dell'invito sembra non essere valido",
+                "label": "Codice invito",
+                "description": "Codice invito che viene utilizzato per l'URL del nome del server nelle classifiche"
+            },
+            "disableLegacyCommands": {
+                "label": "Comandi prefissati",
+                "checkbox": "Disabilita i comandi con prefisso legacy",
+                "description": "Questo disabiliterà completamente i comandi con prefisso legacy, in modo da poter utilizzare solo i comandi con barra."
+            },
+            "noLanguageCodeDefined": "(utilizzare la lingua predefinita del server)",
+            "title": "Generale",
+            "language": {
+                "description": "Imposta la lingua per RinBot all'interno di Discord. Questo non influisce sui titoli degli anime.",
+                "label": "Lingua"
+            }
+        }
+    },
+    "userProfile": {
+        "statistics": "Statistiche",
+        "allTimeResults": "Risultati di tutti i tempi",
+        "rounds": "Giri",
+        "noResultsYet": "Non ci sono ancora risultati.",
+        "trophiesWon": "Trofei vinti",
+        "week": "Settimana",
+        "achievementPoints": "Punti di realizzazione",
+        "achievements": "Risultati",
+        "noTrophiesWon": "Nessun trofeo vinto.",
+        "roundPoints": "Punti tondi",
+        "points": "Punti",
+        "rank": "Classifica"
+    },
+    "myServers": {
+        "details": "Dettagli",
+        "title": "I miei server",
+        "searchForServer": "Ricerca di un server",
+        "description": "Per poter configurare {botName} il proprio server, è necessario disporre dell'autorizzazione **Server Management**.",
+        "boostedServer": "Server potenziato",
+        "hasBot": "{botName} è su questo server",
+        "addBot": "Aggiungi {botName}",
+        "notHasBot": "{botName} non è presente su questo server",
+        "couldNotRetrieveServers": "Impossibile recuperare i server",
+        "configure": "Configurare",
+        "showAll": "Mostra tutti i miei server"
+    },
+    "myServerDetails": {
+        "backToMyServers": "Ritorno ai miei server",
+        "server": "Server",
+        "channels": "Canali",
+        "leaderboard": "Classifica",
+        "players": "Giocatori",
+        "onlyForManagement": "Solo per la gestione del server"
+    },
+    "channelConfiguration": {
+        "boostedServersGetMore": "I [server potenziati] ({patreonLink}) possono avere fino a {patronMaxConfigs} configurazioni di canali.",
+        "startGameOnIdle": {
+            "checkbox": "Iniziare un nuovo ciclo quando il canale è inattivo",
+            "minutesIdle": "Minuti di inattività",
+            "boostedServersCanHaveLess": "[Server potenziati]({patreonLink}) può avere &#60; 60 minuti."
+        },
+        "couldNotSaveChanges": "Impossibile salvare le modifiche",
+        "channelAccessControlEnabled": {
+            "checkbox": "Abilita il controllo dell'accesso al canale",
+            "description": "Questo fa sì che {botName} non ascolti alcun comando a meno che non sia stato inserito in una lista bianca specifica per ogni canale.",
+            "label": "Controllo degli accessi"
+        },
+        "undo": "Annullamento",
+        "savedChangesSuccessfully": "Le modifiche sono state salvate con successo",
+        "add": "Aggiungere un canale",
+        "maximumReached": "È stato raggiunto il numero massimo di configurazioni di canale {maxChannelConfigs}.",
+        "description": "Qui è possibile configurare alcune opzioni specifiche per canale. Queste potrebbero essere ampliate con altre opzioni di configurazione del server in un secondo momento.",
+        "stage": {
+            "topic": {
+                "label": "Argomento del palcoscenico"
+            }
+        },
+        "noChannelsConfigured": "Al momento non è stato configurato alcun canale. Fare clic sul pulsante \"Aggiungi un canale\" per iniziare.",
+        "saveChanges": "Salva le modifiche",
+        "useForVoiceRounds": {
+            "checkbox": "Utilizza solo questo canale vocale per i turni vocali (può essere attivo solo uno)"
+        }
+    },
+    "supportUs": {
+        "votingAndReviewing": "Votazione e revisione",
+        "supportThroughVoting": "È sempre utile votare regolarmente e lasciare una recensione su questi siti web.",
+        "translations": "Traduzioni",
+        "goal": "{completedPercentage}% dei costi operativi di ${amount} al mese sono finanziati!",
+        "helpWithTranslating": "Potete contribuire a migliorare le traduzioni attuali o ad aggiungere nuove lingue utilizzando la crowd-translation!",
+        "joinTheTranslationsChannel": "Assicuratevi di unirvi al canale `#traduzioni` nel [server di supporto]({supportServerUrl}) per chiedere aiuto e discutere delle traduzioni.",
+        "supportThroughKoFi": "Potreste anche pensare di offrirmi un caffè attraverso ko-fi.com. Tuttavia, questo non dà alcun vantaggio se non il mio massimo apprezzamento!",
+        "supportThroughPatreon": "Se volete contribuire a coprire i costi del server, potete impegnarvi per qualsiasi cifra utilizzando Patreon. Otterrai anche alcuni vantaggi speciali!",
+        "signInWithAuth0": "Accedere con Auth0 e poi \"Continua con Discord\"."
+    },
+    "notLoggedIn": "Per accedere a questa pagina è necessario aver effettuato il login.",
+    "weekPicker": {
+        "allTime": "Tutti i tempi",
+        "year": "Anno",
+        "weekly": "Settimanale",
+        "week": "Settimana"
+    },
+    "database": {
+        "visualNovels": {
+            "title": "Romanzi visivi"
+        },
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Personaggi"
+        }
+    },
+    "difficulties": {
+        "NORMAL": "Normale",
+        "NIGHTMARE": "Incubo",
+        "UNKNOWN": "Sconosciuto",
+        "EASY": "Facile",
+        "HARD": "Duro",
+        "EXTREME": "Estremo"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "Elenco Ani",
+        "MY_ANIME_LIST": "Il mio elenco di anime"
+    },
+    "leaderboard": {
+        "guilds": {
+            "title": "Server",
+            "description": "Questo è un elenco dei server principali su cui viene giocato il gioco.  \nPer impostazione predefinita, il nome del server è nascosto. È possibile scegliere di mostrarlo nella configurazione del server dopo l'accesso."
+        },
+        "achievements": {
+            "title": "Risultati",
+            "description": "Si tratta dei giocatori che hanno collezionato il maggior numero di punti obiettivo."
+        },
+        "title": "Classifica",
+        "overview": {
+            "title": "Panoramica",
+            "showMore": "Mostra di più",
+            "thisWeek": "Questa settimana",
+            "allTime": "Tutti i tempi",
+            "lastWeekWinners": "I vincitori della scorsa settimana",
+            "guildsHiddenByDefault": "Per impostazione predefinita, i nomi dei server sono nascosti; per visualizzarli, è necessario effettuare il login come amministratore del server.",
+            "thisWeekEndsIn": "La settimana si concluderà su {timeLeft}."
+        },
+        "players": {
+            "title": "Giocatori",
+            "description": "Questo è un elenco dei migliori giocatori su tutti i server in cui si gioca. I round di messaggi diretti non vengono conteggiati."
+        }
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "won": "Vinto",
+            "lost": "Perso",
+            "total": "Totale",
+            "title": "Giri al giorno",
+            "winners": "Vincitori"
+        },
+        "title": "Statistiche",
+        "description": "La quantità di giri giocati al giorno negli ultimi 30 giorni."
+    },
+    "pageNotFound": "La pagina non esiste",
+    "common": {
+        "termsOfService": "Termini di servizio",
+        "loading": "Caricamento",
+        "error": "Errore",
+        "success": "Il successo",
+        "boostedByBotSupporter": "Sostenuto da un sostenitore di {botName}",
+        "privacyPolicy": "Informativa sulla privacy",
+        "botSupporter": "{botName} sostenitore",
+        "onlyForPatrons": "Solo per i clienti",
+        "experimentalFeature": "Caratteristica sperimentale"
+    },
+    "navbar": {
+        "mySettings": "Le mie impostazioni",
+        "commands": "Comandi",
+        "login": "Accesso",
+        "logout": "Disconnessione",
+        "home": "Casa",
+        "myServers": "I miei server",
+        "myBoostedServers": "I miei server potenziati",
+        "faq": "FAQ",
+        "myProfile": "Il mio profilo",
+        "status": "Stato",
+        "database": "Database",
+        "changelog": "Changelog",
+        "leaderboard": "Classifica",
+        "statistics": "Statistiche"
+    },
+    "needHelp": {
+        "needHelp": "Avete bisogno di aiuto?",
+        "supportServerIntroduction": "È possibile chiedere aiuto, fornire feedback, richiedere nuove funzionalità o semplicemente giocare a Guess the Anime nel server di supporto ufficiale.",
+        "encounterProblemsContact": "In caso di problemi, contattare Kururin.",
+        "joinTheSupportServer": "Partecipare al server di supporto"
+    },
+    "nsfw": {
+        "QUESTIONABLE": "Discutibile",
+        "NOT_SAFE": "Non sicuro",
+        "DANGEROUS": "Pericoloso",
+        "UNKNOWN": "Sconosciuto",
+        "SAFE": "Sicuro"
+    },
+    "reportAnime": {
+        "submitted": "Il vostro rapporto è stato inviato con successo.",
+        "couldNotSubmit": "Non è stato possibile inviare il rapporto."
+    },
+    "leaderboardTable": {
+        "hidden": "(nascosto)",
+        "rank": "Classifica",
+        "name": "Nome",
+        "rounds": "Giri",
+        "points": "Punti",
+        "players": "Giocatori"
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "tooltip": "Comando effimero",
+            "description": "**Comando effimero** - i messaggi che seguono questi comandi saranno visibili solo all'utente."
+        },
+        "title": "Comandi slash",
+        "description": "Per usare i comandi slash è necessario invitare nuovamente {botName} e assicurarsi che abbia i comandi **Create in uno scope del server**.  \nÈ possibile utilizzare il pulsante di invito sulla home page, oppure cliccando su {botName} da Discord.  \n\nAssicurarsi che gli utenti abbiano il permesso **Use Application Commands**, altrimenti non potranno utilizzare alcun comando slash."
+    },
+    "introduction": {
+        "shortDescription": "Gioca a **indovina l'anime** e a molti altri giochi a quiz indovinati direttamente nei canali discord con i tuoi amici.",
+        "title": "{botName}pagina iniziale",
+        "inviteButton": "Invita {botName} al tuo server",
+        "orSeeHerInAction": "oppure potete vederla in azione nel",
+        "supportServer": "{botName} server di supporto",
+        "checkTheCommandListAndConfigure": "Per un elenco completo delle funzioni, consultare l'elenco dei comandi. È possibile configurare {botName} dopo essersi collegati a questo sito web, per personalizzarlo in base alle esigenze del proprio server.",
+        "features": "### Caratteristiche\n- **Migliaia di** di anime, personaggi, visual novel e videogiochi disponibili per essere indovinati!\n- Indovina da immagini, videoclip o frammenti audio di canzoni.\n- **Le catture scelte a caso** fanno sì che nessun round sia mai uguale all'altro.\n- **Sistema di punteggio con classifiche** (di tutti i tempi, settimanali e personalizzate).\n- Livelli di difficoltà **multipli**, in modo che anche i nuovi fan di anime e visual novel possano divertirsi.\n- I titoli possono essere indovinati in **più lingue**.\n- ...e molto altro ancora!"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Sei stato disconnesso!"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Nascondere il mio nome a livello globale",
+                "description": "Abilitando questa opzione, il vostro nome sarà impostato come \"(nascosto)\" su tutte le classifiche e i profili del sito.\n  La modifica può richiedere fino a un giorno per essere implementata in tutto il sistema."
+            }
+        }
+    },
+    "playerTable": {
+        "username": "Nome"
+    },
+    "myBoostedServers": {
+        "youCannotBoostServers": "# Non puoi potenziare nessun server  \nDevi essere almeno un patrono di livello 2 per poter potenziare un server.  \nPer ottenere questo, prima collega il tuo account Discord a patreon, e poi [impegnati per almeno il livello 2 nella pagina patreon di RinBot]({patreonLink}).",
+        "boostedServers": "# server potenziati  \nSei un mecenate di livello {patronTier}. Puoi potenziare {boostsLeft} altri server.",
+        "addServer": "Aggiungere un server",
+        "remove": "Rimuovere da boosted",
+        "noServersBoosted": "Nessun server è stato potenziato.",
+        "searchForServer": "Ricerca di un server",
+        "pickServersToBoost": "Scegliere i server per incrementare",
+        "addToBoosted": "Aggiungi a boosted",
+        "alreadyAdded": "Già aggiunto",
+        "noServersFound": "Nessun server trovato.",
+        "savedChanges": "Le modifiche sono state salvate con successo",
+        "couldNotSaveChanges": "Impossibile salvare le modifiche"
     }
 }

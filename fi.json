@@ -3,6 +3,573 @@
         "leftToUnlock": "jäljellä avattavaksi",
         "thisWasTheLastLevel": "Tämä oli viimeinen taso",
         "noAchievementsGainedYet": "Saavutuksia ei ole vielä kerätty.",
-        "showLocked": "Näytä lukitut saavutukset"
+        "showLocked": "Näytä lukitut saavutukset",
+        "toGoForNextLevel": "siirtyä seuraavalle tasolle"
+    },
+    "main": {
+        "isAinaBotSite": "Selaat tällä hetkellä AinaBotin kotisivuja. Tämä on discord-botti, jossa on vain aikuissisältöä. [Klikkaa tästä siirtyäksesi RinBotin kotisivulle]({productionUrl}), jossa on tavallista animea.",
+        "isBetaSite": "Selaat tällä hetkellä {botName} beta -sivustoa. Tämä on tarkoitettu vain testaustarkoituksiin. [Klikkaa tästä selataksesi varsinaista verkkosivustoa]({productionUrl})."
+    },
+    "genres": {
+        "SHOUJO_AI": "Shoujo Ai",
+        "MAGIC": "Magic",
+        "ROMANCE": "Romanssi",
+        "SCI_FI": "Sci-fi",
+        "MARTIAL_ARTS": "Kamppailulajit",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SUPER_POWER": "Supervoima",
+        "JOSEI": "Josei",
+        "HISTORICAL": "Historiallinen",
+        "HORROR": "Kauhu",
+        "MECHA": "Mecha",
+        "SAMURAI": "Samurai",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "ISEKAI": "Isekai",
+        "ACTION": "Toiminta",
+        "DEMENTIA": "Dementia",
+        "MYSTERY": "Mysteeri",
+        "FANTASY": "Fantasia",
+        "VAMPIRE": "Vampyyri",
+        "SEINEN": "Seinen",
+        "GAME": "Peli",
+        "SCHOOL": "Koulu",
+        "SHOUNEN": "Shounen",
+        "SPACE": "Avaruus",
+        "SPORTS": "Urheilu",
+        "HAREM": "Harem",
+        "SLICE_OF_LIFE": "Slice of life",
+        "SUPERNATURAL": "Yliluonnollinen",
+        "MILITARY": "Sotilaallinen",
+        "POLICE": "Poliisi",
+        "ADVENTURE": "Seikkailu",
+        "CARS": "Autot",
+        "PARODY": "Parodia",
+        "COMEDY": "Komedia",
+        "DRAMA": "Draama",
+        "KIDS": "Lapset",
+        "MUSIC": "Musiikki",
+        "THRILLER": "Trilleri",
+        "ECCHI": "Ecchi",
+        "SHOUJO": "Shoujo",
+        "PSYCHOLOGICAL": "Psykologinen",
+        "DEMONS": "Demonit"
+    },
+    "guildProfile": {
+        "join": "Liity tähän palvelimeen"
+    },
+    "leaderboard": {
+        "overview": {
+            "guildsHiddenByDefault": "Oletusarvoisesti palvelimen nimet ovat piilossa, kirjaudu palvelimen ylläpitäjäksi näyttääksesi ne.",
+            "thisWeek": "Tällä viikolla",
+            "allTime": "Kaikkien aikojen",
+            "title": "Yleiskatsaus",
+            "showMore": "Näytä lisää",
+            "lastWeekWinners": "Viime viikon voittajat",
+            "thisWeekEndsIn": "Viikko päättyy {timeLeft}."
+        },
+        "title": "Tulostaulu",
+        "players": {
+            "title": "Pelaajat",
+            "description": "Tämä on luettelo parhaista pelaajista kaikilla palvelimilla, joilla peliä pelataan. Suoraviestikierroksia ei lasketa mukaan."
+        },
+        "guilds": {
+            "title": "Palvelimet",
+            "description": "Tämä on luettelo suosituimmista palvelimista, joilla peliä pelataan.  \nOletusarvoisesti palvelimesi nimi on piilotettu. Voit valita sen näyttämisen palvelimen asetuksissa kirjautumisen jälkeen."
+        },
+        "achievements": {
+            "title": "Saavutukset",
+            "description": "Tämä on pelaajista, jotka ovat keränneet eniten saavutuspisteitä."
+        }
+    },
+    "animeSorts": {
+        "ROUNDS_WON_ASC": "Voitetut kierrokset (nousevassa järjestyksessä)",
+        "MAIN_TITLE_ASC": "Pääotsikko (nouseva)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Voitetut kierrokset % (nouseva)",
+        "YEAR_DESC": "Vuosi (laskeva)",
+        "ROUNDS_WON_DESC": "Voitetut kierrokset (alenevassa järjestyksessä)",
+        "ROUNDS_LOST_DESC": "Hävityt kierrokset (laskevasti)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Voitetut kierrokset % (laskeva)",
+        "MAIN_TITLE_DESC": "Pääotsikko (alenevassa järjestyksessä)",
+        "YEAR_ASC": "Vuosi (nouseva)",
+        "ROUNDS_LOST_ASC": "Hävityt kierrokset (nouseva)"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Olet kirjautunut ulos!"
+    },
+    "myBoostedServers": {
+        "boostedServers": "# Boosted servers  \nOlet tason {patronTier} suojelija. Voit lisätä {boostsLeft} lisää palvelimia.",
+        "remove": "Poista boosted",
+        "pickServersToBoost": "Valitse palvelimia lisätäksesi",
+        "addToBoosted": "Lisää boosted",
+        "alreadyAdded": "Jo lisätty",
+        "noServersFound": "Palvelimia ei löytynyt.",
+        "savedChanges": "Tallennetut muutokset onnistuneesti",
+        "couldNotSaveChanges": "Muutoksia ei voitu tallentaa",
+        "addServer": "Lisää palvelin",
+        "youCannotBoostServers": "# Et voi lisätä palvelimia  \nSinun on oltava vähintään tason 2 suojelija voidaksesi boostata palvelinta.  \nSaadaksesi tämän, yhdistä ensin Discord-tilisi patreoniin ja sitten [lupaa vähintään tason 2 lupaus RinBotin patreon-sivulla]({patreonLink}).",
+        "noServersBoosted": "Yhtään palvelinta ei ole vahvistettu.",
+        "searchForServer": "Etsi palvelin"
+    },
+    "myServers": {
+        "title": "Palvelimeni",
+        "details": "Yksityiskohdat",
+        "boostedServer": "Tehostettu palvelin",
+        "hasBot": "{botName} on tällä palvelimella",
+        "addBot": "Lisää {botName}",
+        "notHasBot": "{botName} ei ole tällä palvelimella",
+        "configure": "Määritä",
+        "searchForServer": "Etsi palvelin",
+        "showAll": "Näytä kaikki palvelimeni",
+        "description": "Sinulla on oltava **Server Management** -oikeudet, jotta voit määrittää {botName} palvelimen asetukset.",
+        "couldNotRetrieveServers": "Palvelimia ei voitu hakea"
+    },
+    "serverConfiguration": {
+        "general": {
+            "inviteCode": {
+                "description": "Kutsukoodi, jota käytetään palvelimesi nimen URL-osoitteena tulostaulukoissa.",
+                "invalid": "Tämä kutsukoodi näyttää olevan virheellinen",
+                "label": "Kutsukoodi"
+            },
+            "prefix": {
+                "description": "Nämä merkit laitetaan komentojen eteen oletusarvon sijaan: !",
+                "invalid": "Tämä on pakollinen kenttä, ja sen pituus on 1-5 merkkiä.",
+                "label": "Komennon etuliite"
+            },
+            "showInLeaderboards": {
+                "checkbox": "Näytä palvelimen nimi tämän sivuston maailmanlaajuisissa tulostaulukoissa.",
+                "description": "Kun tämä on käytössä, palvelimesi nimi näkyy palvelimen tulostaulukoissa. Voi kestää tunnin, ennen kuin tämä muutos leviää.",
+                "label": "Näytä maailmanlaajuisissa tulostauluissa"
+            },
+            "language": {
+                "description": "Asettaa RinBotin kielen Discordissa. Tämä ei vaikuta animen otsikoihin.",
+                "label": "Kieli"
+            },
+            "title": "Yleistä",
+            "disableLegacyCommands": {
+                "description": "Tämä poistaa vanhat etuliitteelliset komennot kokonaan käytöstä, joten voit käyttää vain vinoviivakomentoja.",
+                "label": "Etuliitteenä olevat komennot",
+                "checkbox": "Perinteisten etuliitteellisten komentojen poistaminen käytöstä"
+            },
+            "noLanguageCodeDefined": "(käytä palvelimen oletuskieltä)"
+        },
+        "guessTheAnime": {
+            "enableAntiSpam": {
+                "description": "Jos otat tämän käyttöön, robotti alkaa jättää huomiotta pelaajat, jotka yrittävät arvata käyttämällä jatkuvasti samaa nimeä.",
+                "label": "Roskapostin torjunta",
+                "checkbox": "Ota roskapostisuodatin käyttöön"
+            },
+            "hideAlternativeTitles": {
+                "label": "Vaihtoehtoiset nimet",
+                "description": "Tämän valinnan valitseminen piilottaa vaihtoehtoisten nimikkeiden luettelon anime-tiivistelmässä.",
+                "checkbox": "Piilota vaihtoehtoiset otsikot"
+            },
+            "disableSummaryLink": {
+                "description": "Tämän valinnan valitseminen poistaa linkin yhteenvedosta kierroksen lopussa.",
+                "label": "Yhteenveto",
+                "checkbox": "Yhteenvetolinkin poistaminen käytöstä"
+            },
+            "titlePreferences": {
+                "titleLanguages": {
+                    "label": "Otsikon kielet",
+                    "selectNone": "Valitse ei mitään",
+                    "selectAll": "Valitse kaikki"
+                },
+                "mainTitle": {
+                    "label": "Pääotsikko",
+                    "type": "Tyyppi",
+                    "language": "Kieli",
+                    "description": "Tämä on tärkeysjärjestys, jonka mukaan pääotsikot valitaan. Pääotsikko on se, jota käytetään vihjeessä ja animeyhteenvedossa kierroksen lopussa. Jos pääotsikkoa ei löydy asetuksiesi perusteella, järjestelmä palaa oletusasetuksiin.",
+                    "source": "Lähde"
+                },
+                "setToDefaults": "Asetetaan oletusarvoihin",
+                "percentageWrong": {
+                    "label": "Prosenttiosuus väärin",
+                    "description": "{percentage}% - alhaisempi tarkoittaa vähemmän anteeksiantavaa arvauksissa esiintyviä kirjoitusvirheitä vastaan."
+                },
+                "titleTypes": {
+                    "any": "(mikä tahansa)",
+                    "kana": "Kana lukemat",
+                    "main": "Tärkeimmät otsikot",
+                    "official": "Viralliset nimikkeet",
+                    "short": "Lyhyet otsikot",
+                    "label": "Otsikkotyypit",
+                    "synonym": "Synonyymit",
+                    "card": "Kortin otsikot"
+                },
+                "disableTitleSimplifications": {
+                    "label": "Otsikon yksinkertaistukset",
+                    "checkbox": "Yksinkertaistusten poistaminen käytöstä",
+                    "description": "Poistaa käytöstä otsikoiden yksinkertaistukset (kuten pitkien otsikoiden jakaminen viivan/kolonin perusteella ja yleisten asiayhteyteen liittyvien sanojen kuten 'kausi', 'versio' jne. poistaminen)."
+                },
+                "titleSources": {
+                    "any": "(mikä tahansa)"
+                },
+                "description": "##### Otsikon mieltymykset  \nTässä voit määrittää mieltymyksesi otsikkokielille, jotka on hyväksyttävä oikeiksi arvauksiksi.  \n\nJos asetuksesi johtavat tyhjään otsikoiden joukkoon, se palaa oletusasetuksiin."
+            },
+            "disableDrops": {
+                "description": "Jos tämä valitaan, peli ei tuota satunnaisia hahmopudotuksia.",
+                "label": "Pisarat",
+                "checkbox": "Pudotusten poistaminen käytöstä"
+            },
+            "title": "Arvaa Anime",
+            "animeSummaryLink": {
+                "description": "Tämä muuttaa vain URL-osoitetta, ja se saattaa palata RinBotin verkkosivustolle jonkin animen kohdalla.",
+                "label": "Anime yhteenveto linkki"
+            },
+            "disableHints": {
+                "description": "Jos tämä valitaan, peli ei näytä vihjeitä millään kierroksella.",
+                "label": "Vihjeitä",
+                "checkbox": "Poista vihjeet käytöstä"
+            },
+            "winnerRoleConfigs": {
+                "label": "Roolit aseman mukaan",
+                "reachedMaximumAssignments": "Olet saavuttanut {maxWinnerRoleConfigs} roolinmääritysten enimmäismäärän.",
+                "boostedServersGetMoreAssignments": "[Tehostetut palvelimet]({patreonLink}) voi olla enintään {patronWinnerRoleConfigs} roolituksia.",
+                "warnManagedRole": "Huomaa, että rooleja hallinnoi täysin {botName}, joten kaikki roolin jäsenet, jotka eivät ole voittajia, poistetaan.",
+                "saveChanges": "Tallenna muutokset",
+                "type": "Tyyppi",
+                "allTime": "Alltime",
+                "time": "Aika",
+                "title": "Roolin määritys",
+                "description": "Täällä voit määrittää roolinjakoja tulostaulukon voittajille.",
+                "add": "Lisää uusi roolitehtävä",
+                "undo": "Kumoa",
+                "rank": "Sijoitus",
+                "weekly": "Viikoittain",
+                "permissionInfo": "Varmista, että osoitteessa {botName} on 'Roolin hallinta'-oikeus ja että se on sen roolin yläpuolella, jonka haluat antaa hänen määrittää.",
+                "role": "Rooli",
+                "isWeekly": "Koko ajan/viikoittain",
+                "points": "Pisteet"
+            },
+            "pointRoleConfigs": {
+                "label": "Roolit pisteittäin"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Tarkista tämä, jotta pelaajat, jotka ovat poistuneet palvelimelta, näkyvät edelleen tulostaulukoissa. Niiden näkyminen voi kestää jopa tunnin.",
+                "label": "Puuttuvat pelaajat tulostaulukoissa",
+                "checkbox": "Näytä puuttuvat pelaajat tulostaulukoissa"
+            }
+        }
+    },
+    "needHelp": {
+        "joinTheSupportServer": "Liity tukipalvelimeen",
+        "encounterProblemsContact": "Jos sinulla on ongelmia, ota yhteyttä Kururiniin siellä.",
+        "needHelp": "Tarvitsetko apua?",
+        "supportServerIntroduction": "Voit pyytää apua, antaa palautetta, pyytää uusia ominaisuuksia tai vain pelata Animea virallisella tukipalvelimella."
+    },
+    "commands": {
+        "shortcuts": {
+            "title": "#### Pyöreän suodattimen pikavalinnat  \nNämä ovat muutamia pikasuodattimia aluksi. Vaikeus valitaan automaattisesti nykyisten pisteidesi perusteella, jos mitään ei ole määritetty.",
+            "years": "**Aloittaa uuden kierroksen vuosien `[vuosi1]` ja `[vuosi2]` väliltä** \nEsimerkki: `!sg 1999 2003` poimii animea vuosilta 1999-2003.",
+            "year": "**Aloittaa uuden kierroksen vuodesta `[vuosi]` tähän päivään asti** \nEsimerkki: `!sg 1999` poimii animea vuosilta 1999 kuluvaan vuoteen saakka.",
+            "difficulty": "**Aloittaa uuden kierroksen tietyllä vaikeusasteella** \n1 (helppo), 2 (normaali), 3 (vaikea), 4 (äärimmäinen), 5 (painajainen) ja 0 (kaikki).  \nEsimerkki: `!sg 1` helppoon kierrokseen tai `!sg 4` äärimmäiseen kierrokseen.",
+            "genre": "**Aloittaa uuden kierroksen tietyn genren animeilla** \nKäytä komentoa `!genres` saadaksesi luettelon kaikista saatavilla olevista genreistä.",
+            "songType": "**Aloittaa uuden äänikierroksen tietyn tyyppisillä kappaleilla** \nKappaletyyppi voi olla: `op` (aloitus), `ed` (lopetus), `in` (insert-kappaleet) tai `tm` (kuvakappaleet).",
+            "query": "**Aloittaa uuden kierroksen, jossa anime perustuu omaan kyselyysi**  \n`d:1` lisätäksesi vaikeuksia suodattimeen.  \n`g:shounen` lisätäksesi genren suodattimeen.  \n`y:2001-2009` lisätäksesi suodattimeen vuosiluvun.  \n`t:op` lisätäksesi biisityypin suodattimeen (vain `!sga` -kierroksilla).  \nEsimerkki: `!sg d:1 g:shounen y:2001-2009` tai `!sg g:drama y:2010` tai `!sga t:op`  \n_Huomaa, että sinun EI tarvitse käyttää kaikkia suodattimia kyselyissäsi._"
+        },
+        "queries": {
+            "songType": "**Suodata kappaleiden tyyppi** (`!sga`, `!sgs` ja `!sgsa` vain).  \nKappaletyyppi voi olla: `op` (aloitus), `ed` (lopetus), `in` (insert-kappaleet) tai `tm` (kuvakappaleet).",
+            "filters": "#### Suodattimet",
+            "mal": "**Suodata MyAnimeListisi perusteella** \nEsimerkki: `mal:username` tai `mal:user1,user2` usean käyttäjän listoille.  \nSinun on ensin käytettävä komentoa `!sync`, ennen kuin voit käyttää suodatinta.",
+            "operations": "#### Operations",
+            "title": "### Kyselyt  \nVoit rakentaa omia kyselyjäsi näiden parametrien avulla. Ne toimivat seuraavissa tapauksissa: `!sg`, `!sgv`, `!sga`, `!sgs` ja `!sgsa`.  \n\nEsimerkiksi: `!sg n:5 d:3 y:1995-2005` aloittaa istunnon, jossa pelataan 5 kierrosta animea vaikeustasolla vaikealla vaikeustasolla vuosien 1995 ja 2005 välillä.",
+            "numberOfRounds": "**Istunnon kierrosten lukumäärä** \nTämä käynnistää automaattisesti useita kierroksia yhdessä istunnossa ja antaa sinulle tulostaulukon istunnon lopussa.  \nEsimerkki: `n:2` 2 kierrosta enintään 10 kierrokseen `n:10:llä`",
+            "imageManipulations": "**Muokkaa kuvia kierroksella** (vain kierroksilla, joissa on kuvia).  \nVoit valita seuraavista vaihtoehdoista: `p` pikselöity, `i` käänteinen, `o` öljyvärimaalattu, `g` harmaasävy, `f` käännetty pystysuoraan.  \nEsimerkki: `im:p` tai yhdistelmä `im:g,o,i kanssa.`",
+            "difficulty": "**Suodata vaikeusaste** \n1 (helppo), 2 (normaali), 3 (vaikea), 4 (äärimmäinen), 5 (painajainen) ja 0 (kaikki).  \nEsimerkki: `d:1` helppoa kierrosta varten tai `d:4` äärimmäistä kierrosta varten ja `d:0` vaikeussuodattimen poistamiseksi käytöstä.",
+            "genre": "**Suodata genre** \nTällä hetkellä voidaan suodattaa vain yhtä genreä, kuten `g:action` tai `g:horror`.  \nKäytä komentoa `!genres` saadaksesi luettelon kaikista käytettävissä olevista genreistä.",
+            "year": "**Suodata vuosi** \nEsimerkki: `y:1999` valitsisi animen vuosilta 1999 ja kuluva vuosi mukaan lukien.  \n`y:2005-2010` valitsisi vuosien 2005 ja 2010 (molemmat mukaan lukien) väliltä.",
+            "anilist": "**Suodata AniListisi perusteella** \nEsimerkki: `anilist:username` tai `anilist:user1,user2` useille käyttäjälistoille.  \nSinun on ensin käytettävä komentoa `!sync`, ennen kuin voit käyttää suodatinta.   \nVoit myös yhdistää erityyppisiä anilistaluetteloita toisiinsa seuraavasti: `mal:user1,user2 anilist:user3`",
+            "aggr": "**Aggregaatiomenetelmä** (vain käytettäessä anime-luettelosuodattimia).  \nVoit käyttää `aggr:union` yhdistääksesi anime-luettelot niiden leikkaamisen sijaan."
+        },
+        "points": {
+            "serverscore": "**Näyttää koko palvelimen pisteet**",
+            "allfastest": "**Näyttää kaikkien aikojen nopeimmat pelaajat palvelimella**. \nVain kierrokset, joissa anime pool on yli 1000, lasketaan mukaan.",
+            "title": "#### Pisteet  \nNämä lasketaan uudelleen tunnin välein. Voit [lisätä palvelimesi](https://patreon.com/rinbot?fan_landing=true) reaaliaikaisia päivityksiä varten.",
+            "myscore": "**Näyttää saavuttamasi pisteet ja pelaamasi kierrokset nykyisellä kanavalla.**",
+            "alltop": "**Näyttää kaikkien aikojen parhaat pelaajat palvelimella.**",
+            "weektop": "**Näyttää kuluvan viikon parhaat pelaajat palvelimella**. \nSe käyttää ISO-8601-vuosiviikkoja, joissa maanantai on viikon ensimmäinen päivä. Komento kertoo, milloin viikko nollautuu.",
+            "weekfastest": "**Näyttää kuluvan viikon nopeimmat pelaajat palvelimella** \nVain kierrokset, joissa anime pool on yli 1000, lasketaan mukaan.  \nEsimerkiksi: tämä sulkee pois easy/normal-tilat ja useimmat pienemmät genret."
+        },
+        "title": "Komennot",
+        "management": {
+            "title": "#### Management",
+            "prefix": "**Näyttää nykyisen etuliitteen ja antaa sinun vaihtaa sitä.**",
+            "lang": "**Näyttää nykyisen kielen ja antaa sinun vaihtaa sitä.**"
+        },
+        "onlyForPatrons": {
+            "description": "**Voi käyttää vain [suojelijat]({patreonUrl})** - tämä otettiin käyttöön palvelinkuorman vähentämiseksi ja jotta ihmiset auttaisivat maksamaan laskut.",
+            "tooltip": "Ainoastaan asiakkaita varten"
+        },
+        "isExperimental": {
+            "tooltip": "Kokeellinen",
+            "description": "**Kokeellinen ominaisuus** - tämä ominaisuus on melko uusi, joten se saattaa sisältää joitain virheitä [ilmoita niistä täällä]({supportServerUrl}) jos löydät niitä."
+        },
+        "misc": {
+            "credits": "**Näyttää kaikki hienot ihmiset ja sivustot, jotka auttavat tekemään {botName} mahdolliseksi.**",
+            "title": "#### Sekalaiset",
+            "genres": "**Näytä kaikki mahdolliset anime-genret**",
+            "statg": "**Näytä joitakin pelin yleisiä tilastoja**",
+            "sync": "**Synkronoi anime-luettelosi muilta sivustoilta** \nTällä hetkellä MyAnimeList ja AniList ovat tuettuja.",
+            "mydifficulty": "**Voit asettaa oletusvaikeuden kaikille aloittamillesi kierroksille.**"
+        },
+        "rounds": {
+            "sgg": "**Aloittaa kierroksen videopeleillä**",
+            "stopg": "**Pysäyttää nykyisen kierroksen** \nTämä komento on rajoitettu kerran 15 minuutin välein per henkilö väärinkäytön estämiseksi. [Suojelijat saavat lyhennetyn jäähdytysajan](https://patreon.com/rinbot?fan_landing=true)!",
+            "sb": "**Aloita monivalintakierros kuvien kanssa**",
+            "sgvn": "**Aloittaa kierroksen visuaalisten romaanien kuvilla** \nVain vaikeussuodatin toimii tällä komennolla.",
+            "title": "#### Kierrokset",
+            "sg": "**Aloittaa uuden kierroksen**",
+            "sgv": "**Aloittaa kierroksen videoleikkeillä**",
+            "sga": "**Aloittaa kierroksen avaus- ja loppukappaleiden äänikatkelmilla.**",
+            "sgc": "**Aloittaa kierroksen anime-hahmojen kanssa**"
+        },
+        "ctop": {
+            "title": "#### Mukautetut tulostaulut",
+            "ctop": "**Näytä nykyisen kanavan mukautettu tulostaulu**",
+            "startctop": "**Käynnistää uuden mukautetun tulostaulun kanavalle**. \nSinun on käytettävä useita kanavia, jotta sinulla on useita mukautettuja tulostauluja samanaikaisesti.",
+            "endctop": "**Lopeta aktiivinen mukautettu tulostaulu** \nTämä lopettaa pisteiden keräämisen, mutta ei poista pistetaulukkoa.",
+            "resetctop": "**Nollaa mukautetun tulostaulun** \nTämä poistaa **kokonaan** mukautetun tulostaulun, eikä se enää koskaan palaa!  \nTämän ominaisuuden käyttämiseen tarvitset jonkin seuraavista oikeuksista:\n- Järjestelmänvalvoja\n- Hallitse palvelinta\n- Hallitse rooleja\n- Hallitse kanavia\n- Hallitse viestejä"
+        },
+        "voiceRounds": {
+            "title": "#### Voice round -istunnot",
+            "sgs": "**Aloita äänikierrosistunto** \nTämä liittyy äänikanavaan (jolla on sama nimi tai se, jossa olet) ja aloittaa kierrokset.  \nVarmista, että RinBotilla on __Yhdistä__ ja __Puhu__ -oikeudet kanavalle.",
+            "sgsa": "**Aloita voice round -istunto näytteillä**",
+            "sbsa": "**Aloita monivalintanäppäinäänestyskierros näytteiden avulla.**",
+            "stopgs": "**Lopeta äänikierrokset** \nTämä pysäyttää äänikierrostilan ja myös nykyisen kierroksen."
+        },
+        "prefixCanBeChanged": "Näiden komentojen etuliite `!` voidaan muuttaa 'Omat palvelimet' -sivulla kirjautumisen jälkeen.",
+        "canUseInDirectMessage": "Voit myös käyttää useimpia näistä komennoista suorassa viestissä RinBotille, jotta voit pelata yksityistä istuntoa. Tällä tavoin saatuja pisteitä ei lasketa pistetaulukoihin."
+    },
+    "channelConfiguration": {
+        "savedChangesSuccessfully": "Tallennetut muutokset onnistuneesti",
+        "couldNotSaveChanges": "Muutoksia ei voitu tallentaa",
+        "stage": {
+            "topic": {
+                "label": "Vaiheen aihe"
+            }
+        },
+        "boostedServersGetMore": "[Tehostetut palvelimet]({patreonLink}) voi olla jopa {patronMaxConfigs} kanavakokoonpanoja.",
+        "startGameOnIdle": {
+            "checkbox": "Aloita uusi kierros, kun kanava on tyhjänä",
+            "minutesIdle": "Minuutit tyhjäkäyntiä",
+            "boostedServersCanHaveLess": "[Boosted servers]({patreonLink}) voi olla &#60; 60 minuuttia."
+        },
+        "saveChanges": "Tallenna muutokset",
+        "maximumReached": "Olet saavuttanut {maxChannelConfigs} kanavakokoonpanojen enimmäismäärän.",
+        "undo": "Kumoa",
+        "channelAccessControlEnabled": {
+            "label": "Kulunvalvonta",
+            "description": "Tämä saa aikaan sen, että {botName} ei kuuntele mitään komentoja, ellei niitä ole listattu erikseen kanavakohtaisesti.",
+            "checkbox": "Kanavan käytönvalvonta käyttöön"
+        },
+        "useForVoiceRounds": {
+            "checkbox": "Käytä vain tätä puhekanavaa puhekierroksiin (vain yksi voi olla aktiivinen)."
+        },
+        "description": "Täällä voit määrittää muutamia erityisiä vaihtoehtoja kanavakohtaisesti. Näitä voidaan myöhemmin laajentaa useammilla palvelimen määritysasetuksilla.",
+        "add": "Lisää kanava",
+        "noChannelsConfigured": "Tällä hetkellä kanavia ei ole määritetty. Aloita napsauttamalla 'Lisää kanava' -painiketta."
+    },
+    "nsfw": {
+        "DANGEROUS": "Vaarallinen",
+        "SAFE": "Turvallinen",
+        "NOT_SAFE": "Turvattomuus",
+        "UNKNOWN": "Tuntematon",
+        "QUESTIONABLE": "Kyseenalainen"
+    },
+    "reportAnime": {
+        "submitted": "Raporttisi toimitettiin onnistuneesti.",
+        "couldNotSubmit": "Raporttiasi ei voitu lähettää."
+    },
+    "validation": {
+        "required": "Tämä kenttä on pakollinen",
+        "maxLength": "Maksimipituus on {max} merkkiä, mutta kirjoitit {length} merkkiä."
+    },
+    "leaderboardTable": {
+        "points": "Pisteet",
+        "players": "Pelaajat",
+        "rounds": "Kierrokset",
+        "hidden": "(piilotettu)",
+        "rank": "Sijoitus",
+        "name": "Nimi"
+    },
+    "channelAccessControlConfig": {
+        "allCommands": "(kaikki komennot)",
+        "roles": "Roolit",
+        "title": "Kulunvalvonta",
+        "description": "Pääsynvalvontasäännöt käsitellään ylhäältä alaspäin.  \nKaikki kielletään oletusarvoisesti, joten sinun on laadittava vähintään yksi sallimissääntö.",
+        "addRule": "Lisää sääntö",
+        "commands": "Komennot",
+        "everyoneRole": "@everyone",
+        "maximumReached": "Pääsynvalvontojen enimmäismäärä on saavutettu."
+    },
+    "weekPicker": {
+        "weekly": "Viikoittain",
+        "week": "Viikko",
+        "year": "Vuosi",
+        "allTime": "Kaikkien aikojen"
+    },
+    "slashCommands": {
+        "title": "Slash-komennot",
+        "ephemeral": {
+            "tooltip": "Ephemeral-komento",
+            "description": "**Ephemeral-komento** - näitä komentoja seuraavat viestit näkyvät vain sinulle."
+        },
+        "description": "Jotta voit käyttää slash-komentoja, sinun on mahdollisesti kutsuttava uudelleen {botName} ja varmistettava, että hänellä on **Luo-komennot palvelimen** laajuudessa.  \nVoit käyttää kutsupainiketta etusivulla tai klikkaamalla {botName} Discordista.  \n\nVarmista, että käyttäjilläsi on oikeus **Käytä sovelluskomentoja**, tai he eivät voi käyttää lainkaan slash-komentoja."
+    },
+    "navbar": {
+        "myProfile": "Profiilini",
+        "mySettings": "Minun asetukset",
+        "home": "Etusivu",
+        "commands": "Komennot",
+        "faq": "FAQ",
+        "changelog": "Changelog",
+        "leaderboard": "Tulostaulu",
+        "statistics": "Tilastot",
+        "login": "Kirjaudu sisään",
+        "logout": "Kirjaudu ulos",
+        "myServers": "Palvelimeni",
+        "myBoostedServers": "Minun tehostetut palvelimet",
+        "status": "Tila",
+        "database": "Tietokanta"
+    },
+    "supportUs": {
+        "signInWithAuth0": "Kirjaudu sisään Auth0:lla ja sitten 'Jatka Discordilla'.",
+        "supportThroughKoFi": "Voit myös harkita kahvin ostamista minulle ko-fi.comin kautta. Tämä ei kuitenkaan anna mitään muita etuja kuin äärimmäisen arvostukseni!",
+        "translations": "Käännökset",
+        "joinTheTranslationsChannel": "Muista liittyä `#translations` -kanavalle [tukipalvelimella]({supportServerUrl}), jos haluat pyytää apua ja keskustella käännöksistä.",
+        "helpWithTranslating": "Voit auttaa parantamalla nykyisiä käännöksiä tai lisäämällä uusia kieliä käyttämällä joukkoruotsikäännöstä!",
+        "supportThroughPatreon": "Jos haluat auttaa kattamaan palvelinkustannukset, voit lahjoittaa haluamasi summan Patreonin kautta. Saat myös joitakin erityisiä etuja!",
+        "goal": "{completedPercentage}%{amount} dollarin kuukausittaisista toimintakustannuksista rahoitetaan!",
+        "votingAndReviewing": "Äänestäminen ja tarkistaminen",
+        "supportThroughVoting": "Aina on hyödyllistä äänestää säännöllisesti ja jättää arvostelu näille verkkosivustoille."
+    },
+    "status": {
+        "partialOutage": "Osittainen katkos",
+        "majorOutage": "Merkittävä katkos",
+        "coreServices": "Ydinpalvelut",
+        "discordShards": "Discord sirpaleet",
+        "databaseServices": "Tietokantapalvelut",
+        "website": {
+            "tooltip": "Et olisi täällä, jos tämä olisi punainen.",
+            "name": "Verkkosivusto"
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "Tarjoaa dynaamisen sisällön ja bottien konfiguroinnin verkkosivustolla."
+        },
+        "operational": "Toiminnallinen",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Tarjoaa dynaamisen sisällön (kuten tietokannan) verkkosivustolla."
+        },
+        "worker": {
+            "name": "Työntekijä",
+            "tooltip": "Tarjoaa pistetaulukon, pisteet ja profiilin päivitykset"
+        },
+        "putYourServerId": "Laita palvelintunnuksesi tähän löytääksesi sirpaleesi.",
+        "visualNovelDatabaseApi": {
+            "tooltip": "Tarjoaa visuaalisen romaanin kierroksia - !sgvn",
+            "name": "Visual novel tietokanta API"
+        },
+        "description": "Täältä löydät joidenkin niiden palveluiden tilan, joiden ansiosta {botName} toimii niin kuin pitääkin. Tämä sivu päivittyy automaattisesti 10 sekunnin välein.",
+        "animeDatabaseApi": {
+            "name": "Anime tietokanta API",
+            "tooltip": "Tarjoaa anime-kierroksia - !sg, !sgv ja !sga."
+        },
+        "title": "Tila",
+        "couldNotGetShardStatuses": "API ei saanut shardien tiloja",
+        "howToFindYourServerId": "Jos et tiedä, miten löydät palvelimesi tunnuksen, [lue tämä tukiartikkeli](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)."
+    },
+    "statistics": {
+        "title": "Tilastot",
+        "description": "Päivittäin pelattujen kierrosten määrä viimeisten 30 päivän aikana.",
+        "roundsPerDay": {
+            "title": "Kierroksia päivässä",
+            "lost": "Kadonnut",
+            "total": "Yhteensä",
+            "winners": "Voittajat",
+            "won": "Won"
+        }
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Etsi pelaaja"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Hahmot"
+        },
+        "visualNovels": {
+            "title": "Visuaaliset romaanit"
+        }
+    },
+    "difficulties": {
+        "EASY": "Helppo",
+        "NORMAL": "Normaali",
+        "UNKNOWN": "Tuntematon",
+        "HARD": "Kova",
+        "EXTREME": "Extreme",
+        "NIGHTMARE": "Painajainen"
+    },
+    "userProfile": {
+        "trophiesWon": "Voitetut pokaalit",
+        "noTrophiesWon": "Pokaaleja ei ole vielä voitettu.",
+        "roundPoints": "Pyöreät pisteet",
+        "achievementPoints": "Saavutuspisteet",
+        "statistics": "Tilastot",
+        "allTimeResults": "Kaikkien aikojen tulokset",
+        "rank": "Sijoitus",
+        "rounds": "Kierrokset",
+        "noResultsYet": "Ei vielä tuloksia.",
+        "achievements": "Saavutukset",
+        "points": "Pisteet",
+        "week": "Viikko"
+    },
+    "myServerDetails": {
+        "onlyForManagement": "Vain palvelimen hallintaan",
+        "backToMyServers": "Takaisin palvelimiin",
+        "server": "Palvelin",
+        "channels": "Kanavat",
+        "leaderboard": "Tulostaulu",
+        "players": "Pelaajat"
+    },
+    "playerTable": {
+        "username": "Nimi"
+    },
+    "common": {
+        "termsOfService": "Palveluehdot",
+        "botSupporter": "{botName} tukija",
+        "boostedByBotSupporter": "{botName} kannattajan tukemana",
+        "loading": "Ladataan",
+        "privacyPolicy": "Tietosuojakäytäntö",
+        "error": "Virhe",
+        "success": "Menestys",
+        "onlyForPatrons": "Ainoastaan asiakkaita varten",
+        "experimentalFeature": "Kokeellinen ominaisuus"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "notLoggedIn": "Sinun täytyy olla kirjautuneena sisään päästäksesi tälle sivulle.",
+    "pageNotFound": "Sivua ei ole olemassa",
+    "introduction": {
+        "title": "{botName}'kotisivu",
+        "shortDescription": "Pelaa **arvaa anime** ja monia muita arvauskilpailuja suoraan Discord-kanavilla ystäviesi kanssa.",
+        "inviteButton": "Kutsu {botName} palvelimellesi",
+        "orSeeHerInAction": "tai voit nähdä hänet toiminnassa",
+        "supportServer": "{botName} tukipalvelin",
+        "checkTheCommandListAndConfigure": "Tarkista komentoluettelosta täydellinen luettelo ominaisuuksista. Voit konfiguroida {botName} kirjauduttuasi tälle sivustolle, jotta voit mukauttaa sen palvelimesi tarpeisiin.",
+        "features": "### Ominaisuudet\n- **Tuhansia** animea, hahmoja, visuaalisia romaaneja ja videopelejä arvattavissa!\n- Arvaa kuvista, videopätkistä tai kappaleiden äänipätkistä.\n- **Satunnaisesti poimitut kaappaukset** eivät tee yhdestäkään kierroksesta samanlaista.\n- **Pisteytysjärjestelmä ja tulostaulukot** (kaikkien aikojen, viikoittaiset ja omat mukautetut kaudet).\n- Useita **vaikeustasoja**, joten jopa uudet anime- ja visuaalisten romaanien fanit voivat pitää hauskaa.\n- Otsikot voidaan arvata **useilla kielillä**.\n- ...ja paljon muuta!"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Piilota nimeni maailmanlaajuisesti",
+                "description": "Jos otat tämän käyttöön, nimesi asetetaan \"(piilotettu)\" -kenttään kaikissa sivuston tulostauluissa ja profiileissa.\n  Muutoksen toteuttaminen koko järjestelmässä voi kestää jopa päivän."
+            }
+        }
     }
 }

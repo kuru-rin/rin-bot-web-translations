@@ -1,1 +1,575 @@
-{}
+{
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "titlePreferences": {
+                "disableTitleSimplifications": {
+                    "label": "Zjednodušení názvu",
+                    "description": "Zakáže zjednodušování názvů (například rozdělování dlouhých názvů na pomlčku/polodrážku a odstraňování běžných kontextových slov jako \"sezóna\", \"verze\" atd.)",
+                    "checkbox": "Zakázat zjednodušení"
+                },
+                "titleTypes": {
+                    "main": "Hlavní tituly",
+                    "any": "(libovolný)",
+                    "label": "Typy titulů",
+                    "short": "Krátké názvy",
+                    "synonym": "Synonyma",
+                    "kana": "Čtení Kana",
+                    "official": "Oficiální názvy",
+                    "card": "Názvy karet"
+                },
+                "titleSources": {
+                    "any": "(libovolný)"
+                },
+                "mainTitle": {
+                    "language": "Jazyk",
+                    "type": "Typ",
+                    "label": "Hlavní název",
+                    "description": "Podle této priority budou vybírány hlavní tituly. Hlavní název je ten, který se používá pro nápovědu a shrnutí anime na konci kola. Pokud na základě vašich preferencí nelze najít žádný hlavní titul, vrátí se k výchozímu nastavení.",
+                    "source": "Zdroj:"
+                },
+                "titleLanguages": {
+                    "label": "Titulní jazyky",
+                    "selectAll": "Vyberte vše",
+                    "selectNone": "Nevybrat žádné"
+                },
+                "percentageWrong": {
+                    "description": "{percentage}% - nižší znamená méně tolerantní vůči překlepům v odhadech",
+                    "label": "Chybné procento"
+                },
+                "description": "##### Preference titulů  \nZde můžete nastavit své preference jazyků názvů, které mají být akceptovány jako správné odhady.  \n\nPokud vaše preference vyústí v prázdnou sadu titulů, vrátí se k výchozímu nastavení.",
+                "setToDefaults": "Nastavení na výchozí hodnoty"
+            },
+            "disableSummaryLink": {
+                "description": "Zaškrtnutím této možnosti se na konci kola odstraní odkaz ze souhrnu.",
+                "label": "Souhrn",
+                "checkbox": "Zakázat souhrnný odkaz"
+            },
+            "winnerRoleConfigs": {
+                "role": "Role",
+                "add": "Přidání nového přiřazení rolí",
+                "allTime": "Alltime",
+                "weekly": "Týdenní",
+                "title": "Konfigurace rolí",
+                "description": "Zde můžete nastavit přiřazení rolí pro vítěze v žebříčku.",
+                "boostedServersGetMoreAssignments": "[Posílené servery]({patreonLink}) mohou mít až {patronWinnerRoleConfigs} přiřazení rolí.",
+                "undo": "Zrušit",
+                "permissionInfo": "Ujistěte se, že stránka {botName} má oprávnění \"Spravovat role\" a je umístěna nad rolí, kterou jí chcete nechat přidělit.",
+                "reachedMaximumAssignments": "Dosáhli jste maximálního počtu přiřazení rolí {maxWinnerRoleConfigs}.",
+                "rank": "Hodnost",
+                "type": "Typ",
+                "label": "Role podle hodnosti",
+                "warnManagedRole": "Všimněte si, že role budou kompletně spravovány serverem {botName}, takže všichni členové role, kteří nejsou vítězi, budou odstraněni.",
+                "saveChanges": "Uložení změn",
+                "isWeekly": "Všední/týdenní",
+                "points": "Body",
+                "time": "Čas"
+            },
+            "animeSummaryLink": {
+                "label": "Odkaz na shrnutí anime",
+                "description": "Tím se pouze změní adresa URL a pro některé anime se může vrátit na webovou stránku RinBot."
+            },
+            "hideAlternativeTitles": {
+                "label": "Alternativní názvy",
+                "checkbox": "Skrýt alternativní názvy",
+                "description": "Zaškrtnutím této možnosti se v přehledu anime skryje seznam alternativních titulů."
+            },
+            "title": "Uhádněte anime",
+            "pointRoleConfigs": {
+                "label": "Role podle bodů"
+            },
+            "disableDrops": {
+                "description": "Zaškrtnutím této volby se ve hře nebudou objevovat náhodné kapky postav.",
+                "label": "Kapky",
+                "checkbox": "Zakázat kapky"
+            },
+            "disableHints": {
+                "label": "Nápovědy",
+                "description": "Pokud tuto možnost zaškrtnete, hra nebude v žádném kole zobrazovat žádné nápovědy.",
+                "checkbox": "Zakázat nápovědy"
+            },
+            "enableAntiSpam": {
+                "description": "Pokud tuto funkci povolíte, bot začne ignorovat hráče, kteří se pokoušejí hádat stále stejný název.",
+                "label": "Ochrana proti spamu",
+                "checkbox": "Povolení antispamového filtru"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Zaškrtnutím této možnosti se hráči, kteří opustili server, budou stále zobrazovat v žebříčcích. Může trvat až hodinu, než se objeví.",
+                "label": "Chybějící hráči v žebříčcích",
+                "checkbox": "Zobrazení chybějících hráčů v žebříčcích"
+            }
+        },
+        "general": {
+            "title": "Obecné",
+            "prefix": {
+                "description": "Tyto znaky se budou vkládat před příkazy místo výchozích: !",
+                "label": "Předpona příkazu",
+                "invalid": "Toto pole je povinné a musí obsahovat 1 až 5 znaků."
+            },
+            "language": {
+                "description": "Nastaví jazyk pro RinBot v rámci služby Discord. Nemá vliv na názvy anime.",
+                "label": "Jazyk"
+            },
+            "disableLegacyCommands": {
+                "description": "Tím zcela deaktivujete starší příkazy s předponou, takže budete moci používat pouze příkazy s lomítkem.",
+                "label": "Příkazy s předponou",
+                "checkbox": "Zakázat starší příkazy s předponou"
+            },
+            "showInLeaderboards": {
+                "label": "Zobrazit v globálních žebříčcích",
+                "description": "Pokud je tato funkce povolena, bude název vašeho serveru zobrazen v žebříčcích serverů. Může trvat hodinu, než se tato změna projeví.",
+                "checkbox": "Zobrazení názvu serveru v globálních žebříčcích na této stránce"
+            },
+            "inviteCode": {
+                "label": "Kód pozvánky",
+                "invalid": "Tento kód pozvánky se zdá být neplatný",
+                "description": "Kód pozvánky, který se používá pro adresu URL pro název vašeho serveru v žebříčcích."
+            },
+            "noLanguageCodeDefined": "(použijte výchozí jazyk serveru)"
+        }
+    },
+    "status": {
+        "majorOutage": "Velký výpadek",
+        "coreServices": "Základní služby",
+        "databaseServices": "Databázové služby",
+        "api": {
+            "tooltip": "Zajišťuje dynamický obsah a konfiguraci botů na webových stránkách.",
+            "name": "API"
+        },
+        "worker": {
+            "tooltip": "Poskytuje žebříček, skóre a aktualizace profilu",
+            "name": "Pracovník"
+        },
+        "putYourServerId": "Zde zadejte ID svého serveru, abyste našli svůj střep.",
+        "couldNotGetShardStatuses": "Nelze získat stavy střepů z rozhraní API",
+        "visualNovelDatabaseApi": {
+            "name": "Vizuální román databáze API",
+            "tooltip": "Poskytuje kola vizuálních románů - !sgvn"
+        },
+        "website": {
+            "name": "Webové stránky",
+            "tooltip": "Nebyl bys tady, kdyby byl červený."
+        },
+        "title": "Stav",
+        "discordShards": "Střepy Discord",
+        "graphql": {
+            "tooltip": "Poskytuje dynamický obsah (například databázi) na webových stránkách.",
+            "name": "GraphQL"
+        },
+        "howToFindYourServerId": "Pokud nevíte, jak zjistit ID serveru, přečtěte si [tento článek podpory](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "animeDatabaseApi": {
+            "name": "API databáze Anime",
+            "tooltip": "Poskytuje anime kola - !sg, !sgv a !sga"
+        },
+        "description": "Zde najdete stav některých služeb, díky nimž {botName} funguje tak, jak má. Tato stránka se automaticky obnovuje každých 10 sekund.",
+        "operational": "Provozní",
+        "partialOutage": "Částečný výpadek"
+    },
+    "weekPicker": {
+        "year": "Rok",
+        "week": "Týden",
+        "allTime": "Po celou dobu",
+        "weekly": "Týdenní"
+    },
+    "channelAccessControlConfig": {
+        "addRule": "Přidání pravidla",
+        "title": "Kontrola přístupu",
+        "maximumReached": "Dosáhli jste maximálního počtu kontrol přístupu.",
+        "commands": "Příkazy",
+        "allCommands": "(všechny příkazy)",
+        "description": "Pravidla řízení přístupu se zpracovávají shora dolů.  \nVe výchozím nastavení je vše odepřeno, takže budete muset vytvořit alespoň jedno pravidlo pro povolení.",
+        "everyoneRole": "@everyone",
+        "roles": "Role"
+    },
+    "database": {
+        "characters": {
+            "title": "Postavy"
+        },
+        "visualNovels": {
+            "title": "Vizuální romány"
+        },
+        "anime": {
+            "title": "Anime"
+        }
+    },
+    "difficulties": {
+        "EXTREME": "Extrémní",
+        "NIGHTMARE": "Noční můra",
+        "UNKNOWN": "Neznámý",
+        "NORMAL": "Normální",
+        "EASY": "Easy",
+        "HARD": "Hard"
+    },
+    "nsfw": {
+        "UNKNOWN": "Neznámý",
+        "QUESTIONABLE": "Sporné",
+        "NOT_SAFE": "Nebezpečné",
+        "DANGEROUS": "Nebezpečné",
+        "SAFE": "Bezpečné"
+    },
+    "reportAnime": {
+        "submitted": "Vaše zpráva byla úspěšně podána.",
+        "couldNotSubmit": "Vaši zprávu nebylo možné odeslat."
+    },
+    "validation": {
+        "required": "Toto pole je povinné",
+        "maxLength": "Maximální délka je {max} znaků, ale vy jste napsali {length} znaků."
+    },
+    "genres": {
+        "ACTION": "Akce",
+        "ADVENTURE": "Dobrodružství",
+        "CARS": "Automobily",
+        "COMEDY": "Komedie",
+        "DEMENTIA": "Demence",
+        "MARTIAL_ARTS": "Bojová umění",
+        "MECHA": "Mecha",
+        "SCI_FI": "Sci-fi",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "ISEKAI": "Isekai",
+        "GAME": "Hra",
+        "HISTORICAL": "Historické stránky",
+        "KIDS": "Děti",
+        "MUSIC": "Hudba",
+        "PARODY": "Parodie",
+        "SAMURAI": "Samuraj",
+        "HORROR": "Horor",
+        "FANTASY": "Fantasy",
+        "SCHOOL": "Škola",
+        "MAGIC": "Magic",
+        "MYSTERY": "Záhada",
+        "DRAMA": "Drama",
+        "ECCHI": "Ecchi",
+        "SPACE": "Prostor",
+        "SLICE_OF_LIFE": "Kousek života",
+        "SUPERNATURAL": "Nadpřirozené",
+        "POLICE": "Policie",
+        "PSYCHOLOGICAL": "Psychologický",
+        "THRILLER": "Thriller",
+        "SEINEN": "Seinen",
+        "JOSEI": "Josei",
+        "ROMANCE": "Romance",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Shounen Ai",
+        "MILITARY": "Vojenské stránky",
+        "DEMONS": "Démoni",
+        "SPORTS": "Sport",
+        "SUPER_POWER": "Super síla",
+        "VAMPIRE": "Upír",
+        "HAREM": "Harém"
+    },
+    "supportUs": {
+        "joinTheTranslationsChannel": "Nezapomeňte se připojit ke kanálu `#translations` na [serveru podpory]({supportServerUrl}) a požádat o pomoc a diskutovat o překladech.",
+        "votingAndReviewing": "Hlasování a přezkoumání",
+        "helpWithTranslating": "Můžete pomoci vylepšit stávající překlady nebo přidat nové jazyky pomocí hromadného překladu!",
+        "translations": "Překlady",
+        "supportThroughPatreon": "Pokud chcete pomoci pokrýt náklady na server, můžete přispět libovolnou částkou prostřednictvím Patreonu. Získáte také některé speciální výhody!",
+        "goal": "{completedPercentage}% z provozních nákladů{amount} dolarů měsíčně jsou financovány!",
+        "supportThroughKoFi": "Můžete také zvážit, zda mi nekoupíte kávu přes ko-fi.com. To však nepřináší žádné výhody kromě mého nejvyššího uznání!",
+        "signInWithAuth0": "Přihlaste se pomocí Auth0 a potom \"Continue with Discord\".",
+        "supportThroughVoting": "Vždy je užitečné pravidelně hlasovat a zanechat na těchto stránkách recenzi."
+    },
+    "animeSorts": {
+        "MAIN_TITLE_ASC": "Hlavní název (vzestupně)",
+        "YEAR_DESC": "Rok (sestupně)",
+        "ROUNDS_WON_ASC": "Vyhraná kola (vzestupně)",
+        "ROUNDS_WON_DESC": "Vyhraná kola (sestupně)",
+        "MAIN_TITLE_DESC": "Hlavní název (sestupně)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Vyhraná kola v % (sestupně)",
+        "ROUNDS_LOST_ASC": "Ztracená kola (vzestupně)",
+        "ROUNDS_LOST_DESC": "Ztracená kola (sestupně)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Vyhraná kola v % (vzestupně)",
+        "YEAR_ASC": "Rok (vzestupně)"
+    },
+    "userProfile": {
+        "statistics": "Statistiky",
+        "rank": "Hodnost",
+        "rounds": "Rounds",
+        "noTrophiesWon": "Žádné trofeje zatím nezískal.",
+        "noResultsYet": "Zatím žádné výsledky.",
+        "trophiesWon": "Získané trofeje",
+        "week": "Týden",
+        "achievements": "Úspěchy",
+        "roundPoints": "Kulaté body",
+        "achievementPoints": "Body za úspěch",
+        "allTimeResults": "Dosavadní výsledky",
+        "points": "Body"
+    },
+    "leaderboard": {
+        "overview": {
+            "guildsHiddenByDefault": "Ve výchozím nastavení jsou názvy serverů skryté, pro jejich zobrazení se přihlaste jako správce serveru.",
+            "title": "Přehled",
+            "showMore": "Zobrazit více",
+            "lastWeekWinners": "Výherci z minulého týdne",
+            "thisWeek": "Tento týden",
+            "allTime": "Po celou dobu",
+            "thisWeekEndsIn": "Týden končí na {timeLeft}."
+        },
+        "players": {
+            "description": "Toto je seznam nejlepších hráčů na všech serverech, na kterých se hraje. Kola s přímými zprávami se nezapočítávají.",
+            "title": "Hráči"
+        },
+        "guilds": {
+            "title": "Servery",
+            "description": "Toto je seznam hlavních serverů, na kterých se hra hraje.  \nVe výchozím nastavení je název vašeho serveru skrytý. Po přihlášení můžete v konfiguraci serveru zvolit jeho zobrazení."
+        },
+        "achievements": {
+            "title": "Úspěchy",
+            "description": "Jedná se o hráče, kteří nasbírali nejvíce bodů za úspěchy."
+        },
+        "title": "Žebříček"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "channelConfiguration": {
+        "startGameOnIdle": {
+            "minutesIdle": "Minuty nečinnosti",
+            "boostedServersCanHaveLess": "[Posílené servery]({patreonLink}) mohou mít &#60; 60 minut.",
+            "checkbox": "Zahájení nového kola, když je kanál nečinný"
+        },
+        "undo": "Zrušit",
+        "saveChanges": "Uložení změn",
+        "channelAccessControlEnabled": {
+            "checkbox": "Povolení řízení přístupu ke kanálu",
+            "description": "To způsobí, že {botName} nebude poslouchat žádné příkazy, pokud nejsou uvedeny na bílé listině konkrétního kanálu.",
+            "label": "Kontrola přístupu"
+        },
+        "stage": {
+            "topic": {
+                "label": "Téma etapy"
+            }
+        },
+        "boostedServersGetMore": "[Zesílené servery]({patreonLink}) mohou mít až {patronMaxConfigs} konfigurace kanálů.",
+        "couldNotSaveChanges": "Změny se nepodařilo uložit",
+        "savedChangesSuccessfully": "Úspěšné uložení změn",
+        "useForVoiceRounds": {
+            "checkbox": "Pro hlasová kola používejte pouze tento hlasový kanál (aktivní může být pouze jeden)."
+        },
+        "description": "Zde můžete nakonfigurovat několik specifických možností pro jednotlivé kanály. Ty mohou být později rozšířeny o další možnosti konfigurace serveru.",
+        "add": "Přidání kanálu",
+        "maximumReached": "Dosáhli jste maxima konfigurací kanálů {maxChannelConfigs}.",
+        "noChannelsConfigured": "V současné době nejsou nakonfigurovány žádné kanály. Klikněte na tlačítko \"Přidat kanál\" a začněte."
+    },
+    "navbar": {
+        "logout": "Odhlášení",
+        "myBoostedServers": "Moje posílené servery",
+        "status": "Stav",
+        "database": "Databáze",
+        "mySettings": "Moje nastavení",
+        "statistics": "Statistiky",
+        "leaderboard": "Žebříček",
+        "login": "Přihlášení",
+        "myProfile": "Můj profil",
+        "myServers": "Moje servery",
+        "home": "Home",
+        "commands": "Příkazy",
+        "faq": "ČASTO KLADENÉ DOTAZY",
+        "changelog": "Seznam změn"
+    },
+    "achievements": {
+        "showLocked": "Zobrazit uzamčené úspěchy",
+        "leftToUnlock": "vlevo pro odemknutí",
+        "toGoForNextLevel": "přejít na další úroveň",
+        "thisWasTheLastLevel": "Toto byla poslední úroveň",
+        "noAchievementsGainedYet": "Zatím nebyly shromážděny žádné úspěchy."
+    },
+    "guildProfile": {
+        "join": "Připojte se k tomuto serveru"
+    },
+    "common": {
+        "termsOfService": "Podmínky služby",
+        "botSupporter": "{botName} podporovatel",
+        "boostedByBotSupporter": "Podpořeno příznivcem {botName}",
+        "loading": "Načítání",
+        "error": "Chyba",
+        "success": "Úspěch",
+        "privacyPolicy": "Zásady ochrany osobních údajů",
+        "onlyForPatrons": "Pouze pro patrony",
+        "experimentalFeature": "Experimentální funkce"
+    },
+    "myBoostedServers": {
+        "addToBoosted": "Přidat k posíleným",
+        "alreadyAdded": "Již přidáno",
+        "noServersFound": "Nebyly nalezeny žádné servery.",
+        "noServersBoosted": "Žádné servery nebyly posíleny.",
+        "searchForServer": "Vyhledání serveru",
+        "youCannotBoostServers": "# Nemůžete posílit žádné servery  \nAbyste mohli posílit server, musíte být alespoň patronem 2. úrovně.  \nChcete-li ji získat, nejprve propojte svůj účet na Discordu s patreonem a poté [pledge pro alespoň tier 2 na RinBotově patreon stránce]({patreonLink}).",
+        "addServer": "Přidání serveru",
+        "savedChanges": "Úspěšně uložené změny",
+        "couldNotSaveChanges": "Změny se nepodařilo uložit",
+        "boostedServers": "# Posílené servery  \nJste patronem úrovně {patronTier}. Můžete posílit {boostsLeft} více serverů.",
+        "remove": "Odstranit z posílené",
+        "pickServersToBoost": "Vybírejte servery pro zvýšení"
+    },
+    "myServers": {
+        "boostedServer": "Posílený server",
+        "notHasBot": "{botName} není na tomto serveru",
+        "couldNotRetrieveServers": "Nelze načíst servery",
+        "addBot": "Přidat {botName}",
+        "description": "Abyste mohli konfigurovat server {botName}, musíte mít oprávnění pro správu serveru **** .",
+        "hasBot": "{botName} je na tomto serveru",
+        "title": "Moje servery",
+        "configure": "Konfigurace",
+        "details": "Podrobnosti na",
+        "searchForServer": "Vyhledání serveru",
+        "showAll": "Zobrazit všechny mé servery"
+    },
+    "commands": {
+        "voiceRounds": {
+            "title": "#### Hlasová kola",
+            "sgsa": "**Zahájení hlasového kola se vzorky**",
+            "sbsa": "**Zahájení hlasového kola s výběrem z několika možností pomocí ukázek**",
+            "stopgs": "**Zastavení hlasových kol** \nTím se zastaví režim hlasových kol a také aktuální kolo.",
+            "sgs": "**Zahájení hlasové relace** \nTím se připojíte k hlasovému kanálu (se stejným názvem nebo ke kanálu, ve kterém se právě nacházíte) a zahájíte hlasovou relaci.  \nUjistěte se, že má RinBot pro kanál oprávnění __Připojit__ a __Mluvit__."
+        },
+        "shortcuts": {
+            "query": "**Spustí nové kolo s anime na základě vašeho vlastního dotazu**  \n`d:1` pro přidání obtížnosti do filtru.  \n`g:shounen` pro přidání žánru do filtru  \n`y:2001-2009` pro přidání rozsahu let do filtru  \n`t:op` pro přidání typu skladby do filtru (pouze pro kola `!sga` ) \nPříklad: `!sg d:1 g:shounen y:2001-2009` nebo `!sg g:drama y:2010` nebo `!sga t:op`  \n_Všimněte si, že v dotazech NEMUSÍTE použít všechny filtry._",
+            "title": "#### Zkratky kulatého filtru  \nToto je několik rychlých filtrů pro začátek. Obtížnost je vybrána automaticky na základě vašich aktuálních bodů, pokud není zadána žádná.",
+            "year": "**Začíná nové kolo od roku `[rok]` do současnosti** \nPříklad: `!sg 1999` vybere anime od roku 1999 do aktuálního roku včetně.",
+            "genre": "**Začíná nové kolo s anime určitého žánru** \nPro seznam všech dostupných žánrů použijte příkaz `!genres`.",
+            "years": "**Začíná nové kolo od let mezi `[rok1]` a `[rok2]`** \nPříklad: `!sg 1999 2003` vybere anime z let 1999 až 2003 včetně.",
+            "difficulty": "**Spustí nové kolo s určitou obtížností**. \n1 (snadné), 2 (normální), 3 (těžké), 4 (extrémní), 5 (noční můra) a 0 (vše).  \nPříklad: `!sg 1` pro lehké kolo nebo `!sg 4` pro extrémní kolo.",
+            "songType": "**Spustí nové zvukové kolo se skladbami určitého typu**. \nTyp písně může být: `op` (úvodní písně), `ed` (závěrečné písně), `in` (vložené písně) nebo `tm` (obrazové písně)."
+        },
+        "queries": {
+            "songType": "**Filtrování typu skladeb** ( pouze`!sga`, `!sgs` a `!sgsa` ).  \nTyp písně může být: `op` (úvodní písně), `ed` (závěrečné písně), `in` (vložené písně) nebo `tm` (obrazové písně).",
+            "aggr": "**Metoda agregace** (pouze při použití filtrů seznamu anime)  \nPro sjednocení seznamů anime namísto jejich protnutí můžete použít `aggr:union`.",
+            "operations": "#### Provoz",
+            "filters": "#### Filtry",
+            "imageManipulations": "**Manipulace s obrázky v kole** (pouze pro kola s obrázky).  \nMůžete si vybrat z následujících možností: `p` pixelovaný, `i` obrácený, `o` olejomalba, `g` odstíny šedi, `f` převrácený na výšku.  \nPříklad: `im:p` nebo kombinace s `im:g,o,i.`",
+            "difficulty": "**Filtrování obtížnosti** \n1 (snadné), 2 (normální), 3 (těžké), 4 (extrémní), 5 (noční můra) a 0 (vše).  \nPříklad: `d:1` pro lehké kolo nebo `d:4` pro extrémní a `d:0` pro vypnutí filtru obtížnosti.",
+            "genre": "**Filtrování žánru** \nV současné době lze filtrovat pouze jeden žánr, například `g:action` nebo `g:horror`.  \nPro seznam všech dostupných žánrů použijte příkaz `!žánry`.",
+            "year": "**Filtrování roku** \nPříklad: `y:1999` vybere anime z let 1999 až do aktuálního roku včetně.  \n`y:2005-2010` by vybralo anime z let 2005 až 2010 (obě včetně)",
+            "title": "### Dotazy  \nPomocí těchto parametrů můžete sestavit vlastní dotazy. Budou fungovat pro `!sg`, `!sgv`, `!sga`, `!sgs` a `!sgsa`.  \n\nNapříklad: `!sg n:5 d:3 y:1995-2005` pro zahájení relace s 5 koly anime na těžkou obtížnost mezi lety 1995 a 2005.",
+            "numberOfRounds": "**Počet kol v relaci** \nTím se automaticky spustí více kol v jedné relaci a na konci relace se zobrazí žebříček.  \nPříklad: `n:2` pro 2 kola až maximálně 10 kol s `n:10.`",
+            "mal": "**Filtrování na základě seznamu MyAnimeList** \nPříklad: `mal:username` nebo `mal:user1,user2` pro více seznamů uživatelů.  \nPřed použitím filtru musíte nejprve použít příkaz `!sync`.",
+            "anilist": "**Filtrování na základě vašeho seznamu AniList** \nPříklad: `anilist:username` nebo `anilist:user1,user2` pro více seznamů uživatelů.  \nPřed použitím filtru musíte nejprve použít příkaz `!sync`.   \nMůžete také kombinovat různé druhy anilistů dohromady, například takto: `mal:user1,user2 anilist:user3`"
+        },
+        "points": {
+            "allfastest": "**Zobrazuje nejrychlejší hráče všech dob na serveru**. \nZapočítávají se pouze kola s anime poolem vyšším než 1000.",
+            "serverscore": "**Zobrazuje skóre celého serveru**",
+            "alltop": "**Zobrazuje nejlepší hráče všech dob na serveru**",
+            "myscore": "**Zobrazuje získané body a odehraná kola v aktuálním kanálu.**",
+            "title": "#### Body  \nTy se přepočítávají každou hodinu. Pro aktualizace v reálném čase můžete [boost your server](https://patreon.com/rinbot?fan_landing=true).",
+            "weektop": "**Zobrazuje nejlepší hráče aktuálního týdne na serveru**. \nPoužívá týdny roku podle ISO-8601 s pondělím jako prvním dnem v týdnu. Příkaz vám řekne, kdy se týden vynuluje.",
+            "weekfastest": "**Zobrazuje nejrychlejší hráče aktuálního týdne na serveru**. \nZapočítávají se pouze kola s anime poolem vyšším než 1000.  \nNapříklad: Tím se vyloučí jednoduché/normální režimy a většina menších žánrů."
+        },
+        "ctop": {
+            "startctop": "**Spustí nový vlastní žebříček pro kanál**. \nChcete-li mít více vlastních žebříčků současně, musíte použít více kanálů.",
+            "title": "#### Vlastní žebříčky",
+            "endctop": "**Ukončení aktivního vlastního žebříčku** \nTím se zastaví sbírání bodů, ale žebříček se neodstraní.",
+            "ctop": "**Zobrazení vlastního žebříčku pro aktuální kanál**",
+            "resetctop": "**Obnovení vlastního žebříčku** \nTímto **zcela odstraníte** vlastní žebříček, který se již nikdy nevrátí!  \nK použití této funkce potřebujete jedno z následujících oprávnění:\n- Administrátor: 1. Správce. 2. Správce. 3. Správce.\n- Spravovat server\n- Spravovat role\n- Správa kanálů\n- Spravovat zprávy"
+        },
+        "misc": {
+            "statg": "**Zobrazení globálních statistik hry**",
+            "sync": "**Synchronizace seznamu anime z jiných webů** \nV současné době jsou podporovány MyAnimeList a AniList.",
+            "title": "#### Různé",
+            "credits": "**Ukáže vám všechny skvělé lidi a webové stránky, které pomáhají vytvořit {botName}.**",
+            "genres": "**Zobrazit všechny možné žánry anime**",
+            "mydifficulty": "**Umožňuje nastavit výchozí obtížnost pro všechna zahájená kola.**"
+        },
+        "management": {
+            "title": "#### Management",
+            "prefix": "**Zobrazí aktuální předponu a umožní ji změnit.**",
+            "lang": "**Zobrazí aktuální jazyk a umožní jej změnit.**"
+        },
+        "onlyForPatrons": {
+            "tooltip": "Pouze pro patrony",
+            "description": "**Mohou používat pouze [patroni]({patreonUrl})** - toto bylo zavedeno, aby se snížilo zatížení serveru a lidé pomohli platit účty."
+        },
+        "isExperimental": {
+            "tooltip": "Experimentální",
+            "description": "**Experimentální funkce** - tato funkce je poměrně nová, takže může obsahovat nějaké chyby [pokud nějaké najdete, nahlaste je prosím zde]({supportServerUrl})."
+        },
+        "title": "Příkazy",
+        "prefixCanBeChanged": "Předponu `!` těchto příkazů lze po přihlášení změnit na stránce \"Moje servery\".",
+        "canUseInDirectMessage": "Většinu těchto příkazů můžete použít také v přímé zprávě RinBotovi, abyste mohli přehrát soukromou relaci. Body získané tímto způsobem se nezapočítávají do žebříčků.",
+        "rounds": {
+            "title": "#### Rounds",
+            "sg": "**Zahajuje nové kolo**",
+            "sgv": "**Zahajuje kolo s videoklipy**",
+            "sga": "**Zahajuje kolo se zvukovými úryvky úvodní a závěrečné písně.**",
+            "sgc": "**Začíná kolo s anime postavami**",
+            "sgvn": "**Zahajuje kolo s obrázky vizuálních románů**. \nPro tento příkaz funguje pouze filtr obtížnosti.",
+            "stopg": "**Zastaví aktuální kolo** \nTento příkaz je omezen na jedenkrát za 15 minut na osobu, aby se zabránilo jeho zneužití. [Patroni mají zkrácený cooldown](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgg": "**Začíná kolo s videohrami**",
+            "sb": "**Spusťte kolo tlačítek s výběrem odpovědí s obrázky**"
+        }
+    },
+    "introduction": {
+        "orSeeHerInAction": "nebo ji můžete vidět v akci v",
+        "checkTheCommandListAndConfigure": "Úplný seznam funkcí najdete v seznamu příkazů. Po přihlášení na tuto webovou stránku můžete nakonfigurovat stránku {botName} a přizpůsobit ji potřebám svého serveru.",
+        "shortDescription": "Hrajte **guess the anime** a mnoho dalších tipovacích kvízových her přímo v kanálech Discord se svými přáteli.",
+        "title": "{botName}domovské stránky",
+        "inviteButton": "Pozvání na server {botName}",
+        "supportServer": "{botName} server podpory",
+        "features": "### Vlastnosti\n- **K dispozici jsou tisíce** anime, postav, vizuálních románů a videoher!\n- Hádejte z obrázků, videoklipů nebo zvukových úryvků písní.\n- **Náhodně vybírané úlovky** způsobují, že žádné kolo není nikdy stejné.\n- **Bodovací systém s žebříčky** (za všechny časy, za týden a za vlastní období).\n- Několik **úrovní obtížnosti**, takže se mohou bavit i noví fanoušci anime a vizuálních románů.\n- Tituly lze hádat ve **více jazycích**.\n- ...a mnoho dalšího!"
+    },
+    "leaderboardTable": {
+        "hidden": "(skryté)",
+        "rank": "Hodnost",
+        "name": "Název",
+        "rounds": "Rounds",
+        "players": "Hráči",
+        "points": "Body"
+    },
+    "playerTable": {
+        "username": "Název"
+    },
+    "statistics": {
+        "title": "Statistiky",
+        "description": "Počet odehraných kol za den za posledních 30 dní.",
+        "roundsPerDay": {
+            "title": "Počet ran za den",
+            "won": "Won",
+            "lost": "Ztracené",
+            "total": "Celkem",
+            "winners": "Vítězové"
+        }
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Najít hráče"
+    },
+    "slashCommands": {
+        "title": "Příkazy lomítka",
+        "ephemeral": {
+            "tooltip": "Pomíjivý příkaz",
+            "description": "**Efemérní příkazy** - zprávy následující po těchto příkazech budou viditelné pouze pro vás."
+        },
+        "description": "Abyste mohli používat příkazy lomítka, budete možná muset znovu pozvat server {botName} a ujistit se, že má příkazy **Create v oboru serveru**.  \nMůžete použít tlačítko pro pozvání na domovské stránce nebo kliknutím na {botName} v rámci Discordu.  \n\nUjistěte se, že uživatelé mají oprávnění **Používat příkazy aplikace**, jinak nebudou moci používat vůbec žádné příkazy s lomítkem."
+    },
+    "needHelp": {
+        "supportServerIntroduction": "Na oficiálním serveru podpory můžete požádat o pomoc, poskytnout zpětnou vazbu, požádat o nové funkce nebo si jen zahrát hru Anime.",
+        "joinTheSupportServer": "Připojení k serveru podpory",
+        "needHelp": "Potřebujete pomoc?",
+        "encounterProblemsContact": "Pokud se setkáte s jakýmikoli problémy, obraťte se na Kururina."
+    },
+    "myServerDetails": {
+        "onlyForManagement": "Pouze pro správu serveru",
+        "leaderboard": "Žebříček",
+        "players": "Hráči",
+        "backToMyServers": "Zpět na mé servery",
+        "server": "Server",
+        "channels": "Kanály"
+    },
+    "main": {
+        "isBetaSite": "Právě procházíte webové stránky {botName} beta. Ta je určena pouze pro testovací účely. [Klikněte zde pro prohlížení skutečných webových stránek]({productionUrl}).",
+        "isAinaBotSite": "Právě procházíte domovskou stránku AinaBot. Jedná se o discord bota s obsahem pouze pro dospělé. [Kliknutím sem přejdete na domovskou stránku RinBota]({productionUrl}), který má pravidelně anime."
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Byli jste odhlášeni!"
+    },
+    "pageNotFound": "Stránka neexistuje",
+    "notLoggedIn": "Pro přístup na tuto stránku musíte být přihlášeni.",
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "description": "Pokud tuto funkci povolíte, bude vaše jméno na všech žebříčcích a profilech na webu nastaveno jako \"(skryté)\".\n  Vaše změna může trvat až jeden den, než se projeví v celém systému.",
+                "checkbox": "Skrýt mé jméno globálně"
+            }
+        }
+    }
+}

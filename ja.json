@@ -19,37 +19,67 @@
             "sga": "**オープニング曲とエンディング曲のオーディオ断片で周りを開始します**",
             "sgc": "**アニメのキャラクターでラウンドを開始**",
             "sb": "**画像と複数の選択肢のボタンのラウンドを開始します **",
-            "stopg": "**現在のラウンドを停止する**\nこのコマンドは、虐待を防ぐために、1人あたり15分ごとに1回に制限されています。[パトロンは、削減クールダウンを取得します](https://patreon.com/rinbot?fan_landing=true）！"
+            "stopg": "**現在のラウンドを停止する**\nこのコマンドは、虐待を防ぐために、1人あたり15分ごとに1回に制限されています。[パトロンは、削減クールダウンを取得します](https://patreon.com/rinbot?fan_landing=true）！",
+            "sgg": "**ビデオゲームでラウンド開始**"
         },
         "points": {
             "title": "#### ポイント\nこれらは1時間ごとに再計算されます。 [サーバーを強化する](https://patreon.com/rinbot?fan_landing=true）ことができますリアルタイムの更新のために。",
             "myscore": "**獲得したポイントと現在のチャンネルでプレイしたラウンドを表示します**",
             "alltop": "**サーバー内のすべての時間のトッププレーヤーを示しています**",
             "allfastest": "**サーバー内のすべての時間の最速の選手を示しています**  \n1000以上のアニメプールを持つラウンドのみがカウントされます。",
-            "weektop": "**サーバー内の現在の週のトッププレーヤーを表示します**  \nこれは、週の最初の日として月曜日と年のISO-8601週を使用しています。 週がリセットされるときにコマンドが教えてくれます。"
+            "weektop": "**サーバー内の現在の週のトッププレーヤーを表示します**  \nこれは、週の最初の日として月曜日と年のISO-8601週を使用しています。 週がリセットされるときにコマンドが教えてくれます。",
+            "serverscore": "**サーバー全体のスコアを表示**",
+            "weekfastest": "**サーバー** における、現在の週の最速プレイヤーを表示します。  \nアニメプールが1000以上のラウンドのみカウントされます。  \n例: イージー/ノーマルモードとほとんどの小さいジャンルは除外されます。"
         },
         "title": "コマンド",
         "queries": {
             "title": "### クエリ\nこれらのパラメータを使用して独自のクエリを作成できます。 それはのために動作します `!sg`, `!sgv`, `!sga`, `!sgs` と `!sgsa`と述べている。\n\nたとえば、`!sg n:5d:3y:1995-2005`",
             "operations": "#### 操作",
-            "filters": "#### フィルタ"
+            "filters": "#### フィルタ",
+            "genre": "**ジャンルを絞り込む** \n現在のところ、`g:action` や`g:horror` のように、単一のジャンルだけをフィルタリングすることができます。  \n利用可能なすべてのジャンルのリストには、コマンド`!genres` を使用してください。",
+            "imageManipulations": "**ラウンド内の画像を操作する** （画像を含むラウンドのみ）。  \n`p` pixelated,`i` inverted,`o` oil-painted,`g` grayscale,`f` flipped verticalically から選択できます。  \n例：`im:p` または`im:g,o,iとの組み合わせ。`",
+            "difficulty": "**難易度フィルター** \n1(簡単)、2(普通)、3(難しい)、4(極端)、5(悪夢)、0(すべて)  \n例:`d:1` は簡単なラウンド、`d:4` は極端なラウンド、`d:0` は難易度フィルターを無効にする。",
+            "numberOfRounds": "**セッションのラウンド数** \nこれにより、1つのセッションで自動的に複数のラウンドが開始され、セッション終了時にリーダーボードが表示されます。  \n例:`n:2` で2ラウンド、`n:10 で最大10ラウンド。`",
+            "songType": "**曲のタイプを絞り込む** (`!sga`,`!sgs` and`!sgsa` only)  \n曲の種類は、`op` （オープニング）、`ed` （エンディング）、`in` （挿入歌）、`tm` （イメージソング）のいずれか。",
+            "year": "**年を絞り込む** \n例:`y:1999` は1999年から現在までのアニメを選ぶ。  \n`y:2005-2010` は2005年から2010年までのアニメを選ぶ。",
+            "mal": "**MyAnimeList** に基づいたフィルタリング。  \n例:`mal:username` または`mal:user1,user2` 複数ユーザーリスト用。  \nフィルタを使用する前に、まず`!sync` コマンドを使用する必要があります。",
+            "anilist": "**AniList** に基づいてフィルタリングします。  \n例:`anilist:username` または`anilist:user1,user2` 複数のユーザーリストの場合。  \nフィルタを使用する前に、まず`!sync` コマンドを使用する必要があります。   \n`mal:user1,user2 anilist:user3 のように、異なる種類のアニメリストを組み合わせることもできます。`",
+            "aggr": "**集計方法** （アニメリストフィルターを使用する場合のみ）  \n`aggr:union` を使えば、アニメリストを交差させる代わりに統合することができる。"
         },
         "ctop": {
             "title": "#### カスタムリーダーボード",
             "endctop": "**アクティブなカスタムリーダーボードを終了**  \nこれによりポイントが蓄積されなくなりますが、リーダーボードは削除されません。",
             "ctop": "**現在のチャンネルのカスタムリーダーボードを表示する**",
-            "startctop": "**チャネルの新しいカスタムリーダーボードを開始します**  \nあなたは、同時に複数のカスタムリーダーボードを持っている複数のチャネルを使用する必要があります。"
+            "startctop": "**チャネルの新しいカスタムリーダーボードを開始します**  \nあなたは、同時に複数のカスタムリーダーボードを持っている複数のチャネルを使用する必要があります。",
+            "resetctop": "**カスタムリーダーボードをリセット** \nこれは**** カスタムリーダーボードを完全に削除し、二度と戻らないようにします！  \nこの機能を使用するには、以下のいずれかの権限が必要です：\n- 管理者\n- サーバー管理\n- ロールの管理\n- チャンネルの管理\n- メッセージの管理"
         },
         "voiceRounds": {
             "title": "#### 音声ラウンドセッション",
             "sgs": "**音声ラウンドセッションを開始する**  \nこれは、（同じ名前、またはあなたがしているもので）音声チャネルに参加し、ラウンドをやって開始します。  \nRinBotにチャネルの__接続__および__発言__権限があることを確認してください。",
             "sgsa": "**サンプルとの声の円形の会議を始めて下さい**",
-            "stopgs": "**音声ラウンドを停止します**\nこれにより、音声ラウンドモードと現在のラウンドも停止します。"
+            "stopgs": "**音声ラウンドを停止します**\nこれにより、音声ラウンドモードと現在のラウンドも停止します。",
+            "sbsa": "**サンプルによる複数選択ボタン音声ラウンドセッションの開始**"
         },
         "misc": {
             "title": "#### その他",
             "genres": "**すべての可能なアニメのジャンルを見る**",
-            "statg": "**ゲームのいくつかのグローバル統計を表示します**"
+            "statg": "**ゲームのいくつかのグローバル統計を表示します**",
+            "mydifficulty": "**すべてのラウンドのデフォルトの難易度を設定できます。**",
+            "sync": "**他サイトのアニメリストを同期** \n現在、MyAnimeListとAniListがサポートされています。",
+            "credits": "** {botName} 、その実現に貢献しているクールな人々やウェブサイトを紹介する。**"
+        },
+        "onlyForPatrons": {
+            "description": "**パトロン]({patreonUrl})** 、サーバーの負荷を減らし、課金に協力してもらうために導入された。",
+            "tooltip": "パトロン限定"
+        },
+        "management": {
+            "prefix": "**現在の接頭辞を表示し、変更できる。**",
+            "lang": "**現在の言語を表示し、変更することができます。**",
+            "title": "#### 経営陣"
+        },
+        "isExperimental": {
+            "tooltip": "実験的",
+            "description": "**実験的な機能** - この機能は非常に新しいので、いくつかのバグが含まれているかもしれません [バグを見つけたらここに報告してください]({supportServerUrl})"
         }
     },
     "achievements": {
@@ -60,6 +90,486 @@
         "noAchievementsGainedYet": "成果はまだ収集されていません。"
     },
     "common": {
-        "loading": "読み込み中"
+        "loading": "読み込み中",
+        "experimentalFeature": "実験的特徴",
+        "termsOfService": "利用規約",
+        "error": "エラー",
+        "success": "成功",
+        "botSupporter": "{botName} サポーター",
+        "boostedByBotSupporter": "{botName} サポーターによる後押し",
+        "privacyPolicy": "プライバシーポリシー",
+        "onlyForPatrons": "パトロン限定"
+    },
+    "userProfile": {
+        "trophiesWon": "獲得トロフィー",
+        "points": "ポイント",
+        "rounds": "ラウンド",
+        "achievementPoints": "達成ポイント",
+        "roundPoints": "ラウンドポイント",
+        "allTimeResults": "通算成績",
+        "rank": "順位",
+        "noResultsYet": "まだ結果は出ていない。",
+        "noTrophiesWon": "まだトロフィーは獲得していない。",
+        "week": "週間",
+        "achievements": "実績",
+        "statistics": "統計"
+    },
+    "genres": {
+        "GAME": "ゲーム",
+        "HISTORICAL": "歴史的",
+        "HORROR": "ホラー",
+        "ISEKAI": "伊勢海",
+        "COMEDY": "コメディ",
+        "DEMENTIA": "認知症",
+        "MYSTERY": "ミステリー",
+        "KIDS": "キッズ",
+        "MAGIC": "マジック",
+        "MARTIAL_ARTS": "武道",
+        "SCI_FI": "SF",
+        "DEMONS": "悪魔",
+        "HAREM": "ハーレム",
+        "SLICE_OF_LIFE": "スライス・オブ・ライフ",
+        "ROMANCE": "ロマンス",
+        "SHOUNEN_AI": "少年愛",
+        "SPACE": "スペース",
+        "SPORTS": "スポーツ",
+        "SUPER_POWER": "スーパーパワー",
+        "DRAMA": "ドラマ",
+        "ECCHI": "エッチ",
+        "FANTASY": "ファンタジー",
+        "SEINEN": "青年",
+        "JOSEI": "ジョゼイ",
+        "MAHOU_SHOUJO": "まほう少女",
+        "SCHOOL": "学校",
+        "ACTION": "アクション",
+        "ADVENTURE": "アドベンチャー",
+        "CARS": "自動車",
+        "MECHA": "メカ",
+        "MUSIC": "音楽",
+        "THRILLER": "スリラー",
+        "PARODY": "パロディ",
+        "SAMURAI": "サムライ",
+        "SHOUJO": "少女",
+        "SHOUJO_AI": "少女愛",
+        "SHOUNEN": "少年",
+        "VAMPIRE": "ヴァンパイア",
+        "POLICE": "警察",
+        "PSYCHOLOGICAL": "心理学的",
+        "SUPERNATURAL": "スーパーナチュラル",
+        "MILITARY": "ミリタリー"
+    },
+    "status": {
+        "graphql": {
+            "tooltip": "ウェブサイトに動的コンテンツ（データベースなど）を提供する。",
+            "name": "GraphQL"
+        },
+        "discordShards": "ディスコードの破片",
+        "databaseServices": "データベース・サービス",
+        "website": {
+            "tooltip": "これが赤かったら、君はここにいなかっただろう",
+            "name": "ウェブサイト"
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "ウェブサイトに動的コンテンツとボット設定を提供"
+        },
+        "worker": {
+            "name": "労働者",
+            "tooltip": "リーダーボード、スコア、プロフィールの更新"
+        },
+        "title": "ステータス",
+        "description": "ここでは、{botName} を正常に機能させるためのサービスのステータスをご覧いただけます。このページは10秒ごとに自動的に更新されます。",
+        "operational": "オペレーション",
+        "partialOutage": "部分停電",
+        "animeDatabaseApi": {
+            "name": "アニメデータベースAPI",
+            "tooltip": "sg、sgv、sgaのアニメラウンドを提供"
+        },
+        "majorOutage": "大規模停電",
+        "putYourServerId": "あなたのシャードを見つけるには、ここにサーバーIDを入力してください。",
+        "couldNotGetShardStatuses": "APIからシャードのステータスを取得できませんでした。",
+        "coreServices": "コア・サービス",
+        "howToFindYourServerId": "サーバーIDの見つけ方がわからない場合は、[こちらのサポート記事をお読みください](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)。",
+        "visualNovelDatabaseApi": {
+            "name": "ビジュアル・ノベル・データベースAPI",
+            "tooltip": "ビジュアルノベルのラウンドを提供 - !"
+        }
+    },
+    "animeSorts": {
+        "YEAR_DESC": "年（降順）",
+        "ROUNDS_WON_PERCENTAGE_DESC": "勝率（降順）",
+        "ROUNDS_WON_ASC": "勝利ラウンド（昇順）",
+        "MAIN_TITLE_ASC": "メインタイトル（昇順）",
+        "MAIN_TITLE_DESC": "メインタイトル（降順）",
+        "YEAR_ASC": "年（昇順）",
+        "ROUNDS_WON_DESC": "勝利ラウンド（降順）",
+        "ROUNDS_LOST_ASC": "負けたラウンド（昇順）",
+        "ROUNDS_LOST_DESC": "負けたラウンド（降順）",
+        "ROUNDS_WON_PERCENTAGE_ASC": "勝率（昇順）"
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "tooltip": "エフェメラル・コマンド",
+            "description": "**エフェメラル・コマンド** - これらのコマンドに続くメッセージは、あなただけに表示されます。"
+        },
+        "title": "スラッシュコマンド",
+        "description": "スラッシュ・コマンドを使用するには、{botName} を再招待し、**Create コマンドをサーバーの** スコープで使用できるようにする必要があります。  \nトップページの招待ボタンか、Discordの{botName} をクリックしてください。  \n\nユーザーが**Use Application Commands** のパーミッションを持っていることを確認してください。"
+    },
+    "myServers": {
+        "couldNotRetrieveServers": "サーバーを検索できませんでした",
+        "details": "詳細",
+        "title": "私のサーバー",
+        "description": "サーバーの{botName} を設定するには、**サーバー管理** 権限が必要です。",
+        "boostedServer": "ブーストサーバー",
+        "hasBot": "{botName} このサーバーにある",
+        "notHasBot": "{botName} はこのサーバーにはありません",
+        "addBot": "追加{botName}",
+        "configure": "設定",
+        "searchForServer": "サーバーの検索",
+        "showAll": "すべてのサーバーを表示する"
+    },
+    "navbar": {
+        "myBoostedServers": "私のブーストサーバー",
+        "status": "ステータス",
+        "database": "データベース",
+        "mySettings": "私の設定",
+        "login": "ログイン",
+        "logout": "ログアウト",
+        "myProfile": "プロフィール",
+        "myServers": "私のサーバー",
+        "home": "ホーム",
+        "faq": "よくあるご質問",
+        "changelog": "変更履歴",
+        "leaderboard": "リーダーボード",
+        "statistics": "統計",
+        "commands": "コマンド"
+    },
+    "serverConfiguration": {
+        "general": {
+            "inviteCode": {
+                "label": "招待コード",
+                "invalid": "この招待コードは無効のようです。",
+                "description": "リーダーボードのサーバー名のURLに使用される招待コード"
+            },
+            "title": "一般",
+            "prefix": {
+                "description": "これらの文字はコマンドの前に置かれる！",
+                "label": "コマンドプレフィックス",
+                "invalid": "これは必須項目で、1～5文字で入力してください。"
+            },
+            "noLanguageCodeDefined": "(サーバーのデフォルト言語を使用)",
+            "language": {
+                "description": "Discord内のRinBotの言語を設定します。アニメのタイトルには影響しません。",
+                "label": "言語"
+            },
+            "disableLegacyCommands": {
+                "description": "これでレガシーな接頭辞付きコマンドは完全に無効になり、スラッシュ・コマンドしか使えなくなる。",
+                "label": "接頭辞付きコマンド",
+                "checkbox": "レガシープレフィックスコマンドを無効にする"
+            },
+            "showInLeaderboards": {
+                "description": "これを有効にすると、サーバー名がサーバーリーダーボードに表示されます。この変更が反映されるまで、1時間ほどかかる場合があります。",
+                "checkbox": "このサイトのグローバルリーダーボードにサーバー名を表示する",
+                "label": "グローバル・リーダーボードに表示"
+            }
+        },
+        "guessTheAnime": {
+            "pointRoleConfigs": {
+                "label": "ポイント別役割"
+            },
+            "titlePreferences": {
+                "disableTitleSimplifications": {
+                    "description": "タイトルの簡略化を無効にする（長いタイトルをダッシュ/コロンで分割したり、「シーズン」「バージョン」などの一般的な文脈上の単語を削除したりする）。",
+                    "label": "タイトルの簡略化",
+                    "checkbox": "簡略化を無効にする"
+                },
+                "titleTypes": {
+                    "official": "公式タイトル",
+                    "any": "(どんな）",
+                    "short": "短いタイトル",
+                    "synonym": "同義語",
+                    "card": "カードタイトル",
+                    "kana": "カナ読み",
+                    "label": "タイトルの種類",
+                    "main": "主なタイトル"
+                },
+                "mainTitle": {
+                    "source": "ソース",
+                    "type": "タイプ",
+                    "label": "メインタイトル",
+                    "description": "メインタイトルを決める優先順位です。メインタイトルは、ヒントとラウンド終了時のアニメ概要に使用されるタイトルです。メインタイトルが見つからない場合は、デフォルトに戻ります。",
+                    "language": "言語"
+                },
+                "titleSources": {
+                    "any": "(どんな）"
+                },
+                "setToDefaults": "デフォルトに設定",
+                "titleLanguages": {
+                    "label": "タイトル言語",
+                    "selectNone": "なしを選択",
+                    "selectAll": "すべて選択"
+                },
+                "description": "##### タイトル設定  \nここでは、正しい推測として受け入れられるタイトルの言語を設定できます。  \n\nタイトルの設定が空の場合、デフォルトにフォールバックされます。",
+                "percentageWrong": {
+                    "label": "パーセント",
+                    "description": "{percentage}% - 低いほど、推測のタイプミスに寛容でないことを意味する。"
+                }
+            },
+            "disableSummaryLink": {
+                "description": "これをチェックすると、ラウンド終了時のサマリーからリンクが削除される。",
+                "label": "概要",
+                "checkbox": "サマリーリンクを無効にする"
+            },
+            "disableDrops": {
+                "description": "これをチェックすると、ゲームはランダムなキャラクタードロップをスポーンしなくなります。",
+                "label": "ドロップス",
+                "checkbox": "ドロップを無効にする"
+            },
+            "animeSummaryLink": {
+                "label": "アニメ概要リンク",
+                "description": "これはURLを変更するだけで、アニメによってはRinBotのウェブサイトにフォールバックするかもしれません。"
+            },
+            "winnerRoleConfigs": {
+                "permissionInfo": "{botName} が'Manage Roles'権限を持っていて、彼女に割り当てさせたいロールの上に位置していることを確認してください。",
+                "description": "ここでは、リーダーボードの勝者に対する役割分担を設定することができます。",
+                "role": "役割",
+                "time": "時間",
+                "isWeekly": "オールタイム/ウィークリー",
+                "title": "役割構成",
+                "boostedServersGetMoreAssignments": "[ブーストサーバー]({patreonLink})は、{patronWinnerRoleConfigs} までの役割を割り当てることができます。",
+                "add": "新しい役割割り当てを追加する",
+                "saveChanges": "変更を保存する",
+                "undo": "元に戻す",
+                "warnManagedRole": "ロールは{botName} によって完全に管理されるので、勝者でないロールのメンバーは削除されることに注意してください。",
+                "label": "階級別役割",
+                "points": "ポイント",
+                "reachedMaximumAssignments": "{maxWinnerRoleConfigs} ロール割り当ての上限に達しました。",
+                "rank": "順位",
+                "type": "タイプ",
+                "allTime": "オールタイム",
+                "weekly": "ウィークリー"
+            },
+            "enableAntiSpam": {
+                "label": "スパム対策",
+                "description": "これを有効にすると、同じタイトルを使い続けて当てようとするプレイヤーをボットが無視するようになります。",
+                "checkbox": "アンチスパムフィルターを有効にする"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "これをチェックすると、サーバーを去ったプレイヤーもリーダーボードに表示されるようになります。表示されるまでに1時間ほどかかる場合があります。",
+                "label": "リーダーボードに選手がいない",
+                "checkbox": "リーダーボードに行方不明の選手を表示"
+            },
+            "disableHints": {
+                "description": "これをチェックすると、どのラウンドでもヒントは一切表示されなくなる。",
+                "label": "ヒント",
+                "checkbox": "ヒントを無効にする"
+            },
+            "hideAlternativeTitles": {
+                "description": "これをチェックすると、アニメ概要の代替タイトルリストが非表示になる。",
+                "label": "代替タイトル",
+                "checkbox": "代替タイトルを隠す"
+            },
+            "title": "アニメ当てクイズ"
+        }
+    },
+    "needHelp": {
+        "needHelp": "お困りですか？",
+        "supportServerIntroduction": "ヘルプを求めたり、フィードバックしたり、新機能をリクエストしたり、公式サポートサーバーでアニメをプレイしたりすることができます。",
+        "joinTheSupportServer": "サポートサーバーに参加する",
+        "encounterProblemsContact": "もし何か問題があれば、そこでくるりんに連絡してください。"
+    },
+    "supportUs": {
+        "goal": "{completedPercentage}月額{amount} 、運営費の一部が充当される！",
+        "translations": "翻訳",
+        "signInWithAuth0": "Auth0でサインインし、「Continue with Discord」をクリックします。",
+        "votingAndReviewing": "投票と審査",
+        "supportThroughVoting": "定期的に投票し、これらのウェブサイトにレビューを残すことは常に役に立つ。",
+        "helpWithTranslating": "現在の翻訳を改善したり、クラウドトランスレーションを使って新しい言語を追加したりすることで、支援することができます！",
+        "joinTheTranslationsChannel": "サポートサーバー]({supportServerUrl})の`#translations` チャンネルに参加して、ヘルプを求めたり翻訳について話し合ったりしてください。",
+        "supportThroughKoFi": "また、ko-fi.comを通じて私にコーヒーをおごることもできるかもしれない。ただし、これには私の最大限の感謝以外の特典はありません！",
+        "supportThroughPatreon": "もしサーバー費用を賄いたいとお考えでしたら、Patreonを使ってお好きな金額をご誓約ください。特別な特典もあります！"
+    },
+    "channelConfiguration": {
+        "couldNotSaveChanges": "変更を保存できませんでした",
+        "useForVoiceRounds": {
+            "checkbox": "この音声チャンネルだけを音声ラウンドに使用する（アクティブにできるのは1つのみ）"
+        },
+        "channelAccessControlEnabled": {
+            "checkbox": "チャンネル・アクセス制御を有効にする",
+            "description": "これにより、チャンネルごとに特別にホワイトリストに登録されない限り、{botName} 。",
+            "label": "アクセス制御"
+        },
+        "stage": {
+            "topic": {
+                "label": "ステージトピック"
+            }
+        },
+        "noChannelsConfigured": "現在、チャンネルは設定されていません。チャンネルを追加」ボタンをクリックしてください。",
+        "add": "チャンネルを追加する",
+        "description": "ここではチャンネルごとにいくつかの特定のオプションを設定することができます。これらのオプションは後日、サーバ設定オプションとして拡張されるかもしれません。",
+        "boostedServersGetMore": "[ブーストサーバー]({patreonLink})は、最大{patronMaxConfigs} のチャンネル構成を持つことができる。",
+        "undo": "元に戻す",
+        "saveChanges": "変更を保存する",
+        "maximumReached": "{maxChannelConfigs} チャンネル設定の上限に達しました。",
+        "startGameOnIdle": {
+            "minutesIdle": "分アイドル",
+            "checkbox": "チャネルがアイドル状態のときに新しいラウンドを開始する",
+            "boostedServersCanHaveLess": "[ブーストサーバー]({patreonLink})は、&&60;60分を持つことができます。"
+        },
+        "savedChangesSuccessfully": "変更の保存に成功"
+    },
+    "guildProfile": {
+        "join": "このサーバーに参加する"
+    },
+    "channelAccessControlConfig": {
+        "description": "アクセス制御ルールは、上から下へと処理される。  \nデフォルトではすべてが拒否されるので、最低でも1つは許可ルールを作る必要がある。",
+        "maximumReached": "アクセス制御の最大数に達しました。",
+        "commands": "コマンド",
+        "allCommands": "(すべてのコマンド)",
+        "roles": "役割",
+        "everyoneRole": "みなさん",
+        "title": "アクセス制御",
+        "addRule": "ルールを追加する"
+    },
+    "difficulties": {
+        "EASY": "簡単",
+        "NORMAL": "ノーマル",
+        "UNKNOWN": "不明",
+        "EXTREME": "エクストリーム",
+        "NIGHTMARE": "悪夢",
+        "HARD": "ハード"
+    },
+    "notLoggedIn": "このページにアクセスするにはログインが必要です。",
+    "pageNotFound": "ページが存在しない",
+    "weekPicker": {
+        "allTime": "オールタイム",
+        "weekly": "ウィークリー",
+        "year": "年",
+        "week": "週間"
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "lost": "ロスト",
+            "title": "1日あたりのラウンド数",
+            "won": "優勝",
+            "total": "合計",
+            "winners": "入賞者"
+        },
+        "title": "統計",
+        "description": "過去30日間の1日当たりのプレー回数。"
+    },
+    "database": {
+        "visualNovels": {
+            "title": "ビジュアルノベル"
+        },
+        "anime": {
+            "title": "アニメ"
+        },
+        "characters": {
+            "title": "登場人物"
+        }
+    },
+    "nsfw": {
+        "UNKNOWN": "不明",
+        "SAFE": "安全",
+        "QUESTIONABLE": "疑わしい",
+        "NOT_SAFE": "危険",
+        "DANGEROUS": "危険"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "アニリスト",
+        "MY_ANIME_LIST": "マイアニメ一覧"
+    },
+    "myBoostedServers": {
+        "addServer": "サーバーの追加",
+        "boostedServers": "# ブーストされたサーバー  \nあなたはTier{patronTier} のパトロンです。あなたは{boostsLeft} 以上のサーバーをブーストすることができます。",
+        "alreadyAdded": "すでに追加済み",
+        "noServersFound": "サーバーが見つかりません。",
+        "savedChanges": "変更の保存に成功",
+        "searchForServer": "サーバーの検索",
+        "pickServersToBoost": "サーバーを選ぶ",
+        "youCannotBoostServers": "# どのサーバーもブーストできない  \nサーバーをブーストするには、少なくともTier 2のパトロンになる必要があります。  \nこれを得るには、まずあなたのDiscordアカウントをpatreonにリンクし、[RinBotのpatreonページでティア2以上の誓約をする]({patreonLink})。",
+        "remove": "ブーストから外す",
+        "addToBoosted": "ブーストに追加",
+        "couldNotSaveChanges": "変更を保存できませんでした",
+        "noServersBoosted": "ブーストされたサーバーはない。"
+    },
+    "leaderboard": {
+        "guilds": {
+            "description": "これは、ゲームがプレイされている上位サーバーのリストです。  \nデフォルトではサーバー名は非表示です。ログイン後のサーバー設定で表示するかどうかを選択できます。",
+            "title": "サーバー"
+        },
+        "players": {
+            "description": "これは、ゲームがプレイされている全サーバーのトッププレイヤーのリストです。ダイレクトメッセージでの対戦はカウントされません。",
+            "title": "選手"
+        },
+        "achievements": {
+            "description": "これは、最も多くのアチーブメントポイントを集めた選手のものである。",
+            "title": "実績"
+        },
+        "title": "リーダーボード",
+        "overview": {
+            "title": "概要",
+            "showMore": "もっと見る",
+            "guildsHiddenByDefault": "デフォルトでは、サーバー名は非表示になっています。",
+            "lastWeekWinners": "先週の入賞者",
+            "thisWeek": "今週",
+            "allTime": "オールタイム",
+            "thisWeekEndsIn": "週明けは{timeLeft} 。"
+        }
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "ログアウトされました！"
+    },
+    "myServerDetails": {
+        "channels": "チャンネル",
+        "leaderboard": "リーダーボード",
+        "players": "選手",
+        "onlyForManagement": "サーバー管理のみ",
+        "backToMyServers": "サーバーに戻る",
+        "server": "サーバー"
+    },
+    "introduction": {
+        "shortDescription": "**アニメを当てよう！** その他にもたくさんの当てクイズゲームを、お友達と一緒にdiscordチャンネルで直接プレイできます。",
+        "checkTheCommandListAndConfigure": "機能の全リストはコマンドリストをご覧ください。このウェブサイトにログインした後、{botName} を設定し、サーバーのニーズに合わせてカスタマイズすることができます。",
+        "inviteButton": "{botName} をサーバーに招待する",
+        "orSeeHerInAction": "で彼女の活躍を見ることができる。",
+        "supportServer": "{botName} サポートサーバー",
+        "features": "### 特徴\n-**アニメ、キャラクター、ビジュアルノベル、ビデオゲームの** 数千を当てることができます！\n- 画像、ビデオクリップ、または曲のオーディオ断片から推測します。\n-**ランダムに選ばれたキャプチャ** により、同じラウンドはありません。\n-**リーダーボードによるスコアリングシステム** (オールタイム、ウィークリー、独自のカスタム期間)\n- 複数の難易度**** 、アニメやビジュアルノベルの初心者ファンでも楽しめる。\n- タイトルは**複数の言語で推測可能**.\n- ...and more！",
+        "title": "{botName}ホームページ"
+    },
+    "playerTable": {
+        "username": "名称"
+    },
+    "validation": {
+        "maxLength": "最大長は{max} 文字ですが、あなたが書いたのは{length} 文字です。",
+        "required": "このフィールドは必須です。"
+    },
+    "leaderboardTable": {
+        "hidden": "(非表示)",
+        "rank": "順位",
+        "name": "名称",
+        "rounds": "ラウンド",
+        "players": "選手",
+        "points": "ポイント"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "世界的に名前を隠す",
+                "description": "これを有効にすると、ウェブサイト内のすべてのリーダーボードとプロフィールに、あなたの名前が「（非表示）」に設定されます。\n  変更がシステム全体に反映されるまで、最大1日かかる場合があります。"
+            }
+        }
+    },
+    "main": {
+        "isBetaSite": "現在、{botName} ベータ版ウェブサイトを閲覧しています。これはテストのみを目的としています。[実際のウェブサイトを閲覧するにはここをクリックしてください]({productionUrl})。",
+        "isAinaBotSite": "現在、AinaBotさんのホームページを閲覧中です。アダルトコンテンツのみのdiscordボットです。[RinBotのホームページはこちら]({productionUrl})。普通のアニメがあります。"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "選手を探す"
+    },
+    "reportAnime": {
+        "submitted": "あなたのレポートは無事に提出されました。",
+        "couldNotSubmit": "レポートが提出できませんでした。"
     }
 }

@@ -1,1 +1,575 @@
-{}
+{
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "titlePreferences": {
+                "description": "##### Pavadinimo pageidavimai  \nČia galite konfigūruoti pavadinimų kalbų, kurios turėtų būti priimamos kaip teisingi spėjimai, nuostatas.  \n\nJei dėl jūsų nustatymų pavadinimų rinkinys bus tuščias, bus grįžtama prie numatytųjų nustatymų.",
+                "percentageWrong": {
+                    "description": "{percentage}% - mažesnis reiškia, kad mažiau atlaidus spėjimams dėl spausdinimo klaidų",
+                    "label": "Klaidinga procentinė dalis"
+                },
+                "disableTitleSimplifications": {
+                    "description": "Išjungiamas pavadinimų supaprastinimas (pvz., ilgų pavadinimų padalijimas į brūkšnelius ir (arba) dvitaškius ir įprastų kontekstinių žodžių, pvz., \"sezonas\", \"versija\" ir pan., pašalinimas).",
+                    "checkbox": "Išjungti supaprastinimus",
+                    "label": "Pavadinimo supaprastinimai"
+                },
+                "titleSources": {
+                    "any": "(bet koks)"
+                },
+                "titleTypes": {
+                    "label": "Pavadinimų tipai",
+                    "main": "Pagrindiniai pavadinimai",
+                    "official": "Oficialūs pavadinimai",
+                    "short": "Trumpi pavadinimai",
+                    "card": "Kortelių pavadinimai",
+                    "any": "(bet koks)",
+                    "synonym": "Sinonimai",
+                    "kana": "Kana skaitymai"
+                },
+                "titleLanguages": {
+                    "label": "Pavadinimo kalbos",
+                    "selectAll": "Pasirinkite visus",
+                    "selectNone": "Pasirinkite nė vieno"
+                },
+                "mainTitle": {
+                    "label": "Pagrindinis pavadinimas",
+                    "description": "Pagal šį prioritetą bus atrenkami pagrindiniai pavadinimai. Pagrindinis pavadinimas yra tas, kuris naudojamas užuominai ir anime santraukai raundo pabaigoje. Jei pagal jūsų parinktis nepavyksta rasti pagrindinio pavadinimo, bus grįžtama prie numatytųjų nustatymų.",
+                    "type": "Tipas",
+                    "language": "Kalba",
+                    "source": "Šaltinis"
+                },
+                "setToDefaults": "Nustatyti numatytąsias reikšmes"
+            },
+            "winnerRoleConfigs": {
+                "label": "Vaidmenys pagal rangą",
+                "description": "Čia galite nustatyti vaidmenų priskyrimą lyderių lentelės nugalėtojams.",
+                "permissionInfo": "Įsitikinkite, kad {botName} turi leidimą \"Tvarkyti vaidmenis\" ir yra virš vaidmens, kurį norite leisti jai priskirti.",
+                "reachedMaximumAssignments": "Pasiekėte maksimalų {maxWinnerRoleConfigs} vaidmenų priskyrimo skaičių.",
+                "boostedServersGetMoreAssignments": "[Padidinti serveriai]({patreonLink}) gali turėti iki {patronWinnerRoleConfigs} vaidmenų priskyrimų.",
+                "add": "Pridėti naują vaidmens priskyrimą",
+                "warnManagedRole": "Atkreipkite dėmesį, kad vaidmenys bus visiškai valdomi {botName}, todėl visi vaidmens nariai, kurie nėra laimėtojai, bus pašalinti.",
+                "undo": "Panaikinti",
+                "role": "Vaidmuo",
+                "allTime": "Alltime",
+                "weekly": "Savaitinis",
+                "isWeekly": "Visą laiką / kas savaitę",
+                "points": "Taškai",
+                "time": "Laikas",
+                "title": "Vaidmens konfigūracija",
+                "saveChanges": "Išsaugoti pakeitimus",
+                "rank": "Rangas",
+                "type": "Tipas"
+            },
+            "pointRoleConfigs": {
+                "label": "Vaidmenys pagal taškus"
+            },
+            "title": "Atspėkite animaciją",
+            "animeSummaryLink": {
+                "description": "Tai tik pakeičia URL adresą ir gali būti, kad dėl tam tikrų anime priežasčių bus grįžtama į RinBot svetainę.",
+                "label": "Anime santraukos nuoroda"
+            },
+            "hideAlternativeTitles": {
+                "description": "Pažymėjus šią parinktį, anime santraukoje bus paslėptas alternatyvių pavadinimų sąrašas.",
+                "label": "Alternatyvūs pavadinimai",
+                "checkbox": "Paslėpti alternatyvius pavadinimus"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Pažymėjus šią funkciją, iš serverio išvykę žaidėjai vis tiek bus rodomi lyderių lentelėse. Jų pasirodymas gali užtrukti iki valandos.",
+                "label": "Lyderių lentelėse trūksta žaidėjų",
+                "checkbox": "Lyderių lentelėse rodyti trūkstamus žaidėjus"
+            },
+            "disableDrops": {
+                "description": "Patikrinus šią reikšmę, žaidimas nerodys jokių atsitiktinių veikėjų lašų.",
+                "label": "Lašai",
+                "checkbox": "Išjungti lašus"
+            },
+            "disableHints": {
+                "description": "Pažymėjus šią parinktį, žaidimas nerodys jokių užuominų jokiuose raunduose.",
+                "label": "Patarimai",
+                "checkbox": "Išjungti užuominas"
+            },
+            "enableAntiSpam": {
+                "description": "Įjungus šią funkciją, robotas pradės ignoruoti žaidėjus, kurie bando atspėti nuolat naudodami tą patį pavadinimą.",
+                "label": "Anti-spam",
+                "checkbox": "Įjungti filtrą nuo šlamšto"
+            },
+            "disableSummaryLink": {
+                "description": "Pažymėjus šią parinktį, pasibaigus raundui iš santraukos bus pašalinta nuoroda.",
+                "label": "Santrauka",
+                "checkbox": "Išjungti santraukos nuorodą"
+            }
+        },
+        "general": {
+            "title": "Bendra",
+            "disableLegacyCommands": {
+                "description": "Tai visiškai išjungs senąsias komandas su priešdėliu, todėl galėsite naudoti tik komandas su pasviruoju brūkšniu.",
+                "label": "Priešdėlinės komandos",
+                "checkbox": "Išjungti senąsias priešdėlines komandas"
+            },
+            "prefix": {
+                "description": "Šie simboliai bus įrašyti prieš komandas vietoj numatytųjų: !",
+                "label": "Komandos priešdėlis",
+                "invalid": "Tai privalomas laukas, kuriame turi būti nuo 1 iki 5 simbolių."
+            },
+            "language": {
+                "description": "Nustato \"RinBot\" kalbą programoje \"Discord\". Tai neturi įtakos anime pavadinimams.",
+                "label": "Kalba"
+            },
+            "showInLeaderboards": {
+                "description": "Kai ši funkcija įjungta, jūsų serverio pavadinimas bus rodomas serverio lyderių lentelėse. Gali prireikti valandos, kol šis pakeitimas bus perkeltas.",
+                "checkbox": "Rodyti serverio pavadinimą šios svetainės pasaulinėse lyderių lentelėse",
+                "label": "Rodyti pasaulinėse lyderių lentelėse"
+            },
+            "inviteCode": {
+                "description": "Kvietimo kodas, naudojamas jūsų serverio pavadinimo URL lyderių lentelėse.",
+                "label": "Kvietimo kodas",
+                "invalid": "Atrodo, kad šis kvietimo kodas negalioja"
+            },
+            "noLanguageCodeDefined": "(naudokite numatytąją serverio kalbą)"
+        }
+    },
+    "channelConfiguration": {
+        "description": "Čia galite sukonfigūruoti kelias konkrečias kiekvieno kanalo parinktis. Vėliau jos gali būti papildytos daugiau serverio konfigūracijos parinkčių.",
+        "add": "Pridėti kanalą",
+        "noChannelsConfigured": "Šiuo metu nėra sukonfigūruotų kanalų. Norėdami pradėti, spustelėkite mygtuką \"Pridėti kanalą\".",
+        "maximumReached": "Pasiekėte maksimalų {maxChannelConfigs} kanalų konfigūracijų skaičių.",
+        "boostedServersGetMore": "[Padidinto našumo serveriai]({patreonLink}) gali turėti iki {patronMaxConfigs} kanalų konfigūracijų.",
+        "startGameOnIdle": {
+            "minutesIdle": "Neveikimo minutės",
+            "boostedServersCanHaveLess": "[Boosted serveriai]({patreonLink}) gali turėti &#60; 60 minučių.",
+            "checkbox": "Pradėti naują raundą, kai kanalas neveikia"
+        },
+        "undo": "Panaikinti",
+        "savedChangesSuccessfully": "Sėkmingai išsaugoti pakeitimai",
+        "couldNotSaveChanges": "Nepavyko išsaugoti pakeitimų",
+        "useForVoiceRounds": {
+            "checkbox": "Naudokite tik šį balso kanalą balso raundams (gali būti aktyvus tik vienas)"
+        },
+        "channelAccessControlEnabled": {
+            "checkbox": "Įjungti kanalo prieigos valdymą",
+            "description": "Dėl to {botName} neklausys jokių komandų, nebent jos būtų įtrauktos į baltąjį sąrašą konkrečiam kanalui.",
+            "label": "Prieigos kontrolė"
+        },
+        "stage": {
+            "topic": {
+                "label": "Scenos tema"
+            }
+        },
+        "saveChanges": "Išsaugoti pakeitimus"
+    },
+    "supportUs": {
+        "supportThroughPatreon": "Jei norite padėti padengti serverio išlaidas, galite pažadėti bet kokią sumą naudodamiesi Patreon. Taip pat gausite ypatingų privilegijų!",
+        "goal": "{completedPercentage}finansuojama %{amount} dolerių per mėnesį veiklos išlaidų!",
+        "supportThroughKoFi": "Taip pat galite apsvarstyti galimybę nupirkti man kavos per ko-fi.com. Tačiau tai nesuteikia jokių privilegijų, išskyrus mano didžiausią dėkingumą!",
+        "translations": "Vertimai",
+        "signInWithAuth0": "Prisijunkite su Auth0 ir tada \"Tęsti su \"Discord\".",
+        "votingAndReviewing": "Balsavimas ir peržiūra",
+        "supportThroughVoting": "Visada naudinga reguliariai balsuoti ir palikti atsiliepimą šiose svetainėse.",
+        "joinTheTranslationsChannel": "Būtinai prisijunkite prie `#translations` kanalo [palaikymo serveryje]({supportServerUrl}) ir prašykite pagalbos bei aptarkite vertimus.",
+        "helpWithTranslating": "Galite padėti tobulindami esamus vertimus arba pridėdami naujų kalbų, naudodami minios vertimus!"
+    },
+    "userProfile": {
+        "roundPoints": "Apvalūs taškai",
+        "achievementPoints": "Pasiekimų taškai",
+        "statistics": "Statistika",
+        "achievements": "Pasiekimai",
+        "trophiesWon": "Laimėti trofėjai",
+        "noTrophiesWon": "Dar nėra laimėtų trofėjų.",
+        "week": "Savaitė",
+        "allTimeResults": "Visų laikų rezultatai",
+        "rank": "Rangas",
+        "points": "Taškai",
+        "rounds": "Rundai",
+        "noResultsYet": "Rezultatų dar nėra."
+    },
+    "notLoggedIn": "Norėdami pasiekti šį puslapį, turite būti prisijungę.",
+    "pageNotFound": "Puslapis neegzistuoja",
+    "status": {
+        "title": "Statusas",
+        "description": "Čia rasite kai kurių paslaugų, dėl kurių {botName} veikia taip, kaip turėtų veikti, statusą. Šis puslapis automatiškai atsinaujina kas 10 sekundžių.",
+        "operational": "Veikla",
+        "partialOutage": "Dalinis atjungimas",
+        "majorOutage": "Didelė prastova",
+        "coreServices": "Pagrindinės paslaugos",
+        "discordShards": "\"Discord\" skeveldros",
+        "databaseServices": "Duomenų bazių paslaugos",
+        "website": {
+            "name": "Svetainė",
+            "tooltip": "Tavęs čia nebūtų, jei šis būtų raudonas"
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "Užtikrina dinamišką svetainės turinį ir botų konfigūraciją"
+        },
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "teikia dinamišką turinį (pvz., duomenų bazę) svetainėje."
+        },
+        "worker": {
+            "name": "Darbuotojas",
+            "tooltip": "Pateikiama lyderių lenta, rezultatų ir profilio atnaujinimai"
+        },
+        "putYourServerId": "Įrašykite čia savo serverio ID, kad surastumėte savo valdą",
+        "couldNotGetShardStatuses": "Nepavyko gauti dalinių būsenų iš API",
+        "howToFindYourServerId": "Jei nežinote, kaip rasti savo serverio ID, [perskaitykite šį palaikymo straipsnį] (https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "animeDatabaseApi": {
+            "name": "Anime duomenų bazės API",
+            "tooltip": "Pateikiami anime raundai - !sg, !sgv ir !sga"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "Vizualinė naujoviška duomenų bazės API",
+            "tooltip": "Suteikia vizualinių romanų turus - !sgvn"
+        }
+    },
+    "main": {
+        "isBetaSite": "Šiuo metu naršote {botName} beta svetainę. Ji skirta tik bandymams. [Spustelėkite čia, jei norite peržiūrėti tikrąją svetainę]({productionUrl}).",
+        "isAinaBotSite": "Šiuo metu Jūs naršote AinaBot tinklalapį. Tai yra tik suaugusiems skirtas Discord bot'as. [Spauskite čia, kad pereitumėte į RinBot pagrindinį puslapį]({productionUrl}), kuriame yra įprastų anime."
+    },
+    "weekPicker": {
+        "allTime": "Visų laikų",
+        "weekly": "Savaitinis",
+        "week": "Savaitė",
+        "year": "Metai"
+    },
+    "statistics": {
+        "title": "Statistika",
+        "description": "Per pastarąsias 30 dienų per dieną sužaistų raundų skaičius.",
+        "roundsPerDay": {
+            "title": "Rungtys per dieną",
+            "won": "Won",
+            "lost": "Dingęs",
+            "total": "Iš viso",
+            "winners": "Nugalėtojai"
+        }
+    },
+    "playerTable": {
+        "username": "Pavadinimas"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Rasti žaidėją"
+    },
+    "channelAccessControlConfig": {
+        "commands": "Komandos",
+        "allCommands": "(visos komandos)",
+        "roles": "Vaidmenys",
+        "description": "Prieigos kontrolės taisyklės apdorojamos iš viršaus į apačią.  \nPagal numatytuosius nustatymus viskas draudžiama, todėl turėsite sukurti bent vieną leidimo taisyklę.",
+        "maximumReached": "Pasiektas didžiausias galimas prieigos valdiklių skaičius.",
+        "everyoneRole": "@everyone",
+        "title": "Prieigos kontrolė",
+        "addRule": "Pridėti taisyklę"
+    },
+    "nsfw": {
+        "QUESTIONABLE": "Abejotinas",
+        "SAFE": "Saugus",
+        "NOT_SAFE": "Nesaugus",
+        "DANGEROUS": "Pavojinga",
+        "UNKNOWN": "Nežinomas"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Personažai"
+        },
+        "visualNovels": {
+            "title": "Vaizdiniai romanai"
+        }
+    },
+    "difficulties": {
+        "UNKNOWN": "Nežinomas",
+        "NORMAL": "Normalus",
+        "HARD": "Hard",
+        "EXTREME": "Ekstremalus",
+        "EASY": "Lengva",
+        "NIGHTMARE": "Košmaras"
+    },
+    "reportAnime": {
+        "submitted": "Jūsų ataskaita buvo sėkmingai pateikta.",
+        "couldNotSubmit": "Jūsų ataskaitos nepavyko pateikti."
+    },
+    "validation": {
+        "required": "Šis laukas yra privalomas",
+        "maxLength": "Didžiausias ilgis yra {max} simbolių, bet jūs parašėte {length} simbolių."
+    },
+    "genres": {
+        "ACTION": "Veiksmas",
+        "ADVENTURE": "Nuotykių",
+        "CARS": "Automobiliai",
+        "COMEDY": "Komedija",
+        "DEMENTIA": "Demencija",
+        "DEMONS": "Demonai",
+        "MYSTERY": "Paslaptis",
+        "DRAMA": "Drama",
+        "ECCHI": "Ecchi",
+        "FANTASY": "Fantazija",
+        "GAME": "Žaidimas",
+        "HISTORICAL": "Istorinis",
+        "KIDS": "Vaikai",
+        "MAGIC": "Magic",
+        "MARTIAL_ARTS": "Kovos menai",
+        "MECHA": "Mecha",
+        "MUSIC": "Muzika",
+        "PARODY": "Parodija",
+        "SAMURAI": "Samurajus",
+        "ROMANCE": "Romantika",
+        "SCHOOL": "Mokykla",
+        "SCI_FI": "Mokslinė fantastika",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SPORTS": "Sportas",
+        "SUPER_POWER": "Super galia",
+        "VAMPIRE": "Vampyras",
+        "HAREM": "Haremas",
+        "SLICE_OF_LIFE": "Gyvenimo fragmentas",
+        "SUPERNATURAL": "Antgamtiškas",
+        "MILITARY": "Karinis",
+        "POLICE": "Policija",
+        "PSYCHOLOGICAL": "Psichologinis",
+        "THRILLER": "Trileris",
+        "SEINEN": "Seinen",
+        "SPACE": "Erdvė",
+        "ISEKAI": "Isekai",
+        "JOSEI": "Josei",
+        "HORROR": "Siaubo",
+        "MAHOU_SHOUJO": "Mahou Shoujo"
+    },
+    "animeSorts": {
+        "ROUNDS_LOST_ASC": "Pralaimėti raundai (didėjančia tvarka)",
+        "ROUNDS_LOST_DESC": "Pralaimėti raundai (mažėjančia tvarka)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Laimėti raundai % (didėjančia tvarka)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Laimėtos rungtys % (mažėjančia tvarka)",
+        "MAIN_TITLE_ASC": "Pagrindinis pavadinimas (didėjančia tvarka)",
+        "MAIN_TITLE_DESC": "Pagrindinis pavadinimas (mažėjančia tvarka)",
+        "YEAR_DESC": "Metai (mažėjančia tvarka)",
+        "ROUNDS_WON_ASC": "Laimėtos rungtys (didėjančia tvarka)",
+        "ROUNDS_WON_DESC": "Laimėtos rungtys (mažėjančia tvarka)",
+        "YEAR_ASC": "Metai (didėjančia tvarka)"
+    },
+    "guildProfile": {
+        "join": "Prisijunkite prie šio serverio"
+    },
+    "achievements": {
+        "showLocked": "Rodyti užrakintus pasiekimus",
+        "leftToUnlock": "į kairę, kad atrakintumėte",
+        "toGoForNextLevel": "pereiti į kitą lygį",
+        "thisWasTheLastLevel": "Tai buvo paskutinis lygis",
+        "noAchievementsGainedYet": "Dar nesurinkta jokių pasiekimų."
+    },
+    "commands": {
+        "title": "Komandos",
+        "prefixCanBeChanged": "Šių komandų priešdėlį `!` galima pakeisti prisijungus puslapyje \"Mano serveriai\".",
+        "canUseInDirectMessage": "Daugumą šių komandų taip pat galite naudoti tiesioginėje žinutėje RinBotui, norėdami žaisti privačią sesiją. Tokiu būdu gauti taškai lyderių lentelėse neskaičiuojami.",
+        "rounds": {
+            "title": "#### Rundai",
+            "sg": "**Pradeda naują raundą**",
+            "sgv": "**Pradeda raundą su vaizdo įrašais**",
+            "sga": "**Pradeda raundą su pradžios ir pabaigos dainų garso fragmentais.**",
+            "sgc": "**Pradeda raundą su anime personažais**",
+            "sgg": "**Pradeda raundą su vaizdo žaidimais**",
+            "sgvn": "**Pradeda raundą su vaizdinių romanų vaizdais** \nŠiai komandai veikia tik sudėtingumo filtras.",
+            "sb": "**Pradėkite kelių atsakymų mygtukų raundą su vaizdais**",
+            "stopg": "**Sustabdo dabartinį raundą** \nSiekiant išvengti piktnaudžiavimo, ši komanda vienam asmeniui leidžiama tik kartą per 15 minučių. [Mecenatams sumažinamas veikimo laikas](https://patreon.com/rinbot?fan_landing=true)!"
+        },
+        "voiceRounds": {
+            "title": "#### Balso raundo sesijos",
+            "sgs": "**Pradėkite balso raundo seansą** \nPrisijunkite prie balso kanalo (tuo pačiu pavadinimu arba prie to, kuriame esate) ir pradėkite vykdyti raundus.  \nĮsitikinkite, kad \"RinBot\" turi __Prisijungti__ ir __Kalbėti__ kanalo leidimus.",
+            "sgsa": "**Pradėkite balso apklausos seansą su pavyzdžiais**",
+            "sbsa": "**Pradėkite daugkartinio pasirinkimo mygtukų balso raundą su pavyzdžiais**",
+            "stopgs": "**Sustabdyti balso raundus** \nTai sustabdys balso raundų režimą ir dabartinį raundą."
+        },
+        "shortcuts": {
+            "title": "#### Apvalaus filtro sparčiosios nuorodos  \nTai keletas greitų filtrų, su kuriais galite pradėti. Sunkumas parenkamas automatiškai, atsižvelgiant į jūsų turimus taškus, jei jų nenurodyta.",
+            "year": "**Pradeda naują ciklą nuo metų `[metai]` iki dabar** \nPavyzdys: `!sg 1999` parinktų anime nuo 1999 metų iki dabartinių metų imtinai",
+            "years": "**Pradeda naują ciklą nuo metų tarp `[metai1]` ir `[metai2]`** \nPavyzdys: `!sg 1999 2003` parinktų anime nuo 1999 m. iki 2003 m. imtinai.",
+            "difficulty": "**Pradedamas naujas raundas su tam tikru sudėtingumu** \n1 (lengvas), 2 (normalus), 3 (sunkus), 4 (ekstremalus), 5 (košmaras) ir 0 (viskas)  \nPavyzdys: `!sg 1` - lengvas raundas, arba `!sg 4` - ekstremalus raundas.",
+            "genre": "**Pradeda naują raundą su konkretaus žanro anime** \nNaudokite komandą `!genres` visų galimų žanrų sąrašui gauti.",
+            "songType": "**Pradeda naują garso raundą su tam tikro tipo dainomis** \nDainos tipas gali būti: `op` (pradžios), `ed` (pabaigos), `in` (įterptinės dainos) arba `tm` (vaizdo dainos).",
+            "query": "**Pradeda naują raundą su anime pagal jūsų užklausą**  \n`d:1`, kad filtras būtų sudėtingesnis.  \n`g:shounen` filtrui pridėti žanrą  \n`y:2001-2009`, jei norite į filtrą įtraukti metų intervalą  \n`t:op` į filtrą įtraukti dainos tipą (tik `!sga` raundams)  \nPavyzdys: `!sg d:1 g:shounen y:2001-2009` arba `!sg g:drama y:2010` arba `!.sga t:op`  \n_Atkreipkite dėmesį, kad užklausose NEREIKIA naudoti visų filtrų._"
+        },
+        "queries": {
+            "title": "#### Užklausos  \nGalite kurti savo užklausas, naudodami šiuos parametrus. Jie veiks `!sg`, `!sgv`, `!sga`, `!sgs` ir `!sgsa`.  \n\nPavyzdžiui: `!sg n:5 d:3 y:1995-2005`, kad būtų pradėta sesija su 5 anime raundais, kai 1995-2005 m. buvo sunkus sudėtingumo lygis.",
+            "numberOfRounds": "**Sesijos raundų skaičius** \nTai automatiškai pradės kelis raundus per vieną sesiją ir sesijos pabaigoje pateiks lyderių lentelę.  \nPavyzdys: `n:2` 2 raundai iki daugiausiai 10 raundų su `n:10.`",
+            "imageManipulations": "**Manipuliuoja paveikslėliais raunde** (tik raunduose su paveikslėliais).  \nGalite rinktis iš `p` pikseliuotas, `i` apverstas, `o` tapytas aliejiniais dažais, `g` pilkos spalvos, `f` apverstas vertikaliai.  \nPavyzdys: `im:p` arba derinys su `im:g,o,i.`",
+            "difficulty": "**Filtruoti sudėtingumą** \n1 (lengva), 2 (normali), 3 (sunki), 4 (ekstremali), 5 (košmaras) ir 0 (viskas)  \nPavyzdys: `d:1` - lengvas raundas, arba `d:4` - ekstremalus raundas, o `d:0` - išjungti sudėtingumo filtrą.",
+            "genre": "**Filtruoti žanrą** \nŠiuo metu galima filtruoti tik vieną žanrą, pavyzdžiui, `g:action` arba `g:horror`.  \nNaudokite komandą `!genres`, kad gautumėte visų galimų žanrų sąrašą.",
+            "songType": "**Filtruoti dainų tipą** (`!sga`, `!sgs` ir `!sgsa` tik)  \nDainos tipas gali būti: `op` (pradžios), `ed` (pabaigos), `in` (įterptinės dainos) arba `tm` (vaizdo dainos).",
+            "year": "**Filtruoti metus** \nPavyzdys: `y:1999` atrinktų anime nuo 1999 m. iki einamųjų metų imtinai.  \n`y:2005-2010` atrinktų anime nuo 2005 iki 2010 metų imtinai",
+            "mal": "**Filtravimas pagal \"MyAnimeList\"** \nPavyzdys: `mal:username` arba `mal:user1,user2` keliems naudotojų sąrašams.  \nPrieš naudodami filtrą, pirmiausia turite naudoti `!sync` komandą.",
+            "anilist": "**Filtravimas pagal \"AniList\"** \nPavyzdys: `anilist:username` arba `anilist:user1,user2` keliems naudotojų sąrašams.  \nPrieš naudodami filtrą, pirmiausia turite naudoti komandą `!sync`.   \nTaip pat galite sujungti skirtingų rūšių anilistinius sąrašus, pavyzdžiui, taip: `mal:user1,user2 anilist:user3`",
+            "aggr": "**Agregavimo metodas** (tik naudojant anime sąrašo filtrus)  \nGalite naudoti `aggr:union`, kad sujungtumėte anime sąrašus, o ne juos susikirstumėte.",
+            "operations": "#### Operacijos",
+            "filters": "#### filtrai"
+        },
+        "points": {
+            "title": "#### Taškai  \nJie perskaičiuojami kas valandą. Galite [padidinti savo serverį](https://patreon.com/rinbot?fan_landing=true), jei norite, kad duomenys būtų atnaujinami realiuoju laiku.",
+            "myscore": "**Rodomi dabartiniame kanale surinkti taškai ir sužaistos rungtys.**",
+            "serverscore": "**Rodomas viso serverio rezultatas**",
+            "alltop": "**Rodomi geriausi visų laikų serverio žaidėjai**",
+            "allfastest": "**Rodomi greičiausi visų laikų serverio žaidėjai** \nSkaičiuojami tik tie raundai, kurių anime yra daugiau nei 1000.",
+            "weektop": "**Rodomi geriausi einamosios savaitės žaidėjai serveryje** \nNaudojamos ISO-8601 metų savaitės, o pirmadienis yra pirmoji savaitės diena. Komanda nurodys, kada savaitė bus atstatoma.",
+            "weekfastest": "**Rodomi greičiausi einamosios savaitės žaidėjai serveryje** \nSkaičiuojami tik tie raundai, kuriuose anime yra daugiau nei 1000 žaidėjų.  \nPavyzdžiui: į šį sąrašą neįtraukiami lengvi/normalūs režimai ir dauguma mažesnių žanrų."
+        },
+        "ctop": {
+            "title": "#### Pasirinktinės lyderių lentelės",
+            "ctop": "**Rodyti pasirinktinę dabartinio kanalo lyderių lentelę**",
+            "startctop": "**Pradeda naują pasirinktinę kanalo lyderių lentelę** \nNorėdami vienu metu turėti kelias pasirinktines lyderių lenteles, turite naudoti kelis kanalus.",
+            "endctop": "**Baigti aktyvią pasirinktinę lyderių lentelę** \nTai sustabdo taškų kaupimą, bet nepašalina lyderių lentelės.",
+            "resetctop": "**Iš naujo nustatoma pasirinktinė lyderių lenta** \nTai **visiškai ištrins** pasirinktinę lyderių lentelę, kad ji daugiau niekada nebegrįžtų!  \nNorėdami naudotis šia funkcija, turite turėti vieną iš šių leidimų:\n- Administratorius\n- Tvarkyti serverį\n- Tvarkyti vaidmenis\n- Tvarkyti kanalus\n- Tvarkyti pranešimus"
+        },
+        "misc": {
+            "title": "#### Įvairūs",
+            "genres": "**Rodyti visus galimus anime žanrus**",
+            "statg": "**Parodykite bendrą žaidimo statistiką**",
+            "sync": "**Sinchronizuokite anime sąrašą iš kitų svetainių** \nŠiuo metu palaikomos \"MyAnimeList\" ir \"AniList\".",
+            "credits": "**Parodo visus šaunius žmones ir svetaines, kurie padeda kurti {botName}.**",
+            "mydifficulty": "**Leidžia nustatyti numatytuosius sunkumus visiems pradedamiems raundams.**"
+        },
+        "management": {
+            "title": "#### valdymas",
+            "prefix": "**Rodo dabartinį priešdėlį ir leidžia jį pakeisti**",
+            "lang": "**Rodo esamą kalbą ir leidžia ją pakeisti**"
+        },
+        "onlyForPatrons": {
+            "tooltip": "Tik mecenatams",
+            "description": "**Gali naudotis tik [globėjai]({patreonUrl})** - tai buvo įvesta siekiant sumažinti serverio apkrovą ir padėti žmonėms apmokėti sąskaitas."
+        },
+        "isExperimental": {
+            "tooltip": "Eksperimentinis",
+            "description": "**Eksperimentinė funkcija** - ši funkcija yra gana nauja, todėl joje gali būti klaidų [apie jas praneškite čia]({supportServerUrl}), jei jų rasite."
+        }
+    },
+    "leaderboardTable": {
+        "hidden": "(paslėpta)",
+        "rank": "Rangas",
+        "name": "Pavadinimas",
+        "rounds": "Rundai",
+        "players": "Žaidėjai",
+        "points": "Taškai"
+    },
+    "slashCommands": {
+        "title": "\"Slash\" komandos",
+        "description": "Kad galėtumėte naudoti \"slash\" komandas, galbūt reikės iš naujo pakviesti {botName} ir įsitikinti, kad ji turi **Sukurti komandas serverio** srityje.  \nGalite pasinaudoti pakvietimo mygtuku pagrindiniame puslapyje arba spustelėdami {botName} iš \"Discord\".  \n\nĮsitikinkite, kad jūsų naudotojai turi leidimą **Naudoti taikomųjų programų komandas**, antraip jie apskritai negalės naudoti jokių brūkšninių komandų.",
+        "ephemeral": {
+            "tooltip": "Efemerinė komanda",
+            "description": "**Efemerinė komanda** - pranešimai po šių komandų bus matomi tik jums."
+        }
+    },
+    "common": {
+        "botSupporter": "{botName} rėmėjas",
+        "boostedByBotSupporter": "Paskatino {botName} rėmėjas",
+        "loading": "Pakrovimas",
+        "privacyPolicy": "Privatumo politika",
+        "termsOfService": "Paslaugų teikimo sąlygos",
+        "onlyForPatrons": "Tik mecenatams",
+        "experimentalFeature": "Eksperimentinė funkcija",
+        "error": "Klaida",
+        "success": "Sėkmė"
+    },
+    "leaderboard": {
+        "title": "Lyderių lenta",
+        "overview": {
+            "title": "Apžvalga",
+            "showMore": "Rodyti daugiau",
+            "guildsHiddenByDefault": "Pagal numatytuosius nustatymus serverių pavadinimai yra paslėpti, norėdami juos parodyti, prisijunkite kaip serverio administratorius.",
+            "lastWeekWinners": "Praėjusios savaitės nugalėtojai",
+            "thisWeek": "Šią savaitę",
+            "allTime": "Visų laikų",
+            "thisWeekEndsIn": "Savaitė baigsis {timeLeft}."
+        },
+        "players": {
+            "title": "Žaidėjai",
+            "description": "Tai geriausių žaidėjų sąrašas visuose serveriuose, kuriuose žaidžiamas žaidimas. Tiesioginių žinučių raundai neskaičiuojami."
+        },
+        "guilds": {
+            "title": "Serveriai",
+            "description": "Tai yra geriausių serverių, kuriuose žaidžiamas žaidimas, sąrašas.  \nPagal numatytuosius nustatymus jūsų serverio pavadinimas bus paslėptas. Galite pasirinkti, kad jis būtų rodomas serverio konfigūracijoje po prisijungimo."
+        },
+        "achievements": {
+            "title": "Pasiekimai",
+            "description": "Tai daugiausiai pasiekimų taškų surinkę žaidėjai."
+        }
+    },
+    "myServers": {
+        "couldNotRetrieveServers": "Nepavyko gauti serverių",
+        "title": "Mano serveriai",
+        "description": "Kad galėtumėte konfigūruoti {botName} serverį, turite turėti **serverio valdymo** leidimą.",
+        "boostedServer": "Padidintas serveris",
+        "hasBot": "{botName} yra šiame serveryje",
+        "addBot": "Pridėti {botName}",
+        "notHasBot": "{botName} nėra šiame serveryje",
+        "configure": "Konfigūruoti",
+        "details": "Išsami informacija",
+        "searchForServer": "Serverio paieška",
+        "showAll": "Rodyti visus mano serverius"
+    },
+    "introduction": {
+        "title": "{botName}'s homepage",
+        "inviteButton": "Kvieskite {botName} į savo serverį",
+        "orSeeHerInAction": "arba galite ją pamatyti",
+        "supportServer": "{botName} palaikymo serveris",
+        "checkTheCommandListAndConfigure": "Visą funkcijų sąrašą rasite komandų sąraše. Prisijungę prie šios svetainės galite konfigūruoti {botName} ir pritaikyti ją savo serverio poreikiams.",
+        "shortDescription": "Žaiskite **atspėti anime** ir daugelį kitų spėjimo viktorinos žaidimų tiesiogiai \"Discord\" kanaluose su savo draugais.",
+        "features": "#### Funkcijos\n- **Tūkstančiai** anime, personažų, vaizdinių romanų ir vaizdo žaidimų, kuriuos galima atspėti!\n- Spėkite iš paveikslėlių, vaizdo klipų ar dainų garso fragmentų.\n- **Atsitiktine tvarka parinkti** užfiksuoti vaizdai, todėl nė vienas raundas niekada nebus toks pat.\n- **Taškų sistema su lyderių lentelėmis** (visų laikų, savaitės ir savo pasirinktais laikotarpiais).\n- Keli **sudėtingumo lygiai**, todėl net nauji anime ir vaizdinių romanų gerbėjai gali smagiai praleisti laiką.\n- Pavadinimus galima atspėti **keliomis kalbomis**.\n- ...ir dar daugiau!"
+    },
+    "myBoostedServers": {
+        "addServer": "Pridėti serverį",
+        "remove": "Pašalinti iš padidinto",
+        "noServersBoosted": "Jokie serveriai nebuvo padidinti.",
+        "youCannotBoostServers": "# Negalite padidinti jokių serverių  \nKad galėtumėte padidinti serverį, turite būti bent 2 lygio globėjas.  \nKad tai gautumėte, pirmiausia susiekite savo \"Discord\" paskyrą su \"Patreon\" ir tada [pažadėkite bent 2 lygmenį RinBot \"Patreon\" puslapyje]({patreonLink}).",
+        "boostedServers": "# Padidinti serveriai  \nEsate {patronTier} lygio globėjas. Galite padidinti {boostsLeft} daugiau serverių.",
+        "searchForServer": "Serverio paieška",
+        "pickServersToBoost": "Pasirinkite serverius, kad padidintumėte",
+        "addToBoosted": "Pridėti prie \"boosted",
+        "alreadyAdded": "Jau pridėta",
+        "noServersFound": "Serverių nerasta.",
+        "savedChanges": "Sėkmingai išsaugoti pakeitimai",
+        "couldNotSaveChanges": "Nepavyko išsaugoti pakeitimų"
+    },
+    "navbar": {
+        "home": "Pagrindinis",
+        "commands": "Komandos",
+        "faq": "DUK",
+        "changelog": "Pakeitimų sąrašas",
+        "leaderboard": "Lyderių lenta",
+        "statistics": "Statistika",
+        "login": "Prisijungimas",
+        "logout": "Atsijungimas",
+        "myProfile": "Mano profilis",
+        "myServers": "Mano serveriai",
+        "myBoostedServers": "Mano padidinti serveriai",
+        "status": "Statusas",
+        "database": "Duomenų bazė",
+        "mySettings": "Mano nustatymai"
+    },
+    "needHelp": {
+        "needHelp": "Reikia pagalbos?",
+        "supportServerIntroduction": "Galite prašyti pagalbos, pateikti atsiliepimus, prašyti naujų funkcijų arba tiesiog pažaisti \"Anime\" oficialiame palaikymo serveryje.",
+        "joinTheSupportServer": "Prisijunkite prie palaikymo serverio",
+        "encounterProblemsContact": "Jei kyla kokių nors problemų, kreipkitės į Kururiną."
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Jūs buvote išregistruotas!"
+    },
+    "myServerDetails": {
+        "backToMyServers": "Grįžti į savo serverius",
+        "server": "Serveris",
+        "channels": "Kanalai",
+        "leaderboard": "Lyderių lenta",
+        "players": "Žaidėjai",
+        "onlyForManagement": "Tik serverio valdymui"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "description": "Įjungus šią funkciją, jūsų vardas bus rodomas kaip \"(paslėptas)\" visose svetainės lyderių lentelėse ir profiliuose.\n  Jūsų pakeitimo įgyvendinimas visoje sistemoje gali užtrukti iki vienos dienos.",
+                "checkbox": "Paslėpti mano vardą visame pasaulyje"
+            }
+        }
+    }
+}
