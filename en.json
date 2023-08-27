@@ -236,7 +236,12 @@
                 "label": "Invite code",
                 "invalid": "This invite code seems to be invalid"
             },
-            "noLanguageCodeDefined": "(use server default language)"
+            "noLanguageCodeDefined": "(use server default language)",
+            "managementRoles": {
+                "label": "Management roles",
+                "description": "Roles that will have access to manage the bot through this page. Users with the 'Server management' permission already have access.",
+                "placeholder": "Pick some roles"
+            }
         },
         "guessTheAnime": {
             "title": "Guess the Anime",
