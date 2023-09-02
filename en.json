@@ -339,6 +339,14 @@
             },
             "pointRoleConfigs": {
                 "label": "Roles by points"
+            },
+            "roundButtonConfig": {
+                "label": "Round buttons",
+                "description": "Buttons that are checked will show up at the end of rounds and session",
+                "playAgain": "🔁 Play again",
+                "random": "🎲 Random",
+                "weeklyPointsLeaderboard": "🏆 Weekly points leaderboard",
+                "weeklyTimeLeaderboard": "⏲️ Weekly time leaderboard"
             }
         }
     },
