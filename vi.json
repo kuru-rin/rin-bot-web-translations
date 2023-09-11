@@ -1,1 +1,21 @@
-{}
+{
+    "commands": {
+        "rounds": {
+            "sg": "**Bắt đầu vòng mới**",
+            "sgc": "**Bắt đầu một vòng với các nhân vật anime**",
+            "title": "#### Vòng",
+            "sgv": "**Bắt đầu một vòng mới với tư liệu video ngắn**",
+            "sga": "**Bắt đầu một vòng với đoạn âm thanh ngắn của bài hát mở đầu và kết thúc anime**"
+        },
+        "title": "Các lệnh",
+        "prefixCanBeChanged": "Tiền ngữ lệnh `!` của các lệnh có thể thay đổi trong trang 'Server của tôi' sau khi bạn đăng nhập.",
+        "canUseInDirectMessage": "Bạn cũng có thể sử dụng hầu hết các lệnh này trong tin nhắn trực tiếp (DMs) với RinBot, để chơi một vòng riêng tư. Điểm tính trong các vòng này không được tính trên các bảng xếp hạng."
+    },
+    "achievements": {
+        "showLocked": "Hiện các thành tựu bị khóa",
+        "leftToUnlock": "trái để mở khóa",
+        "toGoForNextLevel": "để sang màn tiếp theo",
+        "thisWasTheLastLevel": "Đây đã là màn cuối",
+        "noAchievementsGainedYet": "Chưa có thành tựu nào được thu thập."
+    }
+}
