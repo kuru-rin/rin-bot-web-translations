@@ -374,6 +374,14 @@
             },
             "pointRoleConfigs": {
                 "label": "Roles por puntos"
+            },
+            "roundButtonConfig": {
+                "label": "Botones redondos",
+                "weeklyTimeLeaderboard": "⏲️ Tabla semanal de tiempos",
+                "description": "Los botones marcados aparecerán al final de las rondas y de la sesión",
+                "playAgain": "🔁 Toca otra vez",
+                "random": "🎲 Aleatorio",
+                "weeklyPointsLeaderboard": "🏆 Clasificación semanal de puntos"
             }
         },
         "general": {
@@ -402,7 +410,12 @@
                 "label": "Comandos de prefijo",
                 "checkbox": "Deshabilitar comandos de prefijo"
             },
-            "noLanguageCodeDefined": "(usar el idioma predeterminado del servidor)"
+            "noLanguageCodeDefined": "(usar el idioma predeterminado del servidor)",
+            "managementRoles": {
+                "label": "Funciones directivas",
+                "description": "Roles que tendrán acceso a gestionar el bot a través de esta página. Los usuarios con el permiso 'Gestión del servidor' ya tienen acceso.",
+                "placeholder": "Elige algunos papeles"
+            }
         }
     },
     "myServerDetails": {

@@ -1,13 +1,22 @@
 {
     "achievements": {
         "showLocked": "Kilitli başarımları göster",
-        "noAchievementsGainedYet": "Henüz hiçbir başarım toplanmadı."
+        "noAchievementsGainedYet": "Henüz hiçbir başarım toplanmadı.",
+        "thisWasTheLastLevel": "Bu son seviyeydi",
+        "leftToUnlock": "kilidi açmak için sol",
+        "toGoForNextLevel": "bir sonraki seviyeye geçmek için"
     },
     "commands": {
         "title": "Komutlar",
         "prefixCanBeChanged": "Komutların prefixi `!`dir. Giriş yaptıktan sonra 'Sunucularım' kısmından değiştirilebilir.",
         "shortcuts": {
-            "years": "**``[year1]` ve `[year2]` arasında çıkan yapımlarla bir tur başlatır.**\nÖrneğin: `!sg 1999 2003` ile 1999 yılından 2003 yılına kadar olan animelerden birisini seçer"
+            "years": "**``[year1]` ve `[year2]` arasında çıkan yapımlarla bir tur başlatır.**\nÖrneğin: `!sg 1999 2003` ile 1999 yılından 2003 yılına kadar olan animelerden birisini seçer",
+            "year": "**Yeni bir turu `[yıl]` yılından şimdiye kadar başlatır** \nÖrnek: `!sg 1999` 1999 yılından içinde bulunduğumuz yıla kadar olan animeleri seçecektir",
+            "title": "#### Yuvarlak filtre kısayolları  \nBunlar başlangıç için bazı hızlı filtrelerdir. Hiçbiri belirtilmemişse zorluk, mevcut puanlarınıza göre otomatik olarak seçilir",
+            "difficulty": "**Belirli bir zorluk derecesiyle yeni bir tur başlatır** \n1 (kolay), 2 (normal), 3 (zor), 4 (aşırı), 5 (kabus) ve 0 (her şey)  \nÖrnek: `!sg 1` kolay bir tur için veya `!sg 4` aşırı bir tur için.",
+            "genre": "**Belirli bir türden anime ile yeni bir tur başlatıyor** \nMevcut tüm türlerin bir listesi için `!genres` komutunu kullanın.",
+            "songType": "**Belirli bir türdeki şarkılarla yeni bir ses turu başlatır** \nŞarkı türü şunlar olabilir: `op` (açılışlar), `ed` (bitişler), `in` (insert şarkılar) veya `tm` (görüntü şarkıları)",
+            "query": "**Kendi sorgunuza göre anime ile yeni bir tur başlatır**  \n`d:1` filtreye zorluk eklemek için  \n`g:shounen` filtresine bir tür eklemek için  \n`y:2001-2009` filtreye bir yıl aralığı eklemek için  \n`t:op` şarkı türünü filtreye eklemek için (sadece `!sga` turları için)  \nÖrnek: `!sg d:1 g:shounen y:2001-2009` veya `!sg g:drama y:2010` veya `!sga t:op`  \n_Sorgularınızda tüm filtreleri kullanmak zorunda olmadığınızı unutmayın._"
         },
         "rounds": {
             "sg": "**Yeni bir tur başlatır**",
@@ -16,13 +25,564 @@
             "sgc": "**Anime karakterleri ile bir tur başlatır**",
             "sgvn": "**Görsel roman resimleriyle bir tur başlatır**\nBu komut için sadece zorluk filtresi çalışır.",
             "sb": "**Resimlerle çoktan seçmeli (butonlu) bir tur başlatır**",
-            "stopg": "**Mevcut turu durdurur**\nBu komut kötüye kullanıma engel olmak için her kullanıcı başına 15 dakikada bir kullanılabilir olarak kısıtlanmıştır. [Bağışçılar azaltılmış bekleme süresine sahiptir](https://patreon.com/rinbot?fan_landing=true)!"
+            "stopg": "**Mevcut turu durdurur**\nBu komut kötüye kullanıma engel olmak için her kullanıcı başına 15 dakikada bir kullanılabilir olarak kısıtlanmıştır. [Bağışçılar azaltılmış bekleme süresine sahiptir](https://patreon.com/rinbot?fan_landing=true)!",
+            "title": "#### Rounds",
+            "sgg": "**Video oyunları ile bir tur başlatır**"
         },
         "voiceRounds": {
-            "title": "#### Sesli tur seansları"
+            "title": "#### Sesli tur seansları",
+            "sbsa": "**Örneklerle bir çoktan seçmeli düğme ses turu oturumu başlatın**",
+            "sgs": "**Bir sesli tur oturumu başlatın** \nBu, bir ses kanalına (aynı adla veya içinde bulunduğunuz kanalla) katılacak ve ardından tur yapmaya başlayacaktır.  \nRinBot'un kanal için __Connect__ ve __Speak__ izinlerine sahip olduğundan emin olun.",
+            "stopgs": "**Ses turlarını durdurun** \nBu, sesli tur modunu ve mevcut turu da durduracaktır.",
+            "sgsa": "**Örneklerle bir ses turu oturumu başlatın**"
+        },
+        "queries": {
+            "numberOfRounds": "**Bir oturumdaki tur sayısı** \nBu, bir oturumda otomatik olarak birden fazla tur başlatacak ve oturumun sonunda size bir liderlik tablosu verecektir.  \nÖrnek: `n:2` 2 tur için `n:10 ile maksimum 10 tura kadar`",
+            "filters": "#### Filtreler",
+            "imageManipulations": "**Bir turdaki görüntüleri manipüle eder** (yalnızca görüntü içeren turlar için)  \n `p` pikselli, `i` ters çevrilmiş, `o` yağlı boyalı, `g` gri tonlamalı, `f` dikey olarak çevrilmiş seçeneklerinden birini seçebilirsiniz.  \nÖrnek: `im:p` veya `im:g,o,i ile bir kombinasyon`",
+            "genre": "**Türü filtreleyin** \nŞu anda `g:action` veya `g:horror` gibi yalnızca tek bir tür filtrelenebilmektedir.  \nMevcut tüm türlerin bir listesi için `!genres` komutunu kullanın.",
+            "year": "**Yılı filtreleyin** \nÖrnek: `y:1999` 1999 yılından içinde bulunulan yıla kadar olan animeleri seçecektir  \n`y:2005-2010` 2005 ve 2010 yılları arasında seçim yapacaktır (her ikisi de dahil)",
+            "aggr": "**Toplama yöntemi** (yalnızca anime liste filtreleri kullanılırken)  \nAnime listelerini kesiştirmek yerine birleştirmek için `aggr:union` adresini kullanabilirsiniz.",
+            "title": "### Sorgular  \nBu parametrelerle kendi sorgularınızı oluşturabilirsiniz. Bunlar `!sg`, `!sgv`, `!sga`, `!sgs` ve `!sgsa` için çalışacaktır.  \n\nÖrneğin: `!sg n:5 d:3 y:1995-2005` 1995 ve 2005 yılları arasında zor zorlukta 5 tur anime ile bir oturum başlatmak için.",
+            "difficulty": "**Zorluk derecesini filtreleyin** \n1 (kolay), 2 (normal), 3 (zor), 4 (aşırı), 5 (kabus) ve 0 (her şey)  \nÖrnek: Kolay bir tur için `d:1` veya aşırı bir tur için `d:4` ve zorluk filtresini devre dışı bırakmak için `d:0`.",
+            "mal": "**MyAnimeList'inize göre filtreleme** \nÖrnek: `mal:kullanıcıadı` veya `mal:kullanıcı1,kullanıcı2` birden fazla kullanıcı listesi için.  \nFiltreyi kullanabilmeniz için önce `!sync` komutunu kullanmış olmanız gerekir.",
+            "anilist": "**AniList'inize göre filtreleyin** \nÖrnek: `anilist:username` veya `anilist:user1,user2` birden fazla kullanıcı listesi için.  \nFiltreyi kullanabilmeniz için önce `!sync` komutunu kullanmış olmanız gerekir.   \nAyrıca farklı türdeki anime listelerini şu şekilde birleştirebilirsiniz: `mal:user1,user2 anilist:user3`",
+            "songType": "**Şarkı türlerini filtreleyin** (`!sga`, `!sgs` ve `!sgsa` sadece)  \nŞarkı türü şunlar olabilir: `op` (açılışlar), `ed` (bitişler), `in` (insert şarkılar) veya `tm` (görüntü şarkıları)",
+            "operations": "#### Operasyonlar"
+        },
+        "points": {
+            "myscore": "**Mevcut kanalda kazandığınız puanları ve oynadığınız turları gösterir**",
+            "title": "#### Puan  \nBunlar her saat yeniden hesaplanır. Gerçek zamanlı güncellemeler için [sunucunuzu güçlendirebilirsiniz] (https://patreon.com/rinbot?fan_landing=true).",
+            "alltop": "**Sunucuda tüm zamanların en iyi oyuncularını gösterir**",
+            "weektop": "**Sunucuda geçerli haftanın en iyi oyuncularını gösterir** \nHaftanın ilk günü Pazartesi olmak üzere ISO-8601 yıl haftalarını kullanır. Komut size haftanın ne zaman sıfırlanacağını söyleyecektir.",
+            "allfastest": "**Sunucuda tüm zamanların en hızlı oyuncularını gösterir** \nYalnızca anime havuzu 1000'den fazla olan turlar sayılır.",
+            "weekfastest": "**Sunucudaki mevcut haftanın en hızlı oyuncularını gösterir** \nYalnızca anime havuzu 1000'den fazla olan turlar sayılır.  \nÖrneğin: bu, kolay/normal modları ve daha küçük türlerin çoğunu hariç tutacaktır.",
+            "serverscore": "**Tüm sunucunun puanını gösterir**"
+        },
+        "ctop": {
+            "title": "#### Özel liderlik tabloları",
+            "ctop": "**Geçerli kanal için özel liderlik tablosunu göster**",
+            "startctop": "**** kanalı için yeni bir özel liderlik tablosu başlatır  \nAynı anda birden fazla özel liderlik tablosuna sahip olmak için birden fazla kanal kullanmanız gerekir.",
+            "endctop": "**Etkin özel liderlik tablosunu sonlandırın** \nBu, puanların birikmesini durdurur ancak liderlik tablosunu kaldırmaz.",
+            "resetctop": "**Özel liderlik tablosunu sıfırlar** \nBu işlem **** özel liderlik tablosunu bir daha geri dönmemek üzere tamamen silecektir!  \nBu özelliği kullanmak için aşağıdaki izinlerden birine ihtiyacınız vardır:\n- Yönetici\n- Sunucu Yönetme\n- Rolleri Yönet\n- Kanalları Yönet\n- Mesajları Yönet"
+        },
+        "management": {
+            "title": "#### Yönetim",
+            "lang": "**Geçerli dili gösterir ve değiştirmenizi sağlar**",
+            "prefix": "**Geçerli öneki gösterir ve değiştirmenize izin verir**"
+        },
+        "onlyForPatrons": {
+            "description": "**Sadece [patrons]({patreonUrl})** tarafından kullanılabilir - bu, sunucu yükünü azaltmak ve insanların faturaları ödemesine yardımcı olmak için tanıtıldı",
+            "tooltip": "Sadece müşteriler için"
+        },
+        "isExperimental": {
+            "description": "**Deneysel özellik** - bu özellik oldukça yenidir, bu nedenle bazı hatalar içerebilir [eğer bulursanız lütfen buraya bildirin]({supportServerUrl})",
+            "tooltip": "Deneysel"
+        },
+        "canUseInDirectMessage": "Bu komutların çoğunu özel bir oturum oynamak için RinBot'a doğrudan mesaj göndererek de kullanabilirsiniz. Bu şekilde kazanılan puanlar liderlik tabloları için sayılmaz.",
+        "misc": {
+            "title": "#### Çeşitli",
+            "genres": "**Tüm olası anime türlerini göster**",
+            "statg": "**Oyunun bazı global istatistiklerini gösterin**",
+            "sync": "**Anime listenizi diğer sitelerden senkronize edin** \nŞu anda MyAnimeList ve AniList desteklenmektedir.",
+            "credits": "**Size {botName} 'u mümkün kılmaya yardımcı olan tüm harika insanları ve web sitelerini gösterir.**",
+            "mydifficulty": "**Başladığınız tüm turlar için varsayılan zorluğu ayarlamanızı sağlar.**"
         }
     },
     "introduction": {
-        "features": "### Özellikler\n- **Binlerce** tahmin edilebilir anime ve görsel novel!\n- Ekran görüntüleri, video klipleri veya ses dosyalarını kullanarak tahmin yapın.\n- **Rastgele alınmış ekran alıntılarıyla** bir tur asla diğerinin aynısı olmaz.\n- **Skor sistemiyle oluşturulan sıralamalar** (tüm zamanlar, haftalık ya da kendi istediğiniz zaman aralığı)\n- Çoklu **zorluk seviyeleri** sayesinde yeni anime ve görsel novel fanları dahi eğlenebilir.\n- Başlıklar **birden fazla dille** tahmin edilebilir.\n- ...ve çok daha fazlası!"
+        "features": "### Özellikler\n- **Binlerce** tahmin edilebilir anime ve görsel novel!\n- Ekran görüntüleri, video klipleri veya ses dosyalarını kullanarak tahmin yapın.\n- **Rastgele alınmış ekran alıntılarıyla** bir tur asla diğerinin aynısı olmaz.\n- **Skor sistemiyle oluşturulan sıralamalar** (tüm zamanlar, haftalık ya da kendi istediğiniz zaman aralığı)\n- Çoklu **zorluk seviyeleri** sayesinde yeni anime ve görsel novel fanları dahi eğlenebilir.\n- Başlıklar **birden fazla dille** tahmin edilebilir.\n- ...ve çok daha fazlası!",
+        "title": "{botName}'in ana sayfası",
+        "inviteButton": "{botName} adresini sunucunuza davet edin",
+        "checkTheCommandListAndConfigure": "Özelliklerin tam listesi için komut listesini kontrol edin. Sunucunuzun ihtiyaçlarına göre özelleştirmek için bu web sitesinde oturum açtıktan sonra {botName} adresini yapılandırabilirsiniz.",
+        "orSeeHerInAction": "ya da onu iş başında görebilirsiniz",
+        "supportServer": "{botName} destek sunucusu",
+        "shortDescription": "**guess the anime** ve diğer birçok tahmin yarışması oyununu doğrudan discord kanallarında arkadaşlarınızla oynayın."
+    },
+    "userProfile": {
+        "rounds": "Turlar",
+        "noResultsYet": "Henüz sonuç yok.",
+        "trophiesWon": "Kazanılan Kupalar",
+        "achievementPoints": "Başarı puanları",
+        "statistics": "İstatistikler",
+        "points": "Puanlar",
+        "noTrophiesWon": "Henüz kazanılmış bir kupa yok.",
+        "week": "Hafta",
+        "achievements": "Başarılar",
+        "allTimeResults": "Tüm zamanların sonuçları",
+        "roundPoints": "Yuvarlak puanlar",
+        "rank": "Rütbe"
+    },
+    "status": {
+        "coreServices": "Temel hizmetler",
+        "discordShards": "Discord parçaları",
+        "operational": "Operasyonel",
+        "partialOutage": "Kısmi kesinti",
+        "api": {
+            "name": "API",
+            "tooltip": "Web sitesinde dinamik içerik ve bot yapılandırması sağlar"
+        },
+        "howToFindYourServerId": "Sunucunuzun ID'sini nasıl bulacağınızı bilmiyorsanız, lütfen [bu destek makalesini okuyun] (https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "website": {
+            "name": "Web sitesi",
+            "tooltip": "Bu kırmızı olsaydı burada olmazdın."
+        },
+        "majorOutage": "Büyük kesinti",
+        "databaseServices": "Veritabanı hizmetleri",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Web sitesinde dinamik içerik (veritabanı gibi) sağlar"
+        },
+        "putYourServerId": "Parçanızı bulmak için sunucu kimliğinizi buraya yazın",
+        "animeDatabaseApi": {
+            "name": "Anime veritabanı API'si",
+            "tooltip": "Anime turları sağlar - !sg, !sgv ve !sga"
+        },
+        "title": "Durum",
+        "description": "Burada {botName} 'un gerektiği gibi çalışmasını sağlayan bazı hizmetlerin durumunu bulabilirsiniz. Bu sayfa her 10 saniyede bir otomatik olarak yenilenir.",
+        "worker": {
+            "name": "İşçi",
+            "tooltip": "Liderlik tablosu, puan ve profil güncellemeleri sağlar"
+        },
+        "visualNovelDatabaseApi": {
+            "tooltip": "Görsel roman turları sağlar - !sgvn",
+            "name": "Görsel roman veritabanı API'si"
+        },
+        "couldNotGetShardStatuses": "API'den shard durumları alınamadı"
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "won": "Kazandı",
+            "winners": "Kazananlar",
+            "title": "Gün başına tur",
+            "lost": "Kayıp",
+            "total": "Toplam"
+        },
+        "title": "İstatistikler",
+        "description": "Son 30 gün için günlük oynanan tur sayısı."
+    },
+    "genres": {
+        "SCHOOL": "Okul",
+        "SPORTS": "Spor",
+        "SUPER_POWER": "Süper güç",
+        "HAREM": "Harem",
+        "JOSEI": "Josei",
+        "SPACE": "Uzay",
+        "VAMPIRE": "Vampir",
+        "THRILLER": "Gerilim",
+        "SEINEN": "Seinen",
+        "ISEKAI": "Isekai",
+        "GAME": "Oyun",
+        "HISTORICAL": "Tarihsel",
+        "HORROR": "Korku",
+        "KIDS": "Çocuklar",
+        "SCI_FI": "Bilimkurgu",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Shounen Ai",
+        "DEMONS": "Şeytanlar",
+        "MYSTERY": "Gizem",
+        "DRAMA": "Drama",
+        "ECCHI": "Ecchi",
+        "MECHA": "Mecha",
+        "MAGIC": "Sihir",
+        "ACTION": "Eylem",
+        "ADVENTURE": "Macera",
+        "COMEDY": "Komedi",
+        "DEMENTIA": "Demans",
+        "FANTASY": "Fantezi",
+        "MARTIAL_ARTS": "Dövüş Sanatları",
+        "MUSIC": "Müzik",
+        "PARODY": "Parodi",
+        "SAMURAI": "Samuray",
+        "ROMANCE": "Romantik",
+        "SLICE_OF_LIFE": "Hayattan bir kesit",
+        "SUPERNATURAL": "Doğaüstü",
+        "MILITARY": "Askeri",
+        "POLICE": "Polis",
+        "PSYCHOLOGICAL": "Psikolojik",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "CARS": "Arabalar"
+    },
+    "navbar": {
+        "database": "Veritabanı",
+        "leaderboard": "Liderlik Tablosu",
+        "status": "Durum",
+        "home": "Ev",
+        "commands": "Komutlar",
+        "statistics": "İstatistikler",
+        "login": "Giriş",
+        "logout": "Oturumu Kapat",
+        "faq": "SSS",
+        "changelog": "Değişiklik Günlüğü",
+        "myProfile": "Benim profilim",
+        "myServers": "Sunucularım",
+        "myBoostedServers": "Güçlendirilmiş sunucularım",
+        "mySettings": "Benim ayarlarım"
+    },
+    "slashCommands": {
+        "title": "Eğik çizgi komutları",
+        "description": "Eğik çizgi komutlarını kullanmak için muhtemelen {botName} adresini yeniden davet etmeniz ve** kapsamındaki bir sunucuda **Oluştur komutlarına sahip olduğundan emin olmanız gerekecektir.  \nAna sayfadaki davet düğmesini kullanabilir veya Discord içinden {botName} adresini tıklayabilirsiniz.  \n\nKullanıcılarınızın **Uygulama Komutlarını Kullan** iznine sahip olduğundan emin olun, aksi takdirde hiçbir eğik çizgi komutunu kullanamazlar.",
+        "ephemeral": {
+            "description": "**Geçici komut** - bu komutları takip eden mesajlar sadece sizin tarafınızdan görülebilir.",
+            "tooltip": "Geçici komut"
+        }
+    },
+    "common": {
+        "botSupporter": "{botName} destekçi",
+        "boostedByBotSupporter": "Bir {botName} destekçisi tarafından desteklendi",
+        "loading": "Yükleniyor",
+        "onlyForPatrons": "Sadece müşteriler için",
+        "experimentalFeature": "Deneysel özellik",
+        "error": "Hata",
+        "success": "Başarı",
+        "termsOfService": "Hizmet şartları",
+        "privacyPolicy": "Gizlilik Politikası"
+    },
+    "leaderboardTable": {
+        "name": "İsim",
+        "points": "Puanlar",
+        "rank": "Rütbe",
+        "hidden": "(gizli)",
+        "rounds": "Turlar",
+        "players": "Oyuncular"
+    },
+    "leaderboard": {
+        "overview": {
+            "allTime": "Tüm zamanlar",
+            "title": "Genel Bakış",
+            "showMore": "Daha fazla göster",
+            "guildsHiddenByDefault": "Varsayılan olarak sunucu adları gizlidir, göstermek için sunucu yöneticisi olarak giriş yapın.",
+            "lastWeekWinners": "Geçen haftanın kazananları",
+            "thisWeek": "Bu hafta",
+            "thisWeekEndsIn": "Hafta {timeLeft} adresinde sona erecektir."
+        },
+        "title": "Liderlik Tablosu",
+        "players": {
+            "description": "Bu, oyunun oynandığı tüm sunuculardaki en iyi oyuncuların bir listesidir. Direkt mesaj turları sayılmaz.",
+            "title": "Oyuncular"
+        },
+        "guilds": {
+            "title": "Sunucular",
+            "description": "Bu, oyunun oynandığı en iyi sunucuların bir listesidir.  \nVarsayılan olarak sunucunuzun adı gizli olacaktır. Giriş yaptıktan sonra sunucu yapılandırmasında göstermeyi seçebilirsiniz."
+        },
+        "achievements": {
+            "title": "Başarılar",
+            "description": "Bu, en çok başarı puanı toplayan oyunculardan oluşur."
+        }
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "hideAlternativeTitles": {
+                "description": "Bunu işaretlemek, anime özetindeki alternatif başlıkların listesini gizleyecektir.",
+                "label": "Alternatif başlıklar",
+                "checkbox": "Alternatif başlıkları gizle"
+            },
+            "enableAntiSpam": {
+                "checkbox": "Anti-spam filtresini etkinleştirin",
+                "description": "Bunu etkinleştirmek, botun sürekli aynı başlığı kullanarak tahmin yapmaya çalışan oyuncuları görmezden gelmeye başlamasını sağlayacaktır.",
+                "label": "Anti-spam"
+            },
+            "titlePreferences": {
+                "percentageWrong": {
+                    "label": "Yüzde yanlış",
+                    "description": "{percentage}% - daha düşük tahminlerde yazım hatalarına karşı daha az affedici anlamına gelir"
+                },
+                "titleSources": {
+                    "any": "(herhangi biri)"
+                },
+                "titleTypes": {
+                    "any": "(herhangi biri)",
+                    "label": "Başlık türleri",
+                    "main": "Ana başlıklar",
+                    "short": "Kısa başlıklar",
+                    "synonym": "Eşanlamlılar",
+                    "official": "Resmi unvanlar",
+                    "card": "Kart başlıkları",
+                    "kana": "Kana okumaları"
+                },
+                "mainTitle": {
+                    "source": "Kaynak",
+                    "language": "Dil",
+                    "label": "Ana başlık",
+                    "type": "Tip",
+                    "description": "Bu, ana başlıkların seçileceği önceliktir. Ana başlık, bir turun sonunda ipucu ve anime özeti için kullanılan başlıktır. Tercihlerinize göre hiçbir ana başlık bulunamazsa, varsayılanlara geri dönecektir."
+                },
+                "titleLanguages": {
+                    "selectAll": "Tümünü seçin",
+                    "selectNone": "Hiçbirini seçmeyin",
+                    "label": "Başlık dilleri"
+                },
+                "disableTitleSimplifications": {
+                    "label": "Başlık basitleştirmeleri",
+                    "description": "Başlık basitleştirmelerini devre dışı bırakır (uzun başlıkları tire/kolonlarına bölmek ve 'sezon', 'sürüm' gibi yaygın bağlamsal kelimeleri kaldırmak gibi)",
+                    "checkbox": "Basitleştirmeleri devre dışı bırak"
+                },
+                "setToDefaults": "Varsayılanlara ayarla",
+                "description": "##### Unvan tercihleri  \nBurada, doğru tahmin olarak kabul edilmesi gereken başlık dillerindeki tercihlerinizi yapılandırabilirsiniz.  \n\nTercihleriniz boş bir başlık kümesiyle sonuçlanırsa, varsayılanlara geri dönecektir."
+            },
+            "winnerRoleConfigs": {
+                "reachedMaximumAssignments": "Maksimum {maxWinnerRoleConfigs} rol atamasına ulaştınız.",
+                "permissionInfo": "{botName} adresinin 'Rolleri Yönet' iznine sahip olduğundan ve atamasına izin vermek istediğiniz rolün üzerinde konumlandığından emin olun.",
+                "type": "Tip",
+                "allTime": "Tüm Zamanlar",
+                "points": "Puanlar",
+                "time": "Zaman",
+                "label": "Rütbeye göre roller",
+                "title": "Rol yapılandırması",
+                "description": "Burada liderlik tablosunda kazananlar için rol atamaları ayarlayabilirsiniz.",
+                "undo": "Geri al",
+                "rank": "Rütbe",
+                "warnManagedRole": "Rollerin tamamen {botName} tarafından yönetileceğini unutmayın, bu nedenle kazanan olmayan tüm rol üyeleri kaldırılacaktır.",
+                "add": "Yeni rol ataması ekleme",
+                "saveChanges": "Değişiklikleri kaydet",
+                "boostedServersGetMoreAssignments": "[Güçlendirilmiş sunucular]({patreonLink}) {patronWinnerRoleConfigs} adresine kadar rol atamasına sahip olabilir.",
+                "weekly": "Haftalık",
+                "isWeekly": "Tüm Zamanlar/Haftalık",
+                "role": "Rol"
+            },
+            "roundButtonConfig": {
+                "description": "İşaretlenen düğmeler turların ve oturumların sonunda görünecektir",
+                "playAgain": "🔁 Tekrar oynat",
+                "random": "🎲 Rastgele",
+                "weeklyPointsLeaderboard": "🏆 Haftalık puan tablosu",
+                "weeklyTimeLeaderboard": "⏲️ Haftalık zaman lider tablosu",
+                "label": "Yuvarlak düğmeler"
+            },
+            "title": "Anime'yi Tahmin Et",
+            "animeSummaryLink": {
+                "description": "Bu sadece URL'yi değiştirir ve bazı animeler için RinBot web sitesine geri dönebilir.",
+                "label": "Anime özet bağlantısı"
+            },
+            "disableSummaryLink": {
+                "description": "Bu işaretlendiğinde turun sonunda özetten bağlantı kaldırılır.",
+                "label": "Özet",
+                "checkbox": "Özet bağlantısını devre dışı bırak"
+            },
+            "disableDrops": {
+                "description": "Bunu işaretlemek, oyunun rastgele karakter düşüşleri oluşturmamasını sağlayacaktır.",
+                "label": "Damlalar",
+                "checkbox": "Damlaları devre dışı bırak"
+            },
+            "disableHints": {
+                "checkbox": "İpuçlarını devre dışı bırak",
+                "description": "Bu işaretlendiğinde oyun hiçbir turda hiçbir ipucu göstermeyecektir.",
+                "label": "İpuçları"
+            },
+            "pointRoleConfigs": {
+                "label": "Puanlara göre roller"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Bunu işaretlediğinizde sunucudan ayrılan oyuncular liderlik tablolarında görünmeye devam edecektir. Görünmeleri bir saat kadar sürebilir.",
+                "label": "Liderlik tablolarında eksik oyuncular",
+                "checkbox": "Liderlik tablolarında eksik oyuncuları göster"
+            }
+        },
+        "general": {
+            "title": "Genel",
+            "prefix": {
+                "description": "Bu karakterler varsayılan yerine komutların önüne konacaktır: !",
+                "label": "Komut öneki",
+                "invalid": "Bu zorunlu bir alandır ve 1 ile 5 karakter arasında olmalıdır."
+            },
+            "language": {
+                "description": "Discord içindeki RinBot için dili ayarlar. Bu anime başlıklarını etkilemez.",
+                "label": "Dil"
+            },
+            "showInLeaderboards": {
+                "description": "Bu etkinleştirildiğinde, sunucunuzun adı sunucu liderlik tablolarında gösterilecektir. Bu değişikliğin yayılması bir saat sürebilir.",
+                "checkbox": "Bu sitedeki küresel liderlik tablolarında sunucunun adını gösterin",
+                "label": "Küresel liderlik tablolarında göster"
+            },
+            "inviteCode": {
+                "label": "Davet kodu",
+                "description": "Liderlik tablolarında sunucunuzun adının URL'si için kullanılan davet kodu",
+                "invalid": "Bu davet kodu geçersiz görünüyor"
+            },
+            "managementRoles": {
+                "label": "Yönetim rolleri",
+                "description": "Bu sayfa aracılığıyla botu yönetmek için erişime sahip olacak roller. 'Sunucu yönetimi' iznine sahip kullanıcılar zaten erişime sahiptir.",
+                "placeholder": "Bazı roller seçin"
+            },
+            "disableLegacyCommands": {
+                "label": "Ön ekli komutlar",
+                "checkbox": "Eski önekli komutları devre dışı bırakma",
+                "description": "Bu, eski ön ekli komutları tamamen devre dışı bırakacak, böylece yalnızca eğik çizgi komutlarını kullanabileceksiniz."
+            },
+            "noLanguageCodeDefined": "(sunucu varsayılan dilini kullanın)"
+        }
+    },
+    "myServerDetails": {
+        "channels": "Kanallar",
+        "leaderboard": "Liderlik Tablosu",
+        "onlyForManagement": "Sadece sunucu yönetimi için",
+        "backToMyServers": "Sunucularıma geri dönüyorum",
+        "server": "Sunucu",
+        "players": "Oyuncular"
+    },
+    "channelConfiguration": {
+        "description": "Burada kanal başına birkaç özel seçeneği yapılandırabilirsiniz. Bunlar daha sonraki bir tarihte daha fazla sunucu yapılandırma seçeneği ile genişletilebilir.",
+        "add": "Kanal ekleme",
+        "startGameOnIdle": {
+            "checkbox": "Kanal boştayken yeni bir tur başlatın",
+            "minutesIdle": "Dakikalar boşta",
+            "boostedServersCanHaveLess": "[Güçlendirilmiş sunucular] ({patreonLink}) 60 dakikaya sahip olabilir."
+        },
+        "channelAccessControlEnabled": {
+            "description": "Bu, {botName} 'un kanal başına özel olarak beyaz listeye alınmadığı sürece hiçbir komutu dinlememesini sağlayacaktır.",
+            "checkbox": "Kanal erişim kontrolünü etkinleştirin",
+            "label": "Erişim kontrolü"
+        },
+        "stage": {
+            "topic": {
+                "label": "Sahne konusu"
+            }
+        },
+        "boostedServersGetMore": "[Boosted servers]({patreonLink}) {patronMaxConfigs} kanal konfigürasyonlarına kadar sahip olabilir.",
+        "saveChanges": "Değişiklikleri kaydet",
+        "undo": "Geri al",
+        "savedChangesSuccessfully": "Değişiklikler başarıyla kaydedildi",
+        "useForVoiceRounds": {
+            "checkbox": "Sesli turlar için yalnızca bu ses kanalını kullanın (yalnızca bir tanesi etkin olabilir)"
+        },
+        "maximumReached": "Maksimum {maxChannelConfigs} kanal konfigürasyonuna ulaştınız.",
+        "noChannelsConfigured": "Şu anda hiçbir kanal yapılandırılmamıştır. Başlamak için 'Kanal ekle' düğmesine tıklayın.",
+        "couldNotSaveChanges": "Değişiklikler kaydedilemedi"
+    },
+    "myServers": {
+        "description": "Sunucunuz için {botName} adresini yapılandırabilmek için **Sunucu Yönetimi** iznine sahip olmanız gerekir.",
+        "boostedServer": "Güçlendirilmiş sunucu",
+        "title": "Sunucularım",
+        "hasBot": "{botName} bu sunucuda",
+        "addBot": "Ekle {botName}",
+        "notHasBot": "{botName} bu sunucuda değil",
+        "couldNotRetrieveServers": "Sunucular alınamadı",
+        "configure": "Yapılandırma",
+        "details": "Detaylar",
+        "showAll": "Tüm sunucularımı göster",
+        "searchForServer": "Bir sunucu arayın"
+    },
+    "notLoggedIn": "Bu sayfaya erişmek için giriş yapmış olmanız gerekmektedir.",
+    "pageNotFound": "Sayfa mevcut değil",
+    "playerTable": {
+        "username": "İsim"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Bir oyuncu bulun"
+    },
+    "channelAccessControlConfig": {
+        "commands": "Komutlar",
+        "description": "Erişim kontrol kuralları yukarıdan aşağıya doğru işlenir.  \nHer şey varsayılan olarak reddedilir, bu nedenle en azından bir izin verme kuralı oluşturmanız gerekecektir.",
+        "allCommands": "(tüm komutlar)",
+        "roles": "Roller",
+        "everyoneRole": "@herkes",
+        "maximumReached": "Maksimum erişim denetimi sayısına ulaştınız.",
+        "title": "Erişim kontrolü",
+        "addRule": "Bir kural ekleyin"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "characters": {
+            "title": "Karakterler"
+        },
+        "visualNovels": {
+            "title": "Görsel Romanlar"
+        }
+    },
+    "nsfw": {
+        "DANGEROUS": "Tehlikeli",
+        "QUESTIONABLE": "Şüpheli",
+        "NOT_SAFE": "Güvensiz",
+        "UNKNOWN": "Bilinmiyor",
+        "SAFE": "Güvenli"
+    },
+    "reportAnime": {
+        "submitted": "Raporunuz başarıyla teslim edilmiştir.",
+        "couldNotSubmit": "Raporunuz gönderilemedi."
+    },
+    "validation": {
+        "required": "Bu alan zorunludur",
+        "maxLength": "Maksimum uzunluk {max} karakterdir, ancak siz {length} karakter yazmışsınız."
+    },
+    "animeListTypes": {
+        "MY_ANIME_LIST": "MyAnimeList",
+        "ANI_LIST": "AniList"
+    },
+    "animeSorts": {
+        "MAIN_TITLE_ASC": "Ana başlık (artan)",
+        "MAIN_TITLE_DESC": "Ana başlık (azalan)",
+        "YEAR_ASC": "Yıl (artan)",
+        "YEAR_DESC": "Yıl (azalan)",
+        "ROUNDS_LOST_ASC": "Kaybedilen rauntlar (artan)",
+        "ROUNDS_WON_ASC": "Kazanılan rauntlar (artan)",
+        "ROUNDS_WON_DESC": "Kazanılan rauntlar (azalan)",
+        "ROUNDS_LOST_DESC": "Kaybedilen rauntlar (azalan)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Kazanılan rauntlar % (artan)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Kazanılan rauntlar % (azalan)"
+    },
+    "guildProfile": {
+        "join": "Bu sunucuya katılın"
+    },
+    "myBoostedServers": {
+        "couldNotSaveChanges": "Değişiklikler kaydedilemedi",
+        "noServersBoosted": "Hiçbir sunucu güçlendirilmemiştir.",
+        "searchForServer": "Bir sunucu arayın",
+        "pickServersToBoost": "Güçlendirmek için sunucuları seçin",
+        "addToBoosted": "Boosted'a ekle",
+        "alreadyAdded": "Çoktan eklendi",
+        "noServersFound": "Sunucu bulunamadı.",
+        "youCannotBoostServers": "# Hiçbir sunucuyu güçlendiremezsiniz  \nBir sunucuyu güçlendirebilmek için en azından 2. kademe bir kullanıcı olmanız gerekir.  \nBunu almak için önce Discord hesabınızı patreon'a bağlayın ve ardından [RinBot'un patreon sayfasında en az 2. aşama için taahhütte bulunun]({patreonLink}).",
+        "boostedServers": "# Güçlendirilmiş sunucular  \nSiz bir {patronTier} patronusunuz. {boostsLeft} daha fazla sunucuyu destekleyebilirsiniz",
+        "addServer": "Sunucu ekleme",
+        "remove": "Güçlendirilmişten kaldır",
+        "savedChanges": "Değişiklikler başarıyla kaydedildi"
+    },
+    "needHelp": {
+        "needHelp": "Yardıma ihtiyacınız var mı?",
+        "supportServerIntroduction": "Resmi destek sunucusunda yardım isteyebilir, geri bildirimde bulunabilir, yeni özellikler talep edebilir veya sadece bazı Guess Anime'lerini oynayabilirsiniz.",
+        "joinTheSupportServer": "Destek sunucusuna katılın",
+        "encounterProblemsContact": "Herhangi bir sorunla karşılaşırsanız, lütfen Kururin ile buradan iletişime geçin."
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Çıkış yaptınız!"
+    },
+    "difficulties": {
+        "UNKNOWN": "Bilinmiyor",
+        "HARD": "Sert",
+        "EXTREME": "Aşırı",
+        "EASY": "Kolay",
+        "NORMAL": "Normal",
+        "NIGHTMARE": "Kabus"
+    },
+    "supportUs": {
+        "joinTheTranslationsChannel": "Yardım istemek ve çevirileri tartışmak için [destek sunucusundaki] ({supportServerUrl}) `#translations` kanalına katıldığınızdan emin olun.",
+        "supportThroughVoting": "Düzenli olarak oy kullanmak ve bu web sitelerine yorum bırakmak her zaman faydalı olacaktır.",
+        "translations": "Çeviriler",
+        "helpWithTranslating": "Mevcut çevirileri geliştirerek veya kitle çevirisini kullanarak yeni diller ekleyerek yardımcı olabilirsiniz!",
+        "signInWithAuth0": "Auth0 ile oturum açın ve ardından 'Discord ile Devam Et'.",
+        "goal": "{completedPercentage}Aylık{amount} operasyonel maliyetlerin %'si finanse edilmektedir!",
+        "supportThroughPatreon": "Sunucu masraflarının karşılanmasına yardımcı olmak isterseniz, Patreon'u kullanarak istediğiniz miktarda bağışta bulunabilirsiniz. Ayrıca bazı özel avantajlar da kazanacaksınız!",
+        "supportThroughKoFi": "Ayrıca ko-fi.com üzerinden bana bir kahve ısmarlamayı da düşünebilirsiniz. Ancak, bu benim en büyük minnettarlığımdan başka herhangi bir avantaj sağlamaz!",
+        "votingAndReviewing": "Oylama ve gözden geçirme"
+    },
+    "weekPicker": {
+        "weekly": "Haftalık",
+        "allTime": "Tüm zamanlar",
+        "year": "Yıl",
+        "week": "Hafta"
+    },
+    "main": {
+        "isBetaSite": "Şu anda {botName} beta web sitesine göz atıyorsunuz. Bu sadece test amaçlıdır. [Gerçek web sitesine göz atmak için buraya tıklayın]({productionUrl}).",
+        "isAinaBotSite": "Şu anda AinaBot'un ana sayfasına göz atıyorsunuz. Bu sadece yetişkin içerikli bir discord botudur. [RinBot'un ana sayfasına gitmek için buraya tıklayın]({productionUrl}), normal anime var."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Adımı küresel olarak gizle",
+                "description": "Bunu etkinleştirdiğinizde adınız web sitesindeki tüm liderlik tablolarında ve profillerde '(gizli)' olarak ayarlanacaktır.\n  Değişikliğinizin sistem genelinde uygulanması bir gün sürebilir."
+            }
+        }
     }
 }

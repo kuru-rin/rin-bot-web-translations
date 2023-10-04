@@ -303,6 +303,14 @@
             "animeSummaryLink": {
                 "description": "In questo modo si modifica solo l'URL e si può tornare al sito web di RinBot per alcune anime.",
                 "label": "Link al riassunto dell'anime"
+            },
+            "roundButtonConfig": {
+                "weeklyPointsLeaderboard": "🏆 Classifica punti settimanale",
+                "weeklyTimeLeaderboard": "⏲️ Classifica settimanale dei tempi",
+                "label": "Pulsanti rotondi",
+                "description": "I pulsanti spuntati appariranno alla fine dei turni e della sessione.",
+                "playAgain": "🔁 Riproduzione",
+                "random": "🎲 Casuale"
             }
         },
         "general": {
@@ -331,6 +339,11 @@
             "language": {
                 "description": "Imposta la lingua per RinBot all'interno di Discord. Questo non influisce sui titoli degli anime.",
                 "label": "Lingua"
+            },
+            "managementRoles": {
+                "label": "Ruoli manageriali",
+                "description": "Ruoli che avranno accesso alla gestione del bot attraverso questa pagina. Gli utenti con l'autorizzazione \"Gestione server\" hanno già accesso.",
+                "placeholder": "Scegliere alcuni ruoli"
             }
         }
     },

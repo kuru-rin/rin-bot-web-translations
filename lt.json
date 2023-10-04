@@ -96,6 +96,14 @@
                 "description": "Pažymėjus šią parinktį, pasibaigus raundui iš santraukos bus pašalinta nuoroda.",
                 "label": "Santrauka",
                 "checkbox": "Išjungti santraukos nuorodą"
+            },
+            "roundButtonConfig": {
+                "label": "Apvalūs mygtukai",
+                "description": "Pažymėti mygtukai bus rodomi raundų ir sesijų pabaigoje.",
+                "playAgain": "🔁 Paleisti dar kartą",
+                "random": "🎲 Atsitiktinis",
+                "weeklyPointsLeaderboard": "🏆 Savaitės taškų lentelė",
+                "weeklyTimeLeaderboard": "⏲️ Savaitės laiko lyderių lentelė"
             }
         },
         "general": {
@@ -124,7 +132,12 @@
                 "label": "Kvietimo kodas",
                 "invalid": "Atrodo, kad šis kvietimo kodas negalioja"
             },
-            "noLanguageCodeDefined": "(naudokite numatytąją serverio kalbą)"
+            "noLanguageCodeDefined": "(naudokite numatytąją serverio kalbą)",
+            "managementRoles": {
+                "label": "Vadovaujantys vaidmenys",
+                "placeholder": "Pasirinkite keletą vaidmenų",
+                "description": "Vaidmenys, kurie turės prieigą prie boto valdymo per šį puslapį. Vartotojai, turintys leidimą \"Serverio valdymas\", jau turi prieigą."
+            }
         }
     },
     "channelConfiguration": {

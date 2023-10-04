@@ -325,6 +325,14 @@
                 "description": "Ha ezt bejelölöd, akkor a szervert elhagyó játékosok továbbra is megjelennek a ranglistán. Akár egy óráig is eltarthat, amíg megjelennek.",
                 "label": "Hiányzó játékosok a ranglistákon",
                 "checkbox": "Hiányzó játékosok megjelenítése a ranglistákon"
+            },
+            "roundButtonConfig": {
+                "label": "Kerek gombok",
+                "playAgain": "🔁 Játsszon újra",
+                "description": "A bejelölt gombok a fordulók és a munkamenet végén jelennek meg.",
+                "random": "🎲 Véletlenszerű",
+                "weeklyPointsLeaderboard": "🏆 Heti ponttáblázat",
+                "weeklyTimeLeaderboard": "⏲️ Heti idő ranglista"
             }
         },
         "general": {
@@ -353,6 +361,11 @@
             "language": {
                 "description": "A RinBot nyelvének beállítása a Discordon belül. Ez nem befolyásolja az anime címeket.",
                 "label": "Nyelv"
+            },
+            "managementRoles": {
+                "label": "Vezetői szerepek",
+                "description": "Azok a szerepkörök, amelyek ezen az oldalon keresztül hozzáférhetnek a bot kezeléséhez. A 'Szerver kezelése' jogosultsággal rendelkező felhasználók már rendelkeznek hozzáféréssel.",
+                "placeholder": "Válasszon ki néhány szerepet"
             }
         }
     },

@@ -150,7 +150,12 @@
                 "label": "Etuliitteenä olevat komennot",
                 "checkbox": "Perinteisten etuliitteellisten komentojen poistaminen käytöstä"
             },
-            "noLanguageCodeDefined": "(käytä palvelimen oletuskieltä)"
+            "noLanguageCodeDefined": "(käytä palvelimen oletuskieltä)",
+            "managementRoles": {
+                "label": "Johtotehtävät",
+                "description": "Roolit, joilla on pääsy botin hallintaan tämän sivun kautta. Käyttäjillä, joilla on 'Palvelimen hallinta' -oikeus, on jo pääsy.",
+                "placeholder": "Valitse joitakin rooleja"
+            }
         },
         "guessTheAnime": {
             "enableAntiSpam": {
@@ -248,6 +253,14 @@
                 "description": "Tarkista tämä, jotta pelaajat, jotka ovat poistuneet palvelimelta, näkyvät edelleen tulostaulukoissa. Niiden näkyminen voi kestää jopa tunnin.",
                 "label": "Puuttuvat pelaajat tulostaulukoissa",
                 "checkbox": "Näytä puuttuvat pelaajat tulostaulukoissa"
+            },
+            "roundButtonConfig": {
+                "label": "Pyöreät painikkeet",
+                "description": "Valitut painikkeet näkyvät kierrosten ja istuntojen lopussa.",
+                "playAgain": "🔁 Toista uudelleen",
+                "random": "🎲 Satunnainen",
+                "weeklyPointsLeaderboard": "🏆 Viikoittainen pistetaulukko",
+                "weeklyTimeLeaderboard": "⏲️ Viikoittainen aika leaderboard"
             }
         }
     },

@@ -186,6 +186,14 @@
                 "description": "Wenn Sie diese Option aktivieren, werden auch Spieler, die den Server verlassen haben, in den Ranglisten angezeigt. Es kann bis zu einer Stunde dauern, bis sie erscheinen.",
                 "label": "Fehlende Spieler in Ranglisten",
                 "checkbox": "Fehlende Spieler in Ranglisten anzeigen"
+            },
+            "roundButtonConfig": {
+                "label": "Runde Tasten",
+                "description": "Schaltflächen, die markiert sind, werden am Ende der Runden und der Sitzung angezeigt",
+                "playAgain": "🔁 Nochmals abspielen",
+                "random": "🎲 Zufällig",
+                "weeklyPointsLeaderboard": "🏆 Wöchentliche Punkteliste",
+                "weeklyTimeLeaderboard": "⏲️ Wöchentliche Zeitrangliste"
             }
         },
         "general": {
@@ -214,6 +222,11 @@
                 "description": "Einladungscode, der für die URL für den Namen Ihres Servers in den Bestenlisten verwendet wird",
                 "label": "Code einladen",
                 "invalid": "Dieser Einladungscode scheint ungültig zu sein"
+            },
+            "managementRoles": {
+                "label": "Managementaufgaben",
+                "description": "Rollen, die über diese Seite Zugriff auf die Verwaltung des Bots haben werden. Benutzer mit der Berechtigung \"Serververwaltung\" haben bereits Zugriff.",
+                "placeholder": "Einige Rollen auswählen"
             }
         }
     },

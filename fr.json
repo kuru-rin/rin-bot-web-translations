@@ -197,6 +197,14 @@
                 "description": "Si vous cochez cette case, les joueurs qui ont quitté le serveur apparaîtront toujours dans les classements. Il peut s'écouler jusqu'à une heure avant qu'ils n'apparaissent.",
                 "label": "Joueurs manquants dans les classements",
                 "checkbox": "Afficher les joueurs manquants dans les classements"
+            },
+            "roundButtonConfig": {
+                "label": "Boutons ronds",
+                "description": "Les boutons qui sont cochés apparaîtront à la fin des tours et de la session.",
+                "playAgain": "🔁 Play again",
+                "random": "🎲 Aléatoire",
+                "weeklyPointsLeaderboard": "🏆 Classement hebdomadaire des points",
+                "weeklyTimeLeaderboard": "⏲️ Classement hebdomadaire des temps"
             }
         },
         "general": {
@@ -225,7 +233,12 @@
                 "invalid": "Ce champ est obligatoire et doit comporter entre 1 et 5 caractères.",
                 "description": "Ces caractères seront placés devant les commandes au lieu des caractères par défaut : !"
             },
-            "noLanguageCodeDefined": "(utiliser la langue par défaut du serveur)"
+            "noLanguageCodeDefined": "(utiliser la langue par défaut du serveur)",
+            "managementRoles": {
+                "label": "Rôles de gestion",
+                "description": "Rôles qui auront accès à la gestion du bot via cette page. Les utilisateurs disposant de l'autorisation \"Gestion du serveur\" y ont déjà accès.",
+                "placeholder": "Choisissez des rôles"
+            }
         }
     },
     "navbar": {

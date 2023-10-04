@@ -96,6 +96,14 @@
                 "description": "Zaškrtnutím této možnosti se hráči, kteří opustili server, budou stále zobrazovat v žebříčcích. Může trvat až hodinu, než se objeví.",
                 "label": "Chybějící hráči v žebříčcích",
                 "checkbox": "Zobrazení chybějících hráčů v žebříčcích"
+            },
+            "roundButtonConfig": {
+                "weeklyPointsLeaderboard": "🏆 Týdenní bodový žebříček",
+                "weeklyTimeLeaderboard": "⏲️ Týdenní časový žebříček",
+                "label": "Kulatá tlačítka",
+                "description": "Zaškrtnutá tlačítka se zobrazí na konci kol a relací.",
+                "playAgain": "🔁 Přehrát znovu",
+                "random": "🎲 Náhodný"
             }
         },
         "general": {
@@ -124,7 +132,12 @@
                 "invalid": "Tento kód pozvánky se zdá být neplatný",
                 "description": "Kód pozvánky, který se používá pro adresu URL pro název vašeho serveru v žebříčcích."
             },
-            "noLanguageCodeDefined": "(použijte výchozí jazyk serveru)"
+            "noLanguageCodeDefined": "(použijte výchozí jazyk serveru)",
+            "managementRoles": {
+                "label": "Řídící role",
+                "description": "Role, které budou mít přístup ke správě bota prostřednictvím této stránky. Uživatelé s oprávněním \"Správa serveru\" již mají přístup.",
+                "placeholder": "Vyberte si několik rolí"
+            }
         }
     },
     "status": {

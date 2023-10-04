@@ -33,7 +33,8 @@
             "stopg": "**Stop de huidige ronde**\nDit commando is beperkt tot eenmaal per 15 minuten per persoon om misbruik te voorkomen. [Patrons krijgen een verlaagde wachttijd](https://patreon.com/rinbot?fan_landing=true)!",
             "sgv": "**Start een ronde met videoclips**",
             "sgc": "**Start een ronde met animepersonages**",
-            "sb": "**Start een meerkeuzevragen ronde met afbeeldingen**"
+            "sb": "**Start een meerkeuzevragen ronde met afbeeldingen**",
+            "sgg": "**Begint een ronde met videospelletjes**"
         },
         "title": "Commando's",
         "prefixCanBeChanged": "De prefix `!` van deze commando's kan worden veranderd op de 'Mijn servers' pagina nadat je bent ingelogd.",
@@ -253,7 +254,12 @@
                     "selectAll": "Selecteer alles",
                     "selectNone": "Selecteer niets"
                 },
-                "description": "##### Titelvoorkeuren\nHier kun je jouw voorkeuren in de talen van titels configureren die zouden moeten worden toegestaan als correcte gokken.\n\nAls jouw voorkeuren ervoor zorgen dat er geen titels overblijven dan wordt er teruggevallen op de standaardinstellingen."
+                "description": "##### Titelvoorkeuren\nHier kun je jouw voorkeuren in de talen van titels configureren die zouden moeten worden toegestaan als correcte gokken.\n\nAls jouw voorkeuren ervoor zorgen dat er geen titels overblijven dan wordt er teruggevallen op de standaardinstellingen.",
+                "disableTitleSimplifications": {
+                    "label": "Titel vereenvoudigingen",
+                    "description": "Schakelt titelvereenvoudigingen uit (zoals het splitsen van lange titels op hun streepje/komma en het verwijderen van veelgebruikte contextuele woorden zoals 'seizoen', 'versie', enz.)",
+                    "checkbox": "Vereenvoudigingen uitschakelen"
+                }
             },
             "title": "Raad de Anime",
             "animeSummaryLink": {
@@ -269,6 +275,37 @@
                 "description": "Het aanvinken hiervan verbergt de lijst van alternatieve titels in de anime-samenvatting.",
                 "label": "Alternatieve titels",
                 "checkbox": "Verberg alternatieve titels"
+            },
+            "pointRoleConfigs": {
+                "label": "Rollen per punt"
+            },
+            "disableSummaryLink": {
+                "checkbox": "Overzichtskoppeling uitschakelen",
+                "description": "Door dit aan te vinken wordt de link verwijderd uit de samenvatting aan het einde van een ronde.",
+                "label": "Samenvatting"
+            },
+            "disableDrops": {
+                "description": "Door dit aan te vinken zal het spel geen willekeurige karakter drops spawnen.",
+                "label": "Druppels",
+                "checkbox": "Druppels uitschakelen"
+            },
+            "roundButtonConfig": {
+                "label": "Ronde knoppen",
+                "description": "Aangevinkte knoppen verschijnen aan het einde van rondes en sessies",
+                "playAgain": "Opnieuw afspelen",
+                "random": "Willekeurig",
+                "weeklyPointsLeaderboard": "Wekelijks puntenklassement",
+                "weeklyTimeLeaderboard": "⏲️ Wekelijks tijd klassement"
+            },
+            "enableAntiSpam": {
+                "description": "Door dit in te schakelen zal de bot spelers negeren die continu dezelfde titel proberen te raden.",
+                "label": "Anti-spam",
+                "checkbox": "De antispamfilter inschakelen"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Als je dit aanvinkt, verschijnen spelers die de server hebben verlaten nog steeds in de leaderboards. Het kan tot een uur duren voordat ze verschijnen.",
+                "label": "Ontbrekende spelers in klassementen",
+                "checkbox": "Toon ontbrekende spelers in klassementen"
             }
         },
         "general": {
@@ -291,7 +328,18 @@
                 "description": "Uitnodigingscode die wordt gebruikt voor de URL van jouw servernaam op de scoreborden",
                 "label": "Uitnodigingscode",
                 "invalid": "Deze uitnodigingscode lijkt ongeldig te zijn"
-            }
+            },
+            "managementRoles": {
+                "label": "Managementrollen",
+                "description": "Rollen die toegang hebben om de bot via deze pagina te beheren. Gebruikers met de rechten 'Serverbeheer' hebben al toegang.",
+                "placeholder": "Kies enkele rollen"
+            },
+            "disableLegacyCommands": {
+                "description": "Dit schakelt de oude commando's met voorvoegsels volledig uit, zodat je alleen nog slash commando's kunt gebruiken.",
+                "label": "Voorafgaande opdrachten",
+                "checkbox": "Oude commando's met voorvoegsel uitschakelen"
+            },
+            "noLanguageCodeDefined": "(gebruik de standaard taal van de server)"
         }
     },
     "channelConfiguration": {
@@ -528,5 +576,13 @@
         },
         "title": "Slash commando's",
         "description": "Om de slash commando's te kunnen gebruiken moet je misschien {botName} opnieuw uitnodigen en ervoor zorgen dat ze de **Creëer commando's in een server** scope heeft.  \nJe kunt de uitnodigknop gebruiken op de home pagina, of door te klikken op {botName} vanuit Discord.  \n\nZorg ervoor dat jouw gebruikers de toestemming **Toepassingscommando's gebruiken** hebben, of zij zullen's helemaal geen slash-commando's kunnen gebruiken."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Verberg mijn naam wereldwijd",
+                "description": "Als je dit inschakelt, wordt je naam als '(verborgen)' weergegeven op alle klassementen en profielen op de website.\n  Het kan tot een dag duren voordat je wijziging in het hele systeem is doorgevoerd."
+            }
+        }
     }
 }

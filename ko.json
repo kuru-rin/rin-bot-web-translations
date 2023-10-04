@@ -1,1 +1,588 @@
-{}
+{
+    "genres": {
+        "ISEKAI": "이세카이",
+        "COMEDY": "코미디",
+        "MYSTERY": "미스터리",
+        "HISTORICAL": "역사",
+        "MAGIC": "마법",
+        "MARTIAL_ARTS": "무술",
+        "MECHA": "메카",
+        "SHOUNEN_AI": "쇼넨 아이",
+        "SUPERNATURAL": "슈퍼내추럴",
+        "THRILLER": "스릴러",
+        "DRAMA": "드라마",
+        "SEINEN": "Seinen",
+        "JOSEI": "Josei",
+        "MAHOU_SHOUJO": "마호 쇼우조",
+        "ACTION": "액션",
+        "DEMENTIA": "치매",
+        "DEMONS": "악마",
+        "ROMANCE": "로맨스",
+        "SCHOOL": "학교",
+        "SHOUJO": "쇼우조",
+        "SHOUJO_AI": "쇼우조 아이",
+        "SHOUNEN": "쇼넨",
+        "SLICE_OF_LIFE": "삶의 한 조각",
+        "MILITARY": "군대",
+        "ADVENTURE": "모험",
+        "CARS": "자동차",
+        "ECCHI": "Ecchi",
+        "FANTASY": "판타지",
+        "GAME": "게임",
+        "HORROR": "공포",
+        "KIDS": "어린이",
+        "MUSIC": "음악",
+        "PARODY": "패러디",
+        "SAMURAI": "사무라이",
+        "SPACE": "공간",
+        "SPORTS": "스포츠",
+        "SUPER_POWER": "슈퍼 파워",
+        "VAMPIRE": "뱀파이어",
+        "HAREM": "하렘",
+        "POLICE": "경찰",
+        "PSYCHOLOGICAL": "심리",
+        "SCI_FI": "공상 과학"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "titlePreferences": {
+                "percentageWrong": {
+                    "description": "{percentage}% - 낮을수록 추측의 오타에 대한 관용이 적습니다.",
+                    "label": "틀린 비율"
+                },
+                "titleTypes": {
+                    "any": "(any)",
+                    "label": "타이틀 유형",
+                    "official": "공식 타이틀",
+                    "short": "짧은 제목",
+                    "synonym": "동의어",
+                    "card": "카드 제목",
+                    "main": "주요 타이틀",
+                    "kana": "가나 읽기"
+                },
+                "titleLanguages": {
+                    "label": "타이틀 언어",
+                    "selectAll": "모두 선택",
+                    "selectNone": "없음 선택"
+                },
+                "mainTitle": {
+                    "label": "메인 제목",
+                    "description": "메인 타이틀이 선택되는 우선 순위입니다. 메인 제목은 라운드가 끝날 때 힌트와 애니메이션 요약에 사용되는 제목입니다. 기본 설정에 따라 메인 타이틀을 찾을 수 없는 경우 기본값으로 대체됩니다.",
+                    "type": "유형",
+                    "language": "언어",
+                    "source": "출처"
+                },
+                "description": "##### 제목 기본 설정  \n여기에서 정답으로 받아들여질 제목 언어에 대한 기본 설정을 구성할 수 있습니다.  \n\n기본 설정으로 인해 제목 집합이 비어 있는 경우 기본값으로 대체됩니다.",
+                "setToDefaults": "기본값으로 설정",
+                "titleSources": {
+                    "any": "(any)"
+                },
+                "disableTitleSimplifications": {
+                    "description": "제목 간소화(대시/콜론에서 긴 제목을 나누고 '시즌', '버전' 등과 같은 일반적인 문맥 단어를 제거하는 등)를 비활성화합니다.",
+                    "label": "제목 간소화",
+                    "checkbox": "단순화 비활성화"
+                }
+            },
+            "winnerRoleConfigs": {
+                "points": "포인트",
+                "permissionInfo": "{botName} 에게 '역할 관리' 권한이 있고, 이 권한이 할당하려는 역할 위에 있는지 확인합니다.",
+                "reachedMaximumAssignments": "최대 {maxWinnerRoleConfigs} 역할 할당에 도달했습니다.",
+                "add": "새 역할 할당 추가",
+                "title": "역할 구성",
+                "description": "여기에서 순위표에서 우승자에 대한 역할 할당을 설정할 수 있습니다.",
+                "warnManagedRole": "역할은 {botName} 에서 완전히 관리하므로 당첨자가 아닌 역할의 구성원은 모두 제거됩니다.",
+                "rank": "순위",
+                "undo": "실행 취소",
+                "role": "역할",
+                "type": "유형",
+                "isWeekly": "상시/주간",
+                "boostedServersGetMoreAssignments": "[부스트 서버]({patreonLink})에는 최대 {patronWinnerRoleConfigs} 개의 역할 할당이 가능합니다.",
+                "saveChanges": "변경 사항 저장",
+                "allTime": "항상",
+                "weekly": "주간",
+                "time": "시간",
+                "label": "직급별 역할"
+            },
+            "roundButtonConfig": {
+                "description": "체크 표시된 버튼은 라운드 및 세션이 끝날 때 표시됩니다.",
+                "random": "🎲 랜덤",
+                "weeklyPointsLeaderboard": "🏆 주간 포인트 순위표",
+                "weeklyTimeLeaderboard": "⏲️ 주간 시간 순위표",
+                "label": "원형 버튼",
+                "playAgain": "🔁 다시 재생"
+            },
+            "title": "애니메이션 맞추기",
+            "animeSummaryLink": {
+                "description": "이렇게 하면 URL만 변경되며 일부 애니메이션의 경우 린봇 웹사이트로 대체될 수 있습니다.",
+                "label": "애니메이션 요약 링크"
+            },
+            "hideAlternativeTitles": {
+                "description": "이 옵션을 선택하면 애니메이션 요약에서 대체 제목 목록이 숨겨집니다.",
+                "label": "대체 제목",
+                "checkbox": "대체 제목 숨기기"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "checkbox": "순위표에 누락된 플레이어 표시",
+                "description": "이 옵션을 선택하면 서버를 떠난 플레이어가 순위표에 계속 표시됩니다. 해당 플레이어가 표시되기까지 최대 1시간이 걸릴 수 있습니다.",
+                "label": "순위표에서 누락된 플레이어"
+            },
+            "disableHints": {
+                "label": "힌트",
+                "checkbox": "힌트 비활성화",
+                "description": "이 옵션을 선택하면 모든 라운드에서 힌트가 전혀 표시되지 않습니다."
+            },
+            "enableAntiSpam": {
+                "description": "이 기능을 활성화하면 봇이 같은 제목을 계속 사용하여 추측을 시도하는 플레이어를 무시하기 시작합니다.",
+                "label": "스팸 방지",
+                "checkbox": "스팸 방지 필터 사용"
+            },
+            "pointRoleConfigs": {
+                "label": "포인트별 역할"
+            },
+            "disableSummaryLink": {
+                "description": "이 옵션을 선택하면 라운드가 끝날 때 요약에서 링크가 제거됩니다.",
+                "label": "요약",
+                "checkbox": "요약 링크 비활성화"
+            },
+            "disableDrops": {
+                "description": "이 옵션을 선택하면 게임에서 무작위 캐릭터 드롭이 생성되지 않습니다.",
+                "label": "방울",
+                "checkbox": "드롭 비활성화"
+            }
+        },
+        "general": {
+            "disableLegacyCommands": {
+                "description": "이렇게 하면 기존 접두사가 붙은 명령이 완전히 비활성화되므로 슬래시 명령만 사용할 수 있습니다.",
+                "label": "접두사 명령",
+                "checkbox": "레거시 접두사가 붙은 명령 사용 안 함"
+            },
+            "prefix": {
+                "description": "이러한 문자는 기본값인 ! 대신 명령 앞에 배치됩니다.",
+                "label": "명령 접두사",
+                "invalid": "이 입력란은 필수 입력란이며 1~5자 사이여야 합니다."
+            },
+            "language": {
+                "description": "디스코드 내에서 린봇의 언어를 설정합니다. 애니메이션 제목에는 영향을 미치지 않습니다.",
+                "label": "언어"
+            },
+            "showInLeaderboards": {
+                "description": "이 기능을 활성화하면 서버 순위표에 서버 이름이 표시됩니다. 이 변경 사항이 적용되려면 1시간 정도 걸릴 수 있습니다.",
+                "checkbox": "이 사이트의 글로벌 순위표에 서버 이름 표시하기",
+                "label": "글로벌 리더보드에 표시"
+            },
+            "managementRoles": {
+                "label": "관리 역할",
+                "description": "이 페이지를 통해 봇을 관리할 수 있는 액세스 권한이 있는 역할입니다. '서버 관리' 권한이 있는 사용자는 이미 액세스 권한이 있습니다.",
+                "placeholder": "몇 가지 역할 선택"
+            },
+            "inviteCode": {
+                "label": "초대 코드",
+                "invalid": "이 초대 코드가 유효하지 않은 것 같습니다.",
+                "description": "순위표에서 서버 이름의 URL에 사용되는 초대 코드를 입력합니다."
+            },
+            "title": "일반",
+            "noLanguageCodeDefined": "(서버 기본 언어 사용)"
+        }
+    },
+    "channelConfiguration": {
+        "stage": {
+            "topic": {
+                "label": "무대 주제"
+            }
+        },
+        "noChannelsConfigured": "현재 구성된 채널이 없습니다. 시작하려면 '채널 추가' 버튼을 클릭하세요.",
+        "saveChanges": "변경 사항 저장",
+        "savedChangesSuccessfully": "변경 사항 저장 성공",
+        "channelAccessControlEnabled": {
+            "description": "이렇게 하면 {botName} 채널별로 특별히 화이트리스트에 지정되지 않는 한 어떤 명령도 수신하지 않습니다.",
+            "checkbox": "채널 액세스 제어 사용",
+            "label": "액세스 제어"
+        },
+        "description": "여기에서 채널별로 몇 가지 특정 옵션을 구성할 수 있습니다. 이러한 옵션은 나중에 더 많은 서버 구성 옵션으로 확장될 수 있습니다.",
+        "maximumReached": "최대 {maxChannelConfigs} 채널 구성에 도달했습니다.",
+        "undo": "실행 취소",
+        "add": "채널 추가하기",
+        "boostedServersGetMore": "[부스트 서버]({patreonLink})는 최대 {patronMaxConfigs} 채널 구성을 가질 수 있습니다.",
+        "startGameOnIdle": {
+            "checkbox": "채널이 유휴 상태일 때 새 라운드 시작",
+            "minutesIdle": "유휴 시간(분)",
+            "boostedServersCanHaveLess": "[부스트 서버]({patreonLink})는 60분 동안 사용할 수 있습니다."
+        },
+        "couldNotSaveChanges": "변경 사항을 저장할 수 없습니다.",
+        "useForVoiceRounds": {
+            "checkbox": "음성 라운드에는 이 음성 채널만 사용하세요(하나만 활성화할 수 있음)."
+        }
+    },
+    "supportUs": {
+        "translations": "번역",
+        "helpWithTranslating": "현재 번역을 개선하거나 크라우드 번역을 사용하여 새로운 언어를 추가하여 도움을 줄 수 있습니다!",
+        "votingAndReviewing": "투표 및 검토",
+        "supportThroughVoting": "정기적으로 투표하고 이러한 웹사이트에 리뷰를 남기는 것은 항상 도움이 됩니다.",
+        "joinTheTranslationsChannel": "지원 서버]({supportServerUrl})의 `#translations` 채널에 가입하여 도움을 요청하고 번역에 대해 논의하세요.",
+        "supportThroughKoFi": "ko-fi.com을 통해 저에게 커피를 사주는 것도 고려해 볼 수 있습니다. 하지만 이 경우에도 진심으로 감사하는 마음 외에는 어떤 특전도 제공되지 않습니다!",
+        "supportThroughPatreon": "서버 비용을 충당하는 데 도움을 주고 싶으시다면 Patreon을 통해 원하는 금액을 후원하실 수 있습니다. 특별한 혜택도 받으실 수 있습니다!",
+        "goal": "{completedPercentage}월 운영비 ${amount} 중 %가 지원됩니다!",
+        "signInWithAuth0": "인증 0으로 로그인한 다음 'Discord 계속하기'를 클릭합니다."
+    },
+    "status": {
+        "howToFindYourServerId": "서버 아이디를 찾는 방법을 모르는 경우 [이 지원 문서를 읽어보세요](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)를 참조하세요.",
+        "majorOutage": "대규모 정전",
+        "coreServices": "핵심 서비스",
+        "databaseServices": "데이터베이스 서비스",
+        "website": {
+            "name": "웹사이트",
+            "tooltip": "이게 빨간색이었다면 여기 있지도 못했을 겁니다."
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "웹사이트에 동적 콘텐츠 및 봇 구성 제공"
+        },
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "웹사이트에 동적 콘텐츠(예: 데이터베이스)를 제공합니다."
+        },
+        "visualNovelDatabaseApi": {
+            "tooltip": "비주얼 노벨 라운드 제공 - !.sgvn",
+            "name": "비주얼 노벨 데이터베이스 API"
+        },
+        "couldNotGetShardStatuses": "API에서 샤드 상태를 가져올 수 없습니다.",
+        "discordShards": "불화 파편",
+        "worker": {
+            "tooltip": "리더보드, 점수 및 프로필 업데이트 제공",
+            "name": "Worker"
+        },
+        "putYourServerId": "샤드를 찾으려면 여기에 서버 ID를 입력하세요.",
+        "title": "상태",
+        "description": "여기에서 {botName} 을 정상적으로 작동하게 하는 일부 서비스의 상태를 확인할 수 있습니다. 이 페이지는 10초마다 자동으로 새로 고쳐집니다.",
+        "operational": "운영",
+        "partialOutage": "부분 정전",
+        "animeDatabaseApi": {
+            "name": "애니메이션 데이터베이스 API",
+            "tooltip": "애니메이션 라운드 제공 - !.sg, !.sgv 및 !.sga"
+        }
+    },
+    "weekPicker": {
+        "allTime": "역대",
+        "weekly": "주간",
+        "week": "주",
+        "year": "연도"
+    },
+    "achievements": {
+        "thisWasTheLastLevel": "이것이 마지막 레벨이었습니다.",
+        "noAchievementsGainedYet": "아직 수집된 업적이 없습니다.",
+        "showLocked": "잠긴 업적 표시",
+        "leftToUnlock": "잠금 해제하려면 왼쪽",
+        "toGoForNextLevel": "다음 단계로 나아가기 위해"
+    },
+    "commands": {
+        "prefixCanBeChanged": "이 명령의 접두사 `!` 는 로그인 후 '내 서버' 페이지에서 변경할 수 있습니다.",
+        "canUseInDirectMessage": "또한, 린봇에게 보내는 쪽지에서 이러한 명령어 대부분을 사용하여 비공개 세션을 플레이할 수도 있습니다. 이 방법으로 획득한 포인트는 순위표에 반영되지 않습니다.",
+        "rounds": {
+            "title": "#### 라운드",
+            "sg": "**새 라운드 시작**",
+            "sgg": "**비디오 게임으로 라운드 시작**",
+            "sgvn": "**비주얼 노벨 이미지로 라운드를 시작합니다** \n이 명령은 난이도 필터만 작동합니다.",
+            "sb": "**이미지로 객관식 버튼 라운드 시작**",
+            "stopg": "**현재 라운드를 중지합니다** \n이 명령은 남용을 방지하기 위해 1인당 15분에 한 번으로 제한됩니다. [후원자는 재사용 대기시간이 감소합니다](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgv": "**비디오 클립으로 라운드 시작**",
+            "sga": "**오프닝 및 엔딩 곡의 오디오 조각으로 라운드를 시작합니다.**",
+            "sgc": "**애니메이션 캐릭터로 라운드 시작**"
+        },
+        "voiceRounds": {
+            "title": "#### 음성 라운드 세션",
+            "sgs": "**음성 라운드 세션 시작** \n이렇게 하면 동일한 이름의 음성 채널(또는 현재 참여 중인 채널)에 가입한 후 라운드를 시작합니다.  \n린봇에 __연결__ 및 __말하기__ 채널에 대한 권한이 있는지 확인합니다.",
+            "sgsa": "**샘플로 음성 라운드 세션 시작**",
+            "sbsa": "**샘플이 포함된 객관식 버튼 음성 라운드 세션 시작하기**",
+            "stopgs": "**음성 회진 중지** \n이렇게 하면 음성 회진 모드와 현재 회진도 중지됩니다."
+        },
+        "shortcuts": {
+            "title": "#### 원형 필터 바로 가기  \n다음은 시작하기에 좋은 몇 가지 빠른 필터입니다. 지정하지 않은 경우 현재 점수를 기준으로 난이도가 자동으로 선택됩니다.",
+            "year": "**연도`[년도]부터 지금까지 새 라운드를 시작합니다** \n예: `!sg 1999` 은 1999년부터 올해까지 애니메이션을 선택합니다.",
+            "years": "**year1]과 `[year2]` 사이의 연도부터 새 라운드를 시작합니다.** \n예: `!.sg 1999 2003` 은 1999년부터 2003년까지 애니메이션을 선택합니다.",
+            "difficulty": "**특정 난이도로 새 라운드를 시작합니다** \n1(쉬움), 2(보통), 3(어려움), 4(극한), 5(악몽), 0(모두)  \n예: 쉬운 라운드의 경우 `!.sg 1`, 익스트림 라운드의 경우 `!.sg 4`.",
+            "genre": "**특정 장르의 애니메이션으로 새 라운드 시작** \n사용 가능한 모든 장르의 목록을 보려면 `!genres` 명령을 사용하세요.",
+            "songType": "**특정 유형의 노래로 새 오디오 라운드를 시작합니다** \n노래 유형: `op` (오프닝), `ed` (엔딩), `in` (삽입곡) 또는 `tm` (이미지 곡)",
+            "query": "**직접 입력한 검색어를 기반으로 애니메이션으로 새 라운드를 시작합니다**  \n`d:1` 필터에 난이도를 추가합니다.  \n`g:쇼넨` 필터에 장르를 추가합니다.  \n`y:2001-2009` 필터에 연도 범위를 추가하려면  \n`t:op` 필터에 곡 유형을 추가하려면 ( `!sga` 라운드에만 해당)  \n예: `!sg d:1 g:shounen y:2001-2009` 또는 `!sg g:drama y:2010` 또는 `!sga t:op`  \n_쿼리에서 모든 필터를 사용할 필요는 없습니다._"
+        },
+        "queries": {
+            "title": "### 쿼리  \n이 매개변수를 사용하여 자신만의 쿼리를 작성할 수 있습니다. ` !sg`, `!sgv`, `!sga`, `!sgs` 및 `!sgsa` 에서 사용할 수 있습니다.  \n\n예: `!sg n:5 d:3 y:1995-2005` 1995년부터 2005년까지 어려운 난이도의 애니메이션 5라운드로 세션을 시작하려면 을 입력합니다.",
+            "numberOfRounds": "**세션의 라운드 수** \n이렇게 하면 한 세션에서 여러 라운드가 자동으로 시작되고 세션이 끝나면 순위표가 표시됩니다.  \n예: `n:2` 2라운드부터 `n:10으로 최대 10라운드까지.`",
+            "imageManipulations": "**라운드에서 이미지 조작** (이미지가 있는 라운드에만 해당)  \n `p` 픽셀화, `i` 반전, `o` 유채화, `g` 회색조, `f` 세로로 뒤집기 중에서 선택할 수 있습니다.  \n예: `im:p` 또는 `im:g,o,i와의 조합`",
+            "difficulty": "**난이도 필터링** \n1(쉬움), 2(보통), 3(어려움), 4(극악), 5(악몽), 0(모두)  \n예: 쉬운 라운드의 경우 `d:1`, 익스트림의 경우 `d:4`, 난이도 필터를 비활성화하려면 `d:0`.",
+            "genre": "**장르 필터링** \n현재 단일 장르만 필터링할 수 있습니다(예: `g:action` 또는 `g:horror`).  \n사용 가능한 모든 장르의 목록을 보려면 `!genres` 명령을 사용하세요.",
+            "songType": "**노래 유형 필터링** (`!sga`, `!sgs` 및 `!sgsa` 만 해당)  \n노래 유형: `op` (오프닝), `ed` (엔딩), `in` (삽입곡) 또는 `tm` (이미지 곡)",
+            "year": "**연도 필터링** \n예: `y:1999` 은 1999년부터 현재 연도를 포함한 연도의 애니메이션을 선택합니다.  \n`y:2005-2010` 은 2005년부터 2010년까지(모두 포함)의 애니메이션을 선택합니다.",
+            "mal": "**MyAnimeList를 기준으로 필터링** \n예: `mal:username` 또는 `mal:user1,user2` 여러 사용자 목록의 경우.  \n필터를 사용하려면 먼저 `!sync` 명령을 사용해야 합니다.",
+            "anilist": "**애니리스트에 따라 필터링** \n예: `anilist:username` 또는 `anilist:user1,user2` 여러 사용자 목록이 있는 경우.  \n필터를 사용하려면 먼저 `!sync` 명령을 사용해야 합니다.   \n다음과 같이 서로 다른 종류의 애니메이션 목록을 함께 결합할 수도 있습니다. `mal:user1,user2 anilist:user3`",
+            "aggr": "**집계 방법** (애니메이션 목록 필터를 사용하는 경우에만 해당)  \n `aggr:union` 을 사용하여 애니메이션 목록을 교차하는 대신 통합할 수 있습니다.",
+            "operations": "#### 운영",
+            "filters": "#### 필터"
+        },
+        "points": {
+            "title": "#### 포인트  \n매 시간마다 다시 계산됩니다. 서버 부스트](https://patreon.com/rinbot?fan_landing=true)를 통해 실시간으로 업데이트할 수 있습니다.",
+            "myscore": "**현재 채널에서 획득한 포인트와 플레이한 라운드가 표시됩니다.**",
+            "serverscore": "**전체 서버의 점수를 표시합니다.**",
+            "alltop": "**서버에서 역대 최고 플레이어를 표시합니다.**",
+            "allfastest": "**서버에서 역대 가장 빠른 플레이어를 표시** \n애니메이션 풀이 1000개 이상인 라운드만 집계됩니다.",
+            "weektop": "**** 서버에서 이번 주의 상위 플레이어를 표시합니다.  \n월요일을 주의 첫 번째 날로 하여 1년 중 ISO-8601 주를 사용합니다. 이 명령은 주를 언제 재설정할지 알려줍니다.",
+            "weekfastest": "**서버에서 이번 주에 가장 빠른 플레이어를 표시합니다** \n애니메이션 풀이 1000개 이상인 라운드만 집계됩니다.  \n예를 들어, 쉬움/일반 모드와 대부분의 소규모 장르는 제외됩니다."
+        },
+        "ctop": {
+            "title": "#### 맞춤형 순위표",
+            "ctop": "**현재 채널에 대한 사용자 지정 순위표 표시**",
+            "startctop": "**채널에 대한 새 사용자 지정 순위표를 시작합니다(** ).  \n여러 채널을 동시에 여러 개의 사용자 지정 순위표를 사용하려면 여러 개의 채널을 사용해야 합니다.",
+            "endctop": "**활성 사용자 지정 순위표 종료** \n이렇게 하면 포인트가 누적되는 것은 중지되지만 순위표가 제거되지는 않습니다.",
+            "resetctop": "**사용자 지정 순위표 재설정** \n그러면 **사용자 지정 순위표가** 완전히 삭제되어 다시는 돌아오지 않습니다!  \n이 기능을 사용하려면 다음 권한 중 하나가 필요합니다:\n- 관리자\n- 서버 관리\n- 역할 관리\n- 채널 관리\n- 메시지 관리"
+        },
+        "misc": {
+            "title": "#### 기타",
+            "genres": "**가능한 모든 애니메이션 장르 표시**",
+            "statg": "**게임의 글로벌 통계 표시**",
+            "sync": "**다른 사이트에서 애니메이션 목록 동기화하기** \n현재 MyAnimeList와 AniList가 지원됩니다.",
+            "credits": "** {botName} 를 가능하게 하는 데 도움을 준 멋진 사람들과 웹사이트를 소개합니다.**",
+            "mydifficulty": "**시작하는 모든 라운드의 기본 난이도를 설정할 수 있습니다.**"
+        },
+        "title": "명령",
+        "onlyForPatrons": {
+            "tooltip": "고객 전용",
+            "description": "**후원자]만 사용 가능({patreonUrl})** - 서버 부하를 줄이고 사람들이 청구서 지불을 돕도록 하기 위해 도입되었습니다."
+        },
+        "isExperimental": {
+            "tooltip": "실험적",
+            "description": "**실험적 기능** - 이 기능은 매우 새롭기 때문에 몇 가지 버그가 있을 수 있습니다 [발견 시 여기에 신고하세요]({supportServerUrl})."
+        },
+        "management": {
+            "title": "#### 관리",
+            "prefix": "**현재 접두사를 표시하고 변경할 수 있습니다.**",
+            "lang": "**현재 언어를 표시하고 변경할 수 있습니다.**"
+        }
+    },
+    "myServers": {
+        "showAll": "내 모든 서버 표시",
+        "details": "세부 정보",
+        "searchForServer": "서버 검색",
+        "title": "내 서버",
+        "description": "서버에 대해 {botName} 을 구성하려면 **서버 관리** 권한이 있어야 합니다.",
+        "boostedServer": "부스트 서버",
+        "hasBot": "{botName} 이 서버에 있습니다.",
+        "addBot": "추가 {botName}",
+        "notHasBot": "{botName} 이 서버에 없습니다.",
+        "couldNotRetrieveServers": "서버를 검색할 수 없습니다.",
+        "configure": "구성"
+    },
+    "myServerDetails": {
+        "backToMyServers": "내 서버로 돌아가기",
+        "leaderboard": "리더보드",
+        "players": "플레이어",
+        "onlyForManagement": "서버 관리 전용",
+        "server": "서버",
+        "channels": "채널"
+    },
+    "notLoggedIn": "이 페이지에 액세스하려면 로그인해야 합니다.",
+    "pageNotFound": "페이지가 존재하지 않습니다.",
+    "main": {
+        "isBetaSite": "현재 {botName} 베타 웹사이트를 탐색 중입니다. 이는 테스트 목적으로만 사용됩니다. [실제 웹사이트를 보려면 여기를 클릭하세요]({productionUrl}).",
+        "isAinaBotSite": "현재 아이나봇의 홈페이지를 브라우징하고 계십니다. 성인용 콘텐츠만 있는 불화 봇입니다. 일반 애니메이션이 있는 [린봇 홈페이지로 이동하려면 여기를 클릭]({productionUrl})로 이동하세요."
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "winners": "수상자",
+            "title": "하루 라운드 수",
+            "won": "원",
+            "lost": "분실",
+            "total": "합계"
+        },
+        "title": "통계",
+        "description": "지난 30일 동안 하루에 플레이한 라운드 수입니다."
+    },
+    "playerTable": {
+        "username": "이름"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "플레이어 찾기"
+    },
+    "channelAccessControlConfig": {
+        "commands": "명령",
+        "allCommands": "(모든 명령)",
+        "roles": "역할",
+        "maximumReached": "최대 액세스 제어 수에 도달했습니다.",
+        "everyoneRole": "모두",
+        "title": "액세스 제어",
+        "description": "액세스 제어 규칙은 위에서 아래로 처리됩니다.  \n기본적으로 모든 것이 거부되므로 최소한 하나의 허용 규칙만 만들어야 합니다.",
+        "addRule": "규칙 추가"
+    },
+    "database": {
+        "anime": {
+            "title": "애니메이션"
+        },
+        "characters": {
+            "title": "문자"
+        },
+        "visualNovels": {
+            "title": "비주얼 노벨"
+        }
+    },
+    "difficulties": {
+        "EASY": "쉬운",
+        "UNKNOWN": "알 수 없음",
+        "NORMAL": "보통",
+        "HARD": "하드",
+        "EXTREME": "익스트림",
+        "NIGHTMARE": "악몽"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "애니리스트",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "animeSorts": {
+        "MAIN_TITLE_ASC": "메인 제목(오름차순)",
+        "MAIN_TITLE_DESC": "메인 제목(내림차순)",
+        "YEAR_ASC": "연도(오름차순)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "라운드 승리 %(내림차순)",
+        "ROUNDS_WON_ASC": "라운드 승리(오름차순)",
+        "ROUNDS_WON_DESC": "라운드 승리(내림차순)",
+        "ROUNDS_LOST_ASC": "손실된 라운드(오름차순)",
+        "ROUNDS_LOST_DESC": "라운드 손실(내림차순)",
+        "YEAR_DESC": "연도(내림차순)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "라운드 승리 %(오름차순)"
+    },
+    "slashCommands": {
+        "title": "슬래시 명령",
+        "description": "슬래시 명령을 사용하려면 {botName} 를 다시 초대하고 **서버** 범위에서 만들기 명령이 있는지 확인해야 할 수 있습니다.  \n홈 페이지의 초대 버튼을 사용하거나 Discord 내에서 {botName} 을 클릭하여 초대할 수 있습니다.  \n\n사용자에게 **애플리케이션 명령 사용** 권한이 있는지 확인하세요. 그렇지 않으면 슬래시 명령을 전혀 사용할 수 없습니다.",
+        "ephemeral": {
+            "tooltip": "임시 명령",
+            "description": "**임시 명령** - 이 명령 뒤에 오는 메시지는 본인만 볼 수 있습니다."
+        }
+    },
+    "common": {
+        "botSupporter": "{botName} 서포터",
+        "boostedByBotSupporter": "{botName} 서포터가 후원했습니다.",
+        "loading": "로드 중",
+        "privacyPolicy": "개인정보 보호정책",
+        "termsOfService": "서비스 약관",
+        "onlyForPatrons": "고객 전용",
+        "experimentalFeature": "실험적 기능",
+        "error": "오류",
+        "success": "성공"
+    },
+    "introduction": {
+        "title": "{botName}의 홈페이지",
+        "inviteButton": "{botName} 서버에 초대하기",
+        "orSeeHerInAction": "또는",
+        "supportServer": "{botName} 지원 서버",
+        "shortDescription": "**애니메이션** 및 기타 여러 가지 추측 퀴즈 게임을 친구들과 함께 디스코드 채널에서 직접 플레이하세요.",
+        "checkTheCommandListAndConfigure": "전체 기능 목록은 명령어 목록에서 확인하세요. 이 웹사이트에 로그인한 후 {botName} 을 구성하여 서버의 요구 사항에 맞게 사용자 지정할 수 있습니다.",
+        "features": "### 특징\n- **수천 개의** 애니메이션, 캐릭터, 비주얼 노벨 및 비디오 게임을 추측할 수 있습니다!\n- 이미지, 비디오 클립 또는 노래의 오디오 조각에서 추측하십시오.\n- **무작위로 선택된 캡처** 어떤 라운드도 동일하지 않습니다.\n- **리더 보드가있는 점수 시스템** (전체, 주간 및 사용자 지정 기간)\n- 다양한 **난이도**, 애니메이션과 비주얼 노벨의 새로운 팬도 재미있게 즐길 수 있습니다.\n- 제목은 **여러 언어** 로 추측 할 수 있습니다.\n- ...그리고 훨씬 더!"
+    },
+    "leaderboardTable": {
+        "hidden": "(숨김)",
+        "rank": "순위",
+        "name": "이름",
+        "rounds": "라운드",
+        "players": "플레이어",
+        "points": "포인트"
+    },
+    "leaderboard": {
+        "title": "리더보드",
+        "overview": {
+            "title": "개요",
+            "showMore": "자세히 보기",
+            "guildsHiddenByDefault": "기본적으로 서버 이름은 숨겨져 있으며, 서버 관리자로 로그인하여 표시합니다.",
+            "lastWeekWinners": "지난주 우승자",
+            "thisWeek": "이번 주",
+            "allTime": "역대",
+            "thisWeekEndsIn": "이번 주는 끝납니다 {timeLeft}."
+        },
+        "players": {
+            "title": "플레이어",
+            "description": "게임이 플레이되고 있는 모든 서버의 상위 플레이어 목록입니다. 쪽지 라운드는 집계되지 않습니다."
+        },
+        "guilds": {
+            "title": "서버",
+            "description": "게임이 플레이되고 있는 인기 서버 목록입니다.  \n기본적으로 서버 이름은 숨겨져 있습니다. 로그인 후 서버 설정에서 서버 이름을 표시하도록 선택할 수 있습니다."
+        },
+        "achievements": {
+            "title": "업적",
+            "description": "가장 많은 업적 포인트를 획득한 플레이어의 목록입니다."
+        }
+    },
+    "navbar": {
+        "home": "홈",
+        "commands": "명령",
+        "faq": "자주 묻는 질문",
+        "changelog": "변경 로그",
+        "leaderboard": "리더보드",
+        "statistics": "통계",
+        "login": "로그인",
+        "logout": "로그아웃",
+        "myProfile": "내 프로필",
+        "myServers": "내 서버",
+        "myBoostedServers": "내 부스트 서버",
+        "status": "상태",
+        "database": "데이터베이스",
+        "mySettings": "내 설정"
+    },
+    "needHelp": {
+        "needHelp": "도움이 필요하신가요?",
+        "supportServerIntroduction": "공식 지원 서버에서 도움을 요청하거나, 피드백을 제공하거나, 새로운 기능을 요청하거나, 애니메이션 맞추기를 플레이할 수 있습니다.",
+        "joinTheSupportServer": "지원 서버에 참여하기",
+        "encounterProblemsContact": "문제가 발생하면 쿠루린에 문의해 주세요."
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "로그아웃되었습니다!"
+    },
+    "myBoostedServers": {
+        "youCannotBoostServers": "# 서버를 부스트할 수 없습니다.  \n서버를 부스트하려면 최소한 티어 2 후원자이어야 합니다.  \n이를 위해서는 먼저 Discord 계정을 후원 페이지에 연결한 다음 [린봇의 후원 페이지에서 2티어 이상 후원 서약]({patreonLink})을 하세요.",
+        "boostedServers": "# 부스트 서버  \n귀하는 티어 {patronTier} 후원자입니다. {boostsLeft} 더 많은 서버를 부스트할 수 있습니다.",
+        "addServer": "서버 추가",
+        "remove": "부스트에서 제거",
+        "noServersBoosted": "부스트된 서버가 없습니다.",
+        "searchForServer": "서버 검색",
+        "pickServersToBoost": "부스트할 서버 선택",
+        "addToBoosted": "부스트에 추가",
+        "alreadyAdded": "이미 추가됨",
+        "noServersFound": "서버를 찾을 수 없습니다.",
+        "savedChanges": "성공적으로 변경 내용 저장",
+        "couldNotSaveChanges": "변경 사항을 저장할 수 없습니다."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "전 세계에서 내 이름 숨기기",
+                "description": "이 기능을 활성화하면 웹사이트 내 모든 순위표와 프로필에서 내 이름이 '(숨김)'으로 설정됩니다.\n  변경 사항이 시스템 전체에 적용되려면 최대 하루 정도 걸릴 수 있습니다."
+            }
+        }
+    },
+    "userProfile": {
+        "noResultsYet": "아직 결과가 없습니다.",
+        "trophiesWon": "획득한 트로피",
+        "noTrophiesWon": "아직 트로피를 획득하지 못했습니다.",
+        "week": "주",
+        "achievements": "업적",
+        "allTimeResults": "역대 결과",
+        "rank": "순위",
+        "points": "포인트",
+        "rounds": "라운드",
+        "roundPoints": "라운드 포인트",
+        "achievementPoints": "업적 포인트",
+        "statistics": "통계"
+    },
+    "validation": {
+        "required": "이 필드는 필수 입력 사항입니다.",
+        "maxLength": "최대 길이는 {max} 자이지만 {length} 자를 입력했습니다."
+    },
+    "guildProfile": {
+        "join": "이 서버에 가입하기"
+    },
+    "nsfw": {
+        "SAFE": "안전",
+        "NOT_SAFE": "안전하지 않음",
+        "QUESTIONABLE": "의심스러운",
+        "UNKNOWN": "알 수 없음",
+        "DANGEROUS": "위험"
+    },
+    "reportAnime": {
+        "submitted": "보고서가 성공적으로 제출되었습니다.",
+        "couldNotSubmit": "보고서를 제출할 수 없습니다."
+    }
+}

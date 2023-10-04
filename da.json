@@ -96,6 +96,14 @@
                 "description": "Hvis du markerer dette, vil spillere, der har forladt serveren, stadig dukke op på leaderboards. Det kan tage op til en time, før de vises.",
                 "label": "Manglende spillere på leaderboards",
                 "checkbox": "Vis manglende spillere på leaderboards"
+            },
+            "roundButtonConfig": {
+                "label": "Runde knapper",
+                "description": "Knapper, der er markeret, vises ved afslutningen af runder og sessioner.",
+                "playAgain": "🔁 Spil igen",
+                "random": "🎲 Tilfældig",
+                "weeklyPointsLeaderboard": "🏆 Ugentlig rangliste over point",
+                "weeklyTimeLeaderboard": "⏲️ Ugentlig rangliste over tid"
             }
         },
         "general": {
@@ -124,7 +132,12 @@
                 "label": "Præfikserede kommandoer",
                 "checkbox": "Deaktiver ældre præfikserede kommandoer"
             },
-            "noLanguageCodeDefined": "(brug serverens standardsprog)"
+            "noLanguageCodeDefined": "(brug serverens standardsprog)",
+            "managementRoles": {
+                "label": "Ledelsesroller",
+                "description": "Roller, der skal have adgang til at administrere botten via denne side. Brugere med tilladelsen 'Server management' har allerede adgang.",
+                "placeholder": "Vælg nogle roller"
+            }
         }
     },
     "userProfile": {

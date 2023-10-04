@@ -274,6 +274,14 @@
                 "description": "Mengaktifkan ini akan membuat bot mulai mengabaikan pemain yang mencoba menebak menggunakan judul yang sama secara terus menerus.",
                 "label": "Anti-spam",
                 "checkbox": "Mengaktifkan filter anti-spam"
+            },
+            "roundButtonConfig": {
+                "label": "Tombol bulat",
+                "playAgain": "🔁 Mainkan lagi",
+                "random": "🎲 Acak",
+                "description": "Tombol yang dicentang akan muncul di akhir ronde dan sesi",
+                "weeklyPointsLeaderboard": "🏆 Papan peringkat poin mingguan",
+                "weeklyTimeLeaderboard": "⏲️ Papan peringkat waktu mingguan"
             }
         },
         "general": {
@@ -302,6 +310,11 @@
                 "description": "Ini akan menonaktifkan perintah lama yang diawali sepenuhnya, sehingga Anda hanya dapat menggunakan perintah garis miring.",
                 "label": "Perintah yang diawali",
                 "checkbox": "Menonaktifkan perintah yang diawali sebelumnya"
+            },
+            "managementRoles": {
+                "label": "Peran manajemen",
+                "description": "Peran yang akan memiliki akses untuk mengelola bot melalui halaman ini. Pengguna dengan izin 'Manajemen server' sudah memiliki akses.",
+                "placeholder": "Pilih beberapa peran"
             }
         }
     },

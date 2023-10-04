@@ -1,1 +1,588 @@
-{}
+{
+    "common": {
+        "success": "Succes",
+        "loading": "Încărcare",
+        "botSupporter": "{botName} susținător",
+        "boostedByBotSupporter": "Stimulat de un suporter {botName}",
+        "privacyPolicy": "Politica de confidențialitate",
+        "error": "Eroare",
+        "experimentalFeature": "Caracteristica experimentală",
+        "termsOfService": "Termeni și condiții de utilizare",
+        "onlyForPatrons": "Numai pentru patroni"
+    },
+    "animeSorts": {
+        "ROUNDS_WON_PERCENTAGE_DESC": "Ronde câștigate % (descrescător)",
+        "MAIN_TITLE_ASC": "Titlul principal (în ordine crescătoare)",
+        "YEAR_ASC": "Anul (în ordine crescătoare)",
+        "ROUNDS_WON_ASC": "Runde câștigate (în ordine crescătoare)",
+        "ROUNDS_WON_DESC": "Runde câștigate (descrescător)",
+        "MAIN_TITLE_DESC": "Titlul principal (descrescător)",
+        "ROUNDS_LOST_DESC": "Runde pierdute (descrescător)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Rânduri câștigate % (crescător)",
+        "ROUNDS_LOST_ASC": "Runde pierdute (în ordine crescătoare)",
+        "YEAR_DESC": "Anul (descrescător)"
+    },
+    "achievements": {
+        "noAchievementsGainedYet": "Încă nu au fost colectate realizări.",
+        "showLocked": "Afișați realizările blocate",
+        "leftToUnlock": "stânga pentru a debloca",
+        "toGoForNextLevel": "pentru a trece la nivelul următor",
+        "thisWasTheLastLevel": "Acesta a fost ultimul nivel"
+    },
+    "status": {
+        "worker": {
+            "name": "Lucrător",
+            "tooltip": "Oferă clasament, scor și actualizări de profil"
+        },
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Furnizează conținut dinamic (cum ar fi baza de date) pe site-ul web"
+        },
+        "howToFindYourServerId": "Dacă nu știți cum să găsiți ID-ul serverului dvs., vă rugăm să [citiți acest articol de asistență] (https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "animeDatabaseApi": {
+            "name": "Baza de date Anime API",
+            "tooltip": "Oferă runde de anime - !sg, !sgv și !sga"
+        },
+        "website": {
+            "tooltip": "Nu ai fi aici dacă acesta ar fi fost roșu.",
+            "name": "Site web"
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "Oferă conținut dinamic și configurare bot pe site-ul web"
+        },
+        "couldNotGetShardStatuses": "Nu a putut obține stări de shard de la API",
+        "description": "Aici puteți găsi statutul unora dintre serviciile care fac ca {botName} să funcționeze așa cum ar trebui. Această pagină se reîmprospătează automat la fiecare 10 secunde.",
+        "discordShards": "Cioburi de discordie",
+        "databaseServices": "Servicii de baze de date",
+        "putYourServerId": "Pune ID-ul serverului tău aici pentru a găsi shard-ul tău",
+        "visualNovelDatabaseApi": {
+            "name": "API pentru baze de date vizuală nouă",
+            "tooltip": "Oferă runde de romane vizuale - !sgvn"
+        },
+        "title": "Stare",
+        "partialOutage": "Întrerupere parțială",
+        "operational": "Operațional",
+        "majorOutage": "Întrerupere majoră",
+        "coreServices": "Servicii de bază"
+    },
+    "genres": {
+        "PSYCHOLOGICAL": "Psihologic",
+        "JOSEI": "Josei",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "ISEKAI": "Isekai",
+        "DEMONS": "Demoni",
+        "MYSTERY": "Mister",
+        "ECCHI": "Ecchi",
+        "HORROR": "Horror",
+        "SHOUNEN_AI": "Shounen Ai",
+        "HAREM": "Harem",
+        "SLICE_OF_LIFE": "Felie de viață",
+        "SUPERNATURAL": "Supranatural",
+        "THRILLER": "Thriller",
+        "SEINEN": "Seinen",
+        "DRAMA": "Dramă",
+        "SHOUNEN": "Shounen",
+        "SHOUJO": "Shoujo",
+        "SAMURAI": "Samurai",
+        "HISTORICAL": "Istoric",
+        "COMEDY": "Comedie",
+        "ADVENTURE": "Aventură",
+        "CARS": "Mașini",
+        "MAGIC": "Magic",
+        "MARTIAL_ARTS": "Arte marțiale",
+        "MECHA": "Meca",
+        "MUSIC": "Muzică",
+        "SCHOOL": "Școala",
+        "SPORTS": "Sport",
+        "SUPER_POWER": "Super putere",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SPACE": "Spațiu",
+        "MILITARY": "Militară",
+        "POLICE": "Poliția",
+        "PARODY": "Parodie",
+        "ACTION": "Acțiune",
+        "KIDS": "Copii",
+        "DEMENTIA": "Demența",
+        "FANTASY": "Fantezie",
+        "GAME": "Joc",
+        "ROMANCE": "Romantism",
+        "SCI_FI": "Sci-fi",
+        "VAMPIRE": "Vampir"
+    },
+    "weekPicker": {
+        "allTime": "Toate timpurile",
+        "weekly": "Săptămânal",
+        "week": "Săptămâna",
+        "year": "Anul"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "disableHints": {
+                "label": "Sugestii",
+                "checkbox": "Dezactivați indicii",
+                "description": "Dacă bifați această opțiune, jocul nu va afișa niciun indiciu în nicio rundă."
+            },
+            "pointRoleConfigs": {
+                "label": "Roluri pe puncte"
+            },
+            "titlePreferences": {
+                "disableTitleSimplifications": {
+                    "description": "Dezactivează simplificările de titluri (cum ar fi împărțirea titlurilor lungi pe liniuță/colon și eliminarea cuvintelor contextuale comune precum \"sezon\", \"versiune\" etc.)",
+                    "label": "Simplificări ale titlului",
+                    "checkbox": "Dezactivarea simplificărilor"
+                },
+                "titleLanguages": {
+                    "selectNone": "Selectați niciunul",
+                    "label": "Limbi de titlu",
+                    "selectAll": "Selectați toate"
+                },
+                "mainTitle": {
+                    "label": "Titlul principal",
+                    "source": "Sursa",
+                    "type": "Tip",
+                    "language": "Limba",
+                    "description": "Aceasta este prioritatea în care vor fi alese titlurile principale. Titlul principal este cel folosit pentru indiciu și pentru rezumatul anime-ului la sfârșitul unei runde. Dacă nu se găsește niciun titlu principal în funcție de preferințele dvs., se va reveni la valorile implicite."
+                },
+                "percentageWrong": {
+                    "description": "{percentage}% - mai mic înseamnă mai puțin iertător față de greșelile de scriere în ghicire",
+                    "label": "Procentul de eroare"
+                },
+                "titleTypes": {
+                    "any": "(orice)",
+                    "official": "Titluri oficiale",
+                    "short": "Titluri scurte",
+                    "kana": "Lecturi Kana",
+                    "label": "Tipuri de titluri",
+                    "card": "Titluri de carduri",
+                    "synonym": "Sinonime",
+                    "main": "Titluri principale"
+                },
+                "setToDefaults": "Setați la valorile implicite",
+                "description": "##### Preferințe de titlu  \nAici puteți configura preferințele dumneavoastră în ceea ce privește limbile de titlu care ar trebui să fie acceptate ca presupuneri corecte.  \n\nDacă preferințele dvs. au ca rezultat un set gol de titluri, se va reveni la valorile implicite.",
+                "titleSources": {
+                    "any": "(orice)"
+                }
+            },
+            "winnerRoleConfigs": {
+                "permissionInfo": "Asigurați-vă că {botName} are permisiunea \"Manage Roles\" (Gestionează roluri) și că este poziționat deasupra rolului pe care doriți să i-l atribuiți.",
+                "reachedMaximumAssignments": "Ați atins numărul maxim de atribuții de rol {maxWinnerRoleConfigs}.",
+                "warnManagedRole": "Rețineți că rolurile vor fi complet gestionate de {botName}, astfel încât orice membru al rolului care nu este câștigător va fi eliminat.",
+                "boostedServersGetMoreAssignments": "[Boosted servers]({patreonLink}) poate avea până la {patronWinnerRoleConfigs} atribuții de rol.",
+                "add": "Adăugați o nouă atribuire de rol",
+                "saveChanges": "Salvați modificările",
+                "title": "Configurarea rolului",
+                "label": "Roluri în funcție de rang",
+                "description": "Aici puteți seta atribuirea de roluri pentru câștigătorii din clasament.",
+                "role": "Rol",
+                "points": "Puncte",
+                "rank": "Clasament",
+                "type": "Tip",
+                "weekly": "Săptămânal",
+                "isWeekly": "În permanență/săptămânal",
+                "time": "Timp",
+                "undo": "Desfaceți",
+                "allTime": "Alltime"
+            },
+            "title": "Ghiciți Anime",
+            "hideAlternativeTitles": {
+                "label": "Titluri alternative",
+                "checkbox": "Ascundeți titlurile alternative",
+                "description": "Dacă bifați această opțiune, lista de titluri alternative din rezumatul anime-ului va fi ascunsă."
+            },
+            "disableSummaryLink": {
+                "description": "Dacă bifați această opțiune, linkul va fi eliminat din rezumatul de la sfârșitul unei runde.",
+                "label": "Rezumat",
+                "checkbox": "Dezactivarea legăturii sumare"
+            },
+            "disableDrops": {
+                "description": "Dacă bifați această opțiune, jocul nu va genera picături aleatorii de caractere.",
+                "label": "Picături",
+                "checkbox": "Dezactivați picăturile"
+            },
+            "roundButtonConfig": {
+                "label": "Butoane rotunde",
+                "description": "Butoanele care sunt bifate vor apărea la sfârșitul rundei și al sesiunii.",
+                "playAgain": "🔁 Redă din nou",
+                "random": "🎲 Aleatoriu",
+                "weeklyPointsLeaderboard": "🏆 Clasamentul săptămânal al punctelor",
+                "weeklyTimeLeaderboard": "⏲️ Clasamentul săptămânal al timpului"
+            },
+            "enableAntiSpam": {
+                "description": "Activarea acestei opțiuni va face ca robotul să înceapă să ignore jucătorii care încearcă să ghicească folosind același titlu în mod continuu.",
+                "label": "Anti-spam",
+                "checkbox": "Activați filtrul anti-spam"
+            },
+            "animeSummaryLink": {
+                "description": "Acest lucru schimbă doar URL-ul și este posibil să se revină la site-ul RinBot pentru unele anime.",
+                "label": "Anime rezumat link"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "label": "Jucători lipsă în clasamente",
+                "description": "Dacă bifați această opțiune, jucătorii care au părăsit serverul vor apărea în clasamente. Poate dura până la o oră până când aceștia vor apărea.",
+                "checkbox": "Afișați jucătorii lipsă în clasamente"
+            }
+        },
+        "general": {
+            "managementRoles": {
+                "label": "Roluri de conducere",
+                "description": "Rolurile care vor avea acces la gestionarea robotului prin intermediul acestei pagini. Utilizatorii cu permisiunea \"Server management\" au deja acces.",
+                "placeholder": "Alege câteva roluri"
+            },
+            "prefix": {
+                "invalid": "Acesta este un câmp obligatoriu și trebuie să aibă între 1 și 5 caractere.",
+                "description": "Aceste caractere vor fi puse în fața comenzilor în loc de cele implicite: !",
+                "label": "Prefixul comenzii"
+            },
+            "language": {
+                "description": "Stabilește limba pentru RinBot în Discord. Acest lucru nu afectează titlurile anime-urilor.",
+                "label": "Limba"
+            },
+            "showInLeaderboards": {
+                "description": "Atunci când această opțiune este activată, numele serverului dvs. va fi afișat în clasamentele serverului. Este posibil să dureze o oră pentru ca această modificare să fie propagată.",
+                "checkbox": "Afișați numele serverului în clasamentele globale de pe acest site",
+                "label": "Arată în clasamentele globale"
+            },
+            "inviteCode": {
+                "invalid": "Acest cod de invitație pare a fi invalid",
+                "description": "Codul de invitație care este utilizat pentru URL-ul pentru numele serverului dvs. în clasamente",
+                "label": "Cod de invitație"
+            },
+            "disableLegacyCommands": {
+                "label": "Comenzi prefixate",
+                "description": "Acest lucru va dezactiva complet comenzile prefixate vechi, astfel încât veți putea utiliza doar comenzi slash.",
+                "checkbox": "Dezactivați comenzile prefixate moștenite"
+            },
+            "noLanguageCodeDefined": "(utilizați limba implicită a serverului)",
+            "title": "General"
+        }
+    },
+    "difficulties": {
+        "HARD": "Hard",
+        "EASY": "Ușor",
+        "NORMAL": "Normal",
+        "UNKNOWN": "Necunoscut",
+        "EXTREME": "Extreme",
+        "NIGHTMARE": "Coșmar"
+    },
+    "commands": {
+        "rounds": {
+            "sb": "**Începeți o rundă de butoane cu alegere multiplă cu imagini**",
+            "sgg": "**Începe o rundă cu jocuri video**",
+            "stopg": "**Oprește runda curentă** \nAceastă comandă este limitată la o dată la 15 minute pentru fiecare persoană, pentru a preveni abuzurile. [Patronii beneficiază de o perioadă de răcire redusă](https://patreon.com/rinbot?fan_landing=true)!",
+            "title": "#### Rânduri",
+            "sg": "**Începe o nouă rundă**",
+            "sgv": "**Începe o rundă cu clipuri video**",
+            "sga": "**Începe o rundă cu fragmente audio ale cântecelor de început și de sfârșit**",
+            "sgc": "**Începe o rundă cu personaje anime**",
+            "sgvn": "**Începe o rundă cu imagini de romane vizuale** \nDoar filtrul de dificultate funcționează pentru această comandă."
+        },
+        "voiceRounds": {
+            "title": "#### Sesiuni de discuții în runda Voice",
+            "sbsa": "**Începeți o sesiune de runde de voce cu buton cu alegere multiplă cu probe**",
+            "sgs": "**Începeți o sesiune de rundă vocală** \nAcest lucru se va alătura unui canal de voce (cu același nume sau cu cel în care vă aflați) și apoi va începe să facă runde.  \nAsigurați-vă că RinBot are __Connect__ și __Speak__ permisiuni pentru canal.",
+            "sgsa": "**Începeți o sesiune de rundă de voce cu mostre**",
+            "stopgs": "**Opriți rundele vocale** \nAcest lucru va opri modul runde vocale și runda curentă."
+        },
+        "title": "Comenzi",
+        "prefixCanBeChanged": "Prefixul `!` al acestor comenzi poate fi schimbat în pagina \"Serverele mele\" după ce vă conectați.",
+        "canUseInDirectMessage": "De asemenea, puteți utiliza majoritatea acestor comenzi în mesajele directe către RinBot, pentru a juca o sesiune privată. Punctele câștigate în acest mod nu sunt luate în calcul pentru clasamente.",
+        "queries": {
+            "anilist": "**Filtrați pe baza AniListului dumneavoastră** \nExemplu: `anilist:username` sau `anilist:user1,user2` pentru liste de utilizatori multipli.  \nTrebuie să fi utilizat mai întâi comanda `!sync` înainte de a putea utiliza filtrul.   \nDe asemenea, puteți combina diferite tipuri de liste de anime împreună, astfel: `mal:user1,user2 anilist:user3`",
+            "year": "**Filtrați anul** \nExemplu: `y:1999` va selecta animații din anii 1999 până în anul curent inclusiv.  \n`y:2005-2010` va alege anime-urile din anii 2005 și 2010 (ambii inclusiv).",
+            "mal": "**Filtrează pe baza listei tale MyAnimeList** \nExemplu: `mal:username` sau `mal:user1,user2` pentru liste de utilizatori multipli.  \nTrebuie să fi folosit mai întâi comanda `!sync` înainte de a putea utiliza filtrul.",
+            "title": "### Queries  \nVă puteți construi propriile interogări cu acești parametri. Ei vor funcționa pentru `!sg`, `!sgv`, `!sga`, `!sgs` și `!sgsa`.  \n\nDe exemplu: `!sg n:5 d:3 y:1995-2005` pentru a începe o sesiune cu 5 runde de anime în dificultate grea între anii 1995 și 2005.",
+            "aggr": "**Metoda de agregare** (numai atunci când se utilizează filtre de listă anime)  \nPuteți utiliza `aggr:union` pentru a uni listele anime în loc să le intersectați.",
+            "operations": "#### Operațiuni",
+            "filters": "#### Filtre",
+            "numberOfRounds": "**Numărul de runde dintr-o sesiune** \nAcest lucru va începe automat mai multe runde într-o sesiune și vă oferă un clasament la sfârșitul sesiunii.  \nExemplu: `n:2` pentru 2 runde până la un maxim de 10 runde cu `n:10`",
+            "imageManipulations": "**Manipulează imaginile într-o rundă** (numai pentru runde cu imagini)  \nPoți alege între `p` pixelat, `i` inversat, `o` pictat în ulei, `g` în tonuri de gri, `f` răsturnat pe verticală.  \nExemplu: `im:p` sau o combinație cu `im:g,o,i`",
+            "difficulty": "**Filtrați dificultatea** \n1 (ușor), 2 (normal), 3 (greu), 4 (extrem), 5 (coșmar) și 0 (totul)  \nExemplu: `d:1` pentru o rundă ușoară, sau `d:4` pentru una extremă și `d:0` pentru a dezactiva filtrul de dificultate.",
+            "genre": "**Filtrează genul** \nÎn prezent, poate fi filtrat doar un singur gen, cum ar fi `g:action` sau `g:horror`.  \nUtilizați comanda `!genres` pentru o listă cu toate genurile disponibile.",
+            "songType": "**Filtrează tipul de melodii** (`!sga`, `!sgs` și `!sgsa` numai)  \nTipul de cântec poate fi: `op` (deschideri), `ed` (finaluri), `in` (cântece de inserție) sau `tm` (cântece de imagine)"
+        },
+        "shortcuts": {
+            "query": "**Începe o nouă rundă cu anime-uri bazate pe propria interogare**  \n`d:1` pentru a adăuga dificultate la filtru  \n`g:shounen` pentru a adăuga un gen la filtru  \n`y:2001-2009` pentru a adăuga un interval de ani la filtru  \n`t:op` pentru a adăuga tipul de melodie la filtru (numai pentru rundele `!sga` ) \nExemplu: `!sg d:1 g:shounen y:2001-2009` sau `!sg g:drama y:2010` sau `!sga t:op`  \n_Rețineți că NU trebuie să folosiți toate filtrele în interogările dumneavoastră._",
+            "title": "#### Scurtături pentru filtre rotunde  \nAcestea sunt câteva filtre rapide cu care puteți începe. Dificultatea este aleasă automat pe baza punctelor dvs. curente, dacă nu este specificat niciunul.",
+            "year": "**Începe o nouă rundă din anul `[an]` până în prezent** \nExemplu: `!sg 1999` va alege anime din anii 1999 până în anul curent inclusiv.",
+            "years": "**Începe o nouă rundă din anii dintre `[an1]` și `[an2]` `** \nExemplu: `!sg 1999 2003` va alege anime din anii 1999 până în 2003 inclusiv.",
+            "difficulty": "**Începe o nouă rundă cu o anumită dificultate** \n1 (ușor), 2 (normal), 3 (greu), 4 (extrem), 5 (coșmar) și 0 (totul)  \nExemplu: `!sg 1` pentru o rundă ușoară, sau `!sg 4` pentru una extremă.",
+            "genre": "**Începe o nouă rundă cu anime-uri dintr-un anumit gen** \nFolosește comanda `!genres` pentru o listă cu toate genurile disponibile.",
+            "songType": "**Începe o nouă rundă audio cu melodii de un anumit tip** \nTipul de cântec poate fi: `op` (deschideri), `ed` (finaluri), `in` (cântece de inserție) sau `tm` (cântece imagine)"
+        },
+        "points": {
+            "myscore": "**Afișează punctele câștigate și rundele jucate în canalul curent.**",
+            "serverscore": "**Afișează scorul întregului server**",
+            "title": "#### Puncte  \nAcestea sunt recalculate la fiecare oră. Puteți să [boost your server] (https://patreon.com/rinbot?fan_landing=true) pentru actualizări în timp real.",
+            "alltop": "**Arată cei mai buni jucători din toate timpurile pe server**",
+            "allfastest": "**Arată cei mai rapizi jucători din toate timpurile pe serverul** \nSunt luate în considerare doar rundele cu un număr de anime mai mare de 1000.",
+            "weektop": "**Afișează cei mai buni jucători din săptămâna curentă pe serverul** \nFolosește săptămânile ISO-8601 ale anului, cu ziua de luni ca primă zi a săptămânii. Comanda vă va spune când se va reseta săptămâna.",
+            "weekfastest": "**Afișează cei mai rapizi jucători din săptămâna curentă pe serverul** \nSunt luate în considerare doar rundele cu un număr de anime mai mare de 1000.  \nDe exemplu: acest lucru va exclude modurile ușor/normal și majoritatea genurilor mai mici."
+        },
+        "ctop": {
+            "title": "#### Clasamente personalizate",
+            "ctop": "**Arată clasamentul personalizat pentru canalul curent**",
+            "startctop": "**Începe un nou clasament personalizat pentru canalul** \nTrebuie să folosiți mai multe canale pentru a avea mai multe clasamente personalizate în același timp.",
+            "resetctop": "**Resetează clasamentul personalizat** \nAcest lucru va **șterge complet** clasamentul personalizat, pentru a nu se mai întoarce niciodată!  \nPentru a utiliza această funcție, aveți nevoie de una dintre următoarele permisiuni:\n- Administrator\n- Manage Server\n- Manage Roles (Gestionare roluri)\n- Manage Channels (Gestionare canale)\n- Gestionare mesaje",
+            "endctop": "**Încheie clasamentul personalizat activ** \nAcest lucru oprește acumularea de puncte, dar nu elimină clasamentul."
+        },
+        "misc": {
+            "title": "#### Diverse",
+            "genres": "**Afișați toate genurile de anime posibile**",
+            "statg": "**Afișați câteva statistici globale ale jocului**",
+            "sync": "**Sincronizează-ți lista de anime-uri de pe alte site-uri** \nÎn prezent sunt acceptate MyAnimeList și AniList.",
+            "credits": "**Vă arată toate persoanele și site-urile interesante care contribuie la realizarea {botName}.**",
+            "mydifficulty": "**Vă permite să setați dificultatea implicită pentru toate rundele pe care le începeți.**"
+        },
+        "isExperimental": {
+            "description": "**Caracteristică experimentală** - această caracteristică este destul de nouă, așa că ar putea conține unele erori [vă rugăm să le raportați aici]({supportServerUrl}) dacă găsiți unele",
+            "tooltip": "Experimental"
+        },
+        "management": {
+            "title": "#### Management",
+            "prefix": "**Afișează prefixul curent și vă permite să îl modificați**",
+            "lang": "**Vă arată limba curentă și vă permite să o schimbați**"
+        },
+        "onlyForPatrons": {
+            "tooltip": "Numai pentru patroni",
+            "description": "**Poate fi folosit doar de [patroni]({patreonUrl})** - acest lucru a fost introdus pentru a reduce sarcina serverului și pentru ca oamenii să ajute la plata facturilor."
+        }
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "winners": "Câștigătorii",
+            "title": "Runde pe zi",
+            "won": "Won",
+            "lost": "Pierdut",
+            "total": "Total"
+        },
+        "title": "Statistici",
+        "description": "Numărul de runde jucate pe zi în ultimele 30 de zile."
+    },
+    "userProfile": {
+        "statistics": "Statistici",
+        "rounds": "Rânduri",
+        "allTimeResults": "Rezultatele din toate timpurile",
+        "rank": "Clasament",
+        "roundPoints": "Puncte rotunde",
+        "achievementPoints": "Puncte de realizare",
+        "points": "Puncte",
+        "noResultsYet": "Nu există încă rezultate.",
+        "trophiesWon": "Trofee câștigate",
+        "noTrophiesWon": "Încă nu am câștigat niciun trofeu.",
+        "week": "Săptămâna",
+        "achievements": "Realizări"
+    },
+    "playerTable": {
+        "username": "Nume"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Găsiți un jucător"
+    },
+    "channelAccessControlConfig": {
+        "commands": "Comenzi",
+        "description": "Regulile de control al accesului sunt procesate de sus în jos.  \nTotul este refuzat în mod implicit, așa că va trebui să creați cel puțin o regulă de autorizare.",
+        "maximumReached": "Ați atins numărul maxim de controale de acces.",
+        "allCommands": "(toate comenzile)",
+        "roles": "Roluri",
+        "addRule": "Adăugați o regulă",
+        "everyoneRole": "@everyone",
+        "title": "Controlul accesului"
+    },
+    "database": {
+        "anime": {
+            "title": "Anime"
+        },
+        "visualNovels": {
+            "title": "Romane vizuale"
+        },
+        "characters": {
+            "title": "Caracterele"
+        }
+    },
+    "nsfw": {
+        "NOT_SAFE": "Nesiguranță",
+        "UNKNOWN": "Necunoscut",
+        "SAFE": "Siguranță",
+        "QUESTIONABLE": "Discutabil",
+        "DANGEROUS": "Periculos"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "main": {
+        "isBetaSite": "Sunteți în curs de navigare pe site-ul {botName} beta. Acesta este destinat doar pentru testare. [Faceți clic aici pentru a naviga pe site-ul actual]({productionUrl}).",
+        "isAinaBotSite": "Sunteți în curs de navigare pe pagina de start a lui AinaBot. Acesta este un bot de discordie cu conținut exclusiv pentru adulți. [Faceți clic aici pentru a merge pe pagina de pornire a lui RinBot]({productionUrl}), care are anime-uri obișnuite."
+    },
+    "channelConfiguration": {
+        "maximumReached": "Ați atins numărul maxim de configurații de canale {maxChannelConfigs}.",
+        "startGameOnIdle": {
+            "boostedServersCanHaveLess": "[Boosted servers]({patreonLink}) poate avea &#60; 60 de minute.",
+            "checkbox": "Începe o nouă rundă când canalul este inactiv",
+            "minutesIdle": "Minute de inactivitate"
+        },
+        "saveChanges": "Salvați modificările",
+        "undo": "Desfaceți",
+        "savedChangesSuccessfully": "Modificări salvate cu succes",
+        "couldNotSaveChanges": "Nu s-a putut salva modificările",
+        "channelAccessControlEnabled": {
+            "checkbox": "Activați controlul accesului la canal",
+            "description": "Acest lucru va face ca {botName} să nu asculte nicio comandă decât dacă este trecută pe lista albă pentru fiecare canal în parte.",
+            "label": "Controlul accesului"
+        },
+        "noChannelsConfigured": "În acest moment nu a fost configurat niciun canal. Faceți clic pe butonul \"Add a channel\" (Adăugați un canal) pentru a începe.",
+        "boostedServersGetMore": "[Serverele amplificate]({patreonLink}) pot avea până la {patronMaxConfigs} configurații de canale.",
+        "useForVoiceRounds": {
+            "checkbox": "Utilizați numai acest canal vocal pentru runde vocale (poate fi activat numai unul)"
+        },
+        "stage": {
+            "topic": {
+                "label": "Subiectul etapei"
+            }
+        },
+        "description": "Aici puteți configura câteva opțiuni specifice pentru fiecare canal. Acestea ar putea fi extinse cu mai multe opțiuni de configurare a serverului la o dată ulterioară.",
+        "add": "Adăugați un canal"
+    },
+    "reportAnime": {
+        "submitted": "Raportul dumneavoastră a fost transmis cu succes.",
+        "couldNotSubmit": "Raportul dumneavoastră nu a putut fi transmis."
+    },
+    "guildProfile": {
+        "join": "Alăturați-vă acestui server"
+    },
+    "supportUs": {
+        "supportThroughPatreon": "Dacă doriți să ajutați la acoperirea costurilor serverului, puteți dona orice sumă doriți folosind Patreon. De asemenea, veți obține câteva avantaje speciale!",
+        "signInWithAuth0": "Conectați-vă cu Auth0 și apoi \"Continuă cu Discord\".",
+        "supportThroughKoFi": "De asemenea, ați putea lua în considerare posibilitatea de a-mi cumpăra o cafea prin ko-fi.com. Cu toate acestea, acest lucru nu oferă niciun alt avantaj în afară de cea mai mare apreciere din partea mea!",
+        "helpWithTranslating": "Puteți ajuta îmbunătățind traducerile actuale sau adăugând noi limbi prin intermediul traducerii colective!",
+        "goal": "{completedPercentage}% din costurile operaționale de ${amount} pe lună sunt finanțate!",
+        "translations": "Traduceri",
+        "joinTheTranslationsChannel": "Nu uitați să vă alăturați canalului `#translations` în [serverul de asistență]({supportServerUrl}) pentru a cere ajutor și a discuta despre traduceri.",
+        "votingAndReviewing": "Votarea și revizuirea",
+        "supportThroughVoting": "Întotdeauna este util să votați în mod regulat și să lăsați o recenzie pe aceste site-uri."
+    },
+    "pageNotFound": "Pagina nu există",
+    "validation": {
+        "maxLength": "Lungimea maximă este de {max} caractere, dar ați scris {length} caractere.",
+        "required": "Acest câmp este obligatoriu"
+    },
+    "navbar": {
+        "mySettings": "Setările mele",
+        "login": "Autentificare",
+        "logout": "Logout",
+        "faq": "ÎNTREBĂRI FRECVENTE",
+        "myProfile": "Profilul meu",
+        "myServers": "Serverele mele",
+        "myBoostedServers": "Serverele mele îmbunătățite",
+        "status": "Stare",
+        "database": "Baza de date",
+        "statistics": "Statistici",
+        "changelog": "Changelog",
+        "leaderboard": "Clasament",
+        "home": "Acasă",
+        "commands": "Comenzi"
+    },
+    "notLoggedIn": "Trebuie să vă conectați pentru a accesa această pagină.",
+    "leaderboard": {
+        "overview": {
+            "title": "Prezentare generală",
+            "showMore": "Arată mai mult",
+            "lastWeekWinners": "Câștigătorii de săptămâna trecută",
+            "guildsHiddenByDefault": "În mod implicit, numele serverelor sunt ascunse, conectați-vă ca administrator al serverului pentru a le afișa.",
+            "thisWeekEndsIn": "Săptămâna se va încheia {timeLeft}.",
+            "thisWeek": "Săptămâna aceasta",
+            "allTime": "Toate timpurile"
+        },
+        "players": {
+            "title": "Jucători",
+            "description": "Aceasta este o listă cu cei mai buni jucători de pe toate serverele pe care se joacă jocul. Rundele de mesaje directe nu sunt luate în considerare."
+        },
+        "title": "Clasament",
+        "guilds": {
+            "title": "Servere",
+            "description": "Aceasta este o listă a serverelor de top pe care se joacă jocul.  \nÎn mod implicit, numele serverului dvs. va fi ascuns. Puteți alege să îl afișați în configurația serverului după ce vă conectați."
+        },
+        "achievements": {
+            "title": "Realizări",
+            "description": "Aceasta este a jucătorilor care au adunat cele mai multe puncte de realizare."
+        }
+    },
+    "leaderboardTable": {
+        "name": "Nume",
+        "rounds": "Rânduri",
+        "players": "Jucători",
+        "points": "Puncte",
+        "hidden": "(ascuns)",
+        "rank": "Clasament"
+    },
+    "myBoostedServers": {
+        "boostedServers": "# Serverele amplificate  \nSunteți un patron de nivel {patronTier}. Puteți stimula {boostsLeft} mai multe servere",
+        "addServer": "Adăugați un server",
+        "couldNotSaveChanges": "Nu s-a putut salva modificările",
+        "youCannotBoostServers": "# Nu puteți stimula niciun server  \nTrebuie să fii cel puțin un patron de nivel 2 pentru a putea stimula un server.  \nPentru a obține acest lucru, mai întâi conectați-vă contul de Discord la patreon și apoi [promisiune pentru cel puțin nivelul 2 la pagina patreon a lui RinBot]({patreonLink}).",
+        "remove": "Eliminați din boosted",
+        "noServersBoosted": "Niciun server nu a fost amplificat.",
+        "searchForServer": "Căutați un server",
+        "pickServersToBoost": "Alegeți servere pentru a stimula",
+        "addToBoosted": "Adăugați la boosted",
+        "alreadyAdded": "Deja adăugat",
+        "noServersFound": "Nu s-au găsit servere.",
+        "savedChanges": "Modificări salvate cu succes"
+    },
+    "introduction": {
+        "title": "{botName}'s homepage",
+        "orSeeHerInAction": "sau o puteți vedea în acțiune în filmul",
+        "supportServer": "{botName} server de suport",
+        "checkTheCommandListAndConfigure": "Consultați lista de comenzi pentru o listă completă de caracteristici. Puteți configura {botName} după ce vă conectați la acest site, pentru a o personaliza în funcție de nevoile serverului dumneavoastră.",
+        "shortDescription": "Joacă **ghici anime-ul** și multe alte jocuri de ghicit chestionare direct pe canalele discord cu prietenii tăi.",
+        "inviteButton": "Invitați {botName} pe serverul dvs.",
+        "features": "### Caracteristici\n- **Mii de** de anime-uri, personaje, romane vizuale și jocuri video disponibile pentru a ghici!\n- Ghiciți din imagini, clipuri video sau fragmente audio de melodii.\n- **Capturi alese aleatoriu** face ca nicio rundă să nu fie la fel.\n- **Sistem de punctaj cu clasamente** (din toate timpurile, săptămânal și perioade personalizate de tine).\n- Mai multe niveluri de dificultate **** , astfel încât chiar și noii fani ai anime-urilor și romanelor vizuale să se poată distra.\n- Titlurile pot fi ghicite în **mai multe limbi**.\n- ...și multe altele!"
+    },
+    "slashCommands": {
+        "ephemeral": {
+            "tooltip": "Comandă efemeră",
+            "description": "**Comandă efemeră** - mesajele care urmează acestor comenzi vor fi vizibile doar pentru dumneavoastră."
+        },
+        "title": "Comenzi Slash",
+        "description": "Pentru a utiliza comenzile slash, va trebui probabil să reinvitați {botName} și să vă asigurați că are comenzile **Create într-un server**.  \nPuteți folosi butonul de invitație de pe pagina principală sau făcând clic pe {botName} din interiorul Discord.  \n\nAsigurați-vă că utilizatorii dvs. au permisiunea **Use Application Commands**, altfel nu vor putea folosi deloc comenzi slash."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Ascunde-mi numele la nivel global",
+                "description": "Activarea acestei opțiuni vă va seta numele ca fiind \"(ascuns)\" pe toate clasamentele și profilurile de pe site.\n  Schimbarea dvs. poate dura până la o zi pentru a fi implementată în întregul sistem."
+            }
+        }
+    },
+    "needHelp": {
+        "needHelp": "Aveți nevoie de ajutor?",
+        "supportServerIntroduction": "Poți cere ajutor, oferi feedback, solicita noi caracteristici sau pur și simplu poți să joci Guess Anime pe serverul oficial de asistență.",
+        "joinTheSupportServer": "Alăturați-vă serverului de asistență",
+        "encounterProblemsContact": "Dacă întâmpinați orice fel de probleme, vă rugăm să îl contactați pe Kururin acolo."
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Ați fost deconectat!"
+    },
+    "myServers": {
+        "title": "Serverele mele",
+        "description": "Trebuie să aveți permisiunea **Server Management** pentru a putea configura {botName} pentru serverul dumneavoastră.",
+        "boostedServer": "Serverul amplificat",
+        "hasBot": "{botName} este pe acest server",
+        "addBot": "Adăugați {botName}",
+        "notHasBot": "{botName} nu este pe acest server",
+        "couldNotRetrieveServers": "Nu a putut prelua serverele",
+        "configure": "Configurați",
+        "details": "Detalii",
+        "searchForServer": "Căutați un server",
+        "showAll": "Afișați toate serverele mele"
+    },
+    "myServerDetails": {
+        "server": "Server",
+        "channels": "Canale",
+        "leaderboard": "Clasament",
+        "players": "Jucători",
+        "onlyForManagement": "Numai pentru gestionarea serverului",
+        "backToMyServers": "Înapoi la serverele mele"
+    }
+}

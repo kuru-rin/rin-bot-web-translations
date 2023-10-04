@@ -3,6 +3,586 @@
         "showLocked": "Visa låsta prestationer",
         "leftToUnlock": "kvar att låsa upp",
         "toGoForNextLevel": "gå till nästa nivå",
-        "thisWasTheLastLevel": "Detta var den sista nivån"
+        "thisWasTheLastLevel": "Detta var den sista nivån",
+        "noAchievementsGainedYet": "Inga prestationer har samlats in ännu."
+    },
+    "status": {
+        "title": "Status",
+        "majorOutage": "Större avbrott",
+        "databaseServices": "Databastjänster",
+        "website": {
+            "name": "Webbplats",
+            "tooltip": "Du skulle inte vara här om den här var röd"
+        },
+        "api": {
+            "name": "API",
+            "tooltip": "Tillhandahåller dynamiskt innehåll och botkonfiguration på webbplatsen"
+        },
+        "worker": {
+            "name": "Arbetstagare",
+            "tooltip": "Ger ledartavla, poäng- och profiluppdateringar"
+        },
+        "putYourServerId": "Ange ditt server-ID här för att hitta din shard",
+        "couldNotGetShardStatuses": "Kunde inte hämta status för shard från API",
+        "animeDatabaseApi": {
+            "tooltip": "Tillhandahåller anime-rundor - !sg, !sgv och !sga",
+            "name": "API för animerad databas"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "API för databas för visuella romaner",
+            "tooltip": "Förutsätter rundor med visuella romaner - !sgvn"
+        },
+        "description": "Här hittar du status för några av de tjänster som gör att {botName} fungerar som den ska. Denna sida uppdateras automatiskt var 10:e sekund.",
+        "operational": "Operativ",
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Tillhandahåller dynamiskt innehåll (t.ex. databasen) på webbplatsen"
+        },
+        "howToFindYourServerId": "Om du inte vet hur du hittar serverns ID kan du [läsa den här supportartikeln] (https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "partialOutage": "Partiellt avbrott",
+        "coreServices": "Centrala tjänster",
+        "discordShards": "Discord shards"
+    },
+    "navbar": {
+        "home": "Hem",
+        "login": "Inloggning",
+        "logout": "Logga ut",
+        "database": "Databas",
+        "myProfile": "Min profil",
+        "myServers": "Mina servrar",
+        "myBoostedServers": "Mina förstärkta servrar",
+        "status": "Status",
+        "commands": "Kommandon",
+        "changelog": "Ändringslogg",
+        "leaderboard": "Ledartavla",
+        "statistics": "Statistik",
+        "mySettings": "Mina inställningar",
+        "faq": "VANLIGA FRÅGOR"
+    },
+    "slashCommands": {
+        "title": "Slash-kommandon",
+        "description": "För att kunna använda slash-kommandona måste du eventuellt bjuda in {botName} igen och se till att hon har **Create-kommandona i en server** scope.  \nDu kan använda inbjudningsknappen på hemsidan, eller genom att klicka på {botName} från Discord.  \n\nSe till att dina användare har behörigheten **Use Application Commands**, annars kommer de inte att kunna använda några slash-kommandon alls.",
+        "ephemeral": {
+            "tooltip": "Kortvarigt kommando",
+            "description": "**Kortvarigt kommando** - de meddelanden som följer på dessa kommandon kommer endast att vara synliga för dig."
+        }
+    },
+    "introduction": {
+        "checkTheCommandListAndConfigure": "Se kommandolistan för en fullständig lista över funktioner. Du kan konfigurera {botName} efter att ha loggat in på denna webbplats, för att anpassa den till behoven på din server.",
+        "shortDescription": "Spela **gissa anime** och många andra gissningsspel direkt i discord-kanaler med dina vänner.",
+        "inviteButton": "Bjud in {botName} till din server",
+        "orSeeHerInAction": "eller så kan du se henne i aktion i",
+        "title": "{botName}s hemsida",
+        "supportServer": "{botName} Stöd server",
+        "features": "### Funktioner\n- **Tusentals** av anime, karaktärer, visuella romaner och videospel tillgängliga att gissa!\n- Gissa från bilder, videoklipp eller ljudfragment av låtar.\n- **Slumpmässigt utvalda fångster** gör att ingen omgång är den andra lik.\n- **Poängsystem med topplistor** (all-time, veckovis och dina egna anpassade perioder)\n- Flera **svårighetsgrader**, så att även nya fans av anime och visual novels kan ha roligt.\n- Titlar kan gissas på **flera språk**.\n- ...och mycket mer!"
+    },
+    "leaderboardTable": {
+        "hidden": "(dold)",
+        "rank": "Rang",
+        "name": "Namn",
+        "rounds": "Rundor",
+        "players": "Spelare",
+        "points": "Poäng"
+    },
+    "leaderboard": {
+        "overview": {
+            "thisWeek": "Denna vecka",
+            "allTime": "Hela tiden",
+            "thisWeekEndsIn": "Veckan kommer att avslutas {timeLeft}.",
+            "title": "Översikt",
+            "showMore": "Visa mer",
+            "guildsHiddenByDefault": "Som standard är servernamnen dolda, logga in som serveradministratör för att visa dem.",
+            "lastWeekWinners": "Förra veckans vinnare"
+        },
+        "guilds": {
+            "title": "Servrar",
+            "description": "Detta är en lista över de toppservrar som spelet spelas på.  \nSom standard är din servers namn dolt. Du kan välja att visa det i serverkonfigurationen efter att du loggat in."
+        },
+        "players": {
+            "description": "Detta är en lista över de bästa spelarna på alla servrar som spelet spelas på. Direktmeddelanderundor räknas inte.",
+            "title": "Spelare"
+        },
+        "title": "Ledartavla",
+        "achievements": {
+            "title": "Prestationer",
+            "description": "Detta är de spelare som har samlat flest prestationspoäng."
+        }
+    },
+    "commands": {
+        "onlyForPatrons": {
+            "description": "**Kan endast användas av [låntagare]({patreonUrl})** - detta infördes för att minska serverbelastningen och få människor att hjälpa till att betala räkningarna",
+            "tooltip": "Endast för kunder"
+        },
+        "points": {
+            "serverscore": "**Visar poängen för hela servern**",
+            "alltop": "**Visar de bästa spelarna genom tiderna på servern**",
+            "allfastest": "**Visar de snabbaste spelarna genom tiderna på servern** \nEndast rundor med en anime-pool på mer än 1000 räknas.",
+            "weektop": "**Visar de bästa spelarna för den aktuella veckan på servern** \nDen använder ISO-8601 veckor för året med måndag som den första dagen i veckan. Kommandot talar om för dig när veckan kommer att återställas.",
+            "title": "#### Poäng  \nDessa omräknas varje timme. Du kan [boosta din server](https://patreon.com/rinbot?fan_landing=true) för realtidsuppdateringar.",
+            "myscore": "**Visar de poäng du vunnit och rundor du spelat i den aktuella kanalen**",
+            "weekfastest": "**Visar de snabbaste spelarna under den aktuella veckan på servern** \nEndast rundor med en anime-pool på mer än 1000 räknas.  \nTill exempel: detta kommer att utesluta enkla / normala lägen och de flesta mindre genrer."
+        },
+        "ctop": {
+            "title": "#### Anpassade topplistor",
+            "ctop": "**Visa den anpassade topplistan för den aktuella kanalen**",
+            "endctop": "**Avsluta den aktiva anpassade topplistan** \nDetta stoppar poäng från att ackumuleras, men tar inte bort leaderboarden.",
+            "startctop": "**Startar en ny anpassad topplista för kanalen** \nDu måste använda flera kanaler för att ha flera anpassade leaderboards samtidigt.",
+            "resetctop": "**Återställer den anpassade topplistan** \nDetta kommer att **helt ta bort** den anpassade leaderboarden, för att aldrig återvända igen!  \nFör att använda den här funktionen behöver du någon av följande behörigheter:\n- Administratör\n- Hantera server\n- Hantera roller\n- Hantera kanaler\n- Hantera meddelanden"
+        },
+        "management": {
+            "lang": "**Visar det aktuella språket och låter dig ändra det**",
+            "title": "#### Ledning",
+            "prefix": "**Visar det aktuella prefixet och låter dig ändra det**"
+        },
+        "canUseInDirectMessage": "Du kan också använda de flesta av dessa kommandon i direktmeddelandet till RinBot, för att spela en privat session. Poäng som erhålls på detta sätt räknas inte för topplistorna.",
+        "rounds": {
+            "sga": "**Startar en runda med ljudfragment av inlednings- och avslutningslåtar**",
+            "sgc": "**Startar en runda med anime-figurer**",
+            "sgvn": "**Startar en runda med bilder av visuella romaner** \nEndast svårighetsfilter fungerar för detta kommando.",
+            "sb": "**Starta en knapprunda med flervalsfrågor och bilder**",
+            "stopg": "**Stoppar den aktuella rundan** \nDetta kommando är begränsat till en gång var 15:e minut per person, för att förhindra missbruk. [Beskyddare får en reducerad cooldown](https://patreon.com/rinbot?fan_landing=true)!",
+            "title": "#### Rundor",
+            "sg": "**Startar en ny runda**",
+            "sgv": "**Startar en runda med videoklipp**",
+            "sgg": "**Startar en runda med videospel**"
+        },
+        "voiceRounds": {
+            "title": "#### Rundabordssamtal",
+            "sgs": "**Starta en röstrunda-session** \nDetta kommer att ansluta till en röstkanal (med samma namn, eller den som du är i) och sedan börja göra rundor.  \nSe till att RinBot har __Connect__ och __Speak__ behörigheter för kanalen.",
+            "sgsa": "**Starta en röstrunda med prover**",
+            "stopgs": "**Stoppa röstrundor** \nDetta kommer att stoppa röstrundorna och även den aktuella rundan.",
+            "sbsa": "**Starta en flervalsknappsröstningsrunda med exempel**"
+        },
+        "shortcuts": {
+            "title": "#### Genvägar för rundfilter  \nHär är några snabba filter att börja med. Svårighetsgraden väljs automatiskt baserat på dina aktuella poäng om ingen har angetts",
+            "years": "**Startar en ny runda från åren mellan `[år1]` och `[år2]`** \nExempel: `!sg 1999 2003` skulle välja anime från åren 1999 till och med 2003",
+            "difficulty": "**Startar en ny runda med en specifik svårighetsgrad** \n1 (lätt), 2 (normal), 3 (svår), 4 (extrem), 5 (mardröm) och 0 (allt)  \nExempel: `!sg 1` för en lätt omgång, eller `!sg 4` för en extrem omgång.",
+            "genre": "**Startar en ny runda med anime från en specifik genre** \nAnvänd kommandot `!genres` för en lista över alla tillgängliga genrer.",
+            "year": "**Startar en ny runda från år `[år]` fram till nu** \nExempel: `!sg 1999` skulle välja anime från år 1999 till och med innevarande år",
+            "songType": "**Startar en ny ljudrunda med låtar av en viss typ** \nLåttypen kan vara: `op` (öppningar), `ed` (avslutningar), `in` (infogningslåtar) eller `tm` (bildlåtar)",
+            "query": "**Startar en ny runda med anime baserad på din egen fråga**  \n`d:1` för att lägga till svårighetsgrad i filtret  \n`g:shounen` för att lägga till en genre i filtret  \n`y:2001-2009` för att lägga till ett årsintervall i filtret  \n`t:op` för att lägga till låttyp i filtret (endast för `!sga` rundor)  \nExempel: `!sg d:1 g:shounen y:2001-2009` eller `!sg g:drama y:2010` eller `!sga t:op`  \n_Observera att du INTE behöver använda alla filter i dina förfrågningar._"
+        },
+        "queries": {
+            "title": "### Frågor  \nDu kan skapa dina egna sökningar med dessa parametrar. De fungerar för `!sg`, `!sgv`, `!sga`, `!sgs` och `!sgsa`.  \n\nTill exempel: `!sg n:5 d:3 y:1995-2005` för att starta en session med 5 omgångar anime på svår svårighetsgrad mellan åren 1995 och 2005.",
+            "numberOfRounds": "**Antalet rundor i en session** \nDetta startar automatiskt flera rundor i en session och ger dig en topplista i slutet av sessionen.  \nExempel: `n:2` för 2 rundor till maximalt 10 rundor med `n:10`",
+            "imageManipulations": "**Manipulerar bilder i en runda** (endast för rundor med bilder)  \nDu kan välja mellan `p` pixlad, `i` inverterad, `o` oljemålad, `g` gråskala, `f` vänd vertikalt.  \nExempel: `im:p` eller en kombination med `im:g,o,i`",
+            "difficulty": "**Filtrera svårighetsgraden** \n1 (lätt), 2 (normal), 3 (svår), 4 (extrem), 5 (mardröm) och 0 (allt)  \nExempel: `d:1` för en lätt runda, eller `d:4` för en extrem runda och `d:0` för att inaktivera svårighetsfiltret.",
+            "genre": "**Filtrera genren** \nFör närvarande kan endast en enda genre filtreras, t.ex. `g:action` eller `g:horror`.  \nAnvänd kommandot `!genres` för en lista över alla tillgängliga genrer.",
+            "year": "**Filtrera året** \nExempel: `y:1999` skulle välja anime från år 1999 till och med innevarande år  \n`y:2005-2010` skulle välja mellan åren 2005 och 2010 (båda inklusive)",
+            "mal": "**Filtrera baserat på din MyAnimeList** \nExempel: `mal:username` eller `mal:user1,user2` för listor med flera användare.  \nDu måste först ha använt kommandot `!sync` innan du kan använda filtret.",
+            "anilist": "**Filtrera baserat på din AniList** \nExempel: `anilist:username` eller `anilist:user1,user2` för flera användarlistor.  \nDu måste först ha använt kommandot `!sync` innan du kan använda filtret.   \nDu kan också kombinera olika typer av anime-listor tillsammans, så här: `mal:user1,user2 anilist:user3`",
+            "aggr": "**Aggregeringsmetod** (endast vid användning av anime-listfilter)  \nDu kan använda `aggr:union` för att förena anime-listorna istället för att korsa dem.",
+            "songType": "**Filtrera typen av låtar** (`!sga`, `!sgs` och `!sgsa` endast)  \nTyp av låt kan vara: `op` (öppningar), `ed` (avslutningar), `in` (infogningslåtar) eller `tm` (bildlåtar)",
+            "operations": "#### Verksamheter",
+            "filters": "#### Filter"
+        },
+        "misc": {
+            "statg": "**Visa lite global statistik för spelet**",
+            "sync": "**Synkronisera din anime-lista från andra webbplatser** \nFör närvarande stöds MyAnimeList och AniList.",
+            "credits": "**Visar dig alla coola människor och webbplatser som hjälper till att göra {botName} möjligt.**",
+            "mydifficulty": "**Låter dig ställa in standard svårighetsgrad för alla rundor du startar.**",
+            "title": "#### Övrigt",
+            "genres": "**Visa alla möjliga anime-genrer**"
+        },
+        "isExperimental": {
+            "description": "**Experimentell funktion** - denna funktion är ganska ny, så kan innehålla några buggar [vänligen rapportera dem här]({supportServerUrl}) om du hittar några",
+            "tooltip": "Experimentell"
+        },
+        "title": "Kommandon",
+        "prefixCanBeChanged": "Prefixet `!` för dessa kommandon kan ändras på sidan \"Mina servrar\" efter att du har loggat in."
+    },
+    "common": {
+        "boostedByBotSupporter": "Stärkt av en supporter {botName}",
+        "loading": "Lastning",
+        "privacyPolicy": "Integritetspolicy",
+        "onlyForPatrons": "Endast för kunder",
+        "experimentalFeature": "Experimentell funktion",
+        "success": "Framgång",
+        "botSupporter": "{botName} supporter",
+        "termsOfService": "Användarvillkor",
+        "error": "Fel"
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "titlePreferences": {
+                "description": "##### Inställningar för titel  \nHär kan du konfigurera dina preferenser för titelspråk som ska accepteras som korrekta gissningar.  \n\nOm dina inställningar resulterar i en tom uppsättning titlar kommer den att återgå till standardinställningarna.",
+                "titleLanguages": {
+                    "label": "Titel språk",
+                    "selectNone": "Välj ingen",
+                    "selectAll": "Välj alla"
+                },
+                "setToDefaults": "Ställ in på standardvärden",
+                "titleSources": {
+                    "any": "(alla)"
+                },
+                "titleTypes": {
+                    "official": "Officiella titlar",
+                    "synonym": "Synonymer",
+                    "label": "Typer av titlar",
+                    "main": "Huvudtitlar",
+                    "card": "Titlar på kort",
+                    "kana": "Kana avläsningar",
+                    "short": "Korta titlar",
+                    "any": "(alla)"
+                },
+                "mainTitle": {
+                    "source": "Källa",
+                    "description": "Detta är den prioritet i vilken huvudtitlar kommer att väljas. Huvudtiteln är den som används för tipset och anime-sammanfattningen i slutet av en omgång. Om ingen huvudtitel kan hittas baserat på dina preferenser, kommer den att återgå till standardinställningarna.",
+                    "type": "Typ",
+                    "language": "Språk",
+                    "label": "Huvudtitel"
+                },
+                "disableTitleSimplifications": {
+                    "description": "Inaktiverar titelförenklingar (som att dela långa titlar på deras bindestreck/kolon och ta bort vanliga kontextuella ord som \"säsong\", \"version\", etc)",
+                    "label": "Förenklingar av titeln",
+                    "checkbox": "Inaktivera förenklingar"
+                },
+                "percentageWrong": {
+                    "label": "Procent fel",
+                    "description": "{percentage}% - lägre betyder mindre förlåtande mot stavfel i gissningar"
+                }
+            },
+            "disableDrops": {
+                "label": "Droppar",
+                "description": "Om du markerar detta kommer spelet inte att generera några slumpmässiga karaktärsdroppar.",
+                "checkbox": "Inaktivera droppar"
+            },
+            "winnerRoleConfigs": {
+                "reachedMaximumAssignments": "Du har nått det maximala antalet {maxWinnerRoleConfigs} rolltilldelningar.",
+                "boostedServersGetMoreAssignments": "[Boosted servers]({patreonLink}) kan ha upp till {patronWinnerRoleConfigs} rolltilldelningar.",
+                "role": "Roll",
+                "time": "Tid",
+                "label": "Roller efter rang",
+                "rank": "Rang",
+                "points": "Poäng",
+                "saveChanges": "Spara ändringar",
+                "allTime": "Hela tiden",
+                "title": "Konfiguration av roller",
+                "description": "Här kan du ställa in rolltilldelningar för vinnare i leaderboarden.",
+                "permissionInfo": "Se till att {botName} har behörigheten \"Hantera roller\" och är placerad ovanför den roll som du vill låta henne tilldela.",
+                "add": "Lägg till ny rolltilldelning",
+                "warnManagedRole": "Observera att rollerna kommer att hanteras helt av {botName}, så alla medlemmar i rollen som inte är vinnare kommer att tas bort.",
+                "undo": "Ångra",
+                "type": "Typ",
+                "weekly": "Varje vecka",
+                "isWeekly": "Alltid/veckovis"
+            },
+            "roundButtonConfig": {
+                "weeklyPointsLeaderboard": "🏆 Ledartavla för veckopoäng",
+                "weeklyTimeLeaderboard": "⏲️ Ledartavla för veckotid",
+                "label": "Runda knappar",
+                "description": "Knappar som är markerade kommer att visas i slutet av rundor och sessioner",
+                "playAgain": "🔁 Spela igen",
+                "random": "🎲 Slumpmässigt"
+            },
+            "enableAntiSpam": {
+                "label": "Anti-spam",
+                "checkbox": "Aktivera antispam-filtret",
+                "description": "Om du aktiverar detta kommer botten att börja ignorera spelare som försöker gissa genom att använda samma titel kontinuerligt."
+            },
+            "hideAlternativeTitles": {
+                "description": "Om du markerar detta döljs listan över alternativa titlar i anime-sammanfattningen.",
+                "label": "Alternativa titlar",
+                "checkbox": "Dölj alternativa titlar"
+            },
+            "disableHints": {
+                "description": "Om du markerar detta kommer spelet inte att visa några ledtrådar alls i några rundor.",
+                "label": "Tips",
+                "checkbox": "Inaktivera tips"
+            },
+            "pointRoleConfigs": {
+                "label": "Roller efter poäng"
+            },
+            "disableSummaryLink": {
+                "description": "Om du markerar detta tas länken bort från sammanfattningen i slutet av rundan.",
+                "label": "Sammanfattning",
+                "checkbox": "Inaktivera sammanfattningslänk"
+            },
+            "title": "Gissa Anime",
+            "animeSummaryLink": {
+                "description": "Detta ändrar bara URL:en och det kan hända att RinBot-webbplatsen återställs för vissa anime.",
+                "label": "Länk till sammanfattning av anime"
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Om du markerar detta kommer spelare som har lämnat servern fortfarande att visas i topplistorna. Det kan ta upp till en timme innan de visas.",
+                "label": "Saknade spelare i topplistor",
+                "checkbox": "Visa saknade spelare i topplistor"
+            }
+        },
+        "general": {
+            "language": {
+                "description": "Ställer in språket för RinBot inom Discord. Detta påverkar inte anime-titlarna.",
+                "label": "Språk"
+            },
+            "title": "Allmänt",
+            "prefix": {
+                "description": "Dessa tecken kommer att placeras framför kommandon istället för standard: !",
+                "label": "Prefix för kommando",
+                "invalid": "Detta är ett obligatoriskt fält och måste innehålla mellan 1 och 5 tecken."
+            },
+            "showInLeaderboards": {
+                "description": "När detta är aktiverat kommer din servers namn att visas i serverns topplistor. Det kan ta en timme för denna ändring att spridas.",
+                "checkbox": "Visa serverns namn i de globala topplistorna på denna webbplats",
+                "label": "Visa i globala topplistor"
+            },
+            "disableLegacyCommands": {
+                "description": "Detta kommer att inaktivera de äldre prefixkommandona helt, så att du bara kan använda snedstreckskommandon.",
+                "label": "Kommandon med prefix",
+                "checkbox": "Inaktivera äldre prefixerade kommandon"
+            },
+            "inviteCode": {
+                "description": "Inbjudningskod som används för URL:en för din servers namn i topplistorna",
+                "label": "Inbjudningskod",
+                "invalid": "Denna inbjudningskod verkar vara ogiltig"
+            },
+            "managementRoles": {
+                "label": "Ledande befattningar",
+                "description": "Roller som kommer att ha tillgång till att hantera bot via denna sida. Användare med behörigheten \"Serverhantering\" har redan åtkomst.",
+                "placeholder": "Välj några roller"
+            },
+            "noLanguageCodeDefined": "(använd serverns standardspråk)"
+        }
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Du har blivit utloggad!"
+    },
+    "channelConfiguration": {
+        "channelAccessControlEnabled": {
+            "label": "Kontroll av åtkomst",
+            "checkbox": "Aktivera åtkomstkontroll för kanaler",
+            "description": "Detta gör att {botName} inte lyssnar på några kommandon om de inte är vitlistade specifikt per kanal."
+        },
+        "startGameOnIdle": {
+            "boostedServersCanHaveLess": "[Boosted servers]({patreonLink}) kan ha &#60; 60 minuter.",
+            "minutesIdle": "Minuter tomgång",
+            "checkbox": "Starta en ny runda när kanalen är inaktiv"
+        },
+        "saveChanges": "Spara ändringar",
+        "couldNotSaveChanges": "Kunde inte spara ändringar",
+        "useForVoiceRounds": {
+            "checkbox": "Använd endast denna röstkanal för röstrundor (endast en kan vara aktiv)"
+        },
+        "savedChangesSuccessfully": "Sparade ändringar framgångsrikt",
+        "description": "Här kan du konfigurera några specifika alternativ per kanal. Dessa kan komma att utökas med fler av serverns konfigurationsalternativ vid ett senare tillfälle.",
+        "stage": {
+            "topic": {
+                "label": "Ämne för scenen"
+            }
+        },
+        "add": "Lägg till en kanal",
+        "noChannelsConfigured": "Inga kanaler har konfigurerats för tillfället. Klicka på knappen \"Lägg till en kanal\" för att börja.",
+        "maximumReached": "Du har nått det maximala antalet {maxChannelConfigs} kanalkonfigurationer.",
+        "boostedServersGetMore": "[Boosted servers]({patreonLink}) kan ha upp till {patronMaxConfigs} kanalkonfigurationer.",
+        "undo": "Ångra"
+    },
+    "supportUs": {
+        "joinTheTranslationsChannel": "Gå gärna med i `#translations` -kanalen i [supportservern]({supportServerUrl}) för att be om hjälp och diskutera översättningar.",
+        "supportThroughVoting": "Det är alltid bra att rösta regelbundet och lämna ett omdöme på dessa webbplatser.",
+        "goal": "{completedPercentage}% av driftskostnaderna på{amount} per månad är finansierade!",
+        "votingAndReviewing": "Röstning och granskning",
+        "signInWithAuth0": "Logga in med Auth0 och sedan \"Fortsätt med Discord\".",
+        "supportThroughKoFi": "Du kan också överväga att köpa en kaffe till mig via ko-fi.com. Detta ger dock inga andra förmåner än min yttersta uppskattning!",
+        "helpWithTranslating": "Du kan hjälpa till genom att förbättra befintliga översättningar eller lägga till nya språk med hjälp av crowd-translation!",
+        "supportThroughPatreon": "Om du vill hjälpa till att täcka serverkostnaderna kan du donera hur mycket du vill via Patreon. Du kommer också att få några speciella förmåner!",
+        "translations": "Översättningar"
+    },
+    "weekPicker": {
+        "allTime": "Hela tiden",
+        "weekly": "Varje vecka",
+        "week": "Vecka",
+        "year": "År"
+    },
+    "genres": {
+        "PARODY": "Parodi",
+        "MAGIC": "Magi",
+        "ADVENTURE": "Äventyr",
+        "CARS": "Bilar",
+        "COMEDY": "Komedi",
+        "DEMENTIA": "Demens",
+        "DEMONS": "Demoner",
+        "ACTION": "Åtgärder",
+        "MAHOU_SHOUJO": "Mahou Shoujo",
+        "ISEKAI": "Isekai",
+        "MARTIAL_ARTS": "Kampsport",
+        "SAMURAI": "Samurai",
+        "SCHOOL": "Skolan",
+        "SCI_FI": "Sci-fi",
+        "GAME": "Spel",
+        "HISTORICAL": "Historisk",
+        "ROMANCE": "Romantik",
+        "SLICE_OF_LIFE": "En bit av livet",
+        "SUPERNATURAL": "Övernaturligt",
+        "SEINEN": "Seinen",
+        "MYSTERY": "Mysterium",
+        "DRAMA": "Drama",
+        "ECCHI": "Ecchi",
+        "FANTASY": "Fantasi",
+        "HORROR": "Skräck",
+        "KIDS": "Barn",
+        "SHOUJO": "Shoujo",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Shounen Ai",
+        "SPACE": "Utrymme",
+        "SPORTS": "Sport",
+        "SUPER_POWER": "Superkraft",
+        "VAMPIRE": "Vampyr",
+        "HAREM": "Harem",
+        "MILITARY": "Militär",
+        "POLICE": "Polisen",
+        "PSYCHOLOGICAL": "Psykologisk",
+        "THRILLER": "Thriller",
+        "MECHA": "Mecha",
+        "MUSIC": "Musik",
+        "JOSEI": "Josei"
+    },
+    "myServers": {
+        "title": "Mina servrar",
+        "boostedServer": "Förstärkt server",
+        "hasBot": "{botName} finns på denna server",
+        "addBot": "Lägg till {botName}",
+        "description": "Du måste ha behörigheten **Server Management** för att kunna konfigurera {botName} för din server.",
+        "notHasBot": "{botName} finns inte på denna server",
+        "couldNotRetrieveServers": "Kunde inte hämta servrar",
+        "configure": "Konfigurera",
+        "showAll": "Visa alla mina servrar",
+        "details": "Detaljer",
+        "searchForServer": "Sök efter en server"
+    },
+    "myServerDetails": {
+        "players": "Spelare",
+        "onlyForManagement": "Endast för serverhantering",
+        "leaderboard": "Ledartavla",
+        "backToMyServers": "Tillbaka till mina servrar",
+        "server": "Server",
+        "channels": "Kanaler"
+    },
+    "myBoostedServers": {
+        "searchForServer": "Sök efter en server",
+        "addToBoosted": "Lägg till i boosted",
+        "alreadyAdded": "Redan tillagd",
+        "noServersFound": "Inga servrar hittades.",
+        "savedChanges": "Sparade ändringar framgångsrikt",
+        "pickServersToBoost": "Välj servrar för att öka",
+        "couldNotSaveChanges": "Kunde inte spara ändringar",
+        "youCannotBoostServers": "# Du kan inte boosta några servrar  \nDu måste åtminstone vara en tier 2-patron för att kunna boosta en server.  \nFör att få detta, länka först ditt Discord-konto till patreon, och sedan [lova minst nivå 2 på RinBots patreon-sida]({patreonLink}).",
+        "boostedServers": "# Förstärkta servrar  \nDu är en nivå {patronTier} beskyddare. Du kan boosta {boostsLeft} fler server(s)",
+        "addServer": "Lägg till en server",
+        "remove": "Ta bort från boosted",
+        "noServersBoosted": "Inga servrar har förstärkts."
+    },
+    "userProfile": {
+        "rank": "Rang",
+        "points": "Poäng",
+        "rounds": "Rundor",
+        "noResultsYet": "Inga resultat ännu.",
+        "trophiesWon": "Vunna troféer",
+        "noTrophiesWon": "Inga troféer har vunnits ännu.",
+        "achievementPoints": "Poäng för prestationer",
+        "week": "Vecka",
+        "achievements": "Prestationer",
+        "roundPoints": "Runda punkter",
+        "statistics": "Statistik",
+        "allTimeResults": "Resultat genom tiderna"
+    },
+    "channelAccessControlConfig": {
+        "maximumReached": "Du har uppnått det maximala antalet åtkomstkontroller.",
+        "addRule": "Lägg till en regel",
+        "roles": "Roller",
+        "title": "Kontroll av åtkomst",
+        "commands": "Kommandon",
+        "allCommands": "(alla kommandon)",
+        "everyoneRole": "@alla",
+        "description": "Regler för åtkomstkontroll behandlas från topp till botten.  \nAllt nekas som standard, så du måste åtminstone skapa en allow-regel."
+    },
+    "database": {
+        "characters": {
+            "title": "Karaktärer"
+        },
+        "visualNovels": {
+            "title": "Visuella romaner"
+        },
+        "anime": {
+            "title": "Anime"
+        }
+    },
+    "difficulties": {
+        "EASY": "Lätt",
+        "NORMAL": "Normal",
+        "HARD": "Hård",
+        "UNKNOWN": "Okänd",
+        "EXTREME": "Extrem",
+        "NIGHTMARE": "Mardröm"
+    },
+    "animeSorts": {
+        "ROUNDS_WON_ASC": "Vunna ronder (stigande)",
+        "ROUNDS_WON_DESC": "Vunna rundor (fallande)",
+        "MAIN_TITLE_DESC": "Huvudtitel (fallande)",
+        "YEAR_ASC": "År (stigande)",
+        "YEAR_DESC": "År (fallande)",
+        "ROUNDS_LOST_ASC": "Förlorade rundor (stigande)",
+        "ROUNDS_LOST_DESC": "Förlorade rundor (fallande)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Vunna rundor % (stigande)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Vunna ronder % (fallande)",
+        "MAIN_TITLE_ASC": "Huvudtitel (stigande)"
+    },
+    "guildProfile": {
+        "join": "Gå med i denna server"
+    },
+    "needHelp": {
+        "supportServerIntroduction": "Du kan be om hjälp, ge feedback, begära nya funktioner eller bara spela några Guess Anime på den officiella supportservern.",
+        "joinTheSupportServer": "Gå med i supportservern",
+        "encounterProblemsContact": "Om du stöter på några som helst problem, vänligen kontakta Kururin där.",
+        "needHelp": "Behöver du hjälp?"
+    },
+    "notLoggedIn": "Du måste vara inloggad för att komma åt denna sida.",
+    "pageNotFound": "Sidan finns inte",
+    "reportAnime": {
+        "couldNotSubmit": "Din rapport kunde inte skickas in.",
+        "submitted": "Din rapport skickades in framgångsrikt."
+    },
+    "animeListTypes": {
+        "ANI_LIST": "AniList",
+        "MY_ANIME_LIST": "MinAnimeLista"
+    },
+    "validation": {
+        "required": "Detta fält är obligatoriskt",
+        "maxLength": "Maximal längd är {max} tecken, men du skrev {length} tecken."
+    },
+    "main": {
+        "isBetaSite": "Du surfar för närvarande på {botName} beta-webbplatsen. Detta är endast avsett för teständamål. [Klicka här för att bläddra på den aktuella webbplatsen]({productionUrl}).",
+        "isAinaBotSite": "Du är inne och tittar på AinaBots hemsida. Detta är en discord bot med endast vuxeninnehåll. [Klicka här för att gå till RinBots hemsida]({productionUrl}), som har regelbunden anime."
+    },
+    "statistics": {
+        "title": "Statistik",
+        "description": "Antal spelade rundor per dag under de senaste 30 dagarna.",
+        "roundsPerDay": {
+            "title": "Rundor per dag",
+            "won": "Vann",
+            "lost": "Förlorad",
+            "total": "Totalt",
+            "winners": "Vinnare"
+        }
+    },
+    "playerTable": {
+        "username": "Namn"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Hitta en spelare"
+    },
+    "nsfw": {
+        "UNKNOWN": "Okänd",
+        "DANGEROUS": "Farlig",
+        "SAFE": "Säker",
+        "QUESTIONABLE": "Ifrågasatt",
+        "NOT_SAFE": "Osäker"
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Dölj mitt namn globalt",
+                "description": "Om du aktiverar detta kommer ditt namn att anges som '(dolt)' på alla topplistor och profiler på webbplatsen.\n  Det kan ta upp till en dag innan din ändring är genomförd i hela systemet."
+            }
+        }
     }
 }
