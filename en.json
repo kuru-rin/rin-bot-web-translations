@@ -584,5 +584,14 @@
                 "description": "Enabling this will set your name as '(hidden)' on all leaderboards and profiles within the website.\n  Your change may take up to a day to be implemented throughout the system."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visual novels",
+        "videoGame": "Video games",
+        "animeCharacter": "Anime characters",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
+  
 }
