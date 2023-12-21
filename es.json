@@ -584,5 +584,13 @@
                 "description": "Al activar esto, se establecerá tu nombre como '(oculto)' en todas las clasificaciones y perfiles dentro del sitio web.\n  Es posible que tu cambio tarde hasta un día en implementarse."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Novelas visuales",
+        "videoGame": "Videojuegos",
+        "animeCharacter": "Personajes de anime",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

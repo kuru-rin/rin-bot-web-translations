@@ -584,5 +584,13 @@
             }
         }
     },
-    "notLoggedIn": "Sie müssen eingeloggt sein, um auf diese Seite zugreifen zu können."
+    "notLoggedIn": "Sie müssen eingeloggt sein, um auf diese Seite zugreifen zu können.",
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visuelle Romane",
+        "videoGame": "Videospiele",
+        "animeCharacter": "Anime-Figuren",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
+    }
 }

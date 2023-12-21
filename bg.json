@@ -584,5 +584,13 @@
                 "checkbox": "Скрийте името ми в световен мащаб"
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Аниме",
+        "visualNovel": "Визуални романи",
+        "videoGame": "Видеоигри",
+        "animeCharacter": "Аниме герои",
+        "pokemon": "Покемон",
+        "manga": "Манга"
     }
 }

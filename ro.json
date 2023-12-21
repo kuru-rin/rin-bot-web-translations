@@ -584,5 +584,13 @@
         "players": "Jucători",
         "onlyForManagement": "Numai pentru gestionarea serverului",
         "backToMyServers": "Înapoi la serverele mele"
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Romane vizuale",
+        "videoGame": "Jocuri video",
+        "animeCharacter": "Personaje anime",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

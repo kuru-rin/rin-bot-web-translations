@@ -584,5 +584,13 @@
                 "description": "Als je dit inschakelt, wordt je naam als '(verborgen)' weergegeven op alle klassementen en profielen op de website.\n  Het kan tot een dag duren voordat je wijziging in het hele systeem is doorgevoerd."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visuele romans",
+        "videoGame": "Videogames",
+        "animeCharacter": "Anime personages",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

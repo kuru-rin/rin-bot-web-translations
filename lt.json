@@ -584,5 +584,13 @@
                 "checkbox": "Paslėpti mano vardą visame pasaulyje"
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Vizualiniai romanai",
+        "videoGame": "Vaizdo žaidimai",
+        "animeCharacter": "Anime personažai",
+        "pokemon": "Pokemonai",
+        "manga": "Manga"
     }
 }

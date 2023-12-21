@@ -584,5 +584,13 @@
             }
         }
     },
-    "pageNotFound": "La page n'existe pas"
+    "pageNotFound": "La page n'existe pas",
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Romans visuels",
+        "videoGame": "Jeux vidéo",
+        "animeCharacter": "Personnages d'animation",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
+    }
 }

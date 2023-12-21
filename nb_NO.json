@@ -584,5 +584,13 @@
     "animeListTypes": {
         "ANI_LIST": "AniList",
         "MY_ANIME_LIST": "MyAnimeList"
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visuelle romaner",
+        "videoGame": "Videospill",
+        "animeCharacter": "Anime-figurer",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

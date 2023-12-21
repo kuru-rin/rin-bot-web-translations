@@ -584,5 +584,13 @@
         "noServersFound": "Nessun server trovato.",
         "savedChanges": "Le modifiche sono state salvate con successo",
         "couldNotSaveChanges": "Impossibile salvare le modifiche"
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Romanzi visivi",
+        "videoGame": "Videogiochi",
+        "animeCharacter": "Personaggi degli anime",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

@@ -584,5 +584,13 @@
                 "description": "Mengaktifkan ini akan membuat nama Anda menjadi '(tersembunyi)' di semua papan peringkat dan profil di situs web.\n  Perubahan Anda mungkin memerlukan waktu hingga satu hari untuk diterapkan di seluruh sistem."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Novel visual",
+        "videoGame": "Permainan video",
+        "animeCharacter": "Karakter anime",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

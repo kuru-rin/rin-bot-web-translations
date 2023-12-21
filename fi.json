@@ -584,5 +584,13 @@
                 "description": "Jos otat tämän käyttöön, nimesi asetetaan \"(piilotettu)\" -kenttään kaikissa sivuston tulostauluissa ja profiileissa.\n  Muutoksen toteuttaminen koko järjestelmässä voi kestää jopa päivän."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visuaaliset romaanit",
+        "videoGame": "Videopelit",
+        "animeCharacter": "Anime-hahmot",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

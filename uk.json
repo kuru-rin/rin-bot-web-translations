@@ -584,5 +584,13 @@
         "toGoForNextLevel": "щоб перейти на наступний рівень",
         "thisWasTheLastLevel": "Це був останній рівень",
         "noAchievementsGainedYet": "Досягнення ще не зібрані."
+    },
+    "mediaTypes": {
+        "anime": "Аніме",
+        "visualNovel": "Візуальні романи",
+        "videoGame": "Відеоігри",
+        "animeCharacter": "Персонажі аніме",
+        "pokemon": "Покемони",
+        "manga": "Манга"
     }
 }

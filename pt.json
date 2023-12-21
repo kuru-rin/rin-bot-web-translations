@@ -584,5 +584,13 @@
                 "description": "Se ativar esta opção, o seu nome ficará \"oculto\" em todas as tabelas de classificação e perfis no sítio Web.\n  A sua alteração pode demorar até um dia a ser implementada em todo o sistema."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Romances visuais",
+        "videoGame": "Jogos de vídeo",
+        "animeCharacter": "Personagens de anime",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

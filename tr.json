@@ -584,5 +584,13 @@
                 "description": "Bunu etkinleştirdiğinizde adınız web sitesindeki tüm liderlik tablolarında ve profillerde '(gizli)' olarak ayarlanacaktır.\n  Değişikliğinizin sistem genelinde uygulanması bir gün sürebilir."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Görsel romanlar",
+        "videoGame": "Video oyunları",
+        "animeCharacter": "Anime karakterleri",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

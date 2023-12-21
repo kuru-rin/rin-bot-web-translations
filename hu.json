@@ -584,5 +584,13 @@
         },
         "title": "Slash parancsok",
         "description": "A slash parancsok használatához valószínűleg újra meg kell hívnod a {botName} címet, és meg kell győződnöd arról, hogy a **Create parancsok a** szerver hatókörében vannak.  \nHasználhatod a meghívás gombot a kezdőlapon, vagy a Discordon belül a {botName} gombra kattintva.  \n\nGyőződj meg róla, hogy a felhasználóid rendelkeznek a **Use Application Commands** jogosultsággal, különben egyáltalán nem tudnak majd slash parancsokat használni."
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Vizuális regények",
+        "manga": "Manga",
+        "videoGame": "Videójátékok",
+        "animeCharacter": "Anime karakterek",
+        "pokemon": "Pokémon"
     }
 }

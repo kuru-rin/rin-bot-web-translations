@@ -584,5 +584,13 @@
     "reportAnime": {
         "submitted": "あなたのレポートは無事に提出されました。",
         "couldNotSubmit": "レポートが提出できませんでした。"
+    },
+    "mediaTypes": {
+        "anime": "アニメ",
+        "visualNovel": "ビジュアル・ノベル",
+        "videoGame": "ビデオゲーム",
+        "animeCharacter": "アニメキャラクター",
+        "pokemon": "ポケモン",
+        "manga": "マンガ"
     }
 }

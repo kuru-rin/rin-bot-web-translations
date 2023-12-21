@@ -584,5 +584,13 @@
     },
     "logout": {
         "youHaveBeenLoggedOut": "Вы вышли из системы!"
+    },
+    "mediaTypes": {
+        "anime": "Аниме",
+        "visualNovel": "Визуальные новеллы",
+        "videoGame": "Видеоигры",
+        "animeCharacter": "Персонажи аниме",
+        "pokemon": "Покемон",
+        "manga": "Манга"
     }
 }

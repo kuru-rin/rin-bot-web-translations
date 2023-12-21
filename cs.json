@@ -584,5 +584,13 @@
                 "checkbox": "Skrýt mé jméno globálně"
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Vizuální romány",
+        "videoGame": "Videohry",
+        "animeCharacter": "Postavy z anime",
+        "pokemon": "Pokémoni",
+        "manga": "Manga"
     }
 }

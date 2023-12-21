@@ -584,5 +584,13 @@
                 "description": "Hvis du aktiverer dette, bliver dit navn '(skjult)' på alle leaderboards og profiler på hjemmesiden.\n  Det kan tage op til en dag, før din ændring er implementeret i hele systemet."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visuelle romaner",
+        "videoGame": "Videospil",
+        "animeCharacter": "Anime-figurer",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }

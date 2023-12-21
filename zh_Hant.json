@@ -584,5 +584,13 @@
         "visualNovels": {
             "title": "视觉小说"
         }
+    },
+    "mediaTypes": {
+        "anime": "动漫",
+        "visualNovel": "视觉小说",
+        "videoGame": "电子游戏",
+        "animeCharacter": "动漫人物",
+        "pokemon": "神奇宝贝",
+        "manga": "漫画"
     }
 }

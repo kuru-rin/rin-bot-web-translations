@@ -584,5 +584,13 @@
                 "description": "Om du aktiverar detta kommer ditt namn att anges som '(dolt)' på alla topplistor och profiler på webbplatsen.\n  Det kan ta upp till en dag innan din ändring är genomförd i hela systemet."
             }
         }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Visuella romaner",
+        "videoGame": "Videospel",
+        "animeCharacter": "Anime-karaktärer",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
     }
 }
