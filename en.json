@@ -132,6 +132,7 @@
             "showMore": "Show more",
             "guildsHiddenByDefault": "By default server names are hidden, login as server admin to show it.",
             "lastWeekWinners": "Last week's winners",
+            "thisYear": "This year",
             "thisWeek": "This week",
             "allTime": "All-time",
             "thisWeekEndsIn": "The week will end {timeLeft}."
