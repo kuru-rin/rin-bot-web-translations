@@ -528,7 +528,8 @@
             "lastWeekWinners": "先週の入賞者",
             "thisWeek": "今週",
             "allTime": "オールタイム",
-            "thisWeekEndsIn": "週明けは{timeLeft} 。"
+            "thisWeekEndsIn": "週明けは{timeLeft} 。",
+            "thisYear": "今年は"
         }
     },
     "logout": {

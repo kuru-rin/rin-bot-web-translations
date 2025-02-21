@@ -509,7 +509,8 @@
             "lastWeekWinners": "Переможці минулого тижня",
             "thisWeek": "Цього тижня",
             "allTime": "За весь час",
-            "thisWeekEndsIn": "Тиждень завершиться {timeLeft}."
+            "thisWeekEndsIn": "Тиждень завершиться {timeLeft}.",
+            "thisYear": "Цього року"
         },
         "players": {
             "title": "Гравці",

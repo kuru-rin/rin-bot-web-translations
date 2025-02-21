@@ -267,7 +267,8 @@
             "lastWeekWinners": "Zwycięzcy z zeszłego tygodnia",
             "guildsHiddenByDefault": "Domyślnie nazwy serwerów są ukryte, zaloguj się jako administrator serwera, aby je zobaczyć.",
             "showMore": "Pokaż więcej",
-            "title": "Przegląd"
+            "title": "Przegląd",
+            "thisYear": "W tym roku"
         },
         "title": "Ranking"
     },

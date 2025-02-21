@@ -65,7 +65,8 @@
             "title": "Yleiskatsaus",
             "showMore": "Näytä lisää",
             "lastWeekWinners": "Viime viikon voittajat",
-            "thisWeekEndsIn": "Viikko päättyy {timeLeft}."
+            "thisWeekEndsIn": "Viikko päättyy {timeLeft}.",
+            "thisYear": "Tänä vuonna"
         },
         "title": "Tulostaulu",
         "players": {

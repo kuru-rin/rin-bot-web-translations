@@ -147,7 +147,8 @@
             "lastWeekWinners": "Winnaars van vorige week",
             "thisWeek": "Deze week",
             "allTime": "Allertijden",
-            "thisWeekEndsIn": "De week zal {timeLeft} eindigen."
+            "thisWeekEndsIn": "De week zal {timeLeft} eindigen.",
+            "thisYear": "Dit jaar"
         },
         "players": {
             "title": "Spelers",

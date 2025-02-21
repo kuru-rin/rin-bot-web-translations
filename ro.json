@@ -492,7 +492,8 @@
             "guildsHiddenByDefault": "În mod implicit, numele serverelor sunt ascunse, conectați-vă ca administrator al serverului pentru a le afișa.",
             "thisWeekEndsIn": "Săptămâna se va încheia {timeLeft}.",
             "thisWeek": "Săptămâna aceasta",
-            "allTime": "Toate timpurile"
+            "allTime": "Toate timpurile",
+            "thisYear": "În acest an"
         },
         "players": {
             "title": "Jucători",

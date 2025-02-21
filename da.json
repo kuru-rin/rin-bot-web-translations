@@ -477,7 +477,8 @@
             "thisWeek": "I denne uge",
             "lastWeekWinners": "Sidste uges vindere",
             "allTime": "Alle tider",
-            "thisWeekEndsIn": "Ugen slutter på {timeLeft}."
+            "thisWeekEndsIn": "Ugen slutter på {timeLeft}.",
+            "thisYear": "Dette år"
         },
         "achievements": {
             "description": "Dette er de spillere, der har samlet flest achievement-point.",

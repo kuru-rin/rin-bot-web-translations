@@ -198,7 +198,8 @@
             "guildsHiddenByDefault": "Por defeito, os nomes dos servidores estão ocultos. Para os mostrar, tem de iniciar sessão como administrador do servidor.",
             "lastWeekWinners": "Os vencedores da semana passada",
             "thisWeek": "Esta semana",
-            "allTime": "Todos os tempos"
+            "allTime": "Todos os tempos",
+            "thisYear": "Este ano"
         },
         "players": {
             "title": "Jogadores",

@@ -255,7 +255,8 @@
             "guildsHiddenByDefault": "Varsayılan olarak sunucu adları gizlidir, göstermek için sunucu yöneticisi olarak giriş yapın.",
             "lastWeekWinners": "Geçen haftanın kazananları",
             "thisWeek": "Bu hafta",
-            "thisWeekEndsIn": "Hafta {timeLeft} adresinde sona erecektir."
+            "thisWeekEndsIn": "Hafta {timeLeft} adresinde sona erecektir.",
+            "thisYear": "Bu yıl"
         },
         "title": "Liderlik Tablosu",
         "players": {

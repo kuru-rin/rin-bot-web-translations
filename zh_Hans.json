@@ -340,7 +340,8 @@
             "thisWeek": "本周",
             "thisWeekEndsIn": "本周将于{timeLeft} 结束。",
             "title": "概述",
-            "allTime": "所有时间"
+            "allTime": "所有时间",
+            "thisYear": "今年"
         },
         "players": {
             "title": "球员",

@@ -467,7 +467,8 @@
             "allTime": "Minden idők",
             "title": "Áttekintés",
             "guildsHiddenByDefault": "Alapértelmezés szerint a kiszolgálónevek el vannak rejtve, a megjelenítéshez jelentkezzen be szerveradminisztrátorként.",
-            "thisWeek": "Ezen a héten"
+            "thisWeek": "Ezen a héten",
+            "thisYear": "Idén"
         },
         "achievements": {
             "description": "Ez a legtöbb teljesítménypontot összegyűjtő játékosoké.",

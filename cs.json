@@ -316,7 +316,8 @@
             "lastWeekWinners": "Výherci z minulého týdne",
             "thisWeek": "Tento týden",
             "allTime": "Po celou dobu",
-            "thisWeekEndsIn": "Týden končí na {timeLeft}."
+            "thisWeekEndsIn": "Týden končí na {timeLeft}.",
+            "thisYear": "V letošním roce"
         },
         "players": {
             "description": "Toto je seznam nejlepších hráčů na všech serverech, na kterých se hraje. Kola s přímými zprávami se nezapočítávají.",

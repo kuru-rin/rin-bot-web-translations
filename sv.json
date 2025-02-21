@@ -92,7 +92,8 @@
             "title": "Översikt",
             "showMore": "Visa mer",
             "guildsHiddenByDefault": "Som standard är servernamnen dolda, logga in som serveradministratör för att visa dem.",
-            "lastWeekWinners": "Förra veckans vinnare"
+            "lastWeekWinners": "Förra veckans vinnare",
+            "thisYear": "Detta år"
         },
         "guilds": {
             "title": "Servrar",

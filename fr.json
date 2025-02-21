@@ -568,7 +568,8 @@
             "guildsHiddenByDefault": "Par défaut, les noms des serveurs sont cachés. Pour les afficher, il faut se connecter en tant qu'administrateur du serveur.",
             "thisWeek": "Cette semaine",
             "allTime": "Tous les temps",
-            "thisWeekEndsIn": "La semaine se terminera à l'adresse {timeLeft}."
+            "thisWeekEndsIn": "La semaine se terminera à l'adresse {timeLeft}.",
+            "thisYear": "Cette année"
         },
         "title": "Tableau de bord",
         "players": {

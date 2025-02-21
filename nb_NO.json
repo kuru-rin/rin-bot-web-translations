@@ -409,7 +409,8 @@
             "thisWeekEndsIn": "Uken avsluttes på {timeLeft}.",
             "lastWeekWinners": "Forrige ukes vinnere",
             "title": "Oversikt",
-            "guildsHiddenByDefault": "Som standard er servernavnene skjult, logg inn som serveradministrator for å vise dem."
+            "guildsHiddenByDefault": "Som standard er servernavnene skjult, logg inn som serveradministrator for å vise dem.",
+            "thisYear": "Dette året"
         },
         "players": {
             "description": "Dette er en liste over de beste spillerne på alle serverne spillet spilles på. Runder med direktemeldinger regnes ikke med.",

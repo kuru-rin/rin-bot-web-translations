@@ -126,7 +126,8 @@
             "lastWeekWinners": "Pemenang minggu lalu",
             "thisWeek": "Minggu ini",
             "allTime": "Sepanjang masa",
-            "thisWeekEndsIn": "Minggu akan berakhir {timeLeft}."
+            "thisWeekEndsIn": "Minggu akan berakhir {timeLeft}.",
+            "thisYear": "Tahun ini"
         },
         "players": {
             "title": "Pemain",

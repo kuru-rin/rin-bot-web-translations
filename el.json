@@ -556,7 +556,8 @@
             "lastWeekWinners": "Οι νικητές της προηγούμενης εβδομάδας",
             "thisWeek": "Αυτή την εβδομάδα",
             "allTime": "All-time",
-            "thisWeekEndsIn": "Η εβδομάδα θα τελειώσει {timeLeft}."
+            "thisWeekEndsIn": "Η εβδομάδα θα τελειώσει {timeLeft}.",
+            "thisYear": "Φέτος"
         },
         "title": "Πίνακας κατάταξης"
     },

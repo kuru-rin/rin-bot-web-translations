@@ -491,7 +491,8 @@
             "lastWeekWinners": "지난주 우승자",
             "thisWeek": "이번 주",
             "allTime": "역대",
-            "thisWeekEndsIn": "이번 주는 끝납니다 {timeLeft}."
+            "thisWeekEndsIn": "이번 주는 끝납니다 {timeLeft}.",
+            "thisYear": "올해"
         },
         "players": {
             "title": "플레이어",

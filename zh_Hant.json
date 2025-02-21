@@ -312,7 +312,8 @@
             "thisWeekEndsIn": "本周将于{timeLeft} 结束。",
             "guildsHiddenByDefault": "默认情况下，服务器名称是隐藏的，以服务器管理员身份登录后才能显示。",
             "lastWeekWinners": "上周获奖者",
-            "thisWeek": "本周"
+            "thisWeek": "本周",
+            "thisYear": "今年"
         },
         "players": {
             "title": "球员",

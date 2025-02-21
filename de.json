@@ -499,7 +499,8 @@
             "showMore": "Mehr anzeigen",
             "guildsHiddenByDefault": "Standardmäßig sind die Servernamen ausgeblendet, melden Sie sich als Server-Administrator an, um sie anzuzeigen.",
             "lastWeekWinners": "Die Gewinner der letzten Woche",
-            "allTime": "Alle Zeiten"
+            "allTime": "Alle Zeiten",
+            "thisYear": "Dieses Jahr"
         },
         "players": {
             "title": "Spieler",

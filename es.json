@@ -117,7 +117,8 @@
             "thisWeek": "Esta semana",
             "allTime": "Todos los tiempos",
             "thisWeekEndsIn": "La semana terminará {timeLeft}.",
-            "guildsHiddenByDefault": "Por defecto los nombres de los servidores están ocultos, inicia sesión como administrador del servidor para mostrarlo."
+            "guildsHiddenByDefault": "Por defecto los nombres de los servidores están ocultos, inicia sesión como administrador del servidor para mostrarlo.",
+            "thisYear": "Este año"
         },
         "players": {
             "title": "Jugadores",

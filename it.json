@@ -469,7 +469,8 @@
             "allTime": "Tutti i tempi",
             "lastWeekWinners": "I vincitori della scorsa settimana",
             "guildsHiddenByDefault": "Per impostazione predefinita, i nomi dei server sono nascosti; per visualizzarli, è necessario effettuare il login come amministratore del server.",
-            "thisWeekEndsIn": "La settimana si concluderà su {timeLeft}."
+            "thisWeekEndsIn": "La settimana si concluderà su {timeLeft}.",
+            "thisYear": "Quest'anno"
         },
         "players": {
             "title": "Giocatori",

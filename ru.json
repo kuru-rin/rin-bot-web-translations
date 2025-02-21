@@ -432,7 +432,8 @@
             "lastWeekWinners": "Победители прошлой недели",
             "thisWeek": "На этой неделе",
             "allTime": "Все время",
-            "thisWeekEndsIn": "Неделя завершится {timeLeft}."
+            "thisWeekEndsIn": "Неделя завершится {timeLeft}.",
+            "thisYear": "В этом году"
         },
         "achievements": {
             "description": "Здесь представлены игроки, набравшие наибольшее количество очков достижений.",

@@ -489,7 +489,8 @@
             "lastWeekWinners": "Praėjusios savaitės nugalėtojai",
             "thisWeek": "Šią savaitę",
             "allTime": "Visų laikų",
-            "thisWeekEndsIn": "Savaitė baigsis {timeLeft}."
+            "thisWeekEndsIn": "Savaitė baigsis {timeLeft}.",
+            "thisYear": "Šiais metais"
         },
         "players": {
             "title": "Žaidėjai",
