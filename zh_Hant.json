@@ -1,597 +1,597 @@
 {
     "achievements": {
-        "toGoForNextLevel": "‎進入一個新的等級",
+        "toGoForNextLevel": "剩餘數量‎進入下一個等級",
         "showLocked": "‎顯示鎖定的成就‎",
-        "thisWasTheLastLevel": "這是最後一個可選擇的難度",
-        "leftToUnlock": "離開解鎖",
-        "noAchievementsGainedYet": "尚無任何有紀錄的成就。"
+        "thisWasTheLastLevel": "這已經是最高等級",
+        "leftToUnlock": "尚未解鎖",
+        "noAchievementsGainedYet": "還沒有記錄到任何的成就。"
     },
     "commands": {
         "shortcuts": {
-            "songType": "**開啟一個音樂回合並附有特定種類**  \n音樂種類可以是: `op` (開頭音樂), `ed` (片尾音樂), `in` (插入曲) or `tm` (人物印象歌曲)",
-            "difficulty": "**開啟一個指定難度的回合**  \n1 (簡單), 2 (普通), 3 (困難), 4 (極限), 5 (夢魘) 還有 0 (無限制)  \n範例: `!sg 1` 代表一個簡單回合，或者 `!sg 4` 代表極限難度。",
-            "genre": "**開啟一個限制特定種類的回合**  \n使用指令 `!genres` 來查看所有現存的種類.",
-            "query": "**開啟一個基於你自己篩選的動漫回合**  \n`d:1` 來篩選你的難度  \n`g:shounen` 來篩選你的種類  \n`y:2001-2009` 來篩選年份  \n`t:op` 來篩選音樂種類(只適用於 `!sga` 所開啟的回合)  \n範例: `!sg d:1 g:shounen y:2001-2009` 或 `!sg g:drama y:2010` 或 `!sga t:op`  \n_附記:你可以不需要使用所有的篩選條件_",
-            "title": "#### 回合篩選快捷指令  \n這些是一些可以開始使用的快速篩選指令。 如果沒有指定難度，難易度將會基於你的點數自動選擇",
-            "year": "**從 `[某年分]` 到現在中開啟一個新的回合**  \n範例: `!sg 1999` 將會選擇1999年以後至現在的所有動漫",
-            "years": "**從 `年分1`到 `年分2`中開啟一個新的回合**  \n範例: `!sg 1999 2003` 將會選擇從1999年至2003年的所有動漫"
+            "songType": "**開啟一個音樂回合並指定音樂種類**  \n音樂種類可以是: `op` (片頭曲), `ed` (片尾曲), `in` (插入曲) or `tm` (印象曲)",
+            "difficulty": "**開啟一個指定難度的回合**  \n1 (簡單), 2 (普通), 3 (困難), 4 (極限), 5 (夢魘) 還有 0 (無限制)\n例如：`!sg 1`代表一個簡單難度回合，或者`!sg 4`代表極限難度。",
+            "genre": "**開啟一個特定作品類型的回合**  \n使用指令 `!genres` 來查看所有可用的類型。",
+            "query": "**開啟一個指定篩選條件的動畫回合**  \n`d:1` 來篩選你的難度  \n`g:shounen` 來篩選作品類型  \n`y:2001-2009` 來篩選年份  \n`t:op` 來篩選音樂種類（只適用於 `!sga` 所開啟的回合）  \n例如：`!sg d:1 g:shounen y:2001-2009` 或 `!sg g:drama y:2010` 或 `!sga t:op`  \n_附記：你不需要使用所有的篩選條件_",
+            "title": "#### 回合篩選快捷指令  \n這是一些可以開始使用的快速篩選指令。 如果沒有指定難度，難易度將會基於你的積分自動選擇",
+            "year": "**從`[起始年份]`到現在之間開啟一個新的回合**  \n例如：`!sg 1999`將會選擇1999年以後(含)至現在的所有作品",
+            "years": "**從`年分1`到`年分2`之間開啟一個新的回合**  \n例如：`!sg 1999 2003`將會選擇從1999年至2003年的所有作品"
         },
         "rounds": {
             "sga": "**開啟一個猜OP、ED歌曲片段的回合**",
-            "sgvn": "**開啟一個猜視覺小說的圖像的回合**  \n只有在難度篩選開啟後才能使用此一指令",
+            "sgvn": "**開啟一個猜視覺小說圖像的回合**\n只有在難度篩選開啟後才能使用此一指令。",
             "title": "#### 回合",
-            "sg": "**開啟一個新的回合**",
-            "sgc": "**開啟一個猜動漫人物的回合**",
-            "sgv": "**開啟一個猜短片回合**",
-            "sb": "**開啟一個多選的猜圖片的回合**",
-            "stopg": "**停止目前的回合**  \n此指令每一成員15分鐘只能使用一次，以避免濫用 [Patrons get a reduced cooldown](https://patreon.com/rinbot?fan_landing=true)!",
-            "sgg": "**開啟一個猜影片回合**"
+            "sg": "**開始新的一個題目**",
+            "sgc": "**開啟一個猜動畫角色的回合**",
+            "sgv": "**開啟一個以短片猜作品的回合**",
+            "sb": "**開啟一個以圖片猜作品的單選題回合**",
+            "stopg": "**停止目前的回合**  \n此指令每一成員15分鐘只能使用一次，以避免濫用。[贊助者可以減少冷卻時間](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgg": "**開啟一個猜電子遊戲的回合**"
         },
-        "prefixCanBeChanged": "前贅指令(prefix)`!`可以在登入後於\"My Server\"頁面中更改。",
+        "prefixCanBeChanged": "指令前綴`!`可以在登入後於「My Servers」頁面中更改。",
         "voiceRounds": {
-            "sbsa": "**開啟一個多選回合並附有範例**",
+            "sbsa": "**開啟一個以聲音片段猜作品的單選題回合**",
             "title": "#### 語音回合",
-            "sgs": "**開啟一個語音回合**  \n這會讓機器人加入現存的語音頻道 (同名稱或某個你在的頻道) 然後開始一個新的回合  \n請確定RinBot在頻道內有 __連接__ 與 __說話__ 的權限。",
-            "sgsa": "**開啟一個語音回合並附有範例**",
-            "stopgs": "**停止語音回合**  \n這會停止語音模式包含正在進行的回合"
+            "sgs": "**開啟一個聽歌猜作品的回合**  \n這會讓機器人加入現有的語音頻道 (同名或你所在的頻道) 然後開始一個新的回合  \n請確保 RinBot 在語音頻道有 __連接__ 與 __說話__ 的權限。",
+            "sgsa": "**開啟一個以聲音片段猜作品的回合**",
+            "stopgs": "**結束語音回合**  \n這會停止語音模式以及正在進行的回合。"
         },
         "title": "指令",
-        "canUseInDirectMessage": "你也可以私訊RinBot使用大多數的指令來開啟一個私人挑戰。但用這種方式得到的分數將不會記錄在排行榜中。",
+        "canUseInDirectMessage": "你也可以私訊 RinBot 使用大多數的指令來開啟一個私人挑戰。但這種方式得到的分數將不會記錄在排行榜中。",
         "points": {
-            "myscore": "**显示您在当前频道获得的分数和进行的回合数**",
-            "weektop": "**在服务器** 中显示当前周的顶级玩家。  \n它采用 ISO-8601 年周制，周一为一周的第一天。该命令会告诉你星期何时重置。",
-            "weekfastest": "**显示当前一周服务器中速度最快的玩家** \n只计算动漫池超过 1000 的回合。  \n例如：这将排除简单/普通模式和大多数较小的类型。",
-            "title": "#### 积分  \n这些积分每小时重新计算一次。您可以 [boost your server](https://patreon.com/rinbot?fan_landing=true) 获得实时更新。",
-            "serverscore": "**显示整个服务器的得分**",
-            "allfastest": "**显示服务器中速度最快的玩家** \n只计算动漫池超过 1000 的回合。",
-            "alltop": "**显示服务器中的顶级玩家**"
+            "myscore": "**顯示您目前在頻道獲得的分數和已進行的回合數**",
+            "weektop": "**顯示目前一週伺服器中分數最高的玩家** \n排行榜採用 ISO-8601 標準來定義每週的週次，並以星期一作為一週的第一天。該命令會告訴你本週何時重置。",
+            "weekfastest": "**顯示目前一週伺服器中速度最快的玩家** \n只計算動漫池超過 1000 部作品的回合。\n例如：這將排除簡單/一般難度和大多數作品數較少的類型。",
+            "title": "#### 積分\n這些積分每小時重新計算一次。您可以[加成您的伺服器](https://patreon.com/rinbot?fan_landing=true)以啟用即時更新。",
+            "serverscore": "**顯示整個伺服器的得分**",
+            "allfastest": "**顯示伺服器中的全時間最速玩家**\n只計算動漫池超過 1000 部作品的回合。",
+            "alltop": "**顯示伺服器中的全時間最佳玩家**"
         },
         "management": {
-            "lang": "**显示当前语言并进行更改**",
-            "prefix": "**显示当前前缀并允许更改**",
+            "lang": "**顯示或更改目前顯示語言**",
+            "prefix": "**顯示或更改目前指令前綴**",
             "title": "#### 管理"
         },
         "queries": {
-            "songType": "**筛选歌曲类型** (`!sga`,`!sgs` 和`!sgsa` only)  \n歌曲类型可以是：`op` （开场）、`ed` （结尾）、`in` （插入歌曲）或`tm` （图像歌曲）",
-            "year": "**筛选年份** \n示例：`y:1999` 将从 1999 年（包括当年）开始挑选动漫作品  \n`y:2005-2010` 将挑选 2005 年至 2010 年（包括这两年）的动画片",
-            "title": "### 查询  \n您可以使用这些参数创建自己的查询。它们适用于`!sg`,`!sgv`,`!sga`,`!sgs` 和`!sgsa` 。  \n\n例如：`!sg n:5 d:3 y:1995-2005` 开始一个会话，在 1995 年至 2005 年期间以高难度进行 5 轮动画。",
-            "numberOfRounds": "**一个会话中的回合数** \n这将在一个会话中自动开始多轮比赛，并在会话结束时提供一个排行榜。  \n例如：`n:2` 为 2 轮，最多 10 轮，`n:10`",
-            "mal": "**根据您的 MyAnimeList** 进行过滤  \n例如：`mal:username` 或`mal:user1,user2` 用于多个用户列表。  \n在使用过滤器之前，您需要先使用`!sync` 命令。",
-            "anilist": "**根据您的 AniList** 进行过滤  \n例如：`anilist:username` 或`anilist:user1,user2` 用于多个用户列表。  \n在使用过滤器之前，您需要先使用`!sync` 命令。   \n您还可以将不同类型的动漫列表组合在一起，例如：`mal:user1,user2 anilist:user3`",
-            "aggr": "**聚合方法** （仅当使用动漫列表过滤器时）  \n您可以使用`aggr:union` 将动漫列表联合起来，而不是将它们相交。",
-            "operations": "#### 业务",
-            "filters": "#### 过滤器",
-            "imageManipulations": "**在圆** 中处理图像（仅适用于有图像的圆）  \n您可以选择`p` pixelated（像素化）、`i` inverted（倒置）、`o` oil-painted（油画）、`g` grayscale（灰度）、`f` flipped vertically（垂直翻转）。  \n示例：`im:p` 或与`im:g,o,i 结合使用`",
-            "difficulty": "**筛选难度** \n1（简单）、2（普通）、3（困难）、4（极端）、5（噩梦）和 0（一切）。  \n例如：`d:1` 用于简单回合，或`d:4` 用于极端回合，`d:0` 用于禁用难度过滤器。",
-            "genre": "**筛选流派** \n目前只能筛选单一类型，如`g:action` 或`g:horror` 。  \n使用命令`!genres` 可获得所有可用类型的列表。"
+            "songType": "**篩選歌曲類型** （僅適用`!sga`,`!sgs` 和`!sgsa`）  \n歌曲類型可以是：`op`（片頭曲）、`ed`（片尾曲）、`in`（插入曲）或`tm`（印象曲）",
+            "year": "**篩選年份** \n例如：`y:1999` 將挑選含 1999 年開始到現在的作品\n`y:2005-2010` 將挑選 2005 年至 2010 年（包含這兩年）的作品",
+            "title": "### 查詢\n您可以使用這些參數建立自己的查詢。它們適用於`!sg`,`!sgv`,`!sga`,`!sgs` 和`!sgsa` 。  \n\n例如：`!sg n:5 d:3 y:1995-2005` 開始一局遊戲，在 1995 年到 2005 年之間以困難難度進行 5 回合動畫題。",
+            "numberOfRounds": "**一局遊戲的回合數** \n這將在一局遊戲中自動開始多回合比賽，並在比賽結束時顯示排名。  \n例如：`n:2` 為 2 回合，最多 10 回合，`n:10`",
+            "mal": "**根據您的MyAnimeList** 進行篩選\n例如：`mal:帳號名稱`，或`mal:帳號1,帳號2`以使用多個使用者的清單。  \n在使用此篩選條件之前，您需要先使用`!sync`指令。",
+            "anilist": "**根據您的AniList** 進行篩選\n例如：`mal:帳號名稱`，或`mal:user1,user2`以使用多個使用者的清單。  \n在使用此篩選條件之前，您需要先使用`!sync`指令。\n您也可以將不同類型的動畫清單組合在一起，例如：`mal:user1,user2 anilist:user3`",
+            "aggr": "**合併方法** （僅使用動畫清單時）  \n您可以使用`aggr:union`將動漫清單串接起來，而不是取它們的交集。",
+            "operations": "#### 操作符",
+            "filters": "#### 篩選條件",
+            "imageManipulations": "**圖像處理**（僅適用於有圖像的回合）  \n您可以選擇`p` pixelated（馬賽克）、`i` inverted（顏色反轉）、`o` oil-painted（油畫風）、`g` grayscale（灰階）、`f` flipped vertically（上下翻轉）。  \n例如：`im:p`或使用多個效果如`im:g,o,i`",
+            "difficulty": "**篩選難度** \n1（簡單）、2（普通）、3（困難）、4（極端）、5（地獄）和0（所有難度）。  \n例如：`d:1`代表簡單回合，或`d:4`代表極端回合，`d:0`代表停用難度過濾。",
+            "genre": "**篩選作品類型** \n目前只能篩選單一類型，如`g:action` 或`g:horror` 。  \n使用指令`!genres` 可查看所有可用類型的清單。"
         },
         "ctop": {
-            "resetctop": "**重置自定义排行榜** \n这将**完全删除** 自定义排行榜，再也不会返回！  \n要使用此功能，您需要以下权限之一：\n- 管理员\n- 管理服务器\n- 管理角色\n- 管理频道\n- 管理信息",
-            "title": "#### 自定义排行榜",
-            "ctop": "**显示当前频道的自定义排行榜**",
-            "startctop": "**为** 频道启动新的自定义排行榜  \n要同时拥有多个自定义排行榜，您需要使用多个频道。",
-            "endctop": "**结束活动的自定义排行榜** \n这将停止累积积分，但不会移除排行榜。"
+            "resetctop": "**重置自訂排行榜** \n這將**完全刪除** 自訂排行榜，再也無法復原！  \n要使用此功能，您需要以下權限之一：\n- 管理員\n- 管理伺服器\n- 管理角色\n- 管理頻道\n- 管理訊息",
+            "title": "#### 自訂排行榜",
+            "ctop": "**顯示目前頻道的自訂排行榜**",
+            "startctop": "**為頻道啟動新的自訂排行榜** \n要同時擁有多個自訂排行榜，您需要有多個頻道。",
+            "endctop": "**結束啟用中的自訂排行榜** \n這將停止計算積分，但不會移除排行榜。"
         },
         "misc": {
-            "title": "#### 杂项",
-            "genres": "**显示所有可能的动漫类型**",
-            "statg": "**显示游戏的一些全局统计数据**",
-            "sync": "**从其他网站同步您的动漫列表** \n目前支持 MyAnimeList 和 AniList。",
-            "credits": "**向您展示所有帮助实现{botName} 的酷人和网站。**",
-            "mydifficulty": "**让您为开始的所有回合设置默认难度。**"
+            "title": "#### 雜項",
+            "genres": "**顯示所有可用的作品類型**",
+            "statg": "**顯示遊戲的一些全域統計數據**",
+            "sync": "**從其他網站同步您的動畫清單** \n目前支援MyAnimeList 和 AniList。",
+            "credits": "**顯示所有幫助讓 {botName} 成真的超讚人士與網站。**",
+            "mydifficulty": "**讓您設定由您開始的所有回合的預設難度。**"
         },
         "onlyForPatrons": {
-            "tooltip": "仅供顾客使用",
-            "description": "**只能由[赞助人]({patreonUrl})** 使用--这样做是为了减轻服务器的负担，让人们帮助支付账单"
+            "tooltip": "贊助者限定",
+            "description": "**僅限[贊助者]({patreonUrl})使用** - 這是為了減少伺服器負擔，同時讓大家協助分攤營運費用而推出的"
         },
         "isExperimental": {
-            "tooltip": "实验性",
-            "description": "**实验性功能** - 此功能相当新，因此可能包含一些错误[请在此报告]({supportServerUrl}) 如果您发现一些错误"
+            "tooltip": "實驗性功能",
+            "description": "**實驗性功能** - 此功能剛推出，因此可能發生一些錯誤，如果您發現錯誤[請在此報告]({supportServerUrl})"
         }
     },
     "serverConfiguration": {
         "general": {
-            "title": "一般情况",
+            "title": "一般",
             "prefix": {
-                "description": "这些字符将放在命令前面，而不是默认的： ！",
-                "invalid": "这是必填字段，必须在 1 至 5 个字符之间。",
-                "label": "命令前缀"
+                "description": "這些字元將取代指令前綴。預設為驚嘆號 （!）",
+                "invalid": "這格必填，且必須在 1 至 5 個字元之間。",
+                "label": "指令前綴"
             },
             "disableLegacyCommands": {
-                "description": "这将完全禁用传统的前缀命令，因此只能使用斜线命令。",
-                "label": "前缀命令",
-                "checkbox": "禁用传统的前缀命令"
+                "description": "這麼做將完全停用舊式前綴指令，只能使用斜線指令。",
+                "label": "前綴指令",
+                "checkbox": "停用舊式前綴指令"
             },
             "showInLeaderboards": {
-                "checkbox": "在本网站的全球排行榜中显示服务器名称",
-                "label": "在全球排行榜中显示",
-                "description": "启用后，您的服务器名称将显示在服务器排行榜中。此更改可能需要一小时才能传播。"
+                "checkbox": "在本網站的全球排行榜中顯示伺服器名稱",
+                "label": "在全球排行榜中顯示",
+                "description": "啟用後，您的伺服器名稱將會顯示在伺服器排行榜中。此變更可能需要一小時才能生效。"
             },
             "language": {
-                "label": "语言",
-                "description": "设置 Discord 中 RinBot 的语言。这不会影响动画标题。"
+                "label": "語言",
+                "description": "設定 Discord 中 RinBot 的語言。這不會影響動畫標題的顯示語言。"
             },
             "managementRoles": {
-                "label": "管理角色",
-                "description": "可以通过此页面管理机器人的角色。拥有 \"服务器管理 \"权限的用户已经拥有访问权限。",
-                "placeholder": "选择一些角色"
+                "label": "管理員身分組",
+                "description": "可以透過此頁面管理機器人的角色。具有「管理伺服器」權限的使用者已自動擁有此權限。",
+                "placeholder": "選擇身分組"
             },
             "inviteCode": {
-                "description": "用于在排行榜中显示服务器名称 URL 的邀请代码",
-                "label": "邀请码",
-                "invalid": "此邀请代码似乎无效"
+                "description": "用於排行榜中您伺服器名稱網址的邀請碼",
+                "label": "邀請碼",
+                "invalid": "此邀請碼似乎無效"
             },
-            "noLanguageCodeDefined": "(使用服务器默认语言）"
+            "noLanguageCodeDefined": "（使用伺服器預設語言）"
         },
         "guessTheAnime": {
             "winnerRoleConfigs": {
-                "saveChanges": "保存更改",
-                "type": "类型",
-                "rank": "等级",
-                "permissionInfo": "确保{botName} 拥有 \"管理角色 \"权限，并位于要让她分配的角色上方。",
-                "add": "添加新的角色分配",
-                "allTime": "所有时间",
-                "weekly": "每周",
-                "points": "积分",
-                "reachedMaximumAssignments": "您已达到{maxWinnerRoleConfigs} 角色分配的上限。",
-                "boostedServersGetMoreAssignments": "[Boosted servers]({patreonLink}) 最多可以有{patronWinnerRoleConfigs} 个角色分配。",
-                "role": "角色",
-                "time": "时间",
-                "warnManagedRole": "请注意，角色将完全由{botName} 管理，因此角色中任何不是获胜者的成员都将被删除。",
-                "isWeekly": "所有时间/每周",
-                "label": "按职级分列的角色",
-                "title": "角色配置",
-                "description": "在这里，您可以为排行榜上的优胜者设置角色分配。",
-                "undo": "撤消"
+                "saveChanges": "保存變更",
+                "type": "類型",
+                "rank": "排名",
+                "permissionInfo": "確保 {botName} 擁有「管理角色」權限，並且她的身分組比您希望她分配的身分組位階更高。",
+                "add": "新增身分組指派",
+                "allTime": "所有時間",
+                "weekly": "每週",
+                "points": "積分",
+                "reachedMaximumAssignments": "您已達到最大 {maxWinnerRoleConfigs} 條身分組分配規則。",
+                "boostedServersGetMoreAssignments": "[加成伺服器]({patreonLink})最多可以擁有 {patronWinnerRoleConfigs} 條身分組分配規則。",
+                "role": "身分組",
+                "time": "時間",
+                "warnManagedRole": "請注意，身分組將完全由{botName} 管理，因此身分組中任何不是優勝者的成員都將被移除。",
+                "isWeekly": "所有時間/每週",
+                "label": "根據排名指派身分組",
+                "title": "身分組設定",
+                "description": "在這裡，您可以為排行榜上的優勝者指派身分組。",
+                "undo": "復原"
             },
             "titlePreferences": {
                 "titleLanguages": {
-                    "label": "标题语言",
-                    "selectAll": "选择所有",
-                    "selectNone": "无"
+                    "label": "標題語言",
+                    "selectAll": "全選",
+                    "selectNone": "取消全選"
                 },
                 "mainTitle": {
-                    "description": "这是选择主标题的优先顺序。主标题是一轮游戏结束时用于提示和动画摘要的标题。如果无法根据您的偏好找到主标题，则会退回到默认值。",
-                    "label": "主标题",
-                    "source": "资料来源",
-                    "type": "类型",
-                    "language": "语言"
+                    "description": "這是選擇主要標題的優先順序。主要標題將用於提示和回合結束時的動畫簡介。如果根據您的偏好無法找到主要標題，則將回退到預設設定。",
+                    "label": "主要標題",
+                    "source": "資料來源",
+                    "type": "類型",
+                    "language": "語言"
                 },
                 "percentageWrong": {
-                    "label": "错误百分比",
-                    "description": "{percentage}% - 较低表示对猜测中的错字容忍度较低"
+                    "label": "錯誤容許度",
+                    "description": "{percentage}% - 百分比越低，對於猜測中的拼寫錯誤容許度越低"
                 },
                 "disableTitleSimplifications": {
-                    "description": "禁用标题简化（例如分割长标题中的破折号/冒号，删除 \"季节\"、\"版本 \"等常见的上下文关联词）。",
-                    "label": "标题简化",
-                    "checkbox": "禁用简化"
+                    "description": "停用標題簡化（例如，將長標題中的破折號/冒號分開，並刪除常見的上下文詞彙，如「季度」、「版本」等）",
+                    "label": "標題簡化",
+                    "checkbox": "停用簡化"
                 },
-                "description": "##### 标题首选项  \n您可以在此配置您对标题语言的偏好，这些语言应被接受为正确的猜测。  \n\n如果您的首选项导致标题集为空，它将退回到默认值。",
-                "setToDefaults": "设置为默认值",
+                "description": "##### 標題偏好設定\n在這裡你可以配置應該接受為正確猜測的標題語言。\n\n如果你的偏好設定導致標題集合為空，系統將回退到預設值。",
+                "setToDefaults": "設定為預設值",
                 "titleTypes": {
-                    "synonym": "同义词",
-                    "card": "卡片标题",
-                    "kana": "假名读法",
+                    "synonym": "同義詞",
+                    "card": "卡片標題",
+                    "kana": "假名讀法",
                     "any": "(任何)",
-                    "label": "标题类型",
-                    "main": "主要标题",
-                    "official": "正式名称",
-                    "short": "简短标题"
+                    "label": "標題類型",
+                    "main": "主要標題",
+                    "official": "官方標題",
+                    "short": "簡短標題"
                 },
                 "titleSources": {
                     "any": "(任何)"
                 }
             },
             "animeSummaryLink": {
-                "label": "动画摘要链接",
-                "description": "这只会更改 URL，在某些动漫中可能会退回到 RinBot 网站。"
+                "label": "動畫簡介連結",
+                "description": "這只會變更網址，部分動畫可能仍會回到 RinBot 官方網站顯示。"
             },
             "enableAntiSpam": {
-                "checkbox": "启用反垃圾邮件过滤器",
-                "description": "启用此功能后，机器人将开始忽略连续使用相同标题进行竞猜的玩家。",
-                "label": "反垃圾邮件"
+                "checkbox": "啟用反洗頻功能",
+                "description": "啟用此功能後，機器人將開始忽略那些持續使用相同標題進行猜測的玩家。",
+                "label": "反洗頻"
             },
             "disableHints": {
-                "description": "选中此项将使游戏在任何回合中都不显示任何提示。",
+                "description": "勾選此項將使遊戲在所有回合中完全不顯示任何提示。",
                 "label": "提示",
-                "checkbox": "禁用提示"
+                "checkbox": "停用提示"
             },
             "hideAlternativeTitles": {
-                "label": "备选标题",
-                "description": "选中此项将隐藏动画摘要中的备选标题列表。",
-                "checkbox": "隐藏替代标题"
+                "label": "替代標題",
+                "description": "勾選此項將會在動畫簡介中隱藏替代標題列表。",
+                "checkbox": "隱藏替代標題"
             },
             "pointRoleConfigs": {
-                "label": "按点划分的角色"
+                "label": "根據分數指派身分組"
             },
             "disableSummaryLink": {
-                "description": "选中此项将在一轮结束时从摘要中删除链接。",
-                "label": "摘要",
-                "checkbox": "禁用摘要链接"
+                "description": "勾選此項將會在回合結束時移除簡介中的連結。",
+                "label": "簡介",
+                "checkbox": "停用簡介連結"
             },
-            "title": "猜猜动漫",
+            "title": "猜動畫",
             "roundButtonConfig": {
-                "label": "圆形按钮",
-                "description": "选中的按钮将在回合和会话结束时显示",
-                "playAgain": "再次播放",
-                "random": "🎲 随机",
-                "weeklyPointsLeaderboard": "🏆 每周积分排行榜",
-                "weeklyTimeLeaderboard": "⏲️ 每周时间排行榜"
+                "label": "回合按鈕",
+                "description": "勾選的按鈕將在一題和比賽結束時顯示",
+                "playAgain": "再玩一次",
+                "random": "🎲 隨機篩選條件",
+                "weeklyPointsLeaderboard": "🏆 每週積分排行榜",
+                "weeklyTimeLeaderboard": "⏲️ 每週時間排行榜"
             },
             "showMissingPlayersInLeaderboards": {
-                "description": "选中此选项将使已离开服务器的玩家仍然显示在排行榜中。他们可能需要一个小时才能出现。",
-                "label": "排行榜中的失踪玩家",
-                "checkbox": "在排行榜中显示缺席球员"
+                "description": "勾選此選項後，已離開伺服器的玩家仍會顯示在排行榜中。可能需要最多一小時才會顯示。",
+                "label": "排行榜中已退群的玩家",
+                "checkbox": "在排行榜中顯示已離開伺服器的玩家"
             },
             "disableDrops": {
-                "description": "选中此选项将使游戏不会产生任何随机角色掉落。",
-                "label": "水滴",
-                "checkbox": "禁用滴水"
+                "description": "勾選此項將使遊戲不再隨機掉落任何角色。",
+                "label": "掉落",
+                "checkbox": "停用掉落"
             }
         }
     },
     "animeSorts": {
-        "MAIN_TITLE_ASC": "主标题（升序）",
+        "MAIN_TITLE_ASC": "主要標題（升序）",
         "YEAR_ASC": "年份（升序）",
         "YEAR_DESC": "年份（降序）",
-        "ROUNDS_WON_DESC": "获胜回合数（降序）",
-        "ROUNDS_WON_PERCENTAGE_DESC": "获胜回合数 %（降序）",
-        "ROUNDS_WON_ASC": "获胜回合数（升序）",
-        "MAIN_TITLE_DESC": "主要标题（降序）",
-        "ROUNDS_LOST_ASC": "输掉的回合数（从多到少）",
-        "ROUNDS_LOST_DESC": "输掉的回合数（降序）",
-        "ROUNDS_WON_PERCENTAGE_ASC": "获胜回合数 %（升序）"
+        "ROUNDS_WON_DESC": "獲勝回合數（降序）",
+        "ROUNDS_WON_PERCENTAGE_DESC": "獲勝回合數 %（降序）",
+        "ROUNDS_WON_ASC": "獲勝回合數（升序）",
+        "MAIN_TITLE_DESC": "主要標題（降序）",
+        "ROUNDS_LOST_ASC": "失敗回合數（升序）",
+        "ROUNDS_LOST_DESC": "失敗回合數（降序）",
+        "ROUNDS_WON_PERCENTAGE_ASC": "獲勝回合數 %（升序）"
     },
     "common": {
-        "boostedByBotSupporter": "由{botName} 支持者推动",
-        "privacyPolicy": "隐私政策",
+        "boostedByBotSupporter": "由{botName} 贊助者加成",
+        "privacyPolicy": "隱私權政策",
         "success": "成功",
-        "botSupporter": "{botName} 拥护者",
-        "termsOfService": "服务条款",
-        "error": "错误",
-        "loading": "加载中",
-        "onlyForPatrons": "仅供顾客使用",
-        "experimentalFeature": "实验功能"
+        "botSupporter": "{botName} 贊助者",
+        "termsOfService": "服務條款",
+        "error": "錯誤",
+        "loading": "載入中",
+        "onlyForPatrons": "贊助者限定",
+        "experimentalFeature": "實驗性功能"
     },
     "myBoostedServers": {
-        "youCannotBoostServers": "# 您不能提升任何服务器  \n您至少需要成为 2 级赞助人，才能提升服务器。  \n要做到这一点，首先要将您的 Discord 账户链接到 patreon，然后[在 RinBot 的 patreon 页面至少认捐 2 级]({patreonLink})。",
-        "addToBoosted": "添加到助推器",
-        "noServersFound": "未找到服务器。",
-        "savedChanges": "成功保存更改",
-        "addServer": "添加服务器",
-        "searchForServer": "搜索服务器",
-        "remove": "从助推器中移除",
-        "noServersBoosted": "没有提升任何服务器。",
-        "pickServersToBoost": "挑选服务器以提高",
-        "boostedServers": "# 提升服务器  \n您是{patronTier} 级赞助人。您可以提升{boostsLeft} 更多服务器",
-        "alreadyAdded": "已添加",
-        "couldNotSaveChanges": "无法保存更改"
+        "youCannotBoostServers": "# 您無法加成任何伺服器\n您至少需要成為一位 2 級 (Tier 2) 贊助者，才能加成伺服器。  \n要做到這一點，首先要將您的 Discord 帳戶連結到 Patreon，然後[在 RinBot 的 Patreon 上至少成為 2 級會員]({patreonLink})。",
+        "addToBoosted": "新增至加成",
+        "noServersFound": "未找到伺服器。",
+        "savedChanges": "成功保存變更",
+        "addServer": "新增伺服器",
+        "searchForServer": "搜尋伺服器",
+        "remove": "移除加成",
+        "noServersBoosted": "沒有任何伺服器被加成。",
+        "pickServersToBoost": "選擇要加成的伺服器",
+        "boostedServers": "# 已加成的伺服器\n您是 {patronTier} 級贊助者。您還可以加成 {boostsLeft} 個伺服器",
+        "alreadyAdded": "已新增",
+        "couldNotSaveChanges": "無法保存變更"
     },
     "channelConfiguration": {
         "startGameOnIdle": {
-            "boostedServersCanHaveLess": "[Boosted servers]({patreonLink}) can have < 60 minutes.",
-            "checkbox": "频道空闲时启动新一轮",
-            "minutesIdle": "闲置分钟"
+            "boostedServersCanHaveLess": "[加成伺服器]({patreonLink})可以設定 < 60 分鐘.",
+            "checkbox": "頻道空閒時開始新的一道題目",
+            "minutesIdle": "閒置分鐘數"
         },
-        "undo": "撤消",
-        "description": "在这里，您可以为每个通道配置一些特定选项。以后可能会增加更多的服务器配置选项。",
-        "noChannelsConfigured": "目前尚未配置任何频道。点击 \"添加频道 \"按钮开始。",
-        "boostedServersGetMore": "[Boosted servers]({patreonLink}) 最多可以有{patronMaxConfigs} 通道配置。",
+        "undo": "復原",
+        "description": "在這裡，您可以為每個頻道配置一些特定的選項。未來可能會擴充更多伺服器配置選項。",
+        "noChannelsConfigured": "目前尚未設定任何頻道。點擊\"新增頻道\"按鈕開始。",
+        "boostedServersGetMore": "[加成伺服器]({patreonLink})最多可以擁有 {patronMaxConfigs} 個頻道設置。",
         "useForVoiceRounds": {
-            "checkbox": "仅使用该语音通道进行语音轮巡（只能激活一个）"
+            "checkbox": "僅使用該語音頻道播放聲音題（只能有一個使用中）"
         },
         "channelAccessControlEnabled": {
-            "checkbox": "启用通道访问控制",
-            "label": "门禁控制",
-            "description": "这将使{botName} 不监听任何命令，除非每个通道都有特定的白名单。"
+            "checkbox": "啟用頻道存取控制",
+            "label": "存取控制",
+            "description": "這將使 {botName} 無視所有不在白名單上的頻道內的任何指令。"
         },
-        "add": "添加频道",
-        "saveChanges": "保存更改",
-        "savedChangesSuccessfully": "成功保存更改",
-        "couldNotSaveChanges": "无法保存更改",
-        "maximumReached": "您已达到{maxChannelConfigs} 通道配置的上限。",
+        "add": "新增頻道",
+        "saveChanges": "保存變更",
+        "savedChangesSuccessfully": "成功保存變更",
+        "couldNotSaveChanges": "無法保存變更",
+        "maximumReached": "您已達到最多 {maxChannelConfigs} 個頻道設置。",
         "stage": {
             "topic": {
-                "label": "舞台主题"
+                "label": "舞台主題"
             }
         }
     },
     "validation": {
-        "maxLength": "最大长度为{max} 个字符，但您写了{length} 个字符。",
-        "required": "该字段为必填字段"
+        "maxLength": "最大長度為 {max} 個字符，但您輸入了{length} 個字符。",
+        "required": "該欄位為必填"
     },
     "animeListTypes": {
         "ANI_LIST": "AniList",
-        "MY_ANIME_LIST": "我的动漫列表"
+        "MY_ANIME_LIST": "MyAnimeList"
     },
     "leaderboard": {
         "overview": {
-            "allTime": "所有时间",
-            "title": "概述",
-            "showMore": "显示更多",
-            "thisWeekEndsIn": "本周将于{timeLeft} 结束。",
-            "guildsHiddenByDefault": "默认情况下，服务器名称是隐藏的，以服务器管理员身份登录后才能显示。",
-            "lastWeekWinners": "上周获奖者",
-            "thisWeek": "本周",
+            "allTime": "所有時間",
+            "title": "總覽",
+            "showMore": "顯示更多",
+            "thisWeekEndsIn": "本週將於 {timeLeft} 結束。",
+            "guildsHiddenByDefault": "預設情況下，伺服器名稱是隱藏的，以伺服器管理員身分登入後才能顯示。",
+            "lastWeekWinners": "上週贏家",
+            "thisWeek": "本週",
             "thisYear": "今年"
         },
         "players": {
-            "title": "球员",
-            "description": "这是游戏正在进行的所有服务器的顶级玩家列表。直接消息回合不计算在内。"
+            "title": "球員",
+            "description": "這是遊戲正在進行的所有伺服器的最佳玩家列表。私人訊息遊戲不計算在內。"
         },
         "guilds": {
-            "title": "服务器",
-            "description": "这是游戏正在进行的顶级服务器列表。  \n默认情况下，您的服务器名称将被隐藏。您可以选择在登录后在服务器配置中显示它。"
+            "title": "伺服器",
+            "description": "這是目前遊戲積分最高的伺服器排行榜。\n預設情況下，您的伺服器名稱將被隱藏。您可以選擇在登入後在伺服器設置中顯示它。"
         },
         "achievements": {
-            "description": "这是收集了最多成就点数的玩家。",
+            "description": "這是收集了最多成就分數的玩家。",
             "title": "成就"
         },
         "title": "排行榜"
     },
     "genres": {
         "SCI_FI": "科幻",
-        "SHOUJO": "Shoujo",
-        "SHOUJO_AI": "Shoujo Ai",
-        "SPORTS": "体育",
-        "HAREM": "后宫",
-        "SLICE_OF_LIFE": "生活片段",
+        "SHOUJO": "少女",
+        "SHOUJO_AI": "百合",
+        "SPORTS": "體育",
+        "HAREM": "後宮",
+        "SLICE_OF_LIFE": "日常",
         "SUPERNATURAL": "超自然",
-        "MILITARY": "军事",
+        "MILITARY": "軍事",
         "POLICE": "警察",
         "PSYCHOLOGICAL": "心理",
-        "JOSEI": "荷西",
-        "MAHOU_SHOUJO": "马王正传",
-        "ISEKAI": "Isekai",
+        "JOSEI": "女性向",
+        "MAHOU_SHOUJO": "魔法少女",
+        "ISEKAI": "異世界",
         "VAMPIRE": "吸血鬼",
-        "GAME": "游戏",
-        "HISTORICAL": "历史",
-        "KIDS": "儿童",
-        "ROMANCE": "浪漫爱情",
-        "PARODY": "戏仿",
+        "GAME": "遊戲",
+        "HISTORICAL": "歷史",
+        "KIDS": "兒童向",
+        "ROMANCE": "戀愛",
+        "PARODY": "惡搞",
         "SAMURAI": "武士",
-        "SHOUNEN": "文学",
-        "SHOUNEN_AI": "青春愛",
-        "SPACE": "空间",
-        "SUPER_POWER": "超级力量",
-        "THRILLER": "惊悚片",
-        "SEINEN": "Seen",
-        "ADVENTURE": "探险",
-        "CARS": "汽车",
-        "COMEDY": "喜剧",
-        "DEMENTIA": "痴呆症",
-        "DEMONS": "恶魔",
+        "SHOUNEN": "少年",
+        "SHOUNEN_AI": "耽美",
+        "SPACE": "太空",
+        "SUPER_POWER": "超能力",
+        "THRILLER": "驚悚",
+        "SEINEN": "青年",
+        "ADVENTURE": "冒險",
+        "CARS": "賽車",
+        "COMEDY": "喜劇",
+        "DEMENTIA": "精神異常",
+        "DEMONS": "惡魔",
         "HORROR": "恐怖",
-        "MECHA": "机甲",
-        "SCHOOL": "学校",
-        "ACTION": "行动",
-        "MYSTERY": "神秘",
-        "DRAMA": "戏剧",
-        "ECCHI": "生态",
-        "FANTASY": "幻想",
-        "MAGIC": "魔术",
-        "MARTIAL_ARTS": "武术",
-        "MUSIC": "音乐"
+        "MECHA": "機甲",
+        "SCHOOL": "校園",
+        "ACTION": "動作",
+        "MYSTERY": "懸疑",
+        "DRAMA": "劇情",
+        "ECCHI": "福利番",
+        "FANTASY": "奇幻",
+        "MAGIC": "魔法",
+        "MARTIAL_ARTS": "武術",
+        "MUSIC": "音樂"
     },
     "navbar": {
-        "commands": "命令",
-        "faq": "常见问题",
-        "changelog": "更新日志",
+        "commands": "指令",
+        "faq": "常見問題",
+        "changelog": "更新日誌",
         "leaderboard": "排行榜",
-        "statistics": "统计资料",
-        "login": "登录",
-        "logout": "注销",
-        "myProfile": "我的简介",
-        "myServers": "我的服务器",
-        "myBoostedServers": "我的增强型服务器",
-        "status": "现状",
-        "home": "首页",
-        "database": "数据库",
-        "mySettings": "我的设置"
+        "statistics": "統計資料",
+        "login": "登入",
+        "logout": "登出",
+        "myProfile": "我的個人頁面",
+        "myServers": "我的伺服器",
+        "myBoostedServers": "我已加成的伺服器",
+        "status": "狀態",
+        "home": "首頁",
+        "database": "資料庫",
+        "mySettings": "我的設定"
     },
     "myServers": {
-        "description": "您需要拥有**Server Management** 权限，才能为服务器配置{botName} 。",
-        "hasBot": "{botName} 在此服务器上",
-        "addBot": "添加{botName}",
-        "notHasBot": "{botName} 不在本服务器上",
-        "couldNotRetrieveServers": "无法检索服务器",
-        "showAll": "显示我的所有服务器",
-        "title": "我的服务器",
-        "details": "详细信息",
-        "searchForServer": "搜索服务器",
-        "boostedServer": "增强型服务器",
-        "configure": "配置"
+        "description": "您需要擁有**管理伺服器**權限，才能為伺服器設定 {botName} 。",
+        "hasBot": "{botName} 在此伺服器上",
+        "addBot": "新增 {botName}",
+        "notHasBot": "{botName} 不在這個伺服器上",
+        "couldNotRetrieveServers": "無法擷取伺服器資訊",
+        "showAll": "顯示所有我的伺服器",
+        "title": "我的伺服器",
+        "details": "詳細資訊",
+        "searchForServer": "搜尋伺服器",
+        "boostedServer": "已加成伺服器",
+        "configure": "設定"
     },
     "myServerDetails": {
-        "backToMyServers": "回到我的服务器",
-        "server": "服务器",
-        "channels": "渠道",
+        "backToMyServers": "回到我的伺服器",
+        "server": "伺服器",
+        "channels": "頻道",
         "leaderboard": "排行榜",
-        "players": "球员",
-        "onlyForManagement": "仅用于服务器管理"
+        "players": "玩家",
+        "onlyForManagement": "僅用於伺服器管理"
     },
     "status": {
         "website": {
-            "tooltip": "如果这个是红色的，你就不会在这里了",
-            "name": "网站"
+            "tooltip": "如果這是紅的，你應該來不了這裡",
+            "name": "網站"
         },
         "worker": {
-            "tooltip": "提供排行榜、分数和个人资料更新",
-            "name": "工人"
+            "tooltip": "提供排行榜、分數和個人資料的更新",
+            "name": "工作執行器"
         },
         "animeDatabaseApi": {
-            "tooltip": "提供动画回合 - !sg、 !sgv 和 !sga",
-            "name": "动漫数据库 API"
+            "tooltip": "提供動畫題庫 - !sg、 !sgv 和!sga",
+            "name": "動畫資料庫 API"
         },
         "visualNovelDatabaseApi": {
-            "name": "视觉小说数据库应用程序接口",
-            "tooltip": "提供视觉小说回合 - !sgvn"
+            "name": "視覺小說資料庫 API",
+            "tooltip": "提供視覺小說題庫- !sgvn"
         },
-        "title": "现状",
-        "putYourServerId": "在此输入您的服务器 ID 以查找您的分区",
-        "howToFindYourServerId": "如果您不知道如何查找服务器的 ID，请 [阅读此支持文章](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)。",
-        "couldNotGetShardStatuses": "无法从 API 获取分区状态",
-        "operational": "运行",
-        "description": "在这里，您可以找到使{botName} 正常工作的一些服务的状态。本页面每 10 秒自动刷新一次。",
-        "partialOutage": "部分停电",
+        "title": "狀態",
+        "putYourServerId": "在此輸入您的伺服器 ID 查找所屬分片（shard）",
+        "howToFindYourServerId": "如果您不知道怎麼找到您的伺服器 ID，請參閱[這篇支援文章](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)。",
+        "couldNotGetShardStatuses": "無法從 API 取得分片狀態",
+        "operational": "正常運行",
+        "description": "您可以在此查看一些讓 {botName} 得以正常運作的服務狀態。此頁面每 10 秒會自動更新一次。",
+        "partialOutage": "部分故障",
         "majorOutage": "重大故障",
-        "coreServices": "核心服务",
-        "discordShards": "Discord 碎片",
+        "coreServices": "核心服務",
+        "discordShards": "Discord 分片",
         "api": {
-            "name": "应用程序接口",
-            "tooltip": "在网站上提供动态内容和机器人配置"
+            "name": "應用程式介面",
+            "tooltip": "在網站上提供動態內容和機器人配置"
         },
         "graphql": {
-            "name": "图形QL",
-            "tooltip": "在网站上提供动态内容（如数据库"
+            "name": "GraphQL",
+            "tooltip": "在網站上提供動態內容（例如資料庫）"
         },
-        "databaseServices": "数据库服务"
+        "databaseServices": "資料庫服務"
     },
     "main": {
-        "isAinaBotSite": "您正在浏览 AinaBot 的主页。这是一个只有成人内容的 discord 机器人。[点击此处转到 RinBot 的主页]({productionUrl})，其中有常规动漫。",
-        "isBetaSite": "您正在浏览{botName} beta 网站。这仅用于测试目的。[点击此处浏览实际网站]({productionUrl})。"
+        "isAinaBotSite": "您目前正在瀏覽 AinaBot 的首頁。這是一個限制級內容的 Discord 機器人。[點此前往 RinBot 的主頁]({productionUrl})，那裡有一般的動畫內容。",
+        "isBetaSite": "您目前正在瀏覽 {botName} 的 Beta 版網站。此網站僅供測試用途。[點此瀏覽正式網站]({productionUrl})。"
     },
     "statistics": {
         "roundsPerDay": {
-            "won": "获胜",
-            "lost": "丢失",
-            "total": "总计",
-            "winners": "获奖者",
-            "title": "每天回合数"
+            "won": "勝場",
+            "lost": "敗場",
+            "total": "總計",
+            "winners": "優勝者",
+            "title": "回合 / 天"
         },
-        "title": "统计资料",
-        "description": "过去 30 天内每天打球的回合数。"
+        "title": "統計資料",
+        "description": "過去 30 天內每天所玩的回合數量。"
     },
     "leaderboardTable": {
-        "players": "球员",
-        "points": "积分",
-        "hidden": "(隐藏)",
-        "rank": "等级",
-        "name": "名称",
+        "players": "玩家",
+        "points": "積分",
+        "hidden": "(隱藏)",
+        "rank": "排名",
+        "name": "名稱",
         "rounds": "回合"
     },
     "needHelp": {
-        "needHelp": "需要帮助吗？",
-        "supportServerIntroduction": "您可以在官方支持服务器上寻求帮助、提供反馈、申请新功能，或者只是玩玩《猜猜动漫》。",
-        "joinTheSupportServer": "加入支持服务器",
-        "encounterProblemsContact": "如果您遇到任何问题，请联系 Kururin。"
+        "needHelp": "需要幫助嗎？",
+        "supportServerIntroduction": "你可以在官方支援伺服器中尋求幫助、提供回饋、請求新功能，或是單純玩玩「猜動畫」遊戲。",
+        "joinTheSupportServer": "加入支援伺服器",
+        "encounterProblemsContact": "如果您遇到任何問題，請聯絡 Kururin。"
     },
     "weekPicker": {
-        "allTime": "所有时间",
-        "week": "周数",
-        "weekly": "每周",
-        "year": "年份"
+        "allTime": "所有時間",
+        "week": "週",
+        "weekly": "每週",
+        "year": "年"
     },
     "playerTable": {
-        "username": "名称"
+        "username": "名稱"
     },
     "myServerPlayers": {
-        "searchForPlayer": "寻找球员"
+        "searchForPlayer": "搜尋玩家"
     },
     "channelAccessControlConfig": {
-        "commands": "命令",
-        "allCommands": "(所有命令）",
+        "commands": "指令",
+        "allCommands": "（所有指令）",
         "everyoneRole": "@everyone",
-        "addRule": "添加规则",
-        "roles": "角色",
-        "maximumReached": "您已达到访问控制的最大数量。",
-        "title": "门禁控制",
-        "description": "访问控制规则是自上而下处理的。  \n默认情况下，所有内容都会被拒绝，因此你至少要制定一条允许规则。"
+        "addRule": "新增規則",
+        "roles": "身分組",
+        "maximumReached": "已達到存取控制規則的最大數量。",
+        "title": "存取控制",
+        "description": "存取控制規則是從上到下依序處理的。\n預設情況下所有指令都會被拒絕，因此你至少需要建立一條允許規則。"
     },
     "mySettings": {
         "privacy": {
             "hideNameGlobally": {
-                "description": "启用此功能后，您的姓名将在网站内的所有排行榜和个人资料中设置为\"（隐藏）\"。\n  您的更改可能需要一天时间才能在整个系统中执行。",
-                "checkbox": "在全球范围内隐藏我的名字"
+                "description": "啟用此選項後，您的名稱將在網站上的所有排行榜和個人資料中顯示為「（隱藏）」(hidden)。\n此變更可能需要最多一天的時間，才能在整個系統中完全應用。",
+                "checkbox": "全域隱藏我的名稱"
             }
         }
     },
-    "pageNotFound": "页面不存在",
+    "pageNotFound": "頁面不存在",
     "userProfile": {
-        "rank": "等级",
-        "achievementPoints": "积分",
-        "statistics": "统计资料",
-        "allTimeResults": "历年成绩",
-        "points": "积分",
-        "noTrophiesWon": "尚未获得奖杯。",
-        "noResultsYet": "尚无结果。",
-        "week": "周数",
-        "roundPoints": "圆点",
+        "rank": "排名",
+        "achievementPoints": "成就積分",
+        "statistics": "統計資料",
+        "allTimeResults": "全時間成績",
+        "points": "積分",
+        "noTrophiesWon": "尚未獲得獎杯。",
+        "noResultsYet": "尚無結果。",
+        "week": "週",
+        "roundPoints": "回合積分",
         "rounds": "回合",
-        "trophiesWon": "获得的奖杯",
+        "trophiesWon": "獲得的獎杯",
         "achievements": "成就"
     },
     "guildProfile": {
-        "join": "加入该服务器"
+        "join": "加入此伺服器"
     },
     "slashCommands": {
-        "title": "斜线命令",
-        "description": "为了使用斜线命令，您可能需要重新邀请{botName} ，并确保她在服务器** 范围内有**创建命令。  \n您可以使用主页上的邀请按钮，或在 Discord 中单击{botName} 。  \n\n请确保您的用户拥有**使用应用程序命令** 的权限，否则他们根本无法使用任何斜线命令。",
+        "title": "斜線指令",
+        "description": "若要使用斜線指令，你可能需要重新邀請 {botName}，並確保她具有 **在伺服器中建立指令** 的權限範圍。\n你可以透過首頁上的邀請按鈕，或在 Discord 中點選 {botName} 來邀請她。\n\n另外，請確認你的使用者擁有 **使用應用程式指令** 的權限，否則他們將無法使用任何斜線指令。",
         "ephemeral": {
-            "tooltip": "短暂指令",
-            "description": "**短暂命令** - 这些命令后面的信息只有您自己能看到。"
+            "tooltip": "短暫指令",
+            "description": "**短暫指令** - 這些指令發出的訊息只有您自己看得到。"
         }
     },
     "logout": {
-        "youHaveBeenLoggedOut": "您已退出登录！"
+        "youHaveBeenLoggedOut": "您已登出！"
     },
     "supportUs": {
-        "translations": "翻译",
-        "supportThroughPatreon": "如果您想帮助支付服务器费用，您可以使用 Patreon 进行任意金额的认捐。您还将获得一些特殊待遇！",
-        "goal": "{completedPercentage}每月{amount} 美元业务费用的 %！",
-        "supportThroughKoFi": "您也可以考虑通过 ko-fi.com 请我喝咖啡。不过，这样做除了让我万分感激之外，并没有任何好处！",
-        "helpWithTranslating": "您可以使用众包翻译改进现有翻译或添加新语言！",
-        "joinTheTranslationsChannel": "请务必加入[支持服务器]({supportServerUrl}) 中的`#translations` 频道，以寻求帮助和讨论翻译问题。",
-        "signInWithAuth0": "使用 Auth0 登录，然后 \"继续使用 Discord\"。",
-        "votingAndReviewing": "表决和审查",
-        "supportThroughVoting": "定期投票和在这些网站上留下评论总是很有帮助的。"
+        "translations": "翻譯",
+        "supportThroughPatreon": "如果您想幫助分擔伺服器費用，您可以透過 Patreon 贊助任何金額，並且獲得一些特殊的獎勵！",
+        "goal": "每月運營成本的 ${amount} 中，已經有 {completedPercentage}% 由贊助資金支持！",
+        "supportThroughKoFi": "你也可以考慮透過 ko-fi.com 請我喝杯咖啡。不過，這不會為你帶來任何額外的獎勵，除了我最誠摯的感謝！",
+        "helpWithTranslating": "你可以透過群眾翻譯來協助改善現有翻譯或新增其他語言！",
+        "joinTheTranslationsChannel": "請務必加入[支援伺服器]({supportServerUrl})中的 `#translations` 頻道，以便尋求協助並討論翻譯相關事宜。",
+        "signInWithAuth0": "請先使用 Auth0 登入，然後點選「使用 Discord 繼續」（Continue with Discord）。",
+        "votingAndReviewing": "投票與評論",
+        "supportThroughVoting": "定期投票和在這些網站上留下評論總是很有幫助的。"
     },
-    "notLoggedIn": "您需要登录后才能访问此页面。",
+    "notLoggedIn": "您需要登入後才能造訪此頁面。",
     "difficulties": {
-        "NIGHTMARE": "噩梦",
-        "NORMAL": "正常",
-        "EXTREME": "极端",
+        "NIGHTMARE": "地獄",
+        "NORMAL": "普通",
+        "EXTREME": "極限",
         "UNKNOWN": "未知",
-        "EASY": "简单",
-        "HARD": "硬质"
+        "EASY": "簡單",
+        "HARD": "困難"
     },
     "nsfw": {
         "UNKNOWN": "未知",
-        "SAFE": "安全",
-        "NOT_SAFE": "不安全",
-        "DANGEROUS": "危险",
-        "QUESTIONABLE": "有疑问"
+        "SAFE": "普遍級",
+        "NOT_SAFE": "輔導級",
+        "DANGEROUS": "限制級",
+        "QUESTIONABLE": "保護級"
     },
     "reportAnime": {
-        "couldNotSubmit": "您的报告无法提交。",
-        "submitted": "您的报告已成功提交。"
+        "couldNotSubmit": "您的回報無法提交。",
+        "submitted": "您的回報已成功提交。"
     },
     "introduction": {
-        "shortDescription": "直接在 Discord 频道中与朋友一起玩**guess the anime** 和许多其他猜谜游戏。",
-        "title": "{botName}主页",
-        "inviteButton": "邀请{botName} 到您的服务器",
-        "orSeeHerInAction": "或者您可以在",
-        "supportServer": "{botName} 支持服务器",
-        "checkTheCommandListAndConfigure": "请查看命令列表了解全部功能。登录本网站后，您可以配置{botName} ，根据服务器的需要对其进行定制。",
-        "features": "#### 功能\n-**数以千计的** 动漫、角色、视觉小说和视频游戏可供竞猜！\n- 根据图片、视频剪辑或歌曲音频片段进行竞猜。\n-**随机挑选的捕捉器** 让每一轮都不一样。\n-**带有排行榜的计分系统** （历史、每周和您自己的自定义时段）\n- 多个**难度级别** ，即使是动漫和视觉小说的新粉丝也能从中获得乐趣。\n- 可使用多种语言猜测标题**** 。\n- ...等等！"
+        "shortDescription": "直接在 Discord 頻道中與你的朋友一起玩 **動畫猜謎** 和許多其他猜謎遊戲。",
+        "title": "{botName} 首頁",
+        "inviteButton": "邀請 {botName} 到您的伺服器",
+        "orSeeHerInAction": "或者您可以看見她實際運行在以下地方",
+        "supportServer": "{botName} 官方支援伺服器",
+        "checkTheCommandListAndConfigure": "請查看指令清單以了解全部功能。登入本網站後，您可以設定 {botName} ，並根據伺服器的需求進行自訂。",
+        "features": "#### 特點\n- **數以千計的** 動漫、角色、視覺小說和電玩遊戲可供競猜！\n- 根據圖片、影片剪輯或歌曲音訊片段進行競猜。\n- **隨機挑選的截圖/片段** 讓每一場比賽都不一樣。\n- **帶有排行榜的計分系統** （歷史、每周或是您自訂的時段）\n- 多個**難度分級**，即使是動漫和視覺小說的新粉絲也能從中獲得樂趣。\n- 可使用**多種語言**進行猜謎 。\n- ...還有更多！"
     },
     "database": {
         "anime": {
-            "title": "动漫"
+            "title": "動畫"
         },
         "characters": {
-            "title": "人物"
+            "title": "角色"
         },
         "visualNovels": {
-            "title": "视觉小说"
+            "title": "視覺小說"
         }
     },
     "mediaTypes": {
-        "anime": "动漫",
-        "visualNovel": "视觉小说",
-        "videoGame": "电子游戏",
-        "animeCharacter": "动漫人物",
-        "pokemon": "神奇宝贝",
-        "manga": "漫画"
+        "anime": "動畫",
+        "visualNovel": "視覺小說",
+        "videoGame": "電子遊戲",
+        "animeCharacter": "動畫角色",
+        "pokemon": "寶可夢",
+        "manga": "漫畫"
     }
 }
