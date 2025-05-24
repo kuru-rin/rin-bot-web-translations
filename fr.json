@@ -9,12 +9,12 @@
     "commands": {
         "title": "Commandes",
         "prefixCanBeChanged": "Le préfixe `!` de ces commandes peut être modifié dans la page 'Mes serveurs' après votre connexion.",
-        "canUseInDirectMessage": "Vous pouvez également utiliser la plupart de ces commandes sur le message direct à RinBot, afin de jouer une session privée. Les points gagnés de cette manière ne sont pas comptabilisés pour les classements.",
+        "canUseInDirectMessage": "Vous pouvez également utiliser la plupart de ces commandes par messages privés à RinBot, afin de jouer une session privée. Les points gagnés de cette façon ne sont pas comptabilisés pour les classements.",
         "rounds": {
-            "title": "#### Les manches",
+            "title": "Manches ####",
             "sg": "**Commence un nouveau tour**",
             "sgv": "**Commence une partie avec des clips vidéo**",
-            "sga": "** Commence un tour avec des fragments audio des chansons d'ouverture et de fin **",
+            "sga": "** Démarre une manche avec des extraits audio de génériques d'ouverture et de fin **",
             "sgc": "** Commence une manche avec des personnages d'anime **",
             "sgvn": "**Commence une manche avec des images de romans visuels**\nSeul le filtre de difficulté fonctionne pour cette commande.",
             "stopg": "**Arrête le tour en cours**\nCette commande est limitée à une fois toutes les 15 minutes par personne, pour éviter les abus. [Les contributeurs bénéficient d'un temps de recharge réduit](https://patreon.com/rinbot?fan_landing=true) !",
@@ -85,7 +85,7 @@
             "tooltip": "Seulement pour les patrons"
         },
         "isExperimental": {
-            "tooltip": "Experimental",
+            "tooltip": "Expérimental",
             "description": "**Fonction expérimentale** - Cette fonction est très nouvelle, il est possible qu'il y est quelque bugs [S'il vous plaît veuillez les rapporter ici]({supportServerUrl} si vous en trouver"
         }
     },
@@ -201,7 +201,7 @@
             "roundButtonConfig": {
                 "label": "Boutons ronds",
                 "description": "Les boutons qui sont cochés apparaîtront à la fin des tours et de la session.",
-                "playAgain": "🔁 Play again",
+                "playAgain": "🔁 Rejouer",
                 "random": "🎲 Aléatoire",
                 "weeklyPointsLeaderboard": "🏆 Classement hebdomadaire des points",
                 "weeklyTimeLeaderboard": "⏲️ Classement hebdomadaire des temps"
@@ -267,7 +267,7 @@
         "SEINEN": "Seinen",
         "MILITARY": "Militaire",
         "VAMPIRE": "Vampire",
-        "SPORTS": "Sports",
+        "SPORTS": "Sport",
         "SUPER_POWER": "Super pouvoir",
         "ACTION": "Action",
         "MAGIC": "Magie",
