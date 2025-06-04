@@ -11,7 +11,7 @@
         "prefixCanBeChanged": "Le préfixe `!` de ces commandes peut être modifié dans la page 'Mes serveurs' après votre connexion.",
         "canUseInDirectMessage": "Vous pouvez également utiliser la plupart de ces commandes par messages privés à RinBot, afin de jouer une session privée. Les points gagnés de cette façon ne sont pas comptabilisés pour les classements.",
         "rounds": {
-            "title": "Manches ####",
+            "title": "#### Rondes",
             "sg": "**Commence un nouveau tour**",
             "sgv": "**Commence une partie avec des clips vidéo**",
             "sga": "** Démarre une manche avec des extraits audio de génériques d'ouverture et de fin **",
