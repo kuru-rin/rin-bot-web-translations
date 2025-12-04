@@ -5,11 +5,82 @@
             "sgc": "**Bắt đầu một vòng với các nhân vật anime**",
             "title": "#### Vòng",
             "sgv": "**Bắt đầu một vòng mới với tư liệu video ngắn**",
-            "sga": "**Bắt đầu một vòng với đoạn âm thanh ngắn của bài hát mở đầu và kết thúc anime**"
+            "sga": "**Bắt đầu một vòng với đoạn âm thanh ngắn của bài hát mở đầu và kết thúc anime**",
+            "sgvn": "**Bắt đầu một vòng với hình ảnh của các trò chơi visual novel** \nChỉ bộ lọc độ khó hoạt động cho lệnh này.",
+            "sb": "**Bắt đầu một vòng câu hỏi trắc nghiệm có hình ảnh**",
+            "stopg": "**Dừng vòng hiện tại** \nLệnh này bị giới hạn mỗi 15 phút một lần cho mỗi người, để ngăn chặn lạm dụng. [Người dùng có thời gian hồi chiêu giảm](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgg": "**Bắt đầu một vòng chơi với trò chơi điện tử**"
         },
         "title": "Các lệnh",
         "prefixCanBeChanged": "Tiền ngữ lệnh `!` của các lệnh có thể thay đổi trong trang 'Server của tôi' sau khi bạn đăng nhập.",
-        "canUseInDirectMessage": "Bạn cũng có thể sử dụng hầu hết các lệnh này trong tin nhắn trực tiếp (DMs) với RinBot, để chơi một vòng riêng tư. Điểm tính trong các vòng này không được tính trên các bảng xếp hạng."
+        "canUseInDirectMessage": "Bạn cũng có thể sử dụng hầu hết các lệnh này trong tin nhắn trực tiếp (DMs) với RinBot, để chơi một vòng riêng tư. Điểm tính trong các vòng này không được tính trên các bảng xếp hạng.",
+        "voiceRounds": {
+            "title": "#### Các phiên thảo luận bằng giọng nói",
+            "sgs": "**Bắt đầu phiên trò chuyện bằng giọng nói** \nĐiều này sẽ kết nối cậu vào một kênh trò chuyện bằng giọng nói (với tên tương tự hoặc kênh mà cậu đang tham gia) và sau đó bắt đầu phiên trò chuyện.  \nĐảm bảo rằng RinBot có các quyền sau cho kênh: __Connect__ và __Speak__.",
+            "sgsa": "**Bắt đầu một phiên ghi âm giọng nói với các mẫu**",
+            "sbsa": "**Bắt đầu một phiên hỏi đáp bằng giọng nói với các tùy chọn trắc nghiệm kèm theo mẫu.**",
+            "stopgs": "**Dừng vòng gọi giọng nói** \nĐiều này sẽ dừng chế độ vòng gọi giọng nói và vòng hiện tại."
+        },
+        "shortcuts": {
+            "title": "#### Các phím tắt bộ lọc nhanh  \nDưới đây là một số bộ lọc nhanh để cậu bắt đầu. Mức độ khó sẽ được chọn tự động dựa trên số điểm hiện tại của cậu nếu không có lựa chọn nào được chỉ định.",
+            "year": "**Bắt đầu một vòng mới từ năm `[year]` cho đến nay** \nVí dụ: `!sg 1999` sẽ chọn anime từ năm 1999 cho đến và bao gồm cả năm hiện tại",
+            "years": "**Bắt đầu một vòng mới từ các năm giữa `[year1]` và `[year2]`** \nVí dụ: `!sg 1999 2003` sẽ chọn anime từ năm 1999 đến hết năm 2003",
+            "difficulty": "**Bắt đầu một vòng chơi mới với mức độ khó cụ thể** \n1 (dễ), 2 (bình thường), 3 (khó), 4 (cực khó), 5 (ác mộng) và 0 (tất cả)  \nVí dụ: `!sg 1` cho vòng chơi dễ, hoặc `!sg 4` cho vòng chơi cực khó.",
+            "genre": "**Bắt đầu một vòng mới với anime thuộc thể loại cụ thể** \nSử dụng lệnh `!genres` để xem danh sách tất cả các thể loại có sẵn.",
+            "songType": "**Bắt đầu một vòng âm thanh mới với các bài hát thuộc loại cụ thể** \nLoại bài hát có thể là: `op` (bài hát mở đầu), `ed` (bài hát kết thúc), `in` (bài hát chèn), hoặc `tm` (bài hát hình ảnh)",
+            "query": "**Bắt đầu một vòng mới với anime dựa trên truy vấn của cậu**  \n`d:1` để thêm độ khó cho bộ lọc  \n`g:shounen` để thêm thể loại vào bộ lọc  \n`y:2001-2009` để thêm khoảng thời gian vào bộ lọc  \n`t:op` để thêm loại bài hát vào bộ lọc (chỉ áp dụng cho `!sga` vòng)  \nVí dụ: `!sg d:1 g:shounen y:2001-2009` hoặc `!sg g:drama y:2010` hoặc `!sga t:op`  \n_Lưu ý rằng cậu KHÔNG cần phải sử dụng tất cả các bộ lọc trong truy vấn của mình._"
+        },
+        "queries": {
+            "title": "### Truy vấn  \nCậu có thể tạo các truy vấn của riêng mình bằng các tham số này. Chúng sẽ hoạt động cho `!sg`, `!sgv`, `!sga`, `!sgs` và `!sgsa`.  \n\nVí dụ: `!sg n:5 d:3 y:1995-2005` để bắt đầu một phiên chơi với 5 vòng anime ở mức độ khó giữa các năm 1995 và 2005.",
+            "numberOfRounds": "**Số vòng trong một phiên** \nĐiều này sẽ tự động bắt đầu nhiều vòng trong một phiên và cung cấp bảng xếp hạng vào cuối phiên.  \nVí dụ: `n:2` cho 2 vòng, tối đa 10 vòng với `n:10`",
+            "imageManipulations": "**Chỉnh sửa hình ảnh trong vòng tròn** (chỉ áp dụng cho các vòng tròn có hình ảnh)  \nCậu có thể chọn từ các tùy chọn sau: `p` pixelated, `i` inverted, `o` oil-painted, `g` grayscale, `f` flipped vertically.  \nVí dụ: `im:p` hoặc kết hợp với `im:g,o,i`",
+            "difficulty": "**Lọc độ khó** \n1 (dễ), 2 (bình thường), 3 (khó), 4 (cực khó), 5 (ác mộng) và 0 (tất cả)  \nVí dụ: `d:1` cho vòng chơi dễ, hoặc `d:4` cho vòng chơi cực khó và `d:0` để tắt bộ lọc độ khó.",
+            "genre": "**Lọc thể loại** \nHiện tại, chỉ có thể lọc một thể loại duy nhất, ví dụ: `g:action` hoặc `g:horror`.  \nSử dụng lệnh `!genres` để xem danh sách tất cả các thể loại có sẵn.",
+            "songType": "**Lọc loại bài hát** (`!sga`, `!sgs` và `!sgsa` chỉ)  \nLoại bài hát có thể là: `op` (mở đầu), `ed` (kết thúc), `in` (bài hát chèn) hoặc `tm` (bài hát hình ảnh)",
+            "year": "**Lọc theo năm** \nVí dụ: `y:1999` sẽ chọn anime từ năm 1999 đến và bao gồm cả năm hiện tại  \n`y:2005-2010` sẽ chọn anime từ năm 2005 đến 2010 (bao gồm cả hai năm)",
+            "mal": "**Lọc dựa trên danh sách MyAnimeList của cậu** \nVí dụ: `mal:username` hoặc `mal:user1,user2` cho danh sách nhiều người dùng.  \nCậu cần phải sử dụng lệnh `!sync` trước khi có thể sử dụng bộ lọc.",
+            "anilist": "**Lọc theo danh sách AniList của cậu** \nVí dụ: `anilist:username` hoặc `anilist:user1,user2` cho danh sách nhiều người dùng.  \nCậu cần sử dụng lệnh `!sync` trước khi có thể sử dụng bộ lọc.   \nCậu cũng có thể kết hợp các loại danh sách anime khác nhau, như sau: `mal:user1,user2 anilist:user3`",
+            "aggr": "**Phương pháp tổng hợp** (chỉ áp dụng khi sử dụng bộ lọc danh sách anime)  \nCậu có thể sử dụng `aggr:union` để hợp nhất các danh sách anime thay vì giao nhau.",
+            "operations": "#### Hoạt động",
+            "filters": "#### Bộ lọc"
+        },
+        "points": {
+            "title": "#### Điểm  \nCác điểm này được tính lại mỗi giờ. Cậu có thể [tăng cường máy chủ của mình](https://patreon.com/rinbot?fan_landing=true) để nhận cập nhật theo thời gian thực.",
+            "myscore": "**Hiển thị số điểm cậu đã kiếm được và số ván cậu đã chơi trong kênh hiện tại.**",
+            "serverscore": "**Hiển thị điểm số của toàn bộ máy chủ**",
+            "alltop": "**Hiển thị những người chơi xuất sắc nhất mọi thời đại trên máy chủ.**",
+            "allfastest": "**Hiển thị những người chơi nhanh nhất mọi thời đại trên máy chủ** \nChỉ tính các vòng đấu có số lượng người chơi vượt quá 1000.",
+            "weektop": "**Hiển thị các người chơi hàng đầu của tuần hiện tại trên máy chủ** \nNó sử dụng tuần theo tiêu chuẩn ISO-8601 với thứ Hai là ngày đầu tiên của tuần. Lệnh này sẽ thông báo cho cậu biết thời điểm tuần sẽ được đặt lại.",
+            "weekfastest": "**Hiển thị những người chơi nhanh nhất trong tuần hiện tại trên máy chủ** \nChỉ tính các vòng đấu có số lượng người chơi trên 1000.  \nVí dụ: điều này sẽ loại trừ các chế độ dễ/bình thường và hầu hết các thể loại nhỏ hơn."
+        },
+        "ctop": {
+            "title": "#### Bảng xếp hạng tùy chỉnh",
+            "ctop": "**Hiển thị bảng xếp hạng tùy chỉnh cho kênh hiện tại**",
+            "startctop": "**Tạo một bảng xếp hạng tùy chỉnh mới cho kênh** \nCậu cần sử dụng nhiều kênh để có thể tạo nhiều bảng xếp hạng tùy chỉnh cùng lúc.",
+            "endctop": "**Kết thúc bảng xếp hạng tùy chỉnh đang hoạt động** \nĐiều này sẽ ngừng việc tích lũy điểm, nhưng không xóa bảng xếp hạng.",
+            "resetctop": "**Đặt lại bảng xếp hạng tùy chỉnh** \nĐiều này sẽ **xóa hoàn toàn** bảng xếp hạng tùy chỉnh, không bao giờ quay lại nữa!  \nĐể sử dụng tính năng này, cậu cần có một trong các quyền sau:\n- Quản trị viên\n- Quản lý máy chủ\n- Quản lý vai trò\n- Quản lý kênh\n- Quản lý tin nhắn"
+        },
+        "misc": {
+            "title": "#### Các mục khác",
+            "genres": "**Hiển thị tất cả các thể loại anime có thể có**",
+            "statg": "**Hiển thị một số thống kê toàn cầu của trò chơi**",
+            "sync": "**Đồng bộ danh sách anime của cậu từ các trang web khác** Hiện tại, MyAnimeList và AniList được hỗ trợ.",
+            "credits": "**Giới thiệu cho cậu tất cả những người và trang web tuyệt vời đang góp phần làm cho {botName} trở thành hiện thực.**",
+            "mydifficulty": "**Cho phép cậu thiết lập mức độ khó mặc định cho tất cả các vòng chơi mà cậu bắt đầu.**"
+        },
+        "management": {
+            "title": "#### Quản lý",
+            "prefix": "**Hiển thị cho cậu tiền tố hiện tại và cho phép cậu thay đổi nó.**",
+            "lang": "**Hiển thị ngôn ngữ hiện tại và cho phép cậu thay đổi nó.**"
+        },
+        "onlyForPatrons": {
+            "tooltip": "Chỉ dành cho các cậu",
+            "description": "**Chỉ có thể được sử dụng bởi [người ủng hộ]({patreonUrl})** - tính năng này được giới thiệu để giảm tải cho máy chủ và giúp mọi người cùng chia sẻ chi phí duy trì."
+        },
+        "isExperimental": {
+            "tooltip": "Thí nghiệm",
+            "description": "**Tính năng thử nghiệm** - tính năng này còn khá mới, nên có thể chứa một số lỗi. Nếu cậu phát hiện lỗi, vui lòng báo cáo tại đây ({supportServerUrl})."
+        }
     },
     "achievements": {
         "showLocked": "Hiện các thành tựu bị khóa",
@@ -17,5 +88,510 @@
         "toGoForNextLevel": "để sang màn tiếp theo",
         "thisWasTheLastLevel": "Đây đã là màn cuối",
         "noAchievementsGainedYet": "Chưa có thành tựu nào được thu thập."
+    },
+    "serverConfiguration": {
+        "guessTheAnime": {
+            "disableSummaryLink": {
+                "description": "Kiểm tra tùy chọn này sẽ xóa liên kết khỏi phần tóm tắt ở cuối mỗi vòng.",
+                "label": "Tóm tắt",
+                "checkbox": "Tắt liên kết tóm tắt"
+            },
+            "titlePreferences": {
+                "setToDefaults": "Đặt về mặc định",
+                "percentageWrong": {
+                    "label": "Tỷ lệ sai",
+                    "description": "{percentage}% - Giá trị thấp hơn có nghĩa là ít khoan dung hơn đối với lỗi chính tả trong các dự đoán."
+                },
+                "mainTitle": {
+                    "label": "Tiêu đề chính",
+                    "type": "Loại",
+                    "description": "Đây là thứ tự ưu tiên để chọn tiêu đề chính. Tiêu đề chính là tiêu đề được sử dụng cho gợi ý và tóm tắt anime ở cuối mỗi vòng. Nếu không thể tìm thấy tiêu đề chính dựa trên sở thích của cậu, hệ thống sẽ tự động sử dụng các tùy chọn mặc định.",
+                    "source": "Nguồn",
+                    "language": "Ngôn ngữ"
+                },
+                "description": "##### Ưu tiên tiêu đề  \nTại đây, cậu có thể cấu hình các ưu tiên về ngôn ngữ tiêu đề mà cậu muốn được chấp nhận là các dự đoán chính xác.  \n\nNếu các ưu tiên của cậu dẫn đến một tập hợp tiêu đề trống, hệ thống sẽ tự động sử dụng các giá trị mặc định.",
+                "disableTitleSimplifications": {
+                    "description": "Vô hiệu hóa việc đơn giản hóa tiêu đề (chẳng hạn như chia tách các tiêu đề dài tại dấu gạch ngang/dấu hai chấm và loại bỏ các từ ngữ ngữ cảnh thông dụng như 'mùa', 'phiên bản', v.v.)",
+                    "label": "Đơn giản hóa tiêu đề",
+                    "checkbox": "Tắt các tùy chọn đơn giản hóa"
+                },
+                "titleTypes": {
+                    "kana": "Cách đọc Kana",
+                    "synonym": "Từ đồng nghĩa",
+                    "card": "Tên thẻ",
+                    "any": "(bất kỳ)",
+                    "label": "Loại tiêu đề",
+                    "main": "Tiêu đề chính",
+                    "official": "Chức danh chính thức",
+                    "short": "Tên ngắn"
+                },
+                "titleLanguages": {
+                    "label": "Tiêu đề ngôn ngữ",
+                    "selectAll": "Chọn tất cả",
+                    "selectNone": "Không chọn"
+                },
+                "titleSources": {
+                    "any": "(bất kỳ)"
+                }
+            },
+            "winnerRoleConfigs": {
+                "permissionInfo": "Đảm bảo rằng {botName} có quyền 'Quản lý vai trò' và được đặt ở vị trí cao hơn vai trò mà cậu muốn cho phép cô ấy gán.",
+                "boostedServersGetMoreAssignments": "[Máy chủ được tăng cường]({patreonLink}) có thể có tối đa {patronWinnerRoleConfigs} vai trò được gán.",
+                "add": "Thêm phân công vai trò mới",
+                "weekly": "Hàng tuần",
+                "isWeekly": "Mọi thời điểm/Hàng tuần",
+                "points": "Điểm",
+                "time": "Thời gian",
+                "label": "Chức vụ theo cấp bậc",
+                "title": "Cấu hình vai trò",
+                "description": "Tại đây, cậu có thể thiết lập phân công vai trò cho những người chiến thắng trong bảng xếp hạng.",
+                "reachedMaximumAssignments": "Cậu đã đạt đến giới hạn tối đa của việc phân công vai trò trong \" {maxWinnerRoleConfigs} \".",
+                "warnManagedRole": "Lưu ý rằng các vai trò sẽ được quản lý hoàn toàn bởi {botName}, do đó bất kỳ thành viên nào của vai trò không phải là người chiến thắng sẽ bị loại bỏ.",
+                "saveChanges": "Lưu thay đổi",
+                "undo": "Hủy bỏ",
+                "role": "Vai trò",
+                "rank": "Xếp hạng",
+                "type": "Loại",
+                "allTime": "Mọi thời đại"
+            },
+            "pointRoleConfigs": {
+                "label": "Vai trò theo điểm"
+            },
+            "disableDrops": {
+                "label": "Giọt",
+                "checkbox": "Tắt tính năng thả",
+                "description": "Kiểm tra tùy chọn này sẽ khiến trò chơi không xuất hiện bất kỳ vật phẩm rơi ngẫu nhiên nào."
+            },
+            "title": "Đoán tên anime",
+            "showMissingPlayersInLeaderboards": {
+                "description": "Kiểm tra này sẽ khiến những người chơi đã rời khỏi máy chủ vẫn xuất hiện trên bảng xếp hạng. Có thể mất đến một giờ để họ xuất hiện.",
+                "label": "Người chơi thiếu trong bảng xếp hạng",
+                "checkbox": "Hiển thị những người chơi thiếu trong bảng xếp hạng"
+            },
+            "disableHints": {
+                "description": "Kích hoạt tùy chọn này sẽ khiến trò chơi không hiển thị bất kỳ gợi ý nào trong bất kỳ vòng chơi nào.",
+                "label": "Gợi ý",
+                "checkbox": "Tắt gợi ý"
+            },
+            "enableAntiSpam": {
+                "description": "Kích hoạt tính năng này sẽ khiến bot bắt đầu bỏ qua những người chơi cố gắng đoán bằng cùng một tiêu đề liên tục.",
+                "label": "Chống spam",
+                "checkbox": "Bật bộ lọc chống spam"
+            },
+            "roundButtonConfig": {
+                "description": "Các nút được chọn sẽ hiển thị ở cuối mỗi vòng và phiên.",
+                "playAgain": "🔁 Chơi lại",
+                "weeklyTimeLeaderboard": "⏲️ Bảng xếp hạng thời gian hàng tuần",
+                "label": "Nút tròn",
+                "random": "🎲 Ngẫu nhiên",
+                "weeklyPointsLeaderboard": "🏆 Bảng xếp hạng điểm hàng tuần"
+            },
+            "animeSummaryLink": {
+                "description": "Điều này chỉ thay đổi URL và có thể chuyển hướng đến trang web RinBot cho một số anime.",
+                "label": "Liên kết tóm tắt anime"
+            },
+            "hideAlternativeTitles": {
+                "description": "Đánh dấu vào ô này sẽ ẩn danh sách các tiêu đề thay thế trong tóm tắt anime.",
+                "label": "Tên gọi khác",
+                "checkbox": "Ẩn các tiêu đề thay thế"
+            }
+        },
+        "general": {
+            "managementRoles": {
+                "label": "Các vị trí quản lý",
+                "description": "Các vai trò sẽ có quyền truy cập để quản lý bot thông qua trang này. Những người dùng có quyền 'Quản lý máy chủ' đã có quyền truy cập.",
+                "placeholder": "Chọn một số vai trò"
+            },
+            "disableLegacyCommands": {
+                "description": "Điều này sẽ vô hiệu hóa hoàn toàn các lệnh có tiền tố cũ, vì vậy cậu chỉ có thể sử dụng các lệnh gạch chéo.",
+                "checkbox": "Vô hiệu hóa các lệnh có tiền tố cũ",
+                "label": "Các lệnh có tiền tố"
+            },
+            "prefix": {
+                "description": "Các ký tự này sẽ được đặt trước các lệnh thay vì ký tự mặc định: !",
+                "label": "Tiền tố lệnh",
+                "invalid": "Đây là trường thông tin bắt buộc và phải có độ dài từ 1 đến 5 ký tự."
+            },
+            "language": {
+                "description": "Đặt ngôn ngữ cho RinBot trong Discord. Điều này không ảnh hưởng đến tiêu đề anime.",
+                "label": "Ngôn ngữ"
+            },
+            "showInLeaderboards": {
+                "description": "Khi tính năng này được kích hoạt, tên máy chủ của cậu sẽ được hiển thị trên bảng xếp hạng máy chủ. Việc cập nhật thay đổi này có thể mất khoảng một giờ để được áp dụng.",
+                "checkbox": "Hiển thị tên máy chủ trên bảng xếp hạng toàn cầu trên trang web này.",
+                "label": "Hiển thị trong bảng xếp hạng toàn cầu"
+            },
+            "inviteCode": {
+                "description": "Mã mời được sử dụng cho URL tên máy chủ của cậu trong bảng xếp hạng.",
+                "label": "Mã mời",
+                "invalid": "Mã mời này dường như không hợp lệ."
+            },
+            "title": "Chung",
+            "noLanguageCodeDefined": "(sử dụng ngôn ngữ mặc định của máy chủ)"
+        }
+    },
+    "channelConfiguration": {
+        "startGameOnIdle": {
+            "checkbox": "Bắt đầu một vòng mới khi kênh không hoạt động",
+            "minutesIdle": "Thời gian không hoạt động",
+            "boostedServersCanHaveLess": "[Máy chủ được tăng cường]({patreonLink}) có thể hoạt động trong 60 phút."
+        },
+        "add": "Thêm một kênh",
+        "description": "Tại đây, cậu có thể cấu hình một số tùy chọn cụ thể cho từng kênh. Các tùy chọn này có thể được mở rộng thêm với các tùy chọn cấu hình máy chủ khác trong tương lai.",
+        "noChannelsConfigured": "Hiện tại chưa có kênh nào được cấu hình. Nhấp vào nút 'Thêm kênh' để bắt đầu.",
+        "maximumReached": "Cậu đã đạt đến giới hạn tối đa của cấu hình kênh {maxChannelConfigs}.",
+        "boostedServersGetMore": "[Máy chủ được tăng cường]({patreonLink}) có thể hỗ trợ cấu hình kênh lên đến {patronMaxConfigs}.",
+        "saveChanges": "Lưu thay đổi",
+        "savedChangesSuccessfully": "Đã lưu thay đổi thành công",
+        "couldNotSaveChanges": "Không thể lưu các thay đổi",
+        "useForVoiceRounds": {
+            "checkbox": "Chỉ sử dụng kênh thoại này cho các cuộc gọi thoại (chỉ có thể có một kênh hoạt động tại một thời điểm)."
+        },
+        "channelAccessControlEnabled": {
+            "checkbox": "Bật kiểm soát truy cập kênh",
+            "description": "Điều này sẽ khiến {botName} không phản hồi bất kỳ lệnh nào trừ khi được thêm vào danh sách trắng cụ thể cho từng kênh.",
+            "label": "Kiểm soát truy cập"
+        },
+        "stage": {
+            "topic": {
+                "label": "Chủ đề sân khấu"
+            }
+        },
+        "undo": "Hủy bỏ"
+    },
+    "genres": {
+        "MYSTERY": "Bí ẩn",
+        "MARTIAL_ARTS": "Võ thuật",
+        "MECHA": "Mecha",
+        "MUSIC": "Âm nhạc",
+        "PARODY": "Parody",
+        "SAMURAI": "Samurai",
+        "ROMANCE": "Tình yêu",
+        "SCHOOL": "Trường học",
+        "SCI_FI": "Khoa học viễn tưởng",
+        "SHOUJO": "Cô gái",
+        "SHOUJO_AI": "Tình yêu giữa các cô gái",
+        "ADVENTURE": "Phiêu lưu",
+        "CARS": "Xe hơi",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Tình bạn nam giới",
+        "SPACE": "Không gian",
+        "SPORTS": "Thể thao",
+        "SUPER_POWER": "Siêu năng lực",
+        "VAMPIRE": "Ma cà rồng",
+        "HAREM": "Harem",
+        "SUPERNATURAL": "Siêu nhiên",
+        "MILITARY": "Quân sự",
+        "POLICE": "Cảnh sát",
+        "PSYCHOLOGICAL": "Tâm lý học",
+        "THRILLER": "Phim kinh dị",
+        "SEINEN": "Seinen",
+        "JOSEI": "Josei",
+        "MAHOU_SHOUJO": "Cô gái phép thuật",
+        "ISEKAI": "Thế giới khác",
+        "SLICE_OF_LIFE": "Một lát cuộc sống",
+        "ACTION": "Hành động",
+        "COMEDY": "Hài kịch",
+        "DEMENTIA": "Sa sút trí tuệ",
+        "DEMONS": "Quỷ",
+        "DRAMA": "Kịch",
+        "ECCHI": "Ecchi",
+        "FANTASY": "Giả tưởng",
+        "GAME": "Trò chơi",
+        "HISTORICAL": "Lịch sử",
+        "HORROR": "Kinh dị",
+        "KIDS": "Trẻ em",
+        "MAGIC": "Phép thuật"
+    },
+    "userProfile": {
+        "points": "Điểm",
+        "rounds": "Vòng",
+        "achievementPoints": "Điểm thành tích",
+        "statistics": "Thống kê",
+        "allTimeResults": "Kết quả mọi thời đại",
+        "rank": "Xếp hạng",
+        "roundPoints": "Điểm tròn",
+        "noResultsYet": "Chưa có kết quả nào.",
+        "trophiesWon": "Các giải thưởng đã giành được",
+        "noTrophiesWon": "Chưa giành được giải thưởng nào.",
+        "week": "Tuần",
+        "achievements": "Thành tựu"
+    },
+    "status": {
+        "title": "Tình trạng",
+        "operational": "Hoạt động",
+        "coreServices": "Dịch vụ cốt lõi",
+        "discordShards": "Mảnh vỡ Discord",
+        "databaseServices": "Dịch vụ cơ sở dữ liệu",
+        "website": {
+            "name": "Trang web",
+            "tooltip": "Cậu sẽ không ở đây nếu cái này có màu đỏ."
+        },
+        "api": {
+            "name": "Giao diện lập trình ứng dụng",
+            "tooltip": "Cung cấp nội dung động và cấu hình bot trên trang web."
+        },
+        "graphql": {
+            "name": "GraphQL",
+            "tooltip": "Cung cấp nội dung động (chẳng hạn như cơ sở dữ liệu) trên trang web."
+        },
+        "worker": {
+            "name": "Công nhân",
+            "tooltip": "Cung cấp bảng xếp hạng, điểm số và cập nhật hồ sơ"
+        },
+        "howToFindYourServerId": "Nếu cậu không biết cách tìm ID máy chủ của mình, vui lòng [đọc bài viết hỗ trợ này](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).",
+        "animeDatabaseApi": {
+            "name": "Giao diện lập trình ứng dụng (API) cơ sở dữ liệu anime",
+            "tooltip": "Cung cấp các vòng anime - !sg, !sgv và !sga"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "Giao diện lập trình ứng dụng (API) cơ sở dữ liệu tiểu thuyết trực quan",
+            "tooltip": "Cung cấp các vòng chơi visual novel - !sgvn"
+        },
+        "description": "Tại đây, cậu có thể xem trạng thái của một số dịch vụ giúp {botName} hoạt động bình thường. Trang này tự động làm mới mỗi 10 giây.",
+        "partialOutage": "Sự cố mất điện một phần",
+        "majorOutage": "Sự cố lớn",
+        "putYourServerId": "Nhập ID máy chủ của cậu vào đây để tìm shard của cậu.",
+        "couldNotGetShardStatuses": "Không thể lấy trạng thái phân mảnh từ API"
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "winners": "Người chiến thắng",
+            "title": "Số vòng mỗi ngày",
+            "won": "Chiến thắng",
+            "lost": "Mất",
+            "total": "Tổng cộng"
+        },
+        "title": "Thống kê",
+        "description": "Số lượt chơi mỗi ngày trong 30 ngày qua."
+    },
+    "channelAccessControlConfig": {
+        "addRule": "Thêm một quy tắc",
+        "everyoneRole": "@mọi người",
+        "maximumReached": "Cậu đã đạt đến số lượng giới hạn của các quyền truy cập.",
+        "commands": "Lệnh",
+        "allCommands": "(tất cả các lệnh)",
+        "roles": "Vai trò",
+        "title": "Kiểm soát truy cập",
+        "description": "Các quy tắc kiểm soát truy cập được xử lý từ trên xuống dưới.  \nMọi thứ đều bị từ chối theo mặc định, vì vậy cậu sẽ phải tạo ít nhất một quy tắc cho phép."
+    },
+    "database": {
+        "visualNovels": {
+            "title": "Tiểu thuyết hình ảnh"
+        },
+        "anime": {
+            "title": "Hoạt hình"
+        },
+        "characters": {
+            "title": "Nhân vật"
+        }
+    },
+    "notLoggedIn": "Cậu cần phải đăng nhập để truy cập trang này.",
+    "pageNotFound": "Trang không tồn tại",
+    "main": {
+        "isBetaSite": "Cậu đang duyệt trang web beta của {botName}. Trang web này chỉ dành cho mục đích thử nghiệm. [Nhấp vào đây để duyệt trang web chính thức]({productionUrl}).",
+        "isAinaBotSite": "Cậu đang duyệt trang chủ của AinaBot. Đây là một bot Discord chỉ chứa nội dung dành cho người lớn. [Nhấp vào đây để truy cập trang chủ của RinBot]({productionUrl}), nơi có nội dung anime thông thường."
+    },
+    "weekPicker": {
+        "allTime": "Mọi thời đại",
+        "weekly": "Hàng tuần",
+        "year": "Năm",
+        "week": "Tuần"
+    },
+    "difficulties": {
+        "UNKNOWN": "Không rõ",
+        "EASY": "Dễ dàng",
+        "NORMAL": "Bình thường",
+        "HARD": "Khó",
+        "EXTREME": "Cực đoan",
+        "NIGHTMARE": "Cơn ác mộng"
+    },
+    "common": {
+        "botSupporter": "{botName} người ủng hộ",
+        "boostedByBotSupporter": "Được hỗ trợ bởi một người ủng hộ {botName}",
+        "loading": "Đang tải",
+        "privacyPolicy": "Chính sách bảo mật",
+        "termsOfService": "Điều khoản dịch vụ",
+        "onlyForPatrons": "Chỉ dành cho các cậu",
+        "experimentalFeature": "Tính năng thử nghiệm",
+        "error": "Lỗi",
+        "success": "Thành công"
+    },
+    "introduction": {
+        "title": "{botName}Trang chủ của cậu",
+        "features": "### Tính năng\n- **Hàng nghìn** anime, nhân vật, tiểu thuyết trực quan và trò chơi video để đoán!\n- Đoán từ hình ảnh, đoạn video hoặc đoạn âm thanh của bài hát.\n- **Các hình ảnh được chọn ngẫu nhiên** khiến mỗi vòng chơi đều khác biệt.\n- **Hệ thống điểm số với bảng xếp hạng** (tất cả thời gian, hàng tuần và các khoảng thời gian tùy chỉnh của cậu).\n- Nhiều **mức độ khó**, nên ngay cả những người mới yêu thích anime và tiểu thuyết trực quan cũng có thể tham gia.\n- Các tiêu đề có thể được đoán bằng **nhiều ngôn ngữ**.\n- …và còn nhiều hơn nữa!",
+        "inviteButton": "Mời {botName} vào máy chủ của cậu.",
+        "orSeeHerInAction": "hoặc cậu có thể xem cô ấy hành động trong",
+        "supportServer": "{botName} máy chủ hỗ trợ",
+        "checkTheCommandListAndConfigure": "Kiểm tra danh sách lệnh để xem danh sách đầy đủ các tính năng. Cậu có thể cấu hình {botName} sau khi đăng nhập vào trang web này để tùy chỉnh nó theo nhu cầu của máy chủ của cậu.",
+        "shortDescription": "Chơi trò chơi đoán anime \" **\" và \"** \" cùng nhiều trò chơi đoán khác trực tiếp trong các kênh Discord cùng bạn bè của cậu."
+    },
+    "navbar": {
+        "changelog": "Nhật ký thay đổi",
+        "leaderboard": "Bảng xếp hạng",
+        "statistics": "Thống kê",
+        "login": "Đăng nhập",
+        "commands": "Lệnh",
+        "myServers": "Máy chủ của tớ",
+        "myBoostedServers": "Máy chủ được tăng cường của tớ",
+        "status": "Tình trạng",
+        "database": "Cơ sở dữ liệu",
+        "mySettings": "Cài đặt của tớ",
+        "faq": "Câu hỏi thường gặp",
+        "logout": "Đăng xuất",
+        "myProfile": "Hồ sơ của tớ",
+        "home": "Trang chủ"
+    },
+    "leaderboard": {
+        "overview": {
+            "lastWeekWinners": "Những người chiến thắng tuần trước",
+            "allTime": "Mọi thời đại",
+            "thisYear": "Năm nay",
+            "title": "Tổng quan",
+            "showMore": "Hiển thị thêm",
+            "guildsHiddenByDefault": "Theo mặc định, tên máy chủ bị ẩn. Hãy đăng nhập với tư cách quản trị viên máy chủ để hiển thị nó.",
+            "thisWeek": "Tuần này",
+            "thisWeekEndsIn": "Tuần này sẽ kết thúc với {timeLeft}."
+        },
+        "guilds": {
+            "description": "Danh sách các máy chủ hàng đầu mà trò chơi đang được chơi trên đó.  \nTheo mặc định, tên máy chủ của cậu sẽ bị ẩn. Cậu có thể chọn hiển thị nó trong phần cấu hình máy chủ sau khi đăng nhập.",
+            "title": "Máy chủ"
+        },
+        "achievements": {
+            "description": "Đây là những người chơi đã tích lũy được nhiều điểm thành tích nhất.",
+            "title": "Thành tựu"
+        },
+        "title": "Bảng xếp hạng",
+        "players": {
+            "title": "Các cậu",
+            "description": "Đây là danh sách các người chơi hàng đầu trên tất cả các máy chủ mà trò chơi đang được chơi. Các vòng đấu nhắn tin trực tiếp không được tính."
+        }
+    },
+    "myBoostedServers": {
+        "remove": "Loại bỏ khỏi chế độ tăng cường",
+        "noServersBoosted": "Không có máy chủ nào được nâng cấp.",
+        "searchForServer": "Tìm kiếm máy chủ",
+        "youCannotBoostServers": "# Cậu không thể tăng cường bất kỳ máy chủ nào  \nCậu phải ít nhất là thành viên cấp 2 để có thể tăng cường một máy chủ.  \nĐể làm điều này, trước tiên hãy kết nối tài khoản Discord của cậu với Patreon, sau đó [đăng ký ít nhất cấp 2 trên trang Patreon của RinBot]({patreonLink}).",
+        "boostedServers": "# Máy chủ được tăng cường  \nCậu là thành viên cấp {patronTier}. Cậu có thể tăng cường thêm máy chủ(s) {boostsLeft}",
+        "addServer": "Thêm một máy chủ",
+        "pickServersToBoost": "Chọn máy chủ để tăng cường",
+        "addToBoosted": "Thêm vào danh sách được ưu tiên",
+        "alreadyAdded": "Đã thêm",
+        "noServersFound": "Không tìm thấy máy chủ nào.",
+        "savedChanges": "Đã lưu thay đổi thành công",
+        "couldNotSaveChanges": "Không thể lưu các thay đổi"
+    },
+    "validation": {
+        "maxLength": "Độ dài tối đa là {max} ký tự, nhưng cậu đã viết {length} ký tự.",
+        "required": "Trường này là bắt buộc"
+    },
+    "needHelp": {
+        "needHelp": "Cần giúp đỡ?",
+        "supportServerIntroduction": "Cậu có thể yêu cầu hỗ trợ, đưa ra phản hồi, đề xuất tính năng mới hoặc chỉ đơn giản là tham gia trò chơi \"Đoán Anime\" trên máy chủ hỗ trợ chính thức.",
+        "joinTheSupportServer": "Tham gia máy chủ hỗ trợ",
+        "encounterProblemsContact": "Nếu cậu gặp bất kỳ vấn đề nào, vui lòng liên hệ với Kururin tại đó."
+    },
+    "supportUs": {
+        "supportThroughPatreon": "Nếu cậu muốn góp phần chi trả chi phí máy chủ, cậu có thể đóng góp bất kỳ số tiền nào thông qua Patreon. Cậu cũng sẽ nhận được một số ưu đãi đặc biệt!",
+        "goal": "{completedPercentage}% chi phí vận hành hàng tháng là ${amount}, đã được tài trợ!",
+        "supportThroughKoFi": "Cậu cũng có thể cân nhắc mua cho tớ một tách cà phê qua ko-fi.com. Tuy nhiên, điều này không mang lại bất kỳ ưu đãi nào ngoài sự biết ơn chân thành nhất của tớ!",
+        "supportThroughVoting": "Luôn hữu ích là việc bỏ phiếu thường xuyên và để lại đánh giá trên các trang web này.",
+        "helpWithTranslating": "Cậu có thể giúp bằng cách cải thiện các bản dịch hiện tại hoặc thêm ngôn ngữ mới thông qua dịch thuật cộng đồng!",
+        "translations": "Bản dịch",
+        "joinTheTranslationsChannel": "`Hãy chắc chắn tham gia kênh #translations` trên [máy chủ hỗ trợ]({supportServerUrl}) để yêu cầu trợ giúp và thảo luận về bản dịch.",
+        "signInWithAuth0": "Đăng nhập bằng Auth0 và sau đó chọn 'Tiếp tục với Discord'.",
+        "votingAndReviewing": "Bỏ phiếu và đánh giá"
+    },
+    "playerTable": {
+        "username": "Tên"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Tìm một người chơi"
+    },
+    "nsfw": {
+        "UNKNOWN": "Không rõ",
+        "SAFE": "An toàn",
+        "QUESTIONABLE": "Không rõ ràng",
+        "NOT_SAFE": "Không an toàn",
+        "DANGEROUS": "Nguy hiểm"
+    },
+    "animeListTypes": {
+        "ANI_LIST": "Danh sách Ani",
+        "MY_ANIME_LIST": "Danh sách Anime của tớ"
+    },
+    "animeSorts": {
+        "MAIN_TITLE_ASC": "Tiêu đề chính (tăng dần)",
+        "MAIN_TITLE_DESC": "Tiêu đề chính (giảm dần)",
+        "YEAR_ASC": "Năm (theo thứ tự tăng dần)",
+        "YEAR_DESC": "Năm (theo thứ tự giảm dần)",
+        "ROUNDS_WON_ASC": "Số vòng thắng (theo thứ tự tăng dần)",
+        "ROUNDS_WON_DESC": "Số vòng thắng (theo thứ tự giảm dần)",
+        "ROUNDS_LOST_ASC": "Số vòng thua (theo thứ tự tăng dần)",
+        "ROUNDS_LOST_DESC": "Số vòng thua (theo thứ tự giảm dần)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Tỷ lệ phần trăm vòng đấu thắng (theo thứ tự tăng dần)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Tỷ lệ phần trăm vòng đấu thắng (theo thứ tự giảm dần)"
+    },
+    "guildProfile": {
+        "join": "Hãy tham gia máy chủ này"
+    },
+    "mediaTypes": {
+        "manga": "Truyện tranh",
+        "anime": "Hoạt hình",
+        "visualNovel": "Tiểu thuyết hình ảnh",
+        "videoGame": "Trò chơi điện tử",
+        "animeCharacter": "Nhân vật anime",
+        "pokemon": "Pokémon"
+    },
+    "slashCommands": {
+        "title": "Lệnh cắt",
+        "description": "Để sử dụng các lệnh slash, cậu có thể cần phải mời lại {botName} và đảm bảo rằng cô ấy có quyền **Tạo các lệnh trong phạm vi máy chủ**.  \nCậu có thể sử dụng nút mời trên trang chủ hoặc nhấp vào {botName} từ bên trong Discord.  \n\nĐảm bảo rằng người dùng của cậu có quyền **Sử dụng Lệnh Ứng dụng**, nếu không họ sẽ không thể sử dụng bất kỳ lệnh slash nào.",
+        "ephemeral": {
+            "tooltip": "Lệnh tạm thời",
+            "description": "**Lệnh tạm thời** - các tin nhắn sau các lệnh này chỉ hiển thị cho cậu."
+        }
+    },
+    "leaderboardTable": {
+        "hidden": "(ẩn)",
+        "rank": "Xếp hạng",
+        "name": "Tên",
+        "rounds": "Vòng",
+        "players": "Các cậu",
+        "points": "Điểm"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Cậu đã bị đăng xuất!"
+    },
+    "myServers": {
+        "title": "Máy chủ của tớ",
+        "description": "Cậu cần có quyền \" **\" trong \"Server Management\" (** ) để có thể cấu hình \" {botName} \" cho máy chủ của mình.",
+        "boostedServer": "Máy chủ được tăng cường",
+        "hasBot": "{botName} đang ở trên máy chủ này",
+        "addBot": "Thêm {botName}",
+        "notHasBot": "{botName} Không có trên máy chủ này.",
+        "couldNotRetrieveServers": "Không thể truy cập các máy chủ",
+        "configure": "Cấu hình",
+        "details": "Chi tiết",
+        "searchForServer": "Tìm kiếm máy chủ",
+        "showAll": "Hiển thị tất cả các máy chủ của tớ"
+    },
+    "myServerDetails": {
+        "backToMyServers": "Trở lại máy chủ của tớ",
+        "server": "Máy chủ",
+        "channels": "Kênh",
+        "leaderboard": "Bảng xếp hạng",
+        "players": "Các cậu",
+        "onlyForManagement": "Chỉ dành cho quản lý máy chủ"
+    },
+    "reportAnime": {
+        "submitted": "Báo cáo của cậu đã được gửi thành công.",
+        "couldNotSubmit": "Báo cáo của cậu không thể được gửi đi."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Ẩn tên của tớ trên toàn cầu",
+                "description": "Kích hoạt tùy chọn này sẽ đặt tên của cậu thành '(ẩn)' trên tất cả các bảng xếp hạng và hồ sơ trong trang web.\n  Thay đổi của cậu có thể mất tối đa một ngày để được áp dụng trên toàn hệ thống."
+            }
+        }
     }
 }
