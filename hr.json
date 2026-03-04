@@ -1,1 +1,597 @@
-{}
+{
+    "serverConfiguration": {
+        "general": {
+            "managementRoles": {
+                "label": "Menadžerske uloge",
+                "placeholder": "Odaberi neke uloge",
+                "description": "Uloge koje će imati pristup za upravljanje botom putem ove stranice. Korisnici s dozvolom 'Upravljanje poslužiteljem' već imaju pristup."
+            },
+            "showInLeaderboards": {
+                "description": "Kada je ovo omogućeno, ime vašeg poslužitelja bit će prikazano na ljestvicama poslužitelja. Možda će proći sat vremena da se ova promjena proširi.",
+                "checkbox": "Prikaži ime poslužitelja na globalnim ljestvicama na ovoj stranici",
+                "label": "Prikaži na globalnim ljestvicama"
+            },
+            "language": {
+                "label": "Jezik",
+                "description": "Postavlja jezik za RinBot u Discordu. Ovo ne utječe na naslove animea."
+            },
+            "disableLegacyCommands": {
+                "description": "Ovo će potpuno onemogućiti naslijeđene naredbe s prefiksom, pa ćete moći koristiti samo naredbe na kosoj crti.",
+                "label": "Naredbe s prefiksom",
+                "checkbox": "Onemogućite naslijeđene naredbe s prefiksom"
+            },
+            "noLanguageCodeDefined": "(koristite zadani jezik poslužitelja)",
+            "inviteCode": {
+                "description": "Kod poziva koji se koristi za URL naziva vašeg poslužitelja na ljestvicama",
+                "label": "Kod za poziv",
+                "invalid": "Čini se da je ovaj kod za poziv nevažeći."
+            },
+            "title": "Općenito",
+            "prefix": {
+                "description": "Ovi će znakovi biti postavljeni ispred naredbi umjesto zadanog: !",
+                "label": "Prefiks naredbe",
+                "invalid": "Ovo je obavezno polje i mora sadržavati između 1 i 5 znakova."
+            }
+        },
+        "guessTheAnime": {
+            "titlePreferences": {
+                "mainTitle": {
+                    "language": "Jezik",
+                    "label": "Glavni naslov",
+                    "description": "Ovo je prioritet prema kojem će se odabrati glavni naslovi. Glavni naslov je onaj koji se koristi za natpis i sažetak animea na kraju runde. Ako se na temelju vaših preferencija ne može pronaći glavni naslov, vratit će se na zadane vrijednosti.",
+                    "source": "Izvor",
+                    "type": "vrsta"
+                },
+                "disableTitleSimplifications": {
+                    "description": "Onemogućuje pojednostavljenja naslova (kao što je razdvajanje dugih naslova na crticu/dvotočje i uklanjanje uobičajenih kontekstualnih riječi poput 'sezona', 'verzija' itd.)",
+                    "label": "Naslovne pojednostavljenosti",
+                    "checkbox": "Onemogućite pojednostavljenja"
+                },
+                "titleTypes": {
+                    "any": "(bilo koji)",
+                    "label": "Vrste naslova",
+                    "kana": "Kana čitanja",
+                    "card": "Naslovi karata",
+                    "main": "Glavni naslovi",
+                    "official": "Službeni nazivi",
+                    "short": "Kratki naslovi",
+                    "synonym": "Sinonimi"
+                },
+                "percentageWrong": {
+                    "description": "{percentage}% - niža vrijednost znači manju toleranciju na tipfelere u pogodkama",
+                    "label": "Postotak pogrešno"
+                },
+                "titleLanguages": {
+                    "selectAll": "Odaberi sve",
+                    "selectNone": "Odaberi nijedno",
+                    "label": "Naslovi jezika"
+                },
+                "setToDefaults": "Postaviti na zadane vrijednosti",
+                "description": "##### Preferencije naslova  \nOvdje možete konfigurirati svoje preferencije za jezike naslova koji bi trebali biti prihvaćeni kao točna pogodanja.  \n\nAko vaše preferencije rezultiraju praznim skupom naslova, vratit će se na zadane postavke.",
+                "titleSources": {
+                    "any": "(bilo koji)"
+                }
+            },
+            "winnerRoleConfigs": {
+                "add": "Dodaj novu dodjelu uloga",
+                "isWeekly": "Sve vrijeme/Tjedno",
+                "label": "Uloge po činu",
+                "title": "Konfiguracija uloge",
+                "description": "Ovdje možete postaviti dodjelu uloga za pobjednike na ljestvici.",
+                "permissionInfo": "Provjerite ima li {botName} dozvolu 'Upravljanje ulogama' i je li pozicionirana iznad uloge koju želite da joj dopustite dodijeliti.",
+                "warnManagedRole": "Imajte na umu da će uloge biti u potpunosti upravljane od strane {botName}, stoga će svi članovi uloge koji nisu pobjednici biti uklonjeni.",
+                "saveChanges": "Sačuvaj promjene",
+                "reachedMaximumAssignments": "Dostigli ste maksimalni broj dodjela uloga u {maxWinnerRoleConfigs} u.",
+                "boostedServersGetMoreAssignments": "[Pojačani poslužitelji]({patreonLink}) mogu imati do {patronWinnerRoleConfigs} dodjela uloga.",
+                "rank": "Rang",
+                "type": "vrsta",
+                "allTime": "Sva vremena",
+                "points": "Bodovi",
+                "undo": "Poništi",
+                "role": "Uloga",
+                "weekly": "Tjedno",
+                "time": "Vrijeme"
+            },
+            "pointRoleConfigs": {
+                "label": "Uloge po bodovima"
+            },
+            "disableSummaryLink": {
+                "description": "Označavanjem ovoga uklonit će se poveznica iz sažetka na kraju runde.",
+                "checkbox": "Onemogući poveznicu sažetka",
+                "label": "Sažetak"
+            },
+            "title": "Pogodi anime",
+            "animeSummaryLink": {
+                "description": "Ovo samo mijenja URL i može se vratiti na web stranicu RinBota za neke anime.",
+                "label": "Poveznica na sažetak animea"
+            },
+            "hideAlternativeTitles": {
+                "label": "Alternativni naslovi",
+                "checkbox": "Sakrij alternativne naslove",
+                "description": "Označavanjem ovoga sakrit će se popis alternativnih naslova u sažetku animea."
+            },
+            "roundButtonConfig": {
+                "label": "Okrugli gumbi",
+                "description": "Označeni gumbi će se pojaviti na kraju rundi i sesije.",
+                "playAgain": "🔁 Ponovi",
+                "random": "🎲 Slučajno",
+                "weeklyPointsLeaderboard": "🏆 Tjedna ljestvica bodova",
+                "weeklyTimeLeaderboard": "⏲️ Tjedna ljestvica po vremenu"
+            },
+            "enableAntiSpam": {
+                "description": "Omogućavanjem ove opcije bot će početi ignorirati igrače koji neprestano pokušavaju pogoditi koristeći isti naslov.",
+                "label": "Protiv neželjene pošte",
+                "checkbox": "Omogućite anti-spam filtar"
+            },
+            "disableDrops": {
+                "label": "Kapljice",
+                "checkbox": "Onemogući padove",
+                "description": "Provjerom ove opcije igra neće generirati nasumične padove likova."
+            },
+            "disableHints": {
+                "label": "Savjeti",
+                "checkbox": "Onemogući savjete",
+                "description": "Označavanjem ove opcije igra neće prikazivati nikakve natuknice ni u jednoj rundi."
+            },
+            "showMissingPlayersInLeaderboards": {
+                "description": "Provjerite hoće li igrači koji su napustili poslužitelj i dalje biti vidljivi na ljestvicama. Možda će trebati do sat vremena da se pojave.",
+                "label": "Nestali igrači na ljestvicama",
+                "checkbox": "Prikaži nedostajuće igrače na ljestvicama"
+            }
+        }
+    },
+    "status": {
+        "databaseServices": "Usluge baza podataka",
+        "api": {
+            "name": "API",
+            "tooltip": "Omogućuje dinamički sadržaj i konfiguraciju bota na web-stranici"
+        },
+        "partialOutage": "Djelomični prekid",
+        "majorOutage": "Veliki prekid",
+        "graphql": {
+            "tooltip": "Pruža dinamički sadržaj (kao što je baza podataka) na web-stranici",
+            "name": "GraphQL"
+        },
+        "worker": {
+            "name": "Radnik",
+            "tooltip": "Osigurava ažuriranja ljestvice, rezultata i profila"
+        },
+        "title": "Status",
+        "description": "Ovdje možete pronaći status nekih usluga koje omogućuju da {botName} radi kako treba. Ova se stranica automatski osvježava svakih 10 sekundi.",
+        "coreServices": "Osnovne usluge",
+        "putYourServerId": "Unesite ID svog servera ovdje kako biste pronašli svoj shard.",
+        "animeDatabaseApi": {
+            "tooltip": "Omogućuje anime runde - !sg, !sgv i !sga",
+            "name": "API za anime bazu podataka"
+        },
+        "visualNovelDatabaseApi": {
+            "name": "API baze podataka vizualnih romana",
+            "tooltip": "Omogućuje runde vizualne novele - !sgvn"
+        },
+        "couldNotGetShardStatuses": "Nije moguće dohvatiti statusove šardova iz API-ja.",
+        "howToFindYourServerId": "Ako ne znate kako pronaći ID svog poslužitelja, molimo pročitajte ovaj članak podrške: https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-.",
+        "website": {
+            "name": "Web stranica",
+            "tooltip": "Ne biste bili ovdje da je ovaj crven."
+        },
+        "operational": "Operativno",
+        "discordShards": "Discord šljunčci"
+    },
+    "database": {
+        "characters": {
+            "title": "Likovi"
+        },
+        "anime": {
+            "title": "Anime"
+        },
+        "visualNovels": {
+            "title": "Vizualne novele"
+        }
+    },
+    "genres": {
+        "MUSIC": "Glazba",
+        "PARODY": "Parodija",
+        "GAME": "Igra",
+        "SHOUJO_AI": "Shoujo Ai",
+        "SHOUNEN": "Shounen",
+        "SHOUNEN_AI": "Shounen Ai",
+        "THRILLER": "Triler",
+        "SEINEN": "Seinen",
+        "JOSEI": "Josei",
+        "PSYCHOLOGICAL": "Psihološki",
+        "KIDS": "Djeca",
+        "ACTION": "Akcija",
+        "ADVENTURE": "Aventura",
+        "CARS": "Automobili",
+        "MYSTERY": "Misterij",
+        "DRAMA": "drama",
+        "ECCHI": "Eči",
+        "FANTASY": "Fantazija",
+        "MAGIC": "Magija",
+        "MARTIAL_ARTS": "Borilačke vještine",
+        "ROMANCE": "Romansa",
+        "SCHOOL": "Škola",
+        "SCI_FI": "Znanstvena fantastika",
+        "SAMURAI": "Samuraj",
+        "SUPER_POWER": "Supermoć",
+        "VAMPIRE": "Vampir",
+        "HAREM": "Harem",
+        "SLICE_OF_LIFE": "Kriška života",
+        "POLICE": "Policija",
+        "COMEDY": "Komedija",
+        "DEMENTIA": "Demencija",
+        "DEMONS": "Demoni",
+        "HISTORICAL": "Povijesni",
+        "SPORTS": "Sport",
+        "SUPERNATURAL": "Nadnaravno",
+        "MILITARY": "Vojno",
+        "MAHOU_SHOUJO": "Čarobne djevojke",
+        "ISEKAI": "Isekai",
+        "HORROR": "Užas",
+        "MECHA": "Meha",
+        "SHOUJO": "Shoujo",
+        "SPACE": "Prostor"
+    },
+    "statistics": {
+        "roundsPerDay": {
+            "won": "Pobijedio",
+            "lost": "Izgubljeno",
+            "total": "Ukupno",
+            "title": "Runde po danu",
+            "winners": "Pobjednici"
+        },
+        "description": "Broj odigranih rundi dnevno u posljednjih 30 dana.",
+        "title": "Statistika"
+    },
+    "playerTable": {
+        "username": "Ime"
+    },
+    "difficulties": {
+        "EASY": "Jednostavno",
+        "HARD": "Teško",
+        "EXTREME": "Ekstremno",
+        "NIGHTMARE": "Noćna mora",
+        "UNKNOWN": "Neznano",
+        "NORMAL": "Normalno"
+    },
+    "achievements": {
+        "showLocked": "Prikaži zaključene uspjehe",
+        "leftToUnlock": "Preostalo za otključavanje",
+        "toGoForNextLevel": "ići na sljedeću razinu",
+        "thisWasTheLastLevel": "Ovo je bila posljednja razina.",
+        "noAchievementsGainedYet": "Još nije prikupljeno nijedno postignuće."
+    },
+    "commands": {
+        "title": "Naredbe",
+        "rounds": {
+            "sgvn": "**Pokreće rundu sa slikama vizualnih romana** Samo filtar težine radi za ovu naredbu.",
+            "sb": "**Pokrenite krug s gumbima za višestruki izbor s slikama**",
+            "title": "Runde",
+            "sg": "**Pokreće novi krug**",
+            "sgv": "**Počinje krug videozapisima**",
+            "sga": "**Počinje rundu audiofragmentima početne i završne pjesme**",
+            "sgc": "**Počinje krug s anime likovima**",
+            "stopg": "**Zaustavlja trenutnu rundu** Ova je naredba ograničena na jednom svakih 15 minuta po osobi, kako bi se spriječila zlouporaba. [Posjetitelji dobivaju skraćeno vrijeme čekanja](https://patreon.com/rinbot?fan_landing=true)!",
+            "sgg": "**Počinje krug videoigrama**"
+        },
+        "prefixCanBeChanged": "Prefiks `!` ovih naredbi može se promijeniti na stranici 'Moji poslužitelji' nakon prijave.",
+        "canUseInDirectMessage": "Možete također koristiti većinu ovih naredbi u izravnoj poruci RinBot-u kako biste pokrenuli privatnu sesiju. Bodovi stečeni na ovaj način ne računaju se za ljestvice.",
+        "shortcuts": {
+            "query": "**Pokreće novu rundu s animeom temeljenim na vašem upitu**  \n`d:1` za povećanje težine filtra  \n`g:shounen` za dodavanje žanra u filtar  \n`y:2001-2009` za dodavanje raspona godina u filtar  \n`t:op` za dodavanje vrste pjesme u filtar (samo za `!sga` runde)  \nPrimjer: `!sg d:1 g:shounen y:2001-2009` ili `!sg g:drama y:2010` ili `!sga t:op`  \n_Imajte na umu da NE morate koristiti sve filtere u svojim upitima._",
+            "title": "Kružni filtri prečaca  \nOvo su neki brzi filtri za početak. Težina se automatski odabire na temelju vaših trenutnih bodova ako nije navedena",
+            "year": "**Pokreće novi krug od godine `[year]` do danas** \nPrimjer: `!sg 1999` bi odabrao anime iz godina 1999. do i uključujući tekuću godinu",
+            "years": "**Pokreće novu rundu za godine između `[year1]` i `[year2]`** \nPrimjer: `!sg 1999 2003` bi odabrao anime iz godina od 1999. do i uključujući 2003.",
+            "difficulty": "**Pokreće novu rundu s određenom težinom** \n1 (lako), 2 (normalno), 3 (teško), 4 (ekstremno), 5 (košmar) i 0 (sve)  \nPrimjer: `!sg 1` za laku rundu, ili `!sg 4` za ekstremnu rundu.",
+            "genre": "**Pokreće novu rundu s animeom iz određenog žanra** \nKoristite naredbu `!genres` za popis svih dostupnih žanrova.",
+            "songType": "**Pokreće novi audio krug s pjesmama određene vrste** \nVrsta pjesme može biti: `op` (uvodi), `ed` (završeci), `in` (ubacne pjesme) ili `tm` (pjesme za slike)"
+        },
+        "queries": {
+            "difficulty": "**Filtrirajte težinu** \n1 (lako), 2 (normalno), 3 (teško), 4 (ekstremno), 5 (noćna mora) i 0 (sve)  \nPrimjer: `d:1` za laku rundu, ili `d:4` za ekstremnu rundu i `d:0` za onemogućavanje filtra težine.",
+            "genre": "**Filtrirajte žanr** \nTrenutno se može filtrirati samo jedan žanr, npr. `g:action` ili `g:horror`.  \nUpotrijebite naredbu `!genres` za popis svih dostupnih žanrova.",
+            "filters": "#### Filteri",
+            "anilist": "**Filter temeljen na vašoj AniList** \nPrimjer: `anilist:username` ili `anilist:user1,user2` za više korisničkih popisa.  \nPrvo morate upotrijebiti naredbu `!sync` prije nego što možete koristiti filter.  \n\nTakođer možete kombinirati različite vrste anime popisa, ovako: `mal:user1,user2 anilist:user3`",
+            "title": "Upiti\n\nMožete izraditi vlastite upite pomoću ovih parametara. Radit će za `!sg`, `!sgv`, `!sga`, `!sgs` i `!sgsa`.\n\nNa primjer: `!sg n:5 d:3 y:1995-2005` za pokretanje sesije s 5 rundi animea na teškoj razini između 1995. i 2005. godine.",
+            "imageManipulations": "**Manipulira slikama u krugu** (samo za krugove sa slikama)  \nMožete birati između `p` pikselski, `i` obrnuto, `ili` uljano slikano, `g` u sivim tonovima, `f` okrenuto okomito.  \nPrimjer: `im:p` ili kombinacija s `im:g,o,i`",
+            "mal": "**Filter temeljen na vašoj MyAnimeList** Primjer: `mal:username` ili `mal:user1,user2` za više korisničkih popisa.\nPrvo morate upotrijebiti naredbu `!sync` prije nego što možete koristiti filter.",
+            "numberOfRounds": "**Broj rundi u jednoj sesiji** Ovo će automatski pokrenuti više rundi u jednoj sesiji i omogućiti vam ljestvicu na kraju sesije.\nPrimjer: `n:2` za 2 runde, do najviše 10 rundi s `n:10`",
+            "songType": "**Filtrirajte vrstu pjesama** (`!sga`, `!sgs` i `!sgsa` samo) \nVrsta pjesme može biti: `op` (openings), `ed` (endings), `in` (insert songs) ili `tm` (image songs)",
+            "year": "**Filterirajte godinu** \nPrimjer: `y:1999` odabire anime iz godina 1999. do i uključujući tekuću godinu  \n`y:2005-2010` odabire anime iz razdoblja od 2005. do 2010. godine (uključujući obje)",
+            "aggr": "**Metoda agregacije** (samo pri korištenju filtara za anime liste) \n Možete koristiti `aggr:union` za ujedinjenje anime lista umjesto njihovog presjeka.",
+            "operations": "Operacije"
+        },
+        "misc": {
+            "genres": "**Prikaži sve moguće anime žanrove**",
+            "title": "Razno",
+            "statg": "**Prikaži neke globalne statistike igre**",
+            "sync": "**Sinkronizirajte svoju anime listu s drugih stranica** \n Trenutno su podržani MyAnimeList i AniList.",
+            "credits": "**Prikazuje vam sve kul ljude i web stranice koje pomažu da {botName} bude moguć.**",
+            "mydifficulty": "**Omogućuje vam postavljanje zadane težine za sve runde koje započnete.**"
+        },
+        "management": {
+            "title": "Uprava",
+            "prefix": "**Prikazuje trenutni prefiks i omogućuje vam da ga promijenite**",
+            "lang": "**Prikazuje trenutni jezik i omogućuje vam da ga promijenite**"
+        },
+        "onlyForPatrons": {
+            "tooltip": "Samo za goste",
+            "description": "**Može se koristiti samo od strane [patrona]({patreonUrl})** - ovo je uvedeno kako bi se smanjilo opterećenje poslužitelja i potaknulo ljude da pomognu platiti račune"
+        },
+        "isExperimental": {
+            "tooltip": "Eksperimentalni",
+            "description": "**Eksperimentalna značajka** - ova je značajka prilično nova, pa može sadržavati neke bugove [molimo prijavite ih ovdje]({supportServerUrl}) ako ih pronađete"
+        },
+        "voiceRounds": {
+            "sgsa": "**Pokrenite sesiju glasovnog kruga sa uzorcima**",
+            "sbsa": "**Pokrenite glasovnu rundu s gumbima i višestrukim izborom uz primjere**",
+            "title": "Sesije glasovnog kruga",
+            "sgs": "**Pokrenite sesiju glasovnih obilazaka** Time ćete se pridružiti glasovnom kanalu (s istim imenom ili onome u kojem se nalazite) i zatim započeti obilaske. \n Provjerite ima li RinBot za kanal dozvole za __, Connect__ i __te dozvolu Speak__.",
+            "stopgs": "**Zaustavite glasovne krugove** Ovo će zaustaviti način glasovnih krugova i trenutni krug."
+        },
+        "points": {
+            "allfastest": "**Prikazuje najbrže igrače svih vremena na serveru** Ubrajaju se samo runde s anime poolom većim od 1000.",
+            "myscore": "**Prikazuje bodove koje ste osvojili i runde koje ste odigrali u trenutnom kanalu**",
+            "serverscore": "**Prikazuje rezultat cijelog servera**",
+            "title": "#### Bodovi  \nOni se ponovno izračunavaju svakih sat vremena. Možete [pojačati svoj poslužitelj](https://patreon.com/rinbot?fan_landing=true) za ažuriranja u stvarnom vremenu.",
+            "alltop": "**Prikazuje najbolje igrače svih vremena na poslužitelju**",
+            "weektop": "**Prikazuje najbolje igrače trenutačnog tjedna na poslužitelju** Koristi ISO-8601 označavanje tjedana u godini s ponedjeljkom kao prvim danom tjedna. Naredba će vam reći kada će se tjedan resetirati.",
+            "weekfastest": "**Prikazuje najbrže igrače trenutačnog tjedna na serveru** \nUbrajaju se samo runde s anime poolom većim od 1000.  \nNa primjer: time su isključeni easy/normal modovi i većina manjih žanrova."
+        },
+        "ctop": {
+            "title": "Prilagođene ljestvice",
+            "ctop": "**Prikaži prilagođenu ljestvicu za trenutni kanal**",
+            "startctop": "**Pokreće novu prilagođenu ljestvicu za kanal** Morate koristiti više kanala da biste istovremeno imali više prilagođenih ljestvica.",
+            "endctop": "**Zaustavite aktivnu prilagođenu ljestvicu** Time se zaustavlja prikupljanje bodova, ali se ljestvica ne uklanja.",
+            "resetctop": "**Resetira prilagođenu ljestvicu** \nOvo će **potpuno izbrisati** prilagođenu ljestvicu, zauvijek!  \nZa korištenje ove značajke potrebna vam je jedna od sljedećih dozvola:\n- Administrator\n- Upravljanje poslužiteljem\n- Upravljanje ulogama\n- Upravljanje kanalima\n- Upravljanje porukama"
+        }
+    },
+    "slashCommands": {
+        "title": "Slash naredbe",
+        "ephemeral": {
+            "tooltip": "Ephemeral command",
+            "description": "**Ephemeral command** - poruke koje slijede ove naredbe bit će vidljive samo vama."
+        },
+        "description": "Da biste koristili slash naredbe, možda ćete morati ponovno pozvati {botName} i osigurati da ona ima **Create commands in a server** scope. \n Možete koristiti gumb za pozivanje na početnoj stranici ili klikom na {botName} unutar Discerda. \n\nProvjerite imaju li vaši korisnici dozvolu **Use Application Commands**, inače neće moći koristiti nijednu slash naredbu."
+    },
+    "introduction": {
+        "inviteButton": "Pozovite {botName} na svoj poslužitelj",
+        "features": "### Značajke\n- **Tisuće** animea, likova, vizualnih romana i videoigara dostupnih za pogoditi!\n- Pogađajte na temelju slika, videoisječaka ili zvučnih fragmenata pjesama.\n- **Nasumično odabrani isječci** čine svaku rundu drugačijom.\n- **Sustav bodovanja s ljestvicama** (za sva vremena, tjedne i vlastita prilagođena razdoblja)\n- Više **razina težine**, tako da se mogu zabaviti čak i novi obožavatelji animea i vizualnih romana.\n- Naslovi se mogu pogađati na **više jezika**.\n- …i još mnogo toga!",
+        "shortDescription": "Igrajte **, pogodite anime** i mnoge druge kviz-igre s pitanjima izravno u Discord kanalima s prijateljima.",
+        "title": "{botName}Početna stranica",
+        "orSeeHerInAction": "ili je možete vidjeti u akciji u",
+        "supportServer": "{botName} podrška poslužitelju",
+        "checkTheCommandListAndConfigure": "Provjerite popis naredbi za potpuni popis značajki. Nakon prijave na ovu web stranicu možete konfigurirati \" {botName} \" kako biste je prilagodili potrebama vašeg poslužitelja."
+    },
+    "navbar": {
+        "myProfile": "Moj profil",
+        "logout": "Odjava",
+        "home": "Početna",
+        "commands": "Naredbe",
+        "faq": "Često postavljana pitanja",
+        "changelog": "Zapisnik promjena",
+        "leaderboard": "Tablica",
+        "statistics": "Statistika",
+        "login": "Prijava",
+        "myServers": "Moji poslužitelji",
+        "myBoostedServers": "Moji pojačani poslužitelji",
+        "status": "Status",
+        "database": "Baza podataka",
+        "mySettings": "Moja postavke"
+    },
+    "leaderboardTable": {
+        "players": "Igrači",
+        "points": "Bodovi",
+        "name": "Ime",
+        "rounds": "Runde",
+        "hidden": "(skriveno)",
+        "rank": "Rang"
+    },
+    "leaderboard": {
+        "overview": {
+            "allTime": "Sva vremena",
+            "title": "Pregled",
+            "showMore": "Prikaži više",
+            "thisWeek": "Ovaj tjedan",
+            "thisWeekEndsIn": "Tjedan će završiti {timeLeft}.",
+            "guildsHiddenByDefault": "Po zadanome su imena poslužitelja skrivena, prijavite se kao administrator poslužitelja da biste ih prikazali.",
+            "lastWeekWinners": "Pobjednici prošlog tjedna",
+            "thisYear": "Ove godine"
+        },
+        "title": "Tablica",
+        "players": {
+            "title": "Igrači",
+            "description": "Ovo je popis najboljih igrača na svim serverima na kojima se igra ova igra. Runde izravnih poruka se ne računaju."
+        },
+        "guilds": {
+            "title": "Poslužitelji",
+            "description": "Ovo je popis najboljih poslužitelja na kojima se igra. \nPo zadanome će ime vašeg poslužitelja biti skriveno. Možete ga prikazati u konfiguraciji poslužitelja nakon prijave."
+        },
+        "achievements": {
+            "title": "Postignuća",
+            "description": "Ovo je jedan od igrača koji su sakupili najviše bodova postignuća."
+        }
+    },
+    "needHelp": {
+        "joinTheSupportServer": "Pridružite se support serveru",
+        "encounterProblemsContact": "Ako naiđete na bilo kakve probleme, molimo kontaktirajte Kururina tamo.",
+        "supportServerIntroduction": "Možete zatražiti pomoć, dati povratne informacije, zatražiti nove značajke ili jednostavno igrati Guess the Anime na službenom support serveru.",
+        "needHelp": "Trebate pomoć?"
+    },
+    "myBoostedServers": {
+        "remove": "Ukloni iz pojačanja",
+        "noServersBoosted": "Nijedan poslužitelj nije pojačan.",
+        "alreadyAdded": "Već je dodano",
+        "noServersFound": "Nijedan poslužitelj nije pronađen.",
+        "savedChanges": "Promjene spremljene uspješno",
+        "couldNotSaveChanges": "Nije moguće spremiti promjene",
+        "addToBoosted": "Dodaj u pojačano",
+        "boostedServers": "# Pojačani poslužitelji\nVi ste pokrovitelj razine {patronTier}. Možete pojačati još {boostsLeft} poslužitelja.",
+        "addServer": "Dodaj poslužitelj",
+        "youCannotBoostServers": "# Ne možete boostati nijedan server  \nMorate biti barem patron 2. razine da biste mogli boostati server.  \nDa biste to dobili, prvo povežite svoj Discord račun s Patreonom, a zatim [obećajte najmanje razinu 2 na Patreon stranici RinBota]({patreonLink}).",
+        "searchForServer": "Pretraži poslužitelj",
+        "pickServersToBoost": "Odaberite servere za pojačanje"
+    },
+    "myServers": {
+        "title": "Moji poslužitelji",
+        "boostedServer": "Pojačani poslužitelj",
+        "description": "Morate imati dozvolu **Server Management** da biste mogli konfigurirati {botName} za svoj poslužitelj.",
+        "couldNotRetrieveServers": "Nije moguće dohvatiti poslužitelje",
+        "hasBot": "{botName} je na ovom poslužitelju",
+        "addBot": "Dodaj {botName}",
+        "notHasBot": "{botName} Nije na ovom poslužitelju",
+        "configure": "Konfiguriraj",
+        "details": "Detalji",
+        "searchForServer": "Pretraži poslužitelj",
+        "showAll": "Prikaži sve moje poslužitelje"
+    },
+    "channelConfiguration": {
+        "savedChangesSuccessfully": "Promjene spremljene uspješno",
+        "boostedServersGetMore": "[Pojačani poslužitelji]({patreonLink}) mogu imati do {patronMaxConfigs} konfiguracija kanala.",
+        "startGameOnIdle": {
+            "checkbox": "Pokrenite novi krug kada je kanal neaktivan.",
+            "boostedServersCanHaveLess": "[Pojačani poslužitelji]({patreonLink}) mogu imati < 60 minuta.",
+            "minutesIdle": "Minute mirovanja"
+        },
+        "saveChanges": "Sačuvaj promjene",
+        "undo": "Poništi",
+        "description": "Ovdje možete konfigurirati nekoliko specifičnih opcija za svaki kanal. One bi kasnije mogle biti proširene dodatnim opcijama konfiguracije poslužitelja.",
+        "channelAccessControlEnabled": {
+            "checkbox": "Omogući kontrolu pristupa kanalima",
+            "description": "Ovo će natjerati {botName} da ne sluša nikakve zapovijedi osim ako za svaki kanal nije izričito dodan na bijelu listu.",
+            "label": "Kontrola pristupa"
+        },
+        "add": "Dodaj kanal",
+        "noChannelsConfigured": "Trenutno nisu konfigurirani nijedni kanali. Kliknite gumb 'Dodaj kanal' da biste započeli.",
+        "maximumReached": "Dostigli ste maksimalni broj konfiguracija kanala {maxChannelConfigs} a.",
+        "couldNotSaveChanges": "Nije moguće spremiti promjene",
+        "useForVoiceRounds": {
+            "checkbox": "Koristite samo ovaj glasovni kanal za glasovne runde (samo jedan može biti aktivan)"
+        },
+        "stage": {
+            "topic": {
+                "label": "Tema pozornice"
+            }
+        }
+    },
+    "userProfile": {
+        "allTimeResults": "Rezultati svih vremena",
+        "rank": "Rang",
+        "roundPoints": "Zaobljene točke",
+        "achievementPoints": "Bodovi postignuća",
+        "statistics": "Statistika",
+        "points": "Bodovi",
+        "rounds": "Runde",
+        "noResultsYet": "Još nema rezultata.",
+        "noTrophiesWon": "Još nije osvojena nijedna trofeja.",
+        "week": "Tjedan",
+        "achievements": "Postignuća",
+        "trophiesWon": "Osvojene trofeje"
+    },
+    "weekPicker": {
+        "week": "Tjedan",
+        "year": "Godina",
+        "weekly": "Tjedno",
+        "allTime": "Sva vremena"
+    },
+    "channelAccessControlConfig": {
+        "addRule": "Dodaj pravilo",
+        "title": "Kontrola pristupa",
+        "everyoneRole": "@svi",
+        "commands": "Naredbe",
+        "allCommands": "(sve naredbe)",
+        "roles": "Uloge",
+        "description": "Pravila kontrole pristupa obrađuju se odozgo prema dolje. \nSve je prema zadanim postavkama zabranjeno, pa ćete barem morati napraviti jedno dopuštajuće pravilo.",
+        "maximumReached": "Dostigli ste maksimalni broj kontrola pristupa."
+    },
+    "nsfw": {
+        "UNKNOWN": "Neznano",
+        "QUESTIONABLE": "Upitno",
+        "NOT_SAFE": "Nesigurno",
+        "DANGEROUS": "Opasno",
+        "SAFE": "Sigurno"
+    },
+    "common": {
+        "termsOfService": "Uvjeti pružanja usluge",
+        "privacyPolicy": "Pravila o privatnosti",
+        "onlyForPatrons": "Samo za goste",
+        "experimentalFeature": "Eksperimentalna značajka",
+        "error": "Greška",
+        "success": "Uspjeh",
+        "botSupporter": "{botName} pristaša",
+        "boostedByBotSupporter": "Podržano od strane {botName}",
+        "loading": "Učitavanje"
+    },
+    "supportUs": {
+        "translations": "Prijevodi",
+        "joinTheTranslationsChannel": "Obavezno se pridružite kanalu `#translations` na [serveru podrške]({supportServerUrl}) kako biste zatražili pomoć i raspravljali o prijevodima.",
+        "signInWithAuth0": "Prijavite se pomoću Auth0, a zatim 'Nastavi s Discordom'.",
+        "votingAndReviewing": "Glasanje i pregledavanje",
+        "supportThroughVoting": "Uvijek je korisno redovito glasati i ostavljati recenzije na tim web-stranicama.",
+        "goal": "{completedPercentage}% operativnih troškova od{amount} USD mjesečno je financirano!",
+        "supportThroughKoFi": "Možda biste također mogli razmisliti o tome da mi kupite kavu putem ko-fi.com. Međutim, to ne donosi nikakve pogodnosti osim moje najveće zahvalnosti!",
+        "supportThroughPatreon": "Ako želite pomoći u pokrivanju troškova poslužitelja, možete obećati bilo koji iznos koji želite putem Patreona. Također ćete dobiti neke posebne pogodnosti!",
+        "helpWithTranslating": "Možete pomoći poboljšanjem postojećih prijevoda ili dodavanjem novih jezika koristeći masovni prijevod!"
+    },
+    "notLoggedIn": "Morate biti prijavljeni da biste pristupili ovoj stranici.",
+    "pageNotFound": "Stranica ne postoji",
+    "reportAnime": {
+        "couldNotSubmit": "Vaš izvještaj nije mogao biti poslan.",
+        "submitted": "Vaše izvješće je uspješno poslano."
+    },
+    "validation": {
+        "required": "Ovo polje je obavezno",
+        "maxLength": "Maksimalna duljina je {max} znakova, ali ste napisali {length} znakova."
+    },
+    "animeSorts": {
+        "YEAR_ASC": "Godina (rastući)",
+        "YEAR_DESC": "Godina (silazno)",
+        "ROUNDS_LOST_DESC": "Izgubljeni rundi (silazno)",
+        "ROUNDS_WON_PERCENTAGE_ASC": "Postotak osvojenih rundi (rastući)",
+        "MAIN_TITLE_ASC": "Glavni naslov (rastući)",
+        "MAIN_TITLE_DESC": "Glavni naslov (silazno)",
+        "ROUNDS_WON_ASC": "Osvojeni krugovi (rastući)",
+        "ROUNDS_WON_DESC": "Pobjede u rundama (silazno)",
+        "ROUNDS_LOST_ASC": "Izgubljeni krugovi (rastući)",
+        "ROUNDS_WON_PERCENTAGE_DESC": "Postotak osvojenih rundi (silazno)"
+    },
+    "guildProfile": {
+        "join": "Pridruži se ovom serveru"
+    },
+    "main": {
+        "isBetaSite": "Trenutno pregledavate beta verziju web-stranice {botName}. Ovo je namijenjeno samo u svrhu testiranja. [Kliknite ovdje da biste pregledali pravu web-stranicu]({productionUrl}).",
+        "isAinaBotSite": "Trenutno pregledavate početnu stranicu AinaBota. Ovo je Discord bot s isključivo sadržajem za odrasle. [Kliknite ovdje da biste otišli na početnu stranicu RinBota]({productionUrl}), koji ima običan anime."
+    },
+    "mySettings": {
+        "privacy": {
+            "hideNameGlobally": {
+                "checkbox": "Skrij moje ime globalno",
+                "description": "Omogućavanjem ove opcije vaše će se ime na svim ljestvicama i profilima na web-stranici prikazivati kao '(skriveno)'.\n  Promjena može potrajati do jednog dana da se provede kroz cijeli sustav."
+            }
+        }
+    },
+    "mediaTypes": {
+        "anime": "Anime",
+        "visualNovel": "Vizualne novele",
+        "videoGame": "Videoigre",
+        "animeCharacter": "Anime likovi",
+        "pokemon": "Pokémon",
+        "manga": "Manga"
+    },
+    "animeListTypes": {
+        "MY_ANIME_LIST": "MojAnimeList",
+        "ANI_LIST": "AniList"
+    },
+    "logout": {
+        "youHaveBeenLoggedOut": "Odjavljeni ste!"
+    },
+    "myServerDetails": {
+        "backToMyServers": "Povratak na moje poslužitelje",
+        "server": "Poslužitelj",
+        "channels": "Kanalima",
+        "leaderboard": "Tablica",
+        "players": "Igrači",
+        "onlyForManagement": "Samo za upravljanje poslužiteljem"
+    },
+    "myServerPlayers": {
+        "searchForPlayer": "Pronađi igrača"
+    }
+}
