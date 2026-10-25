@@ -150,6 +150,12 @@
             "description": "This is of the players that have collected the most achievement points."
         }
     },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "search": "Search the FAQ…",
+        "searchResultCount": "{count} matching question | {count} matching questions",
+        "noResults": "No matching questions."
+    },
     "navbar": {
         "home": "Home",
         "commands": "Commands",
