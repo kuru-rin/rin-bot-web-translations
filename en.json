@@ -456,8 +456,7 @@
         }
     },
     "main": {
-        "isBetaSite": "You are currently browsing the {botName} beta website. This is only meant for testing purposes. [Click here to browse the actual website]({productionUrl}).",
-        "isAinaBotSite": "You are currently browsing AinaBot's homepage. This is a discord bot with only adult content. [Click here to go to RinBot's homepage]({productionUrl}), which has regular anime."
+        "isBetaSite": "You are currently browsing the {botName} beta website. This is only meant for testing purposes. [Click here to browse the actual website]({productionUrl})."
     },
     "weekPicker": {
         "allTime": "All-time",

@@ -551,8 +551,7 @@
         "maxLength": "Maximal längd är {max} tecken, men du skrev {length} tecken."
     },
     "main": {
-        "isBetaSite": "Du surfar för närvarande på {botName} beta-webbplatsen. Detta är endast avsett för teständamål. [Klicka här för att bläddra på den aktuella webbplatsen]({productionUrl}).",
-        "isAinaBotSite": "Du är inne och tittar på AinaBots hemsida. Detta är en discord bot med endast vuxeninnehåll. [Klicka här för att gå till RinBots hemsida]({productionUrl}), som har regelbunden anime."
+        "isBetaSite": "Du surfar för närvarande på {botName} beta-webbplatsen. Detta är endast avsett för teständamål. [Klicka här för att bläddra på den aktuella webbplatsen]({productionUrl})."
     },
     "statistics": {
         "title": "Statistik",

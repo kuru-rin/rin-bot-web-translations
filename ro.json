@@ -412,8 +412,7 @@
         "MY_ANIME_LIST": "MyAnimeList"
     },
     "main": {
-        "isBetaSite": "Sunteți în curs de navigare pe site-ul {botName} beta. Acesta este destinat doar pentru testare. [Faceți clic aici pentru a naviga pe site-ul actual]({productionUrl}).",
-        "isAinaBotSite": "Sunteți în curs de navigare pe pagina de start a lui AinaBot. Acesta este un bot de discordie cu conținut exclusiv pentru adulți. [Faceți clic aici pentru a merge pe pagina de pornire a lui RinBot]({productionUrl}), care are anime-uri obișnuite."
+        "isBetaSite": "Sunteți în curs de navigare pe site-ul {botName} beta. Acesta este destinat doar pentru testare. [Faceți clic aici pentru a naviga pe site-ul actual]({productionUrl})."
     },
     "channelConfiguration": {
         "maximumReached": "Ați atins numărul maxim de configurații de canale {maxChannelConfigs}.",

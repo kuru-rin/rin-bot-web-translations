@@ -573,8 +573,7 @@
     },
     "notLoggedIn": "您需要登录后才能访问此页面。",
     "main": {
-        "isBetaSite": "您正在浏览{botName} beta 网站。这仅用于测试目的。[点击此处浏览实际网站]({productionUrl})。",
-        "isAinaBotSite": "您正在浏览 AinaBot 的主页。这是一个只有成人内容的 discord 机器人。[点击此处转到 RinBot 的主页]({productionUrl})，其中有常规动漫。"
+        "isBetaSite": "您正在浏览{botName} beta 网站。这仅用于测试目的。[点击此处浏览实际网站]({productionUrl})。"
     },
     "playerTable": {
         "username": "名称"

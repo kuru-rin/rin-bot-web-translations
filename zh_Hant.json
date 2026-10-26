@@ -448,7 +448,6 @@
         "databaseServices": "資料庫服務"
     },
     "main": {
-        "isAinaBotSite": "您目前正在瀏覽 AinaBot 的首頁。這是一個限制級內容的 Discord 機器人。[點此前往 RinBot 的主頁]({productionUrl})，那裡有一般的動畫內容。",
         "isBetaSite": "您目前正在瀏覽 {botName} 的 Beta 版網站。此網站僅供測試用途。[點此瀏覽正式網站]({productionUrl})。"
     },
     "statistics": {

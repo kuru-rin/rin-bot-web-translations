@@ -557,8 +557,7 @@
         "join": "Pridruži se ovom serveru"
     },
     "main": {
-        "isBetaSite": "Trenutno pregledavate beta verziju web-stranice {botName}. Ovo je namijenjeno samo u svrhu testiranja. [Kliknite ovdje da biste pregledali pravu web-stranicu]({productionUrl}).",
-        "isAinaBotSite": "Trenutno pregledavate početnu stranicu AinaBota. Ovo je Discord bot s isključivo sadržajem za odrasle. [Kliknite ovdje da biste otišli na početnu stranicu RinBota]({productionUrl}), koji ima običan anime."
+        "isBetaSite": "Trenutno pregledavate beta verziju web-stranice {botName}. Ovo je namijenjeno samo u svrhu testiranja. [Kliknite ovdje da biste pregledali pravu web-stranicu]({productionUrl})."
     },
     "mySettings": {
         "privacy": {

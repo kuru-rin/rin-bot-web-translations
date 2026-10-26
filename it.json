@@ -139,8 +139,7 @@
         "partialOutage": "Interruzione parziale"
     },
     "main": {
-        "isBetaSite": "Si sta consultando il sito web {botName} beta. Questo sito è stato creato solo a scopo di test. [Fare clic qui per consultare il sito web attuale]({productionUrl}).",
-        "isAinaBotSite": "Stai visualizzando il sito web di AinaBot. Questo è un bot di discordia con contenuti esclusivamente per adulti. [Clicca qui per andare alla homepage di RinBot]({productionUrl}), che ha anime regolari."
+        "isBetaSite": "Si sta consultando il sito web {botName} beta. Questo sito è stato creato solo a scopo di test. [Fare clic qui per consultare il sito web attuale]({productionUrl})."
     },
     "myServerPlayers": {
         "searchForPlayer": "Trova un giocatore"

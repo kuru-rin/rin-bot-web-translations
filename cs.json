@@ -570,8 +570,7 @@
         "channels": "Kanály"
     },
     "main": {
-        "isBetaSite": "Právě procházíte webové stránky {botName} beta. Ta je určena pouze pro testovací účely. [Klikněte zde pro prohlížení skutečných webových stránek]({productionUrl}).",
-        "isAinaBotSite": "Právě procházíte domovskou stránku AinaBot. Jedná se o discord bota s obsahem pouze pro dospělé. [Kliknutím sem přejdete na domovskou stránku RinBota]({productionUrl}), který má pravidelně anime."
+        "isBetaSite": "Právě procházíte webové stránky {botName} beta. Ta je určena pouze pro testovací účely. [Klikněte zde pro prohlížení skutečných webových stránek]({productionUrl})."
     },
     "logout": {
         "youHaveBeenLoggedOut": "Byli jste odhlášeni!"

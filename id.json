@@ -550,8 +550,7 @@
     },
     "notLoggedIn": "Anda harus masuk untuk mengakses halaman ini.",
     "main": {
-        "isBetaSite": "Anda saat ini sedang menjelajahi situs web {botName} beta. Ini hanya dimaksudkan untuk tujuan pengujian. [Klik di sini untuk menjelajahi situs web yang sebenarnya] ({productionUrl}).",
-        "isAinaBotSite": "Anda saat ini sedang menjelajahi beranda AinaBot. Ini adalah bot perselisihan yang hanya memiliki konten dewasa. [Klik di sini untuk pergi ke beranda RinBot] ({productionUrl}), yang memiliki anime biasa."
+        "isBetaSite": "Anda saat ini sedang menjelajahi situs web {botName} beta. Ini hanya dimaksudkan untuk tujuan pengujian. [Klik di sini untuk menjelajahi situs web yang sebenarnya] ({productionUrl})."
     },
     "playerTable": {
         "username": "Nama"

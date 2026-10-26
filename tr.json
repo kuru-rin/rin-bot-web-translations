@@ -575,8 +575,7 @@
         "week": "Hafta"
     },
     "main": {
-        "isBetaSite": "Şu anda {botName} beta web sitesine göz atıyorsunuz. Bu sadece test amaçlıdır. [Gerçek web sitesine göz atmak için buraya tıklayın]({productionUrl}).",
-        "isAinaBotSite": "Şu anda AinaBot'un ana sayfasına göz atıyorsunuz. Bu sadece yetişkin içerikli bir discord botudur. [RinBot'un ana sayfasına gitmek için buraya tıklayın]({productionUrl}), normal anime var."
+        "isBetaSite": "Şu anda {botName} beta web sitesine göz atıyorsunuz. Bu sadece test amaçlıdır. [Gerçek web sitesine göz atmak için buraya tıklayın]({productionUrl})."
     },
     "mySettings": {
         "privacy": {

@@ -474,8 +474,7 @@
         "points": "Poeng"
     },
     "main": {
-        "isBetaSite": "Du surfer for øyeblikket på nettstedet {botName} beta. Dette er kun ment for testformål. [Klikk her for å gå til det faktiske nettstedet]({productionUrl}).",
-        "isAinaBotSite": "Du surfer for øyeblikket på hjemmesiden til AinaBot. Dette er en discord-bot med kun voksent innhold. [Klikk her for å gå til RinBots hjemmeside]({productionUrl}), som har vanlig anime."
+        "isBetaSite": "Du surfer for øyeblikket på nettstedet {botName} beta. Dette er kun ment for testformål. [Klikk her for å gå til det faktiske nettstedet]({productionUrl})."
     },
     "database": {
         "characters": {

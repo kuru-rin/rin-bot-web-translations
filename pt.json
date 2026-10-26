@@ -440,8 +440,7 @@
         "week": "Semana"
     },
     "main": {
-        "isBetaSite": "Está atualmente a navegar no sítio Web {botName} beta. Este sítio serve apenas para efeitos de teste. [Clique aqui para navegar no sítio Web atual]({productionUrl}).",
-        "isAinaBotSite": "Está a navegar na página inicial de AinaBot. Este é um bot discord com conteúdo apenas para adultos. [Clique aqui para ir para a página inicial do RinBot]({productionUrl}), que tem anime regular."
+        "isBetaSite": "Está atualmente a navegar no sítio Web {botName} beta. Este sítio serve apenas para efeitos de teste. [Clique aqui para navegar no sítio Web atual]({productionUrl})."
     },
     "animeListTypes": {
         "MY_ANIME_LIST": "A minha lista de animes",

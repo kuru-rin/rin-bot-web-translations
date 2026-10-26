@@ -381,8 +381,7 @@
     "notLoggedIn": "이 페이지에 액세스하려면 로그인해야 합니다.",
     "pageNotFound": "페이지가 존재하지 않습니다.",
     "main": {
-        "isBetaSite": "현재 {botName} 베타 웹사이트를 탐색 중입니다. 이는 테스트 목적으로만 사용됩니다. [실제 웹사이트를 보려면 여기를 클릭하세요]({productionUrl}).",
-        "isAinaBotSite": "현재 아이나봇의 홈페이지를 브라우징하고 계십니다. 성인용 콘텐츠만 있는 불화 봇입니다. 일반 애니메이션이 있는 [린봇 홈페이지로 이동하려면 여기를 클릭]({productionUrl})로 이동하세요."
+        "isBetaSite": "현재 {botName} 베타 웹사이트를 탐색 중입니다. 이는 테스트 목적으로만 사용됩니다. [실제 웹사이트를 보려면 여기를 클릭하세요]({productionUrl})."
     },
     "statistics": {
         "roundsPerDay": {

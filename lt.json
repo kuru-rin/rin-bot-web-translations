@@ -234,8 +234,7 @@
         }
     },
     "main": {
-        "isBetaSite": "Šiuo metu naršote {botName} beta svetainę. Ji skirta tik bandymams. [Spustelėkite čia, jei norite peržiūrėti tikrąją svetainę]({productionUrl}).",
-        "isAinaBotSite": "Šiuo metu Jūs naršote AinaBot tinklalapį. Tai yra tik suaugusiems skirtas Discord bot'as. [Spauskite čia, kad pereitumėte į RinBot pagrindinį puslapį]({productionUrl}), kuriame yra įprastų anime."
+        "isBetaSite": "Šiuo metu naršote {botName} beta svetainę. Ji skirta tik bandymams. [Spustelėkite čia, jei norite peržiūrėti tikrąją svetainę]({productionUrl})."
     },
     "weekPicker": {
         "allTime": "Visų laikų",

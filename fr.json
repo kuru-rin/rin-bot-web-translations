@@ -308,8 +308,7 @@
         "joinTheSupportServer": "Rejoindre le serveur de support"
     },
     "main": {
-        "isBetaSite": "Vous êtes en train de parcourir le site web {botName} beta. Ce site n'est destiné qu'à des fins de test. [Cliquez ici pour naviguer sur le site actuel]({productionUrl}).",
-        "isAinaBotSite": "Vous êtes en train de parcourir la page d'accueil de AinaBot. Il s'agit d'un bot discord avec uniquement du contenu pour adultes. [Cliquez ici pour aller sur la page d'accueil de RinBot]({productionUrl}), qui propose des animes réguliers."
+        "isBetaSite": "Vous êtes en train de parcourir le site web {botName} beta. Ce site n'est destiné qu'à des fins de test. [Cliquez ici pour naviguer sur le site actuel]({productionUrl})."
     },
     "userProfile": {
         "statistics": "Statistiques",

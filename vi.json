@@ -389,8 +389,7 @@
     "notLoggedIn": "Cậu cần phải đăng nhập để truy cập trang này.",
     "pageNotFound": "Trang không tồn tại",
     "main": {
-        "isBetaSite": "Cậu đang duyệt trang web beta của {botName}. Trang web này chỉ dành cho mục đích thử nghiệm. [Nhấp vào đây để duyệt trang web chính thức]({productionUrl}).",
-        "isAinaBotSite": "Cậu đang duyệt trang chủ của AinaBot. Đây là một bot Discord chỉ chứa nội dung dành cho người lớn. [Nhấp vào đây để truy cập trang chủ của RinBot]({productionUrl}), nơi có nội dung anime thông thường."
+        "isBetaSite": "Cậu đang duyệt trang web beta của {botName}. Trang web này chỉ dành cho mục đích thử nghiệm. [Nhấp vào đây để duyệt trang web chính thức]({productionUrl})."
     },
     "weekPicker": {
         "allTime": "Mọi thời đại",

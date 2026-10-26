@@ -571,8 +571,7 @@
         "required": "Dieses Feld ist erforderlich"
     },
     "main": {
-        "isBetaSite": "Sie befinden sich derzeit auf der Beta-Website {botName}. Diese ist nur für Testzwecke gedacht. [Klicken Sie hier, um die aktuelle Website zu besuchen]({productionUrl}).",
-        "isAinaBotSite": "Du befindest dich momentan auf der Homepage von AinaBot. Dies ist ein Discord-Bot mit ausschließlich erwachsenen Inhalten. [Klicken Sie hier, um zur Homepage von RinBot zu gelangen]({productionUrl}), die regelmäßig Anime zeigt."
+        "isBetaSite": "Sie befinden sich derzeit auf der Beta-Website {botName}. Diese ist nur für Testzwecke gedacht. [Klicken Sie hier, um die aktuelle Website zu besuchen]({productionUrl})."
     },
     "logout": {
         "youHaveBeenLoggedOut": "Sie wurden abgemeldet!"

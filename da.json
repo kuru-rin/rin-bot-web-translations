@@ -222,8 +222,7 @@
         "couldNotGetShardStatuses": "Kunne ikke hente shard-status fra API"
     },
     "main": {
-        "isBetaSite": "Du er i øjeblikket på {botName} beta website. Dette er kun beregnet til testformål. [Klik her for at gennemse den aktuelle hjemmeside]({productionUrl}).",
-        "isAinaBotSite": "Du gennemser i øjeblikket AinaBots hjemmeside. Dette er en discord bot med kun voksenindhold. [Klik her for at gå til RinBots hjemmeside]({productionUrl}), som har almindelig anime."
+        "isBetaSite": "Du er i øjeblikket på {botName} beta website. Dette er kun beregnet til testformål. [Klik her for at gennemse den aktuelle hjemmeside]({productionUrl})."
     },
     "weekPicker": {
         "year": "År",

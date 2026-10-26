@@ -7,7 +7,6 @@
         "toGoForNextLevel": "siirtyä seuraavalle tasolle"
     },
     "main": {
-        "isAinaBotSite": "Selaat tällä hetkellä AinaBotin kotisivuja. Tämä on discord-botti, jossa on vain aikuissisältöä. [Klikkaa tästä siirtyäksesi RinBotin kotisivulle]({productionUrl}), jossa on tavallista animea.",
         "isBetaSite": "Selaat tällä hetkellä {botName} beta -sivustoa. Tämä on tarkoitettu vain testaustarkoituksiin. [Klikkaa tästä selataksesi varsinaista verkkosivustoa]({productionUrl})."
     },
     "genres": {

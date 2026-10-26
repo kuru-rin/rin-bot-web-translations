@@ -576,8 +576,7 @@
         }
     },
     "main": {
-        "isBetaSite": "現在、{botName} ベータ版ウェブサイトを閲覧しています。これはテストのみを目的としています。[実際のウェブサイトを閲覧するにはここをクリックしてください]({productionUrl})。",
-        "isAinaBotSite": "現在、AinaBotさんのホームページを閲覧中です。アダルトコンテンツのみのdiscordボットです。[RinBotのホームページはこちら]({productionUrl})。普通のアニメがあります。"
+        "isBetaSite": "現在、{botName} ベータ版ウェブサイトを閲覧しています。これはテストのみを目的としています。[実際のウェブサイトを閲覧するにはここをクリックしてください]({productionUrl})。"
     },
     "myServerPlayers": {
         "searchForPlayer": "選手を探す"

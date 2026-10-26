@@ -583,7 +583,6 @@
         "maxLength": "Maksymalna długość to {max} znaków, ale użytkownik wpisał {length} znaków."
     },
     "main": {
-        "isAinaBotSite": "Aktualnie przeglądasz stronę główną AinaBot. To jest discord bot z treściami tylko dla dorosłych. [Kliknij tutaj, aby przejść do strony głównej RinBota]({productionUrl}), który ma regularne anime.",
         "isBetaSite": "Aktualnie przeglądasz stronę {botName} beta. Służy ona wyłącznie do celów testowych. [Kliknij tutaj, aby przejrzeć rzeczywistą stronę]({productionUrl})."
     },
     "mediaTypes": {

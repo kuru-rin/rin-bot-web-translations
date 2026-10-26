@@ -575,7 +575,6 @@
         "join": "Csatlakozz ehhez a szerverhez"
     },
     "main": {
-        "isAinaBotSite": "Ön jelenleg az AinaBot honlapját böngészi. Ez egy discord bot csak felnőtt tartalmakkal. [Kattints ide RinBot honlapjára]({productionUrl}), ahol rendszeresen van anime.",
         "isBetaSite": "Ön jelenleg a {botName} béta weboldalon böngészik. Ez csak tesztelési célokat szolgál. [Kattintson ide az aktuális weboldal megtekintéséhez]({productionUrl})."
     },
     "slashCommands": {

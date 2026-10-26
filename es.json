@@ -428,8 +428,7 @@
         "players": "Jugadores"
     },
     "main": {
-        "isBetaSite": "Ahora mismo estás navegando por la página web beta de {botName}. Esto es sólo para propósitos de prueba. [Haz clic aquí para navegar por el sitio web real]({productionUrl}).",
-        "isAinaBotSite": "Estás navegando por la página de AinaBot. Este es un bot de discord con contenido sólo para adultos. [Haz clic aquí para ir a la página principal de RinBot]({productionUrl}), que tiene anime normal."
+        "isBetaSite": "Ahora mismo estás navegando por la página web beta de {botName}. Esto es sólo para propósitos de prueba. [Haz clic aquí para navegar por el sitio web real]({productionUrl})."
     },
     "leaderboardTable": {
         "hidden": "(oculto)",

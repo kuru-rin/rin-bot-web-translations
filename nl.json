@@ -443,8 +443,7 @@
         "week": "Week"
     },
     "main": {
-        "isBetaSite": "Je bevindt je nu op de {botName} beta website. Dit is alleen voor testdoeleinden. [Klik hier om de echte website te bezoeken]({productionUrl}).",
-        "isAinaBotSite": "Je bent nu op AinaBots homepagina. Dit is een discordbot met alleen functies voor volwassenen. [Klik hier om naar RinBots homepagina te gaan]({productionUrl}), die normale anime heeft."
+        "isBetaSite": "Je bevindt je nu op de {botName} beta website. Dit is alleen voor testdoeleinden. [Klik hier om de echte website te bezoeken]({productionUrl})."
     },
     "statistics": {
         "roundsPerDay": {
