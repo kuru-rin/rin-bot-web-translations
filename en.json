@@ -461,6 +461,7 @@
     },
     "weekPicker": {
         "allTime": "All-time",
+        "yearly": "Yearly",
         "weekly": "Weekly",
         "year": "Year",
         "week": "Week"
