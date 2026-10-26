@@ -170,7 +170,12 @@
         "myBoostedServers": "My boosted servers",
         "status": "Status",
         "database": "Database",
-        "mySettings": "My settings"
+        "mySettings": "My settings",
+        "theme": {
+            "system": "System",
+            "light": "Light",
+            "dark": "Dark"
+        }
     },
     "needHelp": {
         "needHelp": "Need help?",
